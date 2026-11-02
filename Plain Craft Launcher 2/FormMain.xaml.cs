@@ -1327,23 +1327,13 @@ public partial class FormMain
     /// </summary>
     private void BtnTitleSelect_Click(MyRadioButton sender, bool raiseByMouse)
     {
-<<<<<<< HEAD
-        var tag = sender.Tag?.ToString();
-        switch (tag)
-        {
-            case "1": PanMainRight.Child = new Pages.PageMods(); break;
-            case "2": PanMainRight.Child = new Pages.PageSettings(); break;
-            default: PanMainRight.Child = new Pages.PageHome(); break;
-        }
-=======
         if (isChangingPage) return;
         var tag = sender.Tag?.ToString();
-        // KSP 挂接：tag=1 → KSP 模组管理，tag=3 → KSP 启动
-        if (tag == "1") { PanMainRight.Child = new Pages.PageMods(); return; }
-        if (tag == "3") { PanMainRight.Child = new Pages.PageHome(); return; }
+        // KSP 挂接：用 MyPageRight 包装 UserControl，避免原生代码强转失败
+        if (tag == "1") { PanMainRight.Child = new MyPageRight { Child = new Pages.PageMods() }; return; }
+        if (tag == "3") { PanMainRight.Child = new MyPageRight { Child = new Pages.PageHome() }; return; }
         var pageType = (PageType)int.Parse(tag ?? "0");
         PageChangeActual(pageType, PageSubType.Default);
->>>>>>> a6b1628 (feat: restore native PCL-CE shell, hook KSP mods/launch into native nav)
     }
 
     private void BtnTitleInner_Click(object sender, EventArgs e)

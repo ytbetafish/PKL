@@ -48,11 +48,6 @@ public sealed partial class SingleInstanceService
                 using var reader = new StreamReader(stream);
                 var pidText = reader.ReadToEnd().Trim();
 
-<<<<<<< HEAD
-                // 自愈：检查记录的 PID 是否还活着；死进程残留锁时接管
-=======
-                // 自愈：检测记录的 PID 是否还活着；死进程残留锁时接管
->>>>>>> a6b1628 (feat: restore native PCL-CE shell, hook KSP mods/launch into native nav)
                 if (int.TryParse(pidText, out var oldPid) && oldPid != Environment.ProcessId)
                 {
                     bool alive;
@@ -62,12 +57,7 @@ public sealed partial class SingleInstanceService
                     if (!alive)
                     {
                         Context.Warn($"PID {oldPid} 已不存在，清理残留锁并接管");
-<<<<<<< HEAD
-                        try { File.Delete(_LockFilePath); } catch { /* 文件可能仍被 OS 句柄占用，忽略 */ }
-                        // 直接以覆盖方式写回自己的 PID
-=======
-                        try { File.Delete(_LockFilePath); } catch { /* best effort */ }
->>>>>>> a6b1628 (feat: restore native PCL-CE shell, hook KSP mods/launch into native nav)
+                        try { File.Delete(_LockFilePath); } catch { }
                         try
                         {
                             var takeover = File.Open(_LockFilePath, FileMode.Create, FileAccess.ReadWrite, FileShare.Read);
@@ -76,20 +66,12 @@ public sealed partial class SingleInstanceService
                             sw.Flush();
                             _lockStream = takeover;
                             Context.Debug("已接管单例锁");
-<<<<<<< HEAD
-                            return; // 正常继续，不退出
-=======
                             return;
->>>>>>> a6b1628 (feat: restore native PCL-CE shell, hook KSP mods/launch into native nav)
                         }
                         catch (Exception ex)
                         {
                             Context.Warn("接管单例锁失败，忽略锁继续启动", ex);
-<<<<<<< HEAD
-                            return; // 不退出，继续启动
-=======
                             return;
->>>>>>> a6b1628 (feat: restore native PCL-CE shell, hook KSP mods/launch into native nav)
                         }
                     }
                 }

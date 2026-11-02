@@ -367,11 +367,7 @@
                                                  LogoScale="0.9"
                                                  SvgIcon="lucide/play" />
                             <local:MyRadioButton x:Name="BtnTitleSelect1"
-<<<<<<< HEAD
-                                                 Text="模组管理"
-=======
                                                  Text="KSP 模组"
->>>>>>> a6b1628 (feat: restore native PCL-CE shell, hook KSP mods/launch into native nav)
                                                  Tag="1"
                                                  Margin="5,0"
                                                  Padding="2,0"
@@ -386,13 +382,8 @@
                                                  Check="BtnTitleSelect_Click"
                                                  LogoScale="1.1"
                                                  SvgIcon="lucide/settings" />
-<<<<<<< HEAD
-                            <local:MyRadioButton x:Name="BtnTitleSelect3" Visibility="Collapsed"
-                                                 Text="{loc:Loc Main.Tab.Tools}"
-=======
                             <local:MyRadioButton x:Name="BtnTitleSelect3" Visibility="Visible"
                                                  Text="KSP 启动"
->>>>>>> a6b1628 (feat: restore native PCL-CE shell, hook KSP mods/launch into native nav)
                                                  Tag="3"
                                                  Margin="5,0"
                                                  Padding="2,0"
