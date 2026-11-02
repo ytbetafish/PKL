@@ -1,21 +1,43 @@
 <UserControl x:Class="PCL.Pages.PageSettings"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ScrollViewer Margin="40">
-        <StackPanel MaxWidth="560">
-            <TextBlock Text="翻译服务设置" FontSize="20" FontWeight="Light" Margin="0,0,0,20" />
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PCL">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="24" MaxWidth="620">
+            <!-- KSP 路径 -->
+            <Border Background="{DynamicResource ColorBrush3}" CornerRadius="8" Padding="18" Margin="0,0,0,14">
+                <StackPanel>
+                    <TextBlock Text="KSP" FontSize="15" FontWeight="SemiBold" Margin="0,0,0,10" />
+                    <TextBlock Text="KSP 安装目录在主页选择，此处仅查看。" FontSize="12.5" Opacity="0.65" />
+                </StackPanel>
+            </Border>
 
-            <TextBlock Text="OpenAI 兼容 Base URL" Margin="0,0,0,4" />
-            <TextBox x:Name="TxtBaseUrl" Padding="8,6" Margin="0,0,0,12" />
+            <!-- 模组描述翻译服务 -->
+            <Border Background="{DynamicResource ColorBrush3}" CornerRadius="8" Padding="18" Margin="0,0,0,14">
+                <StackPanel>
+                    <TextBlock Text="模组描述翻译" FontSize="15" FontWeight="SemiBold" Margin="0,0,0,12" />
 
-            <TextBlock Text="API Key" Margin="0,0,0,4" />
-            <TextBox x:Name="TxtApiKey" Padding="8,6" Margin="0,0,0,12" />
+                    <TextBlock Text="翻译接口 Base URL" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <local:MyTextBox x:Name="TxtBaseUrl" Height="34" Margin="0,0,0,12" />
 
-            <TextBlock Text="模型名" Margin="0,0,0,4" />
-            <TextBox x:Name="TxtModel" Padding="8,6" Margin="0,0,0,20" />
+                    <TextBlock Text="API Key" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <local:MyTextBox x:Name="TxtApiKey" Height="34" Margin="0,0,0,12" />
 
-            <Button Content="保存" Padding="20,8" HorizontalAlignment="Left" Click="BtnSave_Click" />
-            <TextBlock x:Name="LabSaved" Text="" Margin="0,12,0,0" Foreground="Green" />
+                    <TextBlock Text="模型" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <local:MyTextBox x:Name="TxtModel" Height="34" Margin="0,0,0,14" />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <local:MyButton x:Name="BtnSave" Text="保存设置" Width="110" Height="34"
+                                        ColorType="Highlight" Click="BtnSave_Click" />
+                        <TextBlock x:Name="LabSaved" Grid.Column="1" Text="" FontSize="12" Opacity="0.7"
+                                   VerticalAlignment="Center" Margin="14,0,0,0" />
+                    </Grid>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

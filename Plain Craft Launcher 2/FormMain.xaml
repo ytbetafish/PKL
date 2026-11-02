@@ -1,4 +1,4 @@
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:PCL"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -382,7 +382,7 @@
                                                  Check="BtnTitleSelect_Click"
                                                  LogoScale="1.1"
                                                  SvgIcon="lucide/settings" />
-                            <local:MyRadioButton x:Name="BtnTitleSelect3" Visibility="Visible"
+                            <local:MyRadioButton x:Name="BtnTitleSelect3" Visibility="Collapsed"
                                                  Text="KSP 启动"
                                                  Tag="3"
                                                  Margin="5,0"

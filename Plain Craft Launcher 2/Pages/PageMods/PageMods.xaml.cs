@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
@@ -86,12 +86,7 @@ public partial class PageMods : UserControl
         }
     }
 
-    private async void BtnSearch_Click(object sender, RoutedEventArgs e) => await DoSearch(TxtSearch.Text);
-    private async void TxtSearch_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-    {
-        if (e.Key == System.Windows.Input.Key.Enter)
-            await DoSearch(TxtSearch.Text);
-    }
+    private async void BtnSearch_Click(object sender, EventArgs e) => await DoSearch(TxtSearch.Text);
 
     private async void BtnInstalled_Click(object sender, RoutedEventArgs e)
     {

@@ -1,27 +1,36 @@
 <UserControl x:Class="PCL.Pages.PageHome"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid Margin="40">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="520">
-            <TextBlock Text="PKL - KSP Launcher" FontSize="28" FontWeight="Light" Margin="0,0,0,8" />
-            <TextBlock Text="Kerbal Space Program 启动器外壳" FontSize="14" Opacity="0.6" Margin="0,0,0,32" />
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PCL">
+    <Grid Margin="32">
+        <Border VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="560"
+                Background="{DynamicResource ColorBrush3}" CornerRadius="8" Padding="28">
+            <StackPanel>
+                <TextBlock Text="Kerbal Space Program" FontSize="26" FontWeight="Light"
+                           Foreground="{DynamicResource ColorBrush1}" Margin="0,0,0,2" />
+                <TextBlock Text="KSP 启动器" FontSize="13" Opacity="0.6" Margin="0,0,0,20" />
 
-            <TextBlock Text="KSP 安装路径：" FontSize="13" Margin="0,0,0,4" />
-            <Grid Margin="0,0,0,16">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Border x:Name="PanPath" Background="{DynamicResource ColorBrush3}" CornerRadius="6" Padding="12,8">
-                    <TextBlock x:Name="LabKspPath" Text="未选择" Opacity="0.7" TextTrimming="CharacterEllipsis" />
-                </Border>
-                <Button Grid.Column="1" Content="选择路径" Margin="10,0,0,0" Padding="16,8" Click="BtnPickPath_Click" />
-            </Grid>
+                <TextBlock Text="KSP 安装路径" FontSize="12" Opacity="0.7" Margin="0,0,0,6" />
+                <Grid Margin="0,0,0,14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,9">
+                        <TextBlock x:Name="LabKspPath" Text="未选择" Opacity="0.75"
+                                   FontSize="12.5" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                    </Border>
+                    <local:MyButton Grid.Column="1" Text="选择路径" Width="96" Margin="10,0,0,0"
+                                    Click="BtnPickPath_Click" />
+                </Grid>
 
-            <TextBlock x:Name="LabKspVersion" Text="" FontSize="12" Opacity="0.6" Margin="0,0,0,32" />
+                <TextBlock x:Name="LabKspVersion" Text="" FontSize="12" Opacity="0.6" Margin="0,0,0,24" />
 
-            <Button x:Name="BtnLaunch" Content="启动 KSP" Padding="20,12" FontSize="14" Click="BtnLaunch_Click" HorizontalAlignment="Center" />
-            <TextBlock x:Name="LabKspStatus" Text="" FontSize="12" Opacity="0.7" Margin="0,12,0,0" HorizontalAlignment="Center" />
-        </StackPanel>
+                <local:MyButton x:Name="BtnLaunch" Text="启动 KSP" Height="44"
+                                ColorType="Highlight" Click="BtnLaunch_Click" HorizontalAlignment="Stretch" />
+                <TextBlock x:Name="LabKspStatus" Text="" FontSize="12" Opacity="0.7"
+                           Margin="0,12,0,0" HorizontalAlignment="Center" />
+            </StackPanel>
+        </Border>
     </Grid>
 </UserControl>

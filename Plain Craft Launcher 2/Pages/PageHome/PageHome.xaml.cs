@@ -111,14 +111,14 @@ public partial class PageHome : UserControl
 
     private void SetLaunchedUi()
     {
-        BtnLaunch.Content = "游戏运行中…";
+        BtnLaunch.Text = "游戏运行中…";
         BtnLaunch.IsEnabled = false;
         LabKspStatus.Text = $"KSP 已启动（PID {_kspProcess?.Id}）";
     }
 
     private void SetIdleUi()
     {
-        BtnLaunch.Content = "启动 KSP";
+        BtnLaunch.Text = "启动 KSP";
         BtnLaunch.IsEnabled = true;
         LabKspStatus.Text = "";
     }
