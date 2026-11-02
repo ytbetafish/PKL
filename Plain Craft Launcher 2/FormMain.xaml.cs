@@ -130,14 +130,11 @@ public partial class FormMain
             _helper.DragDrop += (_, _) => FileDrag(_helper.DropFilePaths);
         }
 
-        // KSP 改造后：原启动页左右面板已剥离，使用空白面板占位。
+        // KSP 改造后：左侧栏隐藏，右侧直接托管 KSP 页面。
         var placeholderLeft = new MyPageLeft();
-        var placeholderRight = new MyPageRight();
         PanMainLeft.Child = placeholderLeft;
         pageLeft = placeholderLeft;
-        PanMainRight.Child = placeholderRight;
-        pageRight = placeholderRight;
-        placeholderRight.PageState = MyPageRight.PageStates.ContentStay;
+        PanMainRight.Child = new Pages.PageHome();
         // 调试模式提醒
         if (Common.modeDebug)
             HintService.Show(Hints.Info(Lang.Text("Main.DebugMode.Hint")));
