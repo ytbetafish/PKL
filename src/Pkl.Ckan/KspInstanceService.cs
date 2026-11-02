@@ -6,8 +6,8 @@ namespace Pkl.Ckan;
 
 /// <summary>
 /// Detects KSP installations on disk and loads them through CKAN's <see cref="GameInstance"/>
-/// machinery. Detection combines CKAN's own Steam/registry scan with a manual probe of common
-/// Steam library locations plus caller-supplied paths.
+/// machinery. Detection combines CKAN's own Steam/registry scan with a hard-coded priority list
+/// of known GOG/Steam locations and a scan of adjacent directories that look like a KSP root.
 /// </summary>
 public sealed class KspInstanceService
 {
@@ -40,14 +40,23 @@ public sealed class KspInstanceService
     }
 
     /// <summary>
-    /// Enumerate candidate KSP root directories. This never throws: detection failures (no
-    /// Steam, no registry access) simply yield fewer candidates.
+    /// Enumerate candidate KSP root directories in priority order. This never throws: detection
+    /// failures (no Steam, no registry access) simply yield fewer candidates.
     /// </summary>
     public IReadOnlyList<string> FindCandidateRoots()
     {
         var candidates = new List<string>();
 
-        // 1) CKAN's own detection (Steam registry + libraryfolder vdfs).
+        // 0) Explicitly known install (GOG bundle on this machine).
+        AddIfKspRoot(candidates, @"D:\Kerbal Space Program");
+
+        // 1) Common GOG / Steam locations.
+        foreach (var path in WellKnownPaths())
+        {
+            TryAdd(candidates, path);
+        }
+
+        // 2) CKAN's own detection (Steam registry + libraryfolder vdfs).
         try
         {
             Directory.CreateDirectory(_dataDir);
@@ -55,9 +64,9 @@ public sealed class KspInstanceService
             using var mgr = new GameInstanceManager(_user, config);
             foreach (var inst in mgr.FindDefaultInstances())
             {
-                if (!string.IsNullOrWhiteSpace(inst.GameDir) && IsKspRoot(inst.GameDir))
+                if (!string.IsNullOrWhiteSpace(inst.GameDir))
                 {
-                    candidates.Add(inst.GameDir);
+                    TryAdd(candidates, inst.GameDir);
                 }
             }
         }
@@ -66,21 +75,23 @@ public sealed class KspInstanceService
             // Detection is best-effort; fall through to manual paths.
         }
 
-        // 2) Common Steam install locations.
-        foreach (var steamRoot in CommonSteamRoots())
-        {
-            TryAdd(candidates, Path.Combine(steamRoot, "steamapps", "common", "Kerbal Space Program"));
-            // KSP2: "Kerbal Space Program 2"
-            TryAdd(candidates, Path.Combine(steamRoot, "steamapps", "common", "Kerbal Space Program 2"));
-        }
-
-        // 3) Non-Steam drives that are common for KSP.
+        // 3) Scan every fixed drive for adjacent "Kerbal Space Program*" directories that
+        //    contain KSP_x64.exe + GameData (covers GOG copies next to the primary install).
         foreach (var drive in DriveInfo.GetDrives().Where(d => d.DriveType == DriveType.Fixed))
         {
             try
             {
-                TryAdd(candidates, Path.Combine(drive.Name, "KSP"));
-                TryAdd(candidates, Path.Combine(drive.Name, "Games", "Kerbal Space Program"));
+                var root = drive.Name.TrimEnd('\\');
+                if (Directory.Exists(root))
+                {
+                    foreach (var sub in SafeEnumerateDirectories(root))
+                    {
+                        if (sub.StartsWith("Kerbal Space Program", StringComparison.OrdinalIgnoreCase))
+                        {
+                            TryAdd(candidates, sub);
+                        }
+                    }
+                }
             }
             catch
             {
@@ -93,6 +104,8 @@ public sealed class KspInstanceService
 
     /// <summary>
     /// Probe a directory and return its <see cref="KspInstanceInfo"/> if it looks like a KSP root.
+    /// The version comes from CKAN's build map; if that is unavailable, we fall back to the
+    /// build id recorded in buildID64.txt.
     /// </summary>
     public KspInstanceInfo? Probe(string rootPath)
     {
@@ -112,6 +125,7 @@ public sealed class KspInstanceService
             // Version detection is best-effort.
         }
 
+        version ??= ReadBuildId(rootPath);
         return new KspInstanceInfo(rootPath, version);
     }
 
@@ -128,18 +142,75 @@ public sealed class KspInstanceService
         return new GameInstance(_kspGame, rootPath, name ?? Path.GetFileName(rootPath));
     }
 
-    private static IEnumerable<string> CommonSteamRoots()
+    /// <summary>
+    /// Read the build id from <c>buildID64.txt</c> (e.g. "build id = 03190").
+    /// </summary>
+    internal static string? ReadBuildId(string rootPath)
+    {
+        try
+        {
+            var file = Path.Combine(rootPath, "buildID64.txt");
+            if (!File.Exists(file))
+            {
+                return null;
+            }
+
+            foreach (var line in File.ReadLines(file))
+            {
+                const string needle = "build id =";
+                var idx = line.IndexOf(needle, StringComparison.OrdinalIgnoreCase);
+                if (idx >= 0)
+                {
+                    return line[(idx + needle.Length)..].Trim();
+                }
+            }
+        }
+        catch
+        {
+            // best effort
+        }
+
+        return null;
+    }
+
+    private static IEnumerable<string> WellKnownPaths()
     {
         var progFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
         if (!string.IsNullOrEmpty(progFiles))
         {
-            yield return Path.Combine(progFiles, "Steam");
+            yield return Path.Combine(progFiles, "Steam", "steamapps", "common", "Kerbal Space Program");
         }
 
         var progFiles64 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
         if (!string.IsNullOrEmpty(progFiles64))
         {
-            yield return Path.Combine(progFiles64, "Steam");
+            yield return Path.Combine(progFiles64, "Steam", "steamapps", "common", "Kerbal Space Program");
+        }
+
+        // GOG / manual layouts.
+        yield return @"C:\Games\Kerbal Space Program";
+        yield return @"D:\Steam\steamapps\common\Kerbal Space Program";
+        yield return @"D:\Games\Kerbal Space Program";
+        yield return @"E:\Kerbal Space Program";
+    }
+
+    private static IEnumerable<string> SafeEnumerateDirectories(string path)
+    {
+        try
+        {
+            return Directory.EnumerateDirectories(path);
+        }
+        catch
+        {
+            return Array.Empty<string>();
+        }
+    }
+
+    private static void AddIfKspRoot(List<string> list, string path)
+    {
+        if (IsKspRoot(path))
+        {
+            list.Add(path);
         }
     }
 

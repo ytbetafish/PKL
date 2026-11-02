@@ -1,0 +1,5998 @@
+{
+"available_modules": {
+"RSSOrigin2-Centaurs": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-Centaurs",
+"name": "RSS-Origin 2 - Centaurs",
+"abstract": "This pack includes 8 Centaurs and 2 moons: Hidalgo | Chiron | Pholus | Chariklo | Typhon, Echidna | Ceto, Phorcys | 2002 GZ32 | Kaʻepaokaʻāwela.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-Centaurs",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-Centaurs/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-Centaurs/releases/download/v1.0.1/RSSOrigin2-Centaurs.zip",
+"download_size": 471339427,
+"download_hash": {
+"sha1": "70B122B787C28DE1EA7F3D45A68634FFD5B8B1B5",
+"sha256": "6455F74526C94C826855E641C99DB74C94C9A67910F9EF105D23816C4B9347FD"
+},
+"install_size": 690583928,
+"release_date": "2026-05-28T16:09:48Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-Centaurs",
+"name": "RSS-Origin 2 - Centaurs",
+"abstract": "This pack includes 8 Centaurs and 2 moons: Hidalgo | Chiron | Pholus | Chariklo | Typhon, Echidna | Ceto, Phorcys | 2002 GZ32 | Kaʻepaokaʻāwela.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-Centaurs",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-Centaurs/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-Centaurs/releases/download/v1.0.2/RSSOrigin2-Centaurs.zip",
+"download_size": 471339425,
+"download_hash": {
+"sha1": "5352A6861A94669C13E088D6C5E4E03A01027AF1",
+"sha256": "5B981D8166317DBF151290578C15761A543EB7DCDF83A707A6E7C006886B0FA3"
+},
+"install_size": 690583928,
+"release_date": "2026-06-03T09:48:40Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Giotto": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Giotto",
+"name": "RSS-Origin 2 - MissionPack-Giotto",
+"abstract": "This pack includes 2 objects for the Giotto mission: 1P/Halley | 26P/Grigg–Skjellerup.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Giotto",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Giotto/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Giotto/releases/download/v1.0.0/RSSOrigin2-MissionPack-Giotto.zip",
+"download_size": 39962392,
+"download_hash": {
+"sha1": "BCF7B54C6F2010DC299F48CF774FC8FD55EAF2E1",
+"sha256": "14365111DDAA6C5985E41A927C4AC4AFB624F3F5CF5C9C73B250639A4D414785"
+},
+"install_size": 58301975,
+"release_date": "2026-05-28T16:44:22Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Giotto",
+"name": "RSS-Origin 2 - MissionPack-Giotto",
+"abstract": "This pack includes 2 objects for the Giotto mission: 1P/Halley | 26P/Grigg–Skjellerup.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Giotto",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Giotto/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Giotto/releases/download/v1.0.1/RSSOrigin2-MissionPack-Giotto.zip",
+"download_size": 39962392,
+"download_hash": {
+"sha1": "8CE38D047A314275F0F3999760DEE6F0D88F6841",
+"sha256": "EE3A0FABFB70E67223B41DC09034BD093FB46DDF5E35558D894D614E8C56CD59"
+},
+"install_size": 58301975,
+"release_date": "2026-06-03T12:18:25Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Hayabusa": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Hayabusa",
+"name": "RSS-Origin 2 - MissionPack-Hayabusa",
+"abstract": "This pack includes 1 object for the Hayabusa mission: Itokawa.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa/releases/download/v1.0.0/RSSOrigin2-MissionPack-Hayabusa.zip",
+"download_size": 27346264,
+"download_hash": {
+"sha1": "9F11EC19087AB90377E0C89AAFCF729D52C44B9E",
+"sha256": "730CEF59DCFD13481D8C3272B90DAD639FB6FFD8FF541E89E3974969F610D38D"
+},
+"install_size": 60974761,
+"release_date": "2026-05-28T16:44:26Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Hayabusa",
+"name": "RSS-Origin 2 - MissionPack-Hayabusa",
+"abstract": "This pack includes 1 object for the Hayabusa mission: Itokawa.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa/releases/download/v1.0.1/RSSOrigin2-MissionPack-Hayabusa.zip",
+"download_size": 27346264,
+"download_hash": {
+"sha1": "0F33B70B1423BE8F26DCC393EF422FEAA2E458E5",
+"sha256": "DA28CA2018CB174ADB5074D19C5DE1DF39E04F642B1FAF0757F94753B69AE860"
+},
+"install_size": 60974761,
+"release_date": "2026-06-03T12:18:28Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-ISEE3-ICE": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-ISEE3-ICE",
+"name": "RSS-Origin 2 - MissionPack-ISEE3-ICE",
+"abstract": "This pack includes 2 objects for the ISEE-3/ICE mission: 1P/Halley | 21P/Giacobini–Zinner.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-ISEE3-ICE",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-ISEE3-ICE/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-ISEE3-ICE/releases/download/v1.0.0/RSSOrigin2-MissionPack-ISEE3-ICE.zip",
+"download_size": 40119833,
+"download_hash": {
+"sha1": "F748D3D07ACEFB41EDF1B1A74F28FD0A2E2A7DB6",
+"sha256": "EB874B4D327385CF743E9F483C4843937699AB137DACC96C3D24F644C06F0B38"
+},
+"install_size": 58305742,
+"release_date": "2026-05-28T16:44:33Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-ISEE3-ICE",
+"name": "RSS-Origin 2 - MissionPack-ISEE3-ICE",
+"abstract": "This pack includes 2 objects for the ISEE-3/ICE mission: 1P/Halley | 21P/Giacobini–Zinner.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-ISEE3-ICE",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-ISEE3-ICE/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-ISEE3-ICE/releases/download/v1.0.1/RSSOrigin2-MissionPack-ISEE3-ICE.zip",
+"download_size": 40119833,
+"download_hash": {
+"sha1": "2B25C4D83766FEAD665EF3D93F83E552F119D5F1",
+"sha256": "5958CC2308E61A8F5072741A2AFD578C72B5BEBD0E117B7F6BE8CA3499D6E798"
+},
+"install_size": 58305742,
+"release_date": "2026-06-03T12:18:41Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-NEARShoemaker": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-NEARShoemaker",
+"name": "RSS-Origin 2 - MissionPack-NEARShoemaker",
+"abstract": "This pack includes 2 objects for the NEAR-Shoemaker mission: Mathilde | Eros.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NEARShoemaker",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NEARShoemaker/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeII"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NEARShoemaker/releases/download/v1.0.0/RSSOrigin2-MissionPack-NEARShoemaker.zip",
+"download_size": 164078384,
+"download_hash": {
+"sha1": "4BFE54BC558C7D78BDCA1907BAE049865A742065",
+"sha256": "A7103FFE71723CF40E507687B4A66DE85F4045B852D7418A9CC387E36DBFE503"
+},
+"install_size": 291010493,
+"release_date": "2026-05-28T16:45:20Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-NEARShoemaker",
+"name": "RSS-Origin 2 - MissionPack-NEARShoemaker",
+"abstract": "This pack includes 2 objects for the NEAR-Shoemaker mission: Mathilde | Eros.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NEARShoemaker",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NEARShoemaker/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeII"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NEARShoemaker/releases/download/v1.0.1/RSSOrigin2-MissionPack-NEARShoemaker.zip",
+"download_size": 164078382,
+"download_hash": {
+"sha1": "258249B4F4683B379CB0DB15693E39013A1E52F6",
+"sha256": "3A21F5DF777D5A13E350EC7BA8701683D5187CBA5AFF6F1B119B61B76444CD7A"
+},
+"install_size": 291010493,
+"release_date": "2026-06-03T12:19:41Z"
+}
+}
+},
+"Sol-AsteroidBelt-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-AsteroidBelt-16k",
+"name": "Sol Asteroid Belt Textures (16k)",
+"abstract": "Sol Textures for various Asteroid Belt Objects",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-AsteroidBelt",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-AsteroidBelt/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-AsteroidBelt"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-AsteroidBelt-4k"
+},
+{
+"name": "Sol-AsteroidBelt-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-AsteroidBelt/releases/download/V0.9.5-0/Sol_Asteroid-Belt_16k.zip",
+"download_size": 1526880402,
+"download_hash": {
+"sha1": "90DE4ACE6F552C4E821AFBEBF8CA64FB6BC46BD7",
+"sha256": "C90E9EE9938857CD24A1260D4E176EA691372410AB46A12FE233552E23E9C142"
+},
+"install_size": 2142412136,
+"release_date": "2026-04-01T04:42:40Z"
+}
+}
+},
+"Sol-AsteroidBelt-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-AsteroidBelt-4k",
+"name": "Sol Asteroid Belt Textures (4k)",
+"abstract": "Sol Textures for various Asteroid Belt Objects",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-AsteroidBelt",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-AsteroidBelt/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-AsteroidBelt"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-AsteroidBelt-8k"
+},
+{
+"name": "Sol-AsteroidBelt-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-AsteroidBelt/releases/download/V0.9.5-0/Sol_Asteroid-Belt_4k.zip",
+"download_size": 246587660,
+"download_hash": {
+"sha1": "0BBA3F57AD0F65BF76B98C6A3F386418993E1270",
+"sha256": "AAE06874E1BF891DDA7127765FA29CC8497A39526257DDEE5A97E26B09D5724E"
+},
+"install_size": 322084160,
+"release_date": "2026-04-01T04:10:42Z"
+}
+}
+},
+"Sol-AsteroidBelt-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-AsteroidBelt-8k",
+"name": "Sol Asteroid Belt Textures (8k)",
+"abstract": "Sol Textures for various Asteroid Belt Objects",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-AsteroidBelt",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-AsteroidBelt/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-AsteroidBelt"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-AsteroidBelt-4k"
+},
+{
+"name": "Sol-AsteroidBelt-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-AsteroidBelt/releases/download/V0.9.5-0/Sol_Asteroid-Belt_8k.zip",
+"download_size": 689066336,
+"download_hash": {
+"sha1": "371511645DAF79C192B78648C19CD946BEDE17F1",
+"sha256": "C5AB12866B814AAB31DE0082AC84BE8499506C3B9CC5CB766F50DA5D8811919F"
+},
+"install_size": 934452584,
+"release_date": "2026-04-01T03:57:53Z"
+}
+}
+},
+"Sol-UranusSystem-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-UranusSystem-8k",
+"name": "Sol Uranus System Textures (8k)",
+"abstract": "Sol-SaturnSystem",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-UranusSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-UranusSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-UranusSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-UranusSystem-4k"
+},
+{
+"name": "Sol-UranusSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-UranusSystem/releases/download/V0.9.5-0/Sol_Uranus-System_8k.zip",
+"download_size": 623136573,
+"download_hash": {
+"sha1": "09B035496742EDFF7FBD58F011CE8E6B2D34560E",
+"sha256": "F9962A002A3A94EB3B72A0EB936BE1715B122B5E1137E333A306459704C52EA6"
+},
+"install_size": 772500344,
+"release_date": "2026-04-01T03:56:25Z"
+}
+}
+},
+"Sol-Venus-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Venus-16k",
+"name": "Sol Venus Textures (16k)",
+"abstract": "Sol Textures for Venus",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Venus",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Venus/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Venus"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Venus-4k"
+},
+{
+"name": "Sol-Venus-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Venus/releases/download/V0.9.5-0/Sol_Venus_16k.zip",
+"download_size": 456120811,
+"download_hash": {
+"sha1": "C659EA6A56AD51EC559A33C60B45C0A983DE135B",
+"sha256": "9098CBF1427390837F2E4D7F5F5F9D7D49F8D35DC543BA03DBF15A8893C235AB"
+},
+"install_size": 594425946,
+"release_date": "2026-04-01T03:28:29Z"
+}
+}
+},
+"Sol-Venus-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Venus-4k",
+"name": "Sol Venus Textures (4k)",
+"abstract": "Sol Textures for Venus",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Venus",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Venus/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Venus"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Venus-8k"
+},
+{
+"name": "Sol-Venus-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Venus/releases/download/V0.9.5-0/Sol_Venus_4k.zip",
+"download_size": 32068721,
+"download_hash": {
+"sha1": "EDB95DC6D28266602BDA6FB410F0090B769BE52F",
+"sha256": "6C3CCC599CA3449F5F82327F8E60248EEFACA41BA44C52683CCD3CA0F4FF7D32"
+},
+"install_size": 49166426,
+"release_date": "2026-04-01T03:04:32Z"
+}
+}
+},
+"RSSOrigin2-Comets": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-Comets",
+"name": "RSS-Origin 2 - Comets",
+"abstract": "This pack includes 20 Comets and 1 Comet moon: 1P/Halley | 2P/Encke | 6P/d'Arrest | 8P/Tuttle | 9P/Tempel 1 | 10P/Tempel 2 | 19P/Borrelly | 21P/Giacobini–Zinner | 26P/Grigg–Skjellerup | 29P/Schwassmann–Wachmann 1 | 46P/Wirtanen | 67P/Churyumov–Gerasimenko | 81P/Wild 2 | 103P/Hartley 2 | 153P/Ikeya–Zhang | 311P/PanSTARRS, Companion of 311P.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-Comets",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-Comets/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-Comets/releases/download/v1.0.1/RSSOrigin2-Comets.zip",
+"download_size": 385002371,
+"download_hash": {
+"sha1": "191B30888235ADBBBFBBB1582D3F3977391E4119",
+"sha256": "C3464F96EBBE41F1D0BB8D7EF710B71DB4E1D12AB1916D673C0EAEC04D92E22B"
+},
+"install_size": 528477232,
+"release_date": "2026-05-28T16:09:42Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-Comets",
+"name": "RSS-Origin 2 - Comets",
+"abstract": "This pack includes 20 Comets and 1 Comet moon: 1P/Halley | 2P/Encke | 6P/d'Arrest | 8P/Tuttle | 9P/Tempel 1 | 10P/Tempel 2 | 19P/Borrelly | 21P/Giacobini–Zinner | 26P/Grigg–Skjellerup | 29P/Schwassmann–Wachmann 1 | 46P/Wirtanen | 67P/Churyumov–Gerasimenko | 81P/Wild 2 | 103P/Hartley 2 | 153P/Ikeya–Zhang | 311P/PanSTARRS, Companion of 311P.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-Comets",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-Comets/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-Comets/releases/download/v1.0.2/RSSOrigin2-Comets.zip",
+"download_size": 385002366,
+"download_hash": {
+"sha1": "A6AC9135DC2DB72E6596B887A38A2F02CE37B8CD",
+"sha256": "06F3054C5B0E8B984789E3A2C142B7D909FF826A5392B4B596DC97AEAC7D271B"
+},
+"install_size": 528477232,
+"release_date": "2026-06-03T09:48:10Z"
+}
+}
+},
+"RSSOrigin2-MarsCrossers": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MarsCrossers",
+"name": "RSS-Origin 2 - MarsCrossers",
+"abstract": "This pack includes 4 Mars-crossers and 4 moons: Atami, S/2005 (1139) 1 | Suomi, S/2020 (1656) 1 | Litva, S/2009 (2577) 1, S/2012 (2577) 1 | Braille.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MarsCrossers",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MarsCrossers/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MarsCrossers/releases/download/v1.0.1/RSSOrigin2-MarsCrossers.zip",
+"download_size": 248940228,
+"download_hash": {
+"sha1": "6EFF9599D34259975B65A87D70922E99D991EC1D",
+"sha256": "0CBE0213B51575252F8A814EC8438DBC90A118084018C76EB88054695EDDDB1B"
+},
+"install_size": 316980882,
+"release_date": "2026-05-28T16:08:01Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MarsCrossers",
+"name": "RSS-Origin 2 - MarsCrossers",
+"abstract": "This pack includes 4 Mars-crossers and 4 moons: Atami, S/2005 (1139) 1 | Suomi, S/2020 (1656) 1 | Litva, S/2009 (2577) 1, S/2012 (2577) 1 | Braille.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MarsCrossers",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MarsCrossers/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MarsCrossers/releases/download/v1.0.2/RSSOrigin2-MarsCrossers.zip",
+"download_size": 248940227,
+"download_hash": {
+"sha1": "26DE578263F36079BA992879D3A961C37186DA6C",
+"sha256": "AC844CC3682FCA680BF24B555A359CED52943E902802E425358824285874773A"
+},
+"install_size": 316980882,
+"release_date": "2026-06-03T09:37:13Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-NewHorizons": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-NewHorizons",
+"name": "RSS-Origin 2 - MissionPack-NewHorizons",
+"abstract": "This pack includes 6 objects for the New Horizons mission: APL | Arrokoth | Nix | Hydra | Kerberos | Styx.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NewHorizons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NewHorizons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-DwarfPlanets"
+},
+{
+"name": "RSSOrigin2-TransNeptunianObjects-SizeI"
+},
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NewHorizons/releases/download/v1.0.0/RSSOrigin2-MissionPack-NewHorizons.zip",
+"download_size": 120575422,
+"download_hash": {
+"sha1": "3B5CE3E4FA8D3159F585A9045EBFC317A13B88AA",
+"sha256": "FB7E05EE10521ECDC10C1AF98561F5E6DDC5B141C141168990D3618BA548F758"
+},
+"install_size": 179231438,
+"release_date": "2026-05-28T16:45:19Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-NewHorizons",
+"name": "RSS-Origin 2 - MissionPack-NewHorizons",
+"abstract": "This pack includes 6 objects for the New Horizons mission: APL | Arrokoth | Nix | Hydra | Kerberos | Styx.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NewHorizons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NewHorizons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-DwarfPlanets"
+},
+{
+"name": "RSSOrigin2-TransNeptunianObjects-SizeI"
+},
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-NewHorizons/releases/download/v1.0.1/RSSOrigin2-MissionPack-NewHorizons.zip",
+"download_size": 120575421,
+"download_hash": {
+"sha1": "6BA0DC9EEEA1A0D158DDB552FC24AB18411330C9",
+"sha256": "14B03909DEF1D4D5728CA29F13717543693FA18D8ED4BEE2740EE3AFBC16276D"
+},
+"install_size": 179231438,
+"release_date": "2026-06-03T12:19:36Z"
+}
+}
+},
+"Sol-Configs": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "1",
+"identifier": "Sol-Configs",
+"name": "Sol Configs",
+"abstract": "The next generation of RSS-Reborn",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Configs",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Configs/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "ModuleManager"
+},
+{
+"name": "Sol-Core"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Configs"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Configs/releases/download/V0.9.5-0/Sol_Configs-V0.9.5.zip",
+"download_size": 2484021,
+"download_hash": {
+"sha1": "8583E42E31AD5D75E85A9C4330B7C4E90A0EDE7D",
+"sha256": "C1D2058E0AF0BF9986C86766EE02BB8440197242A17F7D48F548695134771BC6"
+},
+"install_size": 4668669,
+"release_date": "2026-04-01T21:01:10Z"
+},
+"V0.9.5-1": {
+"spec_version": "v1.34",
+"identifier": "Sol-Configs",
+"name": "Sol Configs",
+"abstract": "The next generation of RSS-Reborn",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-1",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Configs",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Configs/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "ModuleManager"
+},
+{
+"name": "Sol-Core"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Configs"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Configs/releases/download/V0.9.5-1/Sol_Configs-V0.9.5-1.zip",
+"download_size": 2562349,
+"download_hash": {
+"sha1": "759710C04FC72BA843D72DC0DE0EB4ADF1BA46FF",
+"sha256": "738F7E74BDAAE986A96186B65C7D71AE17133C3570C5E22FC8ACD494CBA199FB"
+},
+"install_size": 4781612,
+"release_date": "2026-04-04T18:10:10Z"
+}
+}
+},
+"Sol-Sun-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Sun-8k",
+"name": "Sol Sun Textures (8k)",
+"abstract": "Textures for Sol's Sun.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Sun",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Sun/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Sun"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Sun-4k"
+},
+{
+"name": "Sol-Sun-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Sun/releases/download/V0.9.5-0/Sol_Sol_8k.zip",
+"download_size": 39201780,
+"download_hash": {
+"sha1": "639B9A50E3A4804455ACA148A73E0B4F9760276D",
+"sha256": "79B5E96CD15A63A7E82C8D3B5B61972957580C8C498BCD27E280EB81843517FA"
+},
+"install_size": 59413910,
+"release_date": "2026-04-01T03:00:42Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-DART-Hera": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-DART-Hera",
+"name": "RSS-Origin 2 - MissionPack-DART-Hera",
+"abstract": "This pack includes 2 objects for the DART and Hera mission: Didymos, Dimorphos.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DART-Hera",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DART-Hera/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DART-Hera/releases/download/v1.0.0/RSSOrigin2-MissionPack-DART-Hera.zip",
+"download_size": 24614779,
+"download_hash": {
+"sha1": "5BCFF7D120E9AA3C8379587C03C9AADBA9128D72",
+"sha256": "5EA66F941DC07F088B75122E2CD2AE07B0BA06C179E85A9A08061B74BB254622"
+},
+"install_size": 45077125,
+"release_date": "2026-05-28T16:43:41Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-DART-Hera",
+"name": "RSS-Origin 2 - MissionPack-DART-Hera",
+"abstract": "This pack includes 2 objects for the DART and Hera mission: Didymos, Dimorphos.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DART-Hera",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DART-Hera/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DART-Hera/releases/download/v1.0.1/RSSOrigin2-MissionPack-DART-Hera.zip",
+"download_size": 24614779,
+"download_hash": {
+"sha1": "927BFB9A24681E00DCD19617C631533963EEAB8B",
+"sha256": "8C5CDF86BE9D5FDE610F525CDC4E26AC3729A919E3C88A1CA6FD692DDD8A0B4C"
+},
+"install_size": 45077125,
+"release_date": "2026-06-03T12:17:52Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-DeepImpact": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-DeepImpact",
+"name": "RSS-Origin 2 - MissionPack-DeepImpact",
+"abstract": "This pack includes 2 objects for the Deep Impact mission: 9P/Tempel 1 | 103P/Hartley 2.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepImpact",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepImpact/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepImpact/releases/download/v1.0.0/RSSOrigin2-MissionPack-DeepImpact.zip",
+"download_size": 8280144,
+"download_hash": {
+"sha1": "48B5BD5545514915CDEC7F2B81A1AE157716CFAE",
+"sha256": "E138E2F7B2BCFBD0F410C3DC4F2B8EDC2F489EF1A09F0737D979AA0D6B596211"
+},
+"install_size": 11759502,
+"release_date": "2026-05-28T16:43:46Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-DeepImpact",
+"name": "RSS-Origin 2 - MissionPack-DeepImpact",
+"abstract": "This pack includes 2 objects for the Deep Impact mission: 9P/Tempel 1 | 103P/Hartley 2.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepImpact",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepImpact/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepImpact/releases/download/v1.0.1/RSSOrigin2-MissionPack-DeepImpact.zip",
+"download_size": 8280143,
+"download_hash": {
+"sha1": "6596E47053D9B70D859F814BAA003E0038AFD81E",
+"sha256": "EFA9E78EA3524E54F60AAB55BEE07789A55CFF70A64AC66378C85A91E63DCD00"
+},
+"install_size": 11759502,
+"release_date": "2026-06-03T12:17:52Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Tianwen2": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Tianwen2",
+"name": "RSS-Origin 2 - MissionPack-Tianwen2",
+"abstract": "This pack includes 3 objects for the Tianwen-2 mission: Kamoʻoalewa | 311P/PanSTARRS, Companion of 311P.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Tianwen2",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Tianwen2/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+},
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Tianwen2/releases/download/v1.0.0/RSSOrigin2-MissionPack-Tianwen2.zip",
+"download_size": 36021529,
+"download_hash": {
+"sha1": "8972F439978BB1FA6E3FACA5CC511BBB4B489306",
+"sha256": "6EAA35F151203448B81FCB213CC88A65DB480447177DB1F9C579E2309A1CB63F"
+},
+"install_size": 45476892,
+"release_date": "2026-05-28T16:45:20Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Tianwen2",
+"name": "RSS-Origin 2 - MissionPack-Tianwen2",
+"abstract": "This pack includes 3 objects for the Tianwen-2 mission: Kamoʻoalewa | 311P/PanSTARRS, Companion of 311P.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Tianwen2",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Tianwen2/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+},
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Tianwen2/releases/download/v1.0.1/RSSOrigin2-MissionPack-Tianwen2.zip",
+"download_size": 36021528,
+"download_hash": {
+"sha1": "035D31DE0D756733AC2CDC25AAFB1E31D95763DA",
+"sha256": "0DFE6B5C278924AD948480D3A1F5722096BADDDB107C040D7329ECAD54525F7E"
+},
+"install_size": 45476892,
+"release_date": "2026-06-03T12:19:19Z"
+}
+}
+},
+"Sol-MarsSystem-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-MarsSystem-4k",
+"name": "Sol Mars System Textures (4k)",
+"abstract": "Sol Textures for Mars, Phobos and Deimos.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-MarsSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-MarsSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-MarsSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-MarsSystem-8k"
+},
+{
+"name": "Sol-MarsSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-MarsSystem/releases/download/V0.9.5-0/Sol_Mars-System_4k.zip",
+"download_size": 186808790,
+"download_hash": {
+"sha1": "185F0BA5B1BEB9986DB2B8E2C14A32D36E21D5F7",
+"sha256": "2502C7824F9CFEB115A468BA83B0453CFFA6CB09F400BD4F02A081BC97CC1F2F"
+},
+"install_size": 229987800,
+"release_date": "2026-04-01T21:04:44Z"
+}
+}
+},
+"Sol-MarsSystem-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-MarsSystem-8k",
+"name": "Sol Mars System Textures (8k)",
+"abstract": "Sol Textures for Mars, Phobos and Deimos.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-MarsSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-MarsSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-MarsSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-MarsSystem-4k"
+},
+{
+"name": "Sol-MarsSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-MarsSystem/releases/download/V0.9.5-0/Sol_Mars-System_8k.zip",
+"download_size": 419769785,
+"download_hash": {
+"sha1": "A162321E9D82B33CEBE28294D717D8A999D7BE40",
+"sha256": "5392B80C3187881FA6F0FB21367FDE6D6A672E1A0FCA3CCB5D2DD918DCB2FCA9"
+},
+"install_size": 540366296,
+"release_date": "2026-04-01T21:07:44Z"
+}
+}
+},
+"ParallaxContinued-KTL": {
+"module_version": {
+"v1.0.31": {
+"spec_version": "1",
+"identifier": "ParallaxContinued-KTL",
+"name": "Parallax Continued (KSP Texture Loader Fork)",
+"abstract": "A visual mod which overhauls the planet shaders and adds grass, forest, and other types of surface clutter (fork by KSP Texture Loader team)\n",
+"author": "Linx",
+"version": "v1.0.31",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/Phantomical/KSPTextureLoader",
+"repository": "https://github.com/Phantomical/KSPTextureLoader",
+"bugtracker": "https://github.com/Phantomical/KSPTextureLoader/issues",
+"manual": "https://github.com/Phantomical/KSPTextureLoader/wiki"
+},
+"tags": [
+"plugin",
+"library",
+"graphics"
+],
+"provides": [
+"ParallaxContinued"
+],
+"depends": [
+{
+"name": "KSPBurst"
+},
+{
+"name": "KSPTextureLoader"
+},
+{
+"name": "ParallaxContinued-Terrain-Textures"
+},
+{
+"name": "ModuleManager"
+},
+{
+"name": "Kopernicus"
+},
+{
+"name": "ParallaxContinued-Planet-Textures"
+},
+{
+"name": "ParallaxContinued-Scatter-Textures"
+}
+],
+"recommends": [
+{
+"name": "Deferred"
+}
+],
+"conflicts": [
+{
+"name": "Parallax-StockTextures"
+},
+{
+"name": "Parallax-StockScatterTextures"
+},
+{
+"name": "ParallaxContinued"
+},
+{
+"name": "Parallax"
+}
+],
+"install": [
+{
+"file": "GameData/ParallaxContinued"
+}
+],
+"download": "https://github.com/Phantomical/KSPTextureLoader/releases/download/v1.0.31/ParallaxContinued-Full.zip",
+"download_size": 24866355,
+"download_hash": {
+"sha1": "92F84D3C77AAFCF6B8B4ED8D8873C4FA89BEE1A5",
+"sha256": "FD7B0DABD97DE1FBD6183A782AC21EAA4D1D15BDCA5CCEF4FD5EC8E501FDE9D3"
+},
+"install_size": 25935513,
+"release_date": "2026-04-03T02:40:04Z"
+},
+"v1.0.32": {
+"spec_version": "v1.34",
+"identifier": "ParallaxContinued-KTL",
+"name": "Parallax Continued (KSP Texture Loader Fork)",
+"abstract": "A visual mod which overhauls the planet shaders and adds grass, forest, and other types of surface clutter (fork by KSP Texture Loader team)\n",
+"author": "Linx",
+"version": "v1.0.32",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/Phantomical/KSPTextureLoader",
+"repository": "https://github.com/Phantomical/KSPTextureLoader",
+"bugtracker": "https://github.com/Phantomical/KSPTextureLoader/issues",
+"manual": "https://github.com/Phantomical/KSPTextureLoader/wiki"
+},
+"tags": [
+"plugin",
+"library",
+"graphics"
+],
+"provides": [
+"ParallaxContinued"
+],
+"depends": [
+{
+"name": "ModuleManager"
+},
+{
+"name": "Kopernicus"
+},
+{
+"name": "KSPBurst"
+},
+{
+"name": "ParallaxContinued-Terrain-Textures"
+},
+{
+"name": "ParallaxContinued-Scatter-Textures"
+},
+{
+"name": "ParallaxContinued-Planet-Textures"
+},
+{
+"name": "KSPTextureLoader"
+}
+],
+"recommends": [
+{
+"name": "Deferred"
+}
+],
+"conflicts": [
+{
+"name": "ParallaxContinued"
+},
+{
+"name": "Parallax"
+},
+{
+"name": "Parallax-StockTextures"
+},
+{
+"name": "Parallax-StockScatterTextures"
+}
+],
+"install": [
+{
+"file": "GameData/ParallaxContinued"
+}
+],
+"download": "https://github.com/Phantomical/KSPTextureLoader/releases/download/v1.0.32/ParallaxContinued-Full.zip",
+"download_size": 24866355,
+"download_hash": {
+"sha1": "92F84D3C77AAFCF6B8B4ED8D8873C4FA89BEE1A5",
+"sha256": "FD7B0DABD97DE1FBD6183A782AC21EAA4D1D15BDCA5CCEF4FD5EC8E501FDE9D3"
+},
+"install_size": 25935513,
+"release_date": "2026-04-10T01:43:50Z"
+},
+"v1.0.33": {
+"spec_version": "v1.34",
+"identifier": "ParallaxContinued-KTL",
+"name": "Parallax Continued (KSP Texture Loader Fork)",
+"abstract": "A visual mod which overhauls the planet shaders and adds grass, forest, and other types of surface clutter (fork by KSP Texture Loader team)\n",
+"author": "Linx",
+"version": "v1.0.33",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/Phantomical/KSPTextureLoader",
+"repository": "https://github.com/Phantomical/KSPTextureLoader",
+"bugtracker": "https://github.com/Phantomical/KSPTextureLoader/issues",
+"manual": "https://github.com/Phantomical/KSPTextureLoader/wiki"
+},
+"tags": [
+"plugin",
+"library",
+"graphics"
+],
+"provides": [
+"ParallaxContinued"
+],
+"depends": [
+{
+"name": "ModuleManager"
+},
+{
+"name": "Kopernicus"
+},
+{
+"name": "KSPBurst"
+},
+{
+"name": "ParallaxContinued-Terrain-Textures"
+},
+{
+"name": "ParallaxContinued-Scatter-Textures"
+},
+{
+"name": "ParallaxContinued-Planet-Textures"
+},
+{
+"name": "KSPTextureLoader"
+}
+],
+"recommends": [
+{
+"name": "Deferred"
+}
+],
+"conflicts": [
+{
+"name": "ParallaxContinued"
+},
+{
+"name": "Parallax"
+},
+{
+"name": "Parallax-StockTextures"
+},
+{
+"name": "Parallax-StockScatterTextures"
+}
+],
+"install": [
+{
+"file": "GameData/ParallaxContinued"
+}
+],
+"download": "https://github.com/Phantomical/KSPTextureLoader/releases/download/v1.0.33/ParallaxContinued-Full.zip",
+"download_size": 24864548,
+"download_hash": {
+"sha1": "B4372E5210B2B38B07A3C01E07C2DD0A400E407A",
+"sha256": "127E53137CFFBA24B810F935CC8935F552876E1F20F39F678EA13ED1EDB1B3A8"
+},
+"install_size": 25930957,
+"release_date": "2026-04-24T20:36:10Z"
+},
+"v1.0.34": {
+"spec_version": "v1.34",
+"identifier": "ParallaxContinued-KTL",
+"name": "Parallax Continued (KSP Texture Loader Fork)",
+"abstract": "A visual mod which overhauls the planet shaders and adds grass, forest, and other types of surface clutter (fork by KSP Texture Loader team)\n",
+"author": "Linx",
+"version": "v1.0.34",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/Phantomical/KSPTextureLoader",
+"repository": "https://github.com/Phantomical/KSPTextureLoader",
+"bugtracker": "https://github.com/Phantomical/KSPTextureLoader/issues",
+"manual": "https://github.com/Phantomical/KSPTextureLoader/wiki"
+},
+"tags": [
+"plugin",
+"library",
+"graphics"
+],
+"provides": [
+"ParallaxContinued"
+],
+"depends": [
+{
+"name": "ModuleManager"
+},
+{
+"name": "Kopernicus"
+},
+{
+"name": "KSPBurst"
+},
+{
+"name": "ParallaxContinued-Terrain-Textures"
+},
+{
+"name": "ParallaxContinued-Scatter-Textures"
+},
+{
+"name": "ParallaxContinued-Planet-Textures"
+},
+{
+"name": "KSPTextureLoader"
+}
+],
+"recommends": [
+{
+"name": "Deferred"
+}
+],
+"conflicts": [
+{
+"name": "ParallaxContinued"
+},
+{
+"name": "Parallax"
+},
+{
+"name": "Parallax-StockTextures"
+},
+{
+"name": "Parallax-StockScatterTextures"
+}
+],
+"install": [
+{
+"file": "GameData/ParallaxContinued"
+}
+],
+"download": "https://github.com/Phantomical/KSPTextureLoader/releases/download/v1.0.34/ParallaxContinued-Full.zip",
+"download_size": 24864548,
+"download_hash": {
+"sha1": "B4372E5210B2B38B07A3C01E07C2DD0A400E407A",
+"sha256": "127E53137CFFBA24B810F935CC8935F552876E1F20F39F678EA13ED1EDB1B3A8"
+},
+"install_size": 25930957,
+"release_date": "2026-05-19T02:20:29Z"
+},
+"v1.0.35": {
+"spec_version": "v1.34",
+"identifier": "ParallaxContinued-KTL",
+"name": "Parallax Continued (KSP Texture Loader Fork)",
+"abstract": "A visual mod which overhauls the planet shaders and adds grass, forest, and other types of surface clutter (fork by KSP Texture Loader team)\n",
+"author": "Linx",
+"version": "v1.0.35",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/Phantomical/KSPTextureLoader",
+"repository": "https://github.com/Phantomical/KSPTextureLoader",
+"bugtracker": "https://github.com/Phantomical/KSPTextureLoader/issues",
+"manual": "https://github.com/Phantomical/KSPTextureLoader/wiki"
+},
+"tags": [
+"plugin",
+"library",
+"graphics"
+],
+"provides": [
+"ParallaxContinued"
+],
+"depends": [
+{
+"name": "ModuleManager"
+},
+{
+"name": "Kopernicus"
+},
+{
+"name": "KSPBurst"
+},
+{
+"name": "ParallaxContinued-Terrain-Textures"
+},
+{
+"name": "ParallaxContinued-Scatter-Textures"
+},
+{
+"name": "ParallaxContinued-Planet-Textures"
+},
+{
+"name": "KSPTextureLoader"
+}
+],
+"recommends": [
+{
+"name": "Deferred"
+}
+],
+"conflicts": [
+{
+"name": "ParallaxContinued"
+},
+{
+"name": "Parallax"
+},
+{
+"name": "Parallax-StockTextures"
+},
+{
+"name": "Parallax-StockScatterTextures"
+}
+],
+"install": [
+{
+"file": "GameData/ParallaxContinued"
+}
+],
+"download": "https://github.com/Phantomical/KSPTextureLoader/releases/download/v1.0.35/ParallaxContinued-Full.zip",
+"download_size": 24864548,
+"download_hash": {
+"sha1": "B4372E5210B2B38B07A3C01E07C2DD0A400E407A",
+"sha256": "127E53137CFFBA24B810F935CC8935F552876E1F20F39F678EA13ED1EDB1B3A8"
+},
+"install_size": 25930957,
+"release_date": "2026-06-05T01:03:09Z"
+}
+}
+},
+"RSSOrigin2-MainBeltAsteroids-SizeI": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MainBeltAsteroids-SizeI",
+"name": "RSS-Origin 2 - MainBeltAsteroids-SizeI",
+"abstract": "This pack includes 18 MBAs with diameter < 100km and 6 moons: Lutetia | Virginia | Antiope, S/2000 (90) 1 | Rosa | Ida, Dactyl | Mathilde | Nike | Gaspra | Masursky | Šteins | Balam, S/2002 (3749) 1, S/2007 (3749) 1 | Annefrank | Bro | Scottmanley | Donaldjohanson | APL | Dinkinesh, Selam | 2006 VW139, S/2011 (300163) 1.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids/releases/download/v1.0.1/RSSOrigin2-MainBeltAsteroids-SizeI.zip",
+"download_size": 547156522,
+"download_hash": {
+"sha1": "FD8FE7BEB1FE48F7C7BFED5591248E19C3E33E1E",
+"sha256": "F1B8FE5EAE4B15F3B30BBA6DA9EC1334345C7C012550A8819564F40F4883AA88"
+},
+"install_size": 743164491,
+"release_date": "2026-05-28T16:14:21Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MainBeltAsteroids-SizeI",
+"name": "RSS-Origin 2 - MainBeltAsteroids-SizeI",
+"abstract": "This pack includes 18 MBAs with diameter < 100km and 6 moons: Lutetia | Virginia | Antiope, S/2000 (90) 1 | Rosa | Ida, Dactyl | Mathilde | Nike | Gaspra | Masursky | Šteins | Balam, S/2002 (3749) 1, S/2007 (3749) 1 | Annefrank | Bro | Scottmanley | Donaldjohanson | APL | Dinkinesh, Selam | 2006 VW139, S/2011 (300163) 1.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids/releases/download/v1.0.2/RSSOrigin2-MainBeltAsteroids-SizeI.zip",
+"download_size": 547156511,
+"download_hash": {
+"sha1": "FB22CDD877C5C320463A82528D7BC4292F8897F8",
+"sha256": "F5C8D56C0A0E61BE351BF536ADDE36A013FE00F6570E2E1DB53176ED4413905B"
+},
+"install_size": 743164491,
+"release_date": "2026-06-03T09:40:45Z"
+}
+}
+},
+"RSSOrigin2-NeptuneMoons": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-NeptuneMoons",
+"name": "RSS-Origin 2 - NeptuneMoons",
+"abstract": "This pack includes 13 extra moons for Neptune: Nereid | Naiad | Thalassa | Despina | Galatea | Larissa | Proteus | Halimede | Psamathe | Sao | Laomedeia | Neso | Hippocamp.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-NeptuneMoons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-NeptuneMoons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-NeptuneMoons/releases/download/v1.0.1/RSSOrigin2-NeptuneMoons.zip",
+"download_size": 463110148,
+"download_hash": {
+"sha1": "60AD96A4F8DB8914515AC3954464D69409C90A1A",
+"sha256": "83A22FB095CDF89A96232EA7D2DEF8D3ABDC9CB2C133072DA07EFBE7DD002E5D"
+},
+"install_size": 613942386,
+"release_date": "2026-05-28T15:17:17Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-NeptuneMoons",
+"name": "RSS-Origin 2 - NeptuneMoons",
+"abstract": "This pack includes 13 extra moons for Neptune: Nereid | Naiad | Thalassa | Despina | Galatea | Larissa | Proteus | Halimede | Psamathe | Sao | Laomedeia | Neso | Hippocamp.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-NeptuneMoons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-NeptuneMoons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-NeptuneMoons/releases/download/v1.0.2/RSSOrigin2-NeptuneMoons.zip",
+"download_size": 463110138,
+"download_hash": {
+"sha1": "E6527D5B60B6B419F12435694A48C46270998651",
+"sha256": "757F62927E4474295350855CC9E930AEB0C7C3A44BDE731612FF9CAEEB0BA2EA"
+},
+"install_size": 613942386,
+"release_date": "2026-06-03T09:28:55Z"
+}
+}
+},
+"RSSOrigin2-UranusMoons": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-UranusMoons",
+"name": "RSS-Origin 2 - UranusMoons",
+"abstract": "This pack includes 18 extra moons for Uranus: Cordelia | Ophelia | Bianca | Cressida | Desdemona | Juliet | Portia | Rosalind | Belinda | Puck | Caliban | Sycorax | Francisco | Margaret | Ferdinand | Perdita | Mab | Cupid.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-UranusMoons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-UranusMoons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-UranusMoons/releases/download/v1.0.1/RSSOrigin2-UranusMoons.zip",
+"download_size": 463739216,
+"download_hash": {
+"sha1": "23AC021B00420FA30ED552B28637333EDCEC0154",
+"sha256": "4D976A3F66EE7A3A779BD873F6597B7F7A05199D42C72CE2F1F730E776287189"
+},
+"install_size": 604892105,
+"release_date": "2026-05-28T15:17:17Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-UranusMoons",
+"name": "RSS-Origin 2 - UranusMoons",
+"abstract": "This pack includes 18 extra moons for Uranus: Cordelia | Ophelia | Bianca | Cressida | Desdemona | Juliet | Portia | Rosalind | Belinda | Puck | Caliban | Sycorax | Francisco | Margaret | Ferdinand | Perdita | Mab | Cupid.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-UranusMoons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-UranusMoons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-UranusMoons/releases/download/v1.0.2/RSSOrigin2-UranusMoons.zip",
+"download_size": 463739204,
+"download_hash": {
+"sha1": "AE0A94FCFFE20DDA18A9AA83E737BDDB6EE2C9AE",
+"sha256": "4159138AC8D714C3C6B3368EFACE951946BB9FC51DDE149D9EC878AF3C017302"
+},
+"install_size": 604892105,
+"release_date": "2026-06-03T09:28:55Z"
+}
+}
+},
+"Sol-SaturnSystem-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-SaturnSystem-4k",
+"name": "Sol Saturn System Textures (4k)",
+"abstract": "Sol Textures for the entire Saturn system!",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-SaturnSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-SaturnSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-SaturnSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-SaturnSystem-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-SaturnSystem/releases/download/V0.9.5-0/Sol_Saturn-System_4k.zip",
+"download_size": 380798543,
+"download_hash": {
+"sha1": "90461E1D07C99D3690BB5D01E74F09B18AD876DC",
+"sha256": "536227B7ED021F68419037F6B11C147B79A6B5D7F11C9F75C0A93E7D57A04175"
+},
+"install_size": 483568352,
+"release_date": "2026-04-01T03:26:09Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Galileo": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Galileo",
+"name": "RSS-Origin 2 - MissionPack-Galileo",
+"abstract": "This pack includes 7 objects for the Galileo mission: Ida, Dactyl | Gaspra | Amalthea | Thebe | Adrastea | Metis.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Galileo",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Galileo/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-JupiterMoons"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Galileo/releases/download/v1.0.0/RSSOrigin2-MissionPack-Galileo.zip",
+"download_size": 167379097,
+"download_hash": {
+"sha1": "2F83FAF309D6F8EF6DCEC8DD7123FF6FB374ADFA",
+"sha256": "41555EBDD091AC556B875BBB560E7DE9E4C482B551CC9D31A3DF4D641FD7E6D6"
+},
+"install_size": 244133257,
+"release_date": "2026-05-28T16:44:31Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Galileo",
+"name": "RSS-Origin 2 - MissionPack-Galileo",
+"abstract": "This pack includes 7 objects for the Galileo mission: Ida, Dactyl | Gaspra | Amalthea | Thebe | Adrastea | Metis.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Galileo",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Galileo/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-JupiterMoons"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Galileo/releases/download/v1.0.1/RSSOrigin2-MissionPack-Galileo.zip",
+"download_size": 167379096,
+"download_hash": {
+"sha1": "07F85F5D19E8A0669051297C7DC4F7E7498B866E",
+"sha256": "9C7F5229F6D7CFA6AAFF28A617A630D5DB89F2826EF472E39EDCD4E1F5C53DD5"
+},
+"install_size": 244133257,
+"release_date": "2026-06-03T12:19:26Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Hayabusa2": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Hayabusa2",
+"name": "RSS-Origin 2 - MissionPack-Hayabusa2",
+"abstract": "This pack includes 1 object for the Hayabusa2 mission: Ryugu.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa2",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa2/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa2/releases/download/v1.0.0/RSSOrigin2-MissionPack-Hayabusa2.zip",
+"download_size": 2506558,
+"download_hash": {
+"sha1": "FE02C837C028587C3EB68A07072593F615439ADC",
+"sha256": "D3EE161D80B7B0FC0D05978F82E145CD47BF181A3DB29683E32FE363273305CF"
+},
+"install_size": 3469330,
+"release_date": "2026-05-28T16:44:25Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Hayabusa2",
+"name": "RSS-Origin 2 - MissionPack-Hayabusa2",
+"abstract": "This pack includes 1 object for the Hayabusa2 mission: Ryugu.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa2",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa2/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Hayabusa2/releases/download/v1.0.1/RSSOrigin2-MissionPack-Hayabusa2.zip",
+"download_size": 2506558,
+"download_hash": {
+"sha1": "1C22D55CD892D8EA5C10660992833D9AA6B48340",
+"sha256": "8B5AC52E756798E22F4E979CC7584DF2EAB9ED5009C72CCFE4033905462554EA"
+},
+"install_size": 3469330,
+"release_date": "2026-06-03T12:18:22Z"
+}
+}
+},
+"Sol-Core": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Core",
+"name": "Sol Core",
+"abstract": "Core Textures and Sounds for Sol",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Core",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Core/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"RealSolarSystem",
+"RP-1-ExpressInstall-Graphics"
+],
+"depends": [
+{
+"min_version": "2:release-1.12.1-242",
+"name": "Kopernicus"
+},
+{
+"name": "KSPBurst"
+},
+{
+"name": "Harmony2"
+},
+{
+"min_version": "1.0.3",
+"name": "ParallaxContinued"
+},
+{
+"name": "KSPTextureLoader"
+},
+{
+"min_version": "1.6.1",
+"name": "AdvancedPQSTools"
+},
+{
+"name": "BurstPQS"
+},
+{
+"name": "KSPCommunityFixes"
+},
+{
+"name": "KSCSwitcher"
+},
+{
+"name": "TextureReplacer"
+},
+{
+"name": "Sol-Configs"
+},
+{
+"name": "Sol-Visuals"
+},
+{
+"name": "Sol-Launchsites",
+"choice_help_text": "Choose a launch sites texture resolution."
+},
+{
+"name": "Sol-Sun",
+"choice_help_text": "Choose a Sun texture resolution."
+},
+{
+"name": "Sol-Mercury",
+"choice_help_text": "Choose a Mercury texture resolution."
+},
+{
+"name": "Sol-Venus",
+"choice_help_text": "Choose a Venus texture resolution."
+},
+{
+"name": "Sol-EarthSystem",
+"choice_help_text": "Choose an Earth system texture resolution."
+},
+{
+"name": "Sol-MarsSystem",
+"choice_help_text": "Choose a Mars system texture resolution."
+},
+{
+"name": "Sol-JupiterSystem",
+"choice_help_text": "Choose a Jupiter system texture resolution."
+},
+{
+"name": "Sol-SaturnSystem",
+"choice_help_text": "Choose a Saturn system texture resolution."
+},
+{
+"name": "Sol-UranusSystem",
+"choice_help_text": "Choose a Uranus system texture resolution."
+},
+{
+"name": "Sol-NeptuneSystem",
+"choice_help_text": "Choose a Neptune system texture resolution."
+},
+{
+"name": "Sol-AsteroidBelt",
+"choice_help_text": "Choose an asteroid belt texture resolution."
+},
+{
+"name": "Sol-KuiperBelt",
+"choice_help_text": "Choose a Kuiper Belt texture resolution."
+}
+],
+"conflicts": [
+{
+"name": "RealSolarSystem"
+},
+{
+"name": "RP-1-ExpressInstall-Graphics-High"
+},
+{
+"name": "RP-1-ExpressInstall-Graphics-Medium"
+},
+{
+"name": "RP-1-ExpressInstall-Graphics-Low"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Core/releases/download/V0.9.5-0/Sol_Core-V0.9.5.zip",
+"download_size": 160349494,
+"download_hash": {
+"sha1": "E06FED02CFBDA2C7B06713CCFF78834E871CD1D0",
+"sha256": "9F5A8B7164DE76B1DA2C81D6D5212DD2841DBE17002AC1FEA2FF947B8AE3FA0D"
+},
+"install_size": 206306887,
+"release_date": "2026-04-01T02:04:44Z"
+}
+}
+},
+"Sol-EarthSystem-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-EarthSystem-16k",
+"name": "Sol Earth System Textures (16k)",
+"abstract": "Sol Textures for Earth and Luna.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-EarthSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-EarthSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-EarthSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-EarthSystem-4k"
+},
+{
+"name": "Sol-EarthSystem-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-EarthSystem/releases/download/V0.9.5-0/Sol_Earth-System_16k.zip",
+"download_size": 1924926249,
+"download_hash": {
+"sha1": "DFB2FB947655CC383673E5667DA3E58DC6D18502",
+"sha256": "599E9663C1754FE3D4ECD662E507DB1470611CD79A42D93288E209CDDC8F4F1F"
+},
+"install_size": 4021326287,
+"release_date": "2026-04-01T04:15:48Z"
+}
+}
+},
+"Sol-Venus-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Venus-8k",
+"name": "Sol Venus Textures (8k)",
+"abstract": "Sol Textures for Venus",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Venus",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Venus/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Venus"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Venus-4k"
+},
+{
+"name": "Sol-Venus-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Venus/releases/download/V0.9.5-0/Sol_Venus_8k.zip",
+"download_size": 120906324,
+"download_hash": {
+"sha1": "EBE36091BB44E859E8D21DE7A4490D066EFD7428",
+"sha256": "0B14C299B24939A51B9F2BD37A99E37124A3EB19F6A30F7AC50D4837BB2693E5"
+},
+"install_size": 158218330,
+"release_date": "2026-04-01T03:06:32Z"
+}
+}
+},
+"Sol-Visuals": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "1",
+"identifier": "Sol-Visuals",
+"name": "Sol Visuals",
+"abstract": "EVE & Scatterer configs for Sol",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Visuals",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Visuals/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"EnvironmentalVisualEnhancements-Config",
+"EnvironmentalVisualEnhancements-Config-sol",
+"Scatterer-config",
+"Scatterer-sunflare"
+],
+"depends": [
+{
+"name": "Scatterer"
+},
+{
+"name": "ModuleManager"
+},
+{
+"name": "EnvironmentalVisualEnhancements"
+},
+{
+"name": "Sol-Core"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Visuals"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Visuals/releases/download/V0.9.5-0/Sol_Visuals-0.9.5.zip",
+"download_size": 40956,
+"download_hash": {
+"sha1": "4CAADDDEECA87EC5FE374177D4D1381611FB39BA",
+"sha256": "37F800FA0BBABE90466F2E476951E70E78F3533CFA38A0C0013F919C2EF94196"
+},
+"install_size": 120837,
+"release_date": "2026-04-01T18:26:52Z"
+},
+"V0.9.5-1": {
+"spec_version": "v1.34",
+"identifier": "Sol-Visuals",
+"name": "Sol Visuals",
+"abstract": "EVE & Scatterer configs for Sol",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-1",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Visuals",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Visuals/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"EnvironmentalVisualEnhancements-Config",
+"EnvironmentalVisualEnhancements-Config-sol",
+"Scatterer-config",
+"Scatterer-sunflare"
+],
+"depends": [
+{
+"name": "ModuleManager"
+},
+{
+"name": "Sol-Core"
+},
+{
+"name": "EnvironmentalVisualEnhancements"
+},
+{
+"name": "Scatterer"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Visuals"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Visuals/releases/download/V0.9.5-1/Sol_Visuals-V0.9.5-1.zip",
+"download_size": 47811,
+"download_hash": {
+"sha1": "C0B6D2DF26A6A641172E6283A203DCA29FEFC8AA",
+"sha256": "57065E63A3482441D1E9344A95E5FBCB540104832229A321C7746664754F2180"
+},
+"install_size": 134490,
+"release_date": "2026-04-04T17:26:49Z"
+}
+}
+},
+"RSSOrigin2-InterstellarObjects": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-InterstellarObjects",
+"name": "RSS-Origin 2 - InterstellarObjects",
+"abstract": "This pack includes 3 Interstellar objects: 1I/ʻOumuamua | 2I/Borisov | 3I/ATLAS.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-InterstellarObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-InterstellarObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-InterstellarObjects/releases/download/v1.0.1/RSSOrigin2-InterstellarObjects.zip",
+"download_size": 59246848,
+"download_hash": {
+"sha1": "0EC2135E28AC0061114560B6BDF12E325E91095B",
+"sha256": "47D15C54BD2B63902CA8BE481EB8BC0A5C703CEC9ABB541E96AC5F12B87AEE55"
+},
+"install_size": 81640792,
+"release_date": "2026-05-28T15:44:01Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-InterstellarObjects",
+"name": "RSS-Origin 2 - InterstellarObjects",
+"abstract": "This pack includes 3 Interstellar objects: 1I/ʻOumuamua | 2I/Borisov | 3I/ATLAS.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-InterstellarObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-InterstellarObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-InterstellarObjects/releases/download/v1.0.2/RSSOrigin2-InterstellarObjects.zip",
+"download_size": 59246845,
+"download_hash": {
+"sha1": "6DE85E24D17A3F0CAAD45251C1876830F2C5C8AE",
+"sha256": "0F6DA4E326A285E0BDA7CB2C728AC4EFBCAD79458208A8ABC1585E13900D96DA"
+},
+"install_size": 81640792,
+"release_date": "2026-06-03T09:39:30Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Stardust": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Stardust",
+"name": "RSS-Origin 2 - MissionPack-Stardust",
+"abstract": "This pack includes 3 objects for the Stardust mission: Annefrank | 9P/Tempel 1 | 81P/Wild 2.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Stardust",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Stardust/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+},
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Stardust/releases/download/v1.0.0/RSSOrigin2-MissionPack-Stardust.zip",
+"download_size": 32111118,
+"download_hash": {
+"sha1": "7CA0C5E30C62011BF747C9B8C2F0AB553D4FDAF8",
+"sha256": "E1259B6B11C392EBA759C25DA3FC1A369BBF2383E87CE227B5C7D7E349376BB8"
+},
+"install_size": 41260051,
+"release_date": "2026-05-28T16:45:18Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Stardust",
+"name": "RSS-Origin 2 - MissionPack-Stardust",
+"abstract": "This pack includes 3 objects for the Stardust mission: Annefrank | 9P/Tempel 1 | 81P/Wild 2.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Stardust",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Stardust/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+},
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Stardust/releases/download/v1.0.1/RSSOrigin2-MissionPack-Stardust.zip",
+"download_size": 32111117,
+"download_hash": {
+"sha1": "CC8EB87E5E7EA5EF6ADB3C54F5F30FE4A8325E20",
+"sha256": "4585137AC4A53C9C559C4DC5DF067CBC823C135D8D089BC917EE3C0195C3933A"
+},
+"install_size": 41260051,
+"release_date": "2026-06-03T12:19:14Z"
+}
+}
+},
+"Sol-KuiperBelt-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-KuiperBelt-16k",
+"name": "Sol Kuiper Belt Textures (16k)",
+"abstract": "Sol Textures for the Pluto System and Arrokoth.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-KuiperBelt",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-KuiperBelt/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-KuiperBelt"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-KuiperBelt-4k"
+},
+{
+"name": "Sol-KuiperBelt-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-KuiperBelt/releases/download/V0.9.5-0/Sol_Kuiper-Belt_16k.zip",
+"download_size": 1035274970,
+"download_hash": {
+"sha1": "A6986F2EC63A0CE52A574D0DBEFFE7899EB8A817",
+"sha256": "769B797AA6B07E89D35F70B865D501CCFD959C44AAFD970D58BE001AC041E2A7"
+},
+"install_size": 1463704614,
+"release_date": "2026-04-01T04:27:09Z"
+}
+}
+},
+"RSSOrigin2-JupiterMoons": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-JupiterMoons",
+"name": "RSS-Origin 2 - JupiterMoons",
+"abstract": "This pack includes 10 extra moons for Jupiter: Amalthea | Himalia | Elara | Pasiphae | Carme | Ananke | Thebe | Adrastea | Metis | Themisto.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-JupiterMoons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-JupiterMoons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-JupiterMoons/releases/download/v1.0.1/RSSOrigin2-JupiterMoons.zip",
+"download_size": 291913194,
+"download_hash": {
+"sha1": "9E7449D6917C66AA5C88716D249B62B0A890168F",
+"sha256": "2D106C88484ED46FDDB1EDBA980E3F57CEF02276E3E635E5EB3F4F3C4112D1D6"
+},
+"install_size": 400422106,
+"release_date": "2026-05-28T14:52:01Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-JupiterMoons",
+"name": "RSS-Origin 2 - JupiterMoons",
+"abstract": "This pack includes 10 extra moons for Jupiter: Amalthea | Himalia | Elara | Pasiphae | Carme | Ananke | Thebe | Adrastea | Metis | Themisto.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-JupiterMoons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-JupiterMoons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-JupiterMoons/releases/download/v1.0.2/RSSOrigin2-JupiterMoons.zip",
+"download_size": 291913190,
+"download_hash": {
+"sha1": "8B03B7F399154D1F9C97236FA514181C6D3C8014",
+"sha256": "2128EC7D9516CBC2D19991F0B539A859C3D6141D915EA0F8CF9271925925A713"
+},
+"install_size": 400422106,
+"release_date": "2026-06-03T09:26:18Z"
+}
+}
+},
+"RSSOrigin2-MainBeltAsteroids-SizeII": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MainBeltAsteroids-SizeII",
+"name": "RSS-Origin 2 - MainBeltAsteroids-SizeII",
+"abstract": "This pack includes 14 MBAs with diameter > 100km and 15 moons: Pallas | Juno | Hygiea | Psyche | Kalliope, Linus | Eugenia, Petit-Prince, S/2004 (45) 1 | Cybele | Sylvia, Romulus, Remus | Minerva, Aegis, Gorgoneion | Camilla, S/2001 (107) 1, S/2016 (107) 1 | Hermione, S/2002 (121) 1 | Elektra, S/2003 (130) 1, S/2014 (130) 1, S/2014 (130) 2 | Kleopatra, Alexhelios, Cleoselene | Interamnia.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids/releases/download/v1.0.1/RSSOrigin2-MainBeltAsteroids-SizeII.zip",
+"download_size": 1356465136,
+"download_hash": {
+"sha1": "0029DD4C296F9C29C2061D3AA095358B7AAD2F84",
+"sha256": "A8FEF96DB123B81CA21CB4B0E1E1D1FE128260B5312DA55BC214C0591440B1D8"
+},
+"install_size": 1796494366,
+"release_date": "2026-05-28T16:25:58Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MainBeltAsteroids-SizeII",
+"name": "RSS-Origin 2 - MainBeltAsteroids-SizeII",
+"abstract": "This pack includes 14 MBAs with diameter > 100km and 15 moons: Pallas | Juno | Hygiea | Psyche | Kalliope, Linus | Eugenia, Petit-Prince, S/2004 (45) 1 | Cybele | Sylvia, Romulus, Remus | Minerva, Aegis, Gorgoneion | Camilla, S/2001 (107) 1, S/2016 (107) 1 | Hermione, S/2002 (121) 1 | Elektra, S/2003 (130) 1, S/2014 (130) 1, S/2014 (130) 2 | Kleopatra, Alexhelios, Cleoselene | Interamnia.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MainBeltAsteroids/releases/download/v1.0.2/RSSOrigin2-MainBeltAsteroids-SizeII.zip",
+"download_size": 1356465129,
+"download_hash": {
+"sha1": "48703BF694C0D55C4383FD552C2253A94ABC5899",
+"sha256": "1A9C57F4264A3EE2FB451E5E394D74943612E44A84103BEFC8DDDFC1A37033C6"
+},
+"install_size": 1796494366,
+"release_date": "2026-06-03T09:49:10Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Cassini": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Cassini",
+"name": "RSS-Origin 2 - MissionPack-Cassini",
+"abstract": "This pack includes 18 objects for the Cassini–Huygens mission: Masursky | Hyperion | Phoebe | Janus | Epimetheus | Helene | Telesto | Calypso | Atlas | Prometheus | Pandora | Pan | Methone | Pallene | Polydeuces | Daphnis | Anthe | Aegaeon.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Cassini",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Cassini/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-SaturnMoons"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Cassini/releases/download/v1.0.0/RSSOrigin2-MissionPack-Cassini.zip",
+"download_size": 268837531,
+"download_hash": {
+"sha1": "05AB3A23ECC13DB7AEDE1B44BB2B0A1CD3FCC07E",
+"sha256": "F9D92135D99F850CD94A4EB7D5DB1A84D3440DD7F4F1112ED698B388AD74952B"
+},
+"install_size": 453087049,
+"release_date": "2026-05-28T16:43:52Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Cassini",
+"name": "RSS-Origin 2 - MissionPack-Cassini",
+"abstract": "This pack includes 18 objects for the Cassini–Huygens mission: Masursky | Hyperion | Phoebe | Janus | Epimetheus | Helene | Telesto | Calypso | Atlas | Prometheus | Pandora | Pan | Methone | Pallene | Polydeuces | Daphnis | Anthe | Aegaeon.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Cassini",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Cassini/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-SaturnMoons"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Cassini/releases/download/v1.0.1/RSSOrigin2-MissionPack-Cassini.zip",
+"download_size": 268837525,
+"download_hash": {
+"sha1": "891B9454272DE2AE66882E99582ED47631A42476",
+"sha256": "FDEFA0122B3A3F83DF800CFC97432A4D471FE32440A1D9B089054334B53BED0F"
+},
+"install_size": 453087049,
+"release_date": "2026-06-03T12:18:50Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-OSIRISREx": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-OSIRISREx",
+"name": "RSS-Origin 2 - MissionPack-OSIRISREx",
+"abstract": "This pack includes 2 objects for the OSIRIS-REx and OSIRIS-APEX mission: Bennu | Apophis.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-OSIRISREx",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-OSIRISREx/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-OSIRISREx/releases/download/v1.0.0/RSSOrigin2-MissionPack-OSIRISREx.zip",
+"download_size": 69320665,
+"download_hash": {
+"sha1": "3C0E764ABC9A9EDEA4ACA9854B1823783324A186",
+"sha256": "83A9C5836B05D24E4C37552B4882EA72DE32132B42675AF61DD2BE9163E9411F"
+},
+"install_size": 100685645,
+"release_date": "2026-05-28T16:45:14Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-OSIRISREx",
+"name": "RSS-Origin 2 - MissionPack-OSIRISREx",
+"abstract": "This pack includes 2 objects for the OSIRIS-REx and OSIRIS-APEX mission: Bennu | Apophis.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-OSIRISREx",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-OSIRISREx/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-OSIRISREx/releases/download/v1.0.1/RSSOrigin2-MissionPack-OSIRISREx.zip",
+"download_size": 69320665,
+"download_hash": {
+"sha1": "010ED14FBE05E5F30A2818BDCEA6066C4D1EBB1D",
+"sha256": "05FCE5A1DC21EF07A9B0D32280D4E44DCA0D69F7F0C58D6EBFE78D25F590E434"
+},
+"install_size": 100685645,
+"release_date": "2026-06-03T12:19:25Z"
+}
+}
+},
+"Sol-False-Color-Maps-16k": {
+"module_version": {
+"v0.0.1": {
+"spec_version": "v1.34",
+"identifier": "Sol-False-Color-Maps-16k",
+"name": "Sol False Color Maps (16k)",
+"abstract": "False color maps for planets and moons",
+"author": "SimpleUlty",
+"version": "v0.0.1",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/SimpleUlty/Sol-False-Color-Maps",
+"repository": "https://github.com/SimpleUlty/Sol-False-Color-Maps",
+"bugtracker": "https://github.com/SimpleUlty/Sol-False-Color-Maps/issues",
+"manual": "https://github.com/SimpleUlty/Sol-False-Color-Maps/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-False-Color-Maps"
+],
+"depends": [
+{
+"name": "Sol-Configs"
+}
+],
+"conflicts": [
+{
+"name": "Sol-False-Color-Maps-4k"
+},
+{
+"name": "Sol-False-Color-Maps-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Addons"
+}
+],
+"download": "https://github.com/SimpleUlty/Sol-False-Color-Maps/releases/download/v0.0.1/FalseColorMaps.16K.zip",
+"download_size": 1548805569,
+"download_hash": {
+"sha1": "A82AC0CD8E91007993A260520A99EF4F6F6F6693",
+"sha256": "C2861CFBB4CB96A9807AEFB402183B48DF634B41BD64B526A1CC907A5A327D97"
+},
+"install_size": 1892881247,
+"release_date": "2026-05-15T23:51:00Z"
+}
+}
+},
+"Sol-False-Color-Maps-4k": {
+"module_version": {
+"v0.0.1": {
+"spec_version": "v1.34",
+"identifier": "Sol-False-Color-Maps-4k",
+"name": "Sol False Color Maps (4k)",
+"abstract": "False color maps for planets and moons",
+"author": "SimpleUlty",
+"version": "v0.0.1",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/SimpleUlty/Sol-False-Color-Maps",
+"repository": "https://github.com/SimpleUlty/Sol-False-Color-Maps",
+"bugtracker": "https://github.com/SimpleUlty/Sol-False-Color-Maps/issues",
+"manual": "https://github.com/SimpleUlty/Sol-False-Color-Maps/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-False-Color-Maps"
+],
+"depends": [
+{
+"name": "Sol-Configs"
+}
+],
+"conflicts": [
+{
+"name": "Sol-False-Color-Maps-8k"
+},
+{
+"name": "Sol-False-Color-Maps-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Addons"
+}
+],
+"download": "https://github.com/SimpleUlty/Sol-False-Color-Maps/releases/download/v0.0.1/FalseColorMaps.4K.zip",
+"download_size": 222994261,
+"download_hash": {
+"sha1": "46349CF9634DB988F29D5B9029A12722686B6066",
+"sha256": "0A9ABD362FAF16B2C3DC320EBB9E58D0CF006F4FAFF6DEF230BD57C4472273DC"
+},
+"install_size": 282268511,
+"release_date": "2026-05-15T23:47:31Z"
+}
+}
+},
+"Sol-False-Color-Maps-8k": {
+"module_version": {
+"v0.0.1": {
+"spec_version": "v1.34",
+"identifier": "Sol-False-Color-Maps-8k",
+"name": "Sol False Color Maps (8k)",
+"abstract": "False color maps for planets and moons",
+"author": "SimpleUlty",
+"version": "v0.0.1",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/SimpleUlty/Sol-False-Color-Maps",
+"repository": "https://github.com/SimpleUlty/Sol-False-Color-Maps",
+"bugtracker": "https://github.com/SimpleUlty/Sol-False-Color-Maps/issues",
+"manual": "https://github.com/SimpleUlty/Sol-False-Color-Maps/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-False-Color-Maps"
+],
+"depends": [
+{
+"name": "Sol-Configs"
+}
+],
+"conflicts": [
+{
+"name": "Sol-False-Color-Maps-4k"
+},
+{
+"name": "Sol-False-Color-Maps-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Addons"
+}
+],
+"download": "https://github.com/SimpleUlty/Sol-False-Color-Maps/releases/download/v0.0.1/FalseColorMaps.8K.zip",
+"download_size": 565916029,
+"download_hash": {
+"sha1": "198010CD9DE7EF94B1781EA5C668482A109E073F",
+"sha256": "C0A5CB290FCE874F797C5E85AFC7AAF7B0C75033AFA4F88E9ED549B9288B42FC"
+},
+"install_size": 684921695,
+"release_date": "2026-05-15T23:47:14Z"
+}
+}
+},
+"RSSOrigin2-Core": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-Core",
+"name": "RSS-Origin 2 - Core",
+"abstract": "Explore hundreds of real-world asteroids, comets and moons in KSP. The next generation of RSS-Origin, an addon for Sol. This is the core config, texture and plugin pack of RSS-Origin 2, install this first.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "Sol-Configs"
+}
+],
+"recommends": [
+{
+"name": "RSSOrigin2-JupiterMoons"
+},
+{
+"name": "RSSOrigin2-SaturnMoons"
+},
+{
+"name": "RSSOrigin2-UranusMoons"
+},
+{
+"name": "RSSOrigin2-NeptuneMoons"
+},
+{
+"name": "RSSOrigin2-DwarfPlanets"
+},
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+},
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeII"
+},
+{
+"name": "RSSOrigin2-MarsCrossers"
+},
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeII"
+},
+{
+"name": "RSSOrigin2-JupiterTrojans"
+},
+{
+"name": "RSSOrigin2-Centaurs"
+},
+{
+"name": "RSSOrigin2-TransNeptunianObjects-SizeI"
+},
+{
+"name": "RSSOrigin2-TransNeptunianObjects-SizeII"
+},
+{
+"name": "RSSOrigin2-Comets"
+},
+{
+"name": "RSSOrigin2-InterstellarObjects"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2/releases/download/v1.0.1/RSSOrigin2-Core.zip",
+"download_size": 238011562,
+"download_hash": {
+"sha1": "26A456D3C1404746222FB5A999E1B05121CAB823",
+"sha256": "7F2EEB8444A68483C6E3393C8E08C5FD250A25D92149F100D5B98F76A7E40EF6"
+},
+"install_size": 492294906,
+"release_date": "2026-05-28T14:41:06Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Rosetta": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Rosetta",
+"name": "RSS-Origin 2 - MissionPack-Rosetta",
+"abstract": "This pack includes 3 objects for the Rosetta mission: Lutetia | Šteins | 67P/Churyumov–Gerasimenko.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Rosetta",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Rosetta/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+},
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Rosetta/releases/download/v1.0.0/RSSOrigin2-MissionPack-Rosetta.zip",
+"download_size": 38920666,
+"download_hash": {
+"sha1": "560A4628CC6864F210C4061B6896F7D4A09C7369",
+"sha256": "C518370C50C592B7CF455D66DACFF99F9F9B22B9EDA17EA4C3347DFA3CA7A9CC"
+},
+"install_size": 64045836,
+"release_date": "2026-05-28T16:45:13Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Rosetta",
+"name": "RSS-Origin 2 - MissionPack-Rosetta",
+"abstract": "This pack includes 3 objects for the Rosetta mission: Lutetia | Šteins | 67P/Churyumov–Gerasimenko.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Rosetta",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Rosetta/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-Comets"
+},
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Rosetta/releases/download/v1.0.1/RSSOrigin2-MissionPack-Rosetta.zip",
+"download_size": 38920665,
+"download_hash": {
+"sha1": "C1A9FE45C7146A9FBD085DB029C93C924EC99FC8",
+"sha256": "1A70D054D7C75791F65F87F290362663D62F4758FB03F3DACE963D72ADF3CA28"
+},
+"install_size": 64045836,
+"release_date": "2026-06-03T12:19:14Z"
+}
+}
+},
+"Sol-KuiperBelt-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-KuiperBelt-4k",
+"name": "Sol Kuiper Belt Textures (4k)",
+"abstract": "Sol Textures for the Pluto System and Arrokoth.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-KuiperBelt",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-KuiperBelt/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-KuiperBelt"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-KuiperBelt-8k"
+},
+{
+"name": "Sol-KuiperBelt-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-KuiperBelt/releases/download/V0.9.5-0/Sol_Kuiper-Belt_4k.zip",
+"download_size": 173463450,
+"download_hash": {
+"sha1": "E9E330DBBB1BFC765366927AE31D3B8AD6CEF0D6",
+"sha256": "9633C399687F0E5F2BB7AF1FAB42F7AAA1177F73857D05BB4C6D5137606BEC05"
+},
+"install_size": 247356454,
+"release_date": "2026-04-01T03:19:56Z"
+}
+}
+},
+"Sol-KuiperBelt-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-KuiperBelt-8k",
+"name": "Sol Kuiper Belt Textures (8k)",
+"abstract": "Sol Textures for the Pluto System and Arrokoth.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-KuiperBelt",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-KuiperBelt/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-KuiperBelt"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-KuiperBelt-4k"
+},
+{
+"name": "Sol-KuiperBelt-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-KuiperBelt/releases/download/V0.9.5-0/Sol_Kuiper-Belt_8k.zip",
+"download_size": 365619688,
+"download_hash": {
+"sha1": "696AE87FCA77AEA505E3113B5635D1D922804ED7",
+"sha256": "662882BF27F86FC988E9F2633E820090279D168E42507158E10391C82D92F608"
+},
+"install_size": 490626086,
+"release_date": "2026-04-01T03:43:20Z"
+}
+}
+},
+"Sol-Launchsites-1024x": {
+"module_version": {
+"V0.9.4-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Launchsites-1024x",
+"name": "Sol Launchsites Textures (1024x)",
+"abstract": "Sol Textures for various Launchsites around Earth.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.4-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Launchsites",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Launchsites/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Launchsites"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Launchsites-256x"
+},
+{
+"name": "Sol-Launchsites-512x"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-LaunchSites/releases/download/V0.9.4-0/Launchsites-1024x.zip",
+"download_size": 270582119,
+"download_hash": {
+"sha1": "BD0FE704C79A35D25D58B27FB6DEA97D6893A96A",
+"sha256": "27B6658CAAECF89A4BE2868EC468D1DE228FC838C9425FE19C716528DF7BA27F"
+},
+"install_size": 466682180,
+"release_date": "2026-03-09T03:14:54Z"
+}
+}
+},
+"Sol-NeptuneSystem-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-NeptuneSystem-4k",
+"name": "Sol Neptune System Textures (4k)",
+"abstract": "Sol Textures for the entire Neptune system!",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-NeptuneSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-NeptuneSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-NeptuneSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-NeptuneSystem-8k"
+},
+{
+"name": "Sol-NeptuneSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-NeptuneSystem/releases/download/V0.9.5-0/Sol_Neptune-System_4k.zip",
+"download_size": 127289133,
+"download_hash": {
+"sha1": "C53D03F6D25D52780CDF34A144C98919DE33BDA8",
+"sha256": "3C4F7445C0ABB99DA4B6AC2FE104DE379A1237A181BEDF3572DFBD900B57BE8F"
+},
+"install_size": 192223912,
+"release_date": "2026-04-01T03:16:23Z"
+}
+}
+},
+"Sol-NeptuneSystem-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-NeptuneSystem-8k",
+"name": "Sol Neptune System Textures (8k)",
+"abstract": "Sol Textures for the entire Neptune system!",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-NeptuneSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-NeptuneSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-NeptuneSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-NeptuneSystem-4k"
+},
+{
+"name": "Sol-NeptuneSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-NeptuneSystem/releases/download/V0.9.5-0/Sol_Neptune-System_8k.zip",
+"download_size": 341764133,
+"download_hash": {
+"sha1": "07D9BA7EDD3B851BF1272C66A513E463767F92A2",
+"sha256": "DEEDB2EF0C1AB4E89CD197A6DB41AFD538C2E934F8FA5A94C0A070D27529C2DF"
+},
+"install_size": 496311032,
+"release_date": "2026-04-01T03:38:30Z"
+}
+}
+},
+"Sol-SPVE": {
+"module_version": {
+"v1.1.1": {
+"spec_version": "v1.34",
+"identifier": "Sol-SPVE",
+"name": "Sol-SPVE",
+"abstract": "SPVE configs for Sol",
+"author": "rbeap",
+"version": "v1.1.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-4.0",
+"resources": {
+"homepage": "https://github.com/rbeap/Sol-SPVE",
+"repository": "https://github.com/rbeap/Sol-SPVE",
+"bugtracker": "https://github.com/rbeap/Sol-SPVE/issues",
+"manual": "https://github.com/rbeap/Sol-SPVE/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "Sol-Configs"
+}
+],
+"install": [
+{
+"file": "Sol-SPVE"
+}
+],
+"download": "https://github.com/rbeap/Sol-SPVE/releases/download/v1.1.1/Sol-SPVE-v1.1.1.zip",
+"download_size": 56538197,
+"download_hash": {
+"sha1": "C0454AF25EC902A828055C602AAE9624A5EA8609",
+"sha256": "D751CF805EA48815EFB1E1116F261DFEA2B2EDBF382E9BBC84F4D195E8B41A27"
+},
+"install_size": 415114310,
+"release_date": "2026-05-11T22:27:48Z"
+},
+"v2.3.0": {
+"spec_version": "v1.34",
+"identifier": "Sol-SPVE",
+"name": "Sol-SPVE",
+"abstract": "SPVE configs for Sol",
+"author": "rbeap",
+"version": "v2.3.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-4.0",
+"resources": {
+"homepage": "https://github.com/rbeap/Sol-SPVE",
+"repository": "https://github.com/rbeap/Sol-SPVE",
+"bugtracker": "https://github.com/rbeap/Sol-SPVE/issues",
+"manual": "https://github.com/rbeap/Sol-SPVE/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "Sol-Configs"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-SPVE"
+}
+],
+"download": "https://github.com/rbeap/Sol-SPVE/releases/download/v2.3.0/Sol-SPVE-v2.3.0.zip",
+"download_size": 92171957,
+"download_hash": {
+"sha1": "145AD0173A9BDD27BEA6C4E2DD3C708DF3B82E90",
+"sha256": "B39B04E53F75DCE00457E8CAF430AF82707D3F5F179FD60B7CAE45BB1757AEBA"
+},
+"install_size": 352009644,
+"release_date": "2026-08-21T17:27:41Z"
+},
+"v2.4.0": {
+"spec_version": "v1.34",
+"identifier": "Sol-SPVE",
+"name": "Sol-SPVE",
+"abstract": "SPVE configs for Sol",
+"author": "rbeap",
+"version": "v2.4.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-4.0",
+"resources": {
+"homepage": "https://github.com/rbeap/Sol-SPVE",
+"repository": "https://github.com/rbeap/Sol-SPVE",
+"bugtracker": "https://github.com/rbeap/Sol-SPVE/issues",
+"manual": "https://github.com/rbeap/Sol-SPVE/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "Sol-Configs"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-SPVE"
+}
+],
+"download": "https://github.com/rbeap/Sol-SPVE/releases/download/v2.4.0/Sol-SPVE-v2.4.0.zip",
+"download_size": 94847113,
+"download_hash": {
+"sha1": "A3AF68163FAFB373709D54FD2496428F9E78F240",
+"sha256": "BF65FBC07EF5CC2B80A062DB35D8C7A880D6F5C305825038741036F380BA2C2D"
+},
+"install_size": 348304677,
+"release_date": "2026-08-26T19:44:03Z"
+}
+}
+},
+"RSSOrigin2-DwarfPlanets": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-DwarfPlanets",
+"name": "RSS-Origin 2 - DwarfPlanets",
+"abstract": "This pack includes 7 Dwarf planets and 12 Dwarf planet moons: Quaoar, Weywot, Quaoar II | Sedna | Orcus, Vanth | Nix, Hydra, Kerberos, Styx | Haumea, Hiʻiaka, Namaka | Eris, Dysnomia | Makemake, S/2015 (136472) 1 | Gonggong, Xiangliu.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets/releases/download/v1.0.1/RSSOrigin2-DwarfPlanets.zip",
+"download_size": 1347692478,
+"download_hash": {
+"sha1": "A65B792F108D9DC28BF246C1FD58C01AC273D45A",
+"sha256": "54422B575C1337A6A8AE88DA21B7A31FE0CDFB666825B0D481576C810BB69937"
+},
+"install_size": 1803111540,
+"release_date": "2026-05-28T15:27:21Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-DwarfPlanets",
+"name": "RSS-Origin 2 - DwarfPlanets",
+"abstract": "This pack includes 7 Dwarf planets and 12 Dwarf planet moons: Quaoar, Weywot, Quaoar II | Sedna | Orcus, Vanth | Nix, Hydra, Kerberos, Styx | Haumea, Hiʻiaka, Namaka | Eris, Dysnomia | Makemake, S/2015 (136472) 1 | Gonggong, Xiangliu.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets/releases/download/v1.0.2/RSSOrigin2-DwarfPlanets.zip",
+"download_size": 1347197080,
+"download_hash": {
+"sha1": "30407384E10FFB414D032854A68ADBE8C9854190",
+"sha256": "84FFC303E9C57F1C3358F8AE4EDC011A038E84A23188D9952CEAC043B534530F"
+},
+"install_size": 1803111540,
+"release_date": "2026-05-30T12:08:42Z"
+},
+"v1.0.3": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-DwarfPlanets",
+"name": "RSS-Origin 2 - DwarfPlanets",
+"abstract": "This pack includes 7 Dwarf planets and 12 Dwarf planet moons: Quaoar, Weywot, Quaoar II | Sedna | Orcus, Vanth | Nix, Hydra, Kerberos, Styx | Haumea, Hiʻiaka, Namaka | Eris, Dysnomia | Makemake, S/2015 (136472) 1 | Gonggong, Xiangliu.",
+"author": "Charon_S",
+"version": "v1.0.3",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-DwarfPlanets/releases/download/v1.0.3/RSSOrigin2-DwarfPlanets.zip",
+"download_size": 1347197073,
+"download_hash": {
+"sha1": "1EAB759377766A6203D4556B1EC403CF2A9A8B05",
+"sha256": "6CA39E39C4333CDFC2B041BD3B1A0DE56C368BCD6CE308638C84AF7506096AC8"
+},
+"install_size": 1803111540,
+"release_date": "2026-06-03T09:41:08Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-DeepSpace1": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-DeepSpace1",
+"name": "RSS-Origin 2 - MissionPack-DeepSpace1",
+"abstract": "This pack includes 2 objects for the Deep Space 1 mission: Braille | 19P/Borrelly.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepSpace1",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepSpace1/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MarsCrossers"
+},
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepSpace1/releases/download/v1.0.0/RSSOrigin2-MissionPack-DeepSpace1.zip",
+"download_size": 30039714,
+"download_hash": {
+"sha1": "C515AB71809DE3AC9F1C2D85E2401FBEF7665E95",
+"sha256": "617BAA0E37EAC8BC044177F38252BE9926DA303397EB482F6F9E9D3D2C62D854"
+},
+"install_size": 42960712,
+"release_date": "2026-05-28T16:43:57Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-DeepSpace1",
+"name": "RSS-Origin 2 - MissionPack-DeepSpace1",
+"abstract": "This pack includes 2 objects for the Deep Space 1 mission: Braille | 19P/Borrelly.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepSpace1",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepSpace1/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MarsCrossers"
+},
+{
+"name": "RSSOrigin2-Comets"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DeepSpace1/releases/download/v1.0.1/RSSOrigin2-MissionPack-DeepSpace1.zip",
+"download_size": 30039714,
+"download_hash": {
+"sha1": "B17C1FFA544451214D36905C2160C24272DD5F40",
+"sha256": "55884B4E9C92C219E7EAA9E67E9EE9741B2B39B70134A1D593A1D2AC462366F3"
+},
+"install_size": 42960712,
+"release_date": "2026-06-03T12:18:02Z"
+}
+}
+},
+"Sol-EarthSystem-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-EarthSystem-8k",
+"name": "Sol Earth System Textures (8k)",
+"abstract": "Sol Textures for Earth and Luna.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-EarthSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-EarthSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-EarthSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-EarthSystem-4k"
+},
+{
+"name": "Sol-EarthSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-EarthSystem/releases/download/V0.9.5-0/Sol_Earth-System_8k.zip",
+"download_size": 515458213,
+"download_hash": {
+"sha1": "847D3E57C2F7F84A0B628E18858A82B9124F345E",
+"sha256": "C541C7459D1FDDFD3F564A900C827C27860027B583CC9CD04EF2F7315816BBC3"
+},
+"install_size": 1009449103,
+"release_date": "2026-04-01T03:32:02Z"
+}
+}
+},
+"Sol-JupiterSystem-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-JupiterSystem-16k",
+"name": "Sol Jupiter System Textures (16k)",
+"abstract": "Sol Textures for the entire Jupiter System!",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-JupiterSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-JupiterSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-JupiterSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-JupiterSystem-4k"
+},
+{
+"name": "Sol-JupiterSystem-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-JupiterSystem/releases/download/V0.9.5-0/Sol_Jupiter-System_16k.zip",
+"download_size": 1935301594,
+"download_hash": {
+"sha1": "24D3CABDD8F446C11CD8377A766E7ED142D9C2FC",
+"sha256": "8484AF72947FFECB6A3C58487B18D9BA2B3D6B838BE46149BCD7E2FF91D295CB"
+},
+"install_size": 2470273990,
+"release_date": "2026-04-01T04:50:55Z"
+}
+}
+},
+"Sol-JupiterSystem-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-JupiterSystem-4k",
+"name": "Sol Jupiter System Textures (4k)",
+"abstract": "Sol Textures for the entire Jupiter System!",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-JupiterSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-JupiterSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-JupiterSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-JupiterSystem-8k"
+},
+{
+"name": "Sol-JupiterSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-JupiterSystem/releases/download/V0.9.5-0/Sol_Jupiter-System_4k.zip",
+"download_size": 231312309,
+"download_hash": {
+"sha1": "B438BBB5484C689F58809A397A82F1421A2E7B90",
+"sha256": "FA68D1467CBD3325A89B14A857B4404FCCDA8CC00016ED1ADB07A13F1A2E2331"
+},
+"install_size": 300770206,
+"release_date": "2026-04-01T03:13:30Z"
+}
+}
+},
+"Sol-JupiterSystem-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-JupiterSystem-8k",
+"name": "Sol Jupiter System Textures (8k)",
+"abstract": "Sol Textures for the entire Jupiter System!",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-JupiterSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-JupiterSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-JupiterSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-JupiterSystem-4k"
+},
+{
+"name": "Sol-JupiterSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-JupiterSystem/releases/download/V0.9.5-0/Sol_Jupiter-System_8k.zip",
+"download_size": 652394085,
+"download_hash": {
+"sha1": "70CFB486ECB01890B2E550325289033CBB2A62B2",
+"sha256": "852D0B1D77D454C09B7A2E86A19D301313912706CC6BAB2A1C0E772BB3D3489E"
+},
+"install_size": 821912518,
+"release_date": "2026-04-01T03:50:52Z"
+}
+}
+},
+"Sol-Launchsites-256x": {
+"module_version": {
+"V0.9.4-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Launchsites-256x",
+"name": "Sol Launchsites Textures (256x)",
+"abstract": "Sol Textures for various Launchsites around Earth.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.4-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Launchsites",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Launchsites/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Launchsites"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Launchsites-512x"
+},
+{
+"name": "Sol-Launchsites-1024x"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-LaunchSites/releases/download/V0.9.4-0/Launchsites-256x.zip",
+"download_size": 21661079,
+"download_hash": {
+"sha1": "122828B6F9790D8C823D1C6D8B905F526F6091A2",
+"sha256": "08549099F51BFFC35DA2E3B692D6BC4349C1A1583BB1718CA5FCBE74C24EDD47"
+},
+"install_size": 29229380,
+"release_date": "2026-03-09T03:12:47Z"
+}
+}
+},
+"Sol-Launchsites-512x": {
+"module_version": {
+"V0.9.4-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Launchsites-512x",
+"name": "Sol Launchsites Textures (512x)",
+"abstract": "Sol Textures for various Launchsites around Earth.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.4-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Launchsites",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Launchsites/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Launchsites"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Launchsites-256x"
+},
+{
+"name": "Sol-Launchsites-1024x"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-LaunchSites/releases/download/V0.9.4-0/Launchsites-512x.zip",
+"download_size": 75729084,
+"download_hash": {
+"sha1": "02B550F7C9038F266DF85131A3F6DF4163DF7F49",
+"sha256": "AA09AFA9D5C7FB26282798F3EE30BFF7B796495AE74692380ECDEE4A757BB4E9"
+},
+"install_size": 116719940,
+"release_date": "2026-03-09T03:13:31Z"
+}
+}
+},
+"Sol-MarsSystem-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-MarsSystem-16k",
+"name": "Sol Mars System Textures (16k)",
+"abstract": "Sol Textures for Mars, Phobos and Deimos.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-MarsSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-MarsSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-MarsSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-MarsSystem-4k"
+},
+{
+"name": "Sol-MarsSystem-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-MarsSystem/releases/download/V0.9.5-0/Sol_Mars-System_16k.zip",
+"download_size": 1311202883,
+"download_hash": {
+"sha1": "44007AE283E8E8FD0B8F212F8051E57B5A289227",
+"sha256": "587C723FD79089B80AB68581504C968D4F2F98E4928AB653E772606451B462BC"
+},
+"install_size": 1781880280,
+"release_date": "2026-04-01T21:16:36Z"
+}
+}
+},
+"RSSOrigin2-SaturnMoons": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-SaturnMoons",
+"name": "RSS-Origin 2 - SaturnMoons",
+"abstract": "This pack includes 22 extra moons for Saturn: Hyperion | Phoebe | Janus | Epimetheus | Helene | Telesto | Calypso | Atlas | Prometheus | Pandora | Pan | Ymir | Paaliaq | Kiviuq | Albiorix | Siarnaq | Methone | Pallene | Polydeuces | Daphnis | Anthe | Aegaeon.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-SaturnMoons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-SaturnMoons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-SaturnMoons/releases/download/v1.0.1/RSSOrigin2-SaturnMoons.zip",
+"download_size": 408105489,
+"download_hash": {
+"sha1": "F28B7E325370F4B354B9313191500FBBC0AC9B50",
+"sha256": "66D374DE481F32B6CB3E1A46D242930674AC86ADABB453F7C1A70C5ECBCB6FE4"
+},
+"install_size": 655635352,
+"release_date": "2026-05-28T15:14:05Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-SaturnMoons",
+"name": "RSS-Origin 2 - SaturnMoons",
+"abstract": "This pack includes 22 extra moons for Saturn: Hyperion | Phoebe | Janus | Epimetheus | Helene | Telesto | Calypso | Atlas | Prometheus | Pandora | Pan | Ymir | Paaliaq | Kiviuq | Albiorix | Siarnaq | Methone | Pallene | Polydeuces | Daphnis | Anthe | Aegaeon.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-SaturnMoons",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-SaturnMoons/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-SaturnMoons/releases/download/v1.0.2/RSSOrigin2-SaturnMoons.zip",
+"download_size": 408105483,
+"download_hash": {
+"sha1": "4FC18A62878083C041DD14623BBC41BB62CB20E8",
+"sha256": "1D970B8DC44C232D5E5A702887000B75D096BBB7E5E604DDC629DCB0272B3ACB"
+},
+"install_size": 655635352,
+"release_date": "2026-06-03T09:27:46Z"
+}
+}
+},
+"RSSOrigin2-NearEarthObjects-SizeII": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-NearEarthObjects-SizeII",
+"name": "RSS-Origin 2 - NearEarthObjects-SizeII",
+"abstract": "This pack includes 13 NEOs with diameter > 2km and 6 moons: Eros | Ganymed | Florence, S/2017 (3122) 1, S/2017 (3122) 2 | Don Quixote | 2001 SN263, S/2008 (153591) 1, S/2008 (153591) 2 | Geographos | Daedalus | Phaethon | Toutatis | Heracles, S/2011 (5143) 1 | Ra-Shalom | Cruithne | Atira, S/2017 (163693) 1.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects/releases/download/v1.0.1/RSSOrigin2-NearEarthObjects-SizeII.zip",
+"download_size": 658374418,
+"download_hash": {
+"sha1": "BDA0C6E808E8E282A534C5CE0DD6B112DB9B1572",
+"sha256": "028F54B98F7AC30EE1633DE3AA3E227550A600C8C8C623842AE14DFC18E479F2"
+},
+"install_size": 947824341,
+"release_date": "2026-05-28T16:18:31Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-NearEarthObjects-SizeII",
+"name": "RSS-Origin 2 - NearEarthObjects-SizeII",
+"abstract": "This pack includes 13 NEOs with diameter > 2km and 6 moons: Eros | Ganymed | Florence, S/2017 (3122) 1, S/2017 (3122) 2 | Don Quixote | 2001 SN263, S/2008 (153591) 1, S/2008 (153591) 2 | Geographos | Daedalus | Phaethon | Toutatis | Heracles, S/2011 (5143) 1 | Ra-Shalom | Cruithne | Atira, S/2017 (163693) 1.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects/releases/download/v1.0.2/RSSOrigin2-NearEarthObjects-SizeII.zip",
+"download_size": 658374408,
+"download_hash": {
+"sha1": "5D67AD13C2ED23AD5A18D103F58F35AD44990742",
+"sha256": "4750382990CDC757941AC8A02B9CB7AB48AE0EEF9C60403FDC906FCE7739C34B"
+},
+"install_size": 947824341,
+"release_date": "2026-06-03T09:40:47Z"
+}
+}
+},
+"Sol-Mercury-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Mercury-16k",
+"name": "Sol Mercury Textures (16k)",
+"abstract": "Sol Textures for Mercury",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Mercury",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Mercury/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Mercury"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Mercury-4k"
+},
+{
+"name": "Sol-Mercury-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Mercury/releases/download/V0.9.5-0/Sol_Mercury_16k.zip",
+"download_size": 366000576,
+"download_hash": {
+"sha1": "429A70D9DD449F2E354EDB504802707EFF1C48AB",
+"sha256": "135F54908EE26EDFCD0C3DC11DA27555B16AB1971ED06A85AEF9C7E1D0E29DA4"
+},
+"install_size": 583228510,
+"release_date": "2026-04-01T03:07:18Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-DESTINYplus": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-DESTINYplus",
+"name": "RSS-Origin 2 - MissionPack-DESTINY+",
+"abstract": "This pack includes 2 objects for the DESTINY+ mission: Phaethon | Apophis.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DESTINYplus",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DESTINYplus/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+},
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeII"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DESTINYplus/releases/download/v1.0.0/RSSOrigin2-MissionPack-DESTINYplus.zip",
+"download_size": 61333533,
+"download_hash": {
+"sha1": "495AE2BF96020DE63A3E4CD4EF9DAF451BE3994B",
+"sha256": "72DFE36DD1422C976C5CF49C6407F96E277F8E8217CF9592E40DB20D4620B92D"
+},
+"install_size": 79313397,
+"release_date": "2026-05-29T07:39:45Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-DESTINYplus",
+"name": "RSS-Origin 2 - MissionPack-DESTINY+",
+"abstract": "This pack includes 2 objects for the DESTINY+ mission: Phaethon | Apophis.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DESTINYplus",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DESTINYplus/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeI"
+},
+{
+"name": "RSSOrigin2-NearEarthObjects-SizeII"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-DESTINYplus/releases/download/v1.0.1/RSSOrigin2-MissionPack-DESTINYplus.zip",
+"download_size": 61333532,
+"download_hash": {
+"sha1": "1DD8C9331224C39C6651BD785A2962567A499F6D",
+"sha256": "3119C32E4E5CA9C1069E71D4841CE53A2529D4503215B528CD90019A9DA453D9"
+},
+"install_size": 79313397,
+"release_date": "2026-06-03T12:18:15Z"
+}
+}
+},
+"Sol-NeptuneSystem-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-NeptuneSystem-16k",
+"name": "Sol Neptune System Textures (16k)",
+"abstract": "Sol Textures for the entire Neptune system!",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-NeptuneSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-NeptuneSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-NeptuneSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-NeptuneSystem-4k"
+},
+{
+"name": "Sol-NeptuneSystem-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-NeptuneSystem/releases/download/V0.9.5-0/Sol_Neptune-System_16k.zip",
+"download_size": 716374625,
+"download_hash": {
+"sha1": "1C5534EC69A3F9B9FA2EC3CBA943AEF154F00456",
+"sha256": "6E7756C91F4D326C53F1E0E54960493DFEDC357456997979416E5DF73CC06CC0"
+},
+"install_size": 1108679416,
+"release_date": "2026-04-01T04:18:20Z"
+}
+}
+},
+"RSSOrigin2-NearEarthObjects-SizeI": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-NearEarthObjects-SizeI",
+"name": "RSS-Origin 2 - NearEarthObjects-SizeI",
+"abstract": "This pack includes 18 NEOs with diameter < 2km and 6 moons: Amor | Icarus | Apollo, S/2005 (1862) 1 | Talos | Itokawa | YORP | Didymos, Dimorphos | Bennu | 1994 CC, S/2009 (136617) 1, S/2009 (136617) 2 | 2001 WN5 | Ryugu | Kamoʻoalewa | 2005 HC4 | Aten | Moshup, Squannit | Apophis | Duende | Zoozve | ꞌAylóꞌchaxnim.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects/releases/download/v1.0.1/RSSOrigin2-NearEarthObjects-SizeI.zip",
+"download_size": 565158410,
+"download_hash": {
+"sha1": "7EB2447679789A149F14756B891548D1D3DDD2F8",
+"sha256": "D1C4EBA2614D7F7A9E0592B538FBF04D0FD20841A3F1EFD6FDDBA56CDB899D03"
+},
+"install_size": 813853604,
+"release_date": "2026-05-28T16:13:33Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-NearEarthObjects-SizeI",
+"name": "RSS-Origin 2 - NearEarthObjects-SizeI",
+"abstract": "This pack includes 18 NEOs with diameter < 2km and 6 moons: Amor | Icarus | Apollo, S/2005 (1862) 1 | Talos | Itokawa | YORP | Didymos, Dimorphos | Bennu | 1994 CC, S/2009 (136617) 1, S/2009 (136617) 2 | 2001 WN5 | Ryugu | Kamoʻoalewa | 2005 HC4 | Aten | Moshup, Squannit | Apophis | Duende | Zoozve | ꞌAylóꞌchaxnim.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-NearEarthObjects/releases/download/v1.0.2/RSSOrigin2-NearEarthObjects-SizeI.zip",
+"download_size": 565158404,
+"download_hash": {
+"sha1": "B1E564660B74DAF8B93FFCBF8143020AA0784FA5",
+"sha256": "E979C4F30279025579B7856C6CCC665C48A50C4C1CA443172806DA1157204531"
+},
+"install_size": 813853604,
+"release_date": "2026-06-03T09:32:56Z"
+}
+}
+},
+"Sol-Mercury-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Mercury-4k",
+"name": "Sol Mercury Textures (4k)",
+"abstract": "Sol Textures for Mercury",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Mercury",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Mercury/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Mercury"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Mercury-8k"
+},
+{
+"name": "Sol-Mercury-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Mercury/releases/download/V0.9.5-0/Sol_Mercury_4k.zip",
+"download_size": 30280842,
+"download_hash": {
+"sha1": "BCA5233C7AB646263589930174E6174CFB29BA01",
+"sha256": "FD3697B10A6A450F7BAB1246AB090E8DA0C3FA92C5B028085C4FA95895945862"
+},
+"install_size": 37968990,
+"release_date": "2026-04-01T03:02:36Z"
+}
+}
+},
+"Sol-Mercury-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Mercury-8k",
+"name": "Sol Mercury Textures (8k)",
+"abstract": "Sol Textures for Mercury",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Mercury",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Mercury/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Mercury"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Mercury-4k"
+},
+{
+"name": "Sol-Mercury-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Mercury/releases/download/V0.9.5-0/Sol_Mercury_8k.zip",
+"download_size": 106087456,
+"download_hash": {
+"sha1": "107DFCEE3C7044C0FD92A5B084E5192B33A0B032",
+"sha256": "3256141E24E149E45D047AD3CCA9680E78B76CB6D515D42B44F952BDF5AC914B"
+},
+"install_size": 147020894,
+"release_date": "2026-04-01T03:03:19Z"
+}
+}
+},
+"Sol-EarthSystem-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-EarthSystem-4k",
+"name": "Sol Earth System Textures (4k)",
+"abstract": "Sol Textures for Earth and Luna.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-EarthSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-EarthSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-EarthSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-EarthSystem-8k"
+},
+{
+"name": "Sol-EarthSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-EarthSystem/releases/download/V0.9.5-0/Sol_Earth-System_4k.zip",
+"download_size": 134543708,
+"download_hash": {
+"sha1": "D408ED99F717B10DF35F10A046A10512B0B32ED2",
+"sha256": "860DD4D8FD8F66D144F0D27FEB56F565E0FEBEE3B5146F6856F2CC7FED5D857F"
+},
+"install_size": 254474383,
+"release_date": "2026-04-01T03:07:26Z"
+}
+}
+},
+"Sol-UranusSystem-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-UranusSystem-16k",
+"name": "Sol Uranus System Textures (16k)",
+"abstract": "Sol-SaturnSystem",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-UranusSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-UranusSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-UranusSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-UranusSystem-4k"
+},
+{
+"name": "Sol-UranusSystem-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-UranusSystem/releases/download/V0.9.5-0/Sol_Uranus-System_16k.zip",
+"download_size": 624519236,
+"download_hash": {
+"sha1": "57F09C33B32DE332A0BB6A58A5272750810743BF",
+"sha256": "CC0EB3B93123B96B9C1FA77E3DA89672739FA4A2E6071B815D63B00D15D8FD3A"
+},
+"install_size": 789277560,
+"release_date": "2026-04-01T04:19:28Z"
+}
+}
+},
+"Sol-UranusSystem-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-UranusSystem-4k",
+"name": "Sol Uranus System Textures (4k)",
+"abstract": "Sol-SaturnSystem",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-UranusSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-UranusSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-UranusSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-UranusSystem-8k"
+},
+{
+"name": "Sol-UranusSystem-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-UranusSystem/releases/download/V0.9.5-0/Sol_Uranus-System_4k.zip",
+"download_size": 236902432,
+"download_hash": {
+"sha1": "E0FBC78F962D781252CA344C4570CF78BA6F87B5",
+"sha256": "4F9D1E1CD5870387BC09E476978F84DEFE0D981CBD1AB1856E7784BCB8835C29"
+},
+"install_size": 298543992,
+"release_date": "2026-04-01T03:20:12Z"
+}
+}
+},
+"RSSOrigin2-JupiterTrojans": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-JupiterTrojans",
+"name": "RSS-Origin 2 - JupiterTrojans",
+"abstract": "This pack includes 6 Jupiter trojans and 4 moons: Patroclus, Menoetius | Hektor, Skamandrios | Eurybates, Queta | Leucus | Polymele, S/2022 (15094) 1 | Orus.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-JupiterTrojans",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-JupiterTrojans/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-JupiterTrojans/releases/download/v1.0.1/RSSOrigin2-JupiterTrojans.zip",
+"download_size": 307263392,
+"download_hash": {
+"sha1": "5B5428A4CB3B880B10616326ED9DD4B0B3F7B09B",
+"sha256": "D01BBBF766977429C8ACD47EA8365DFE0888E4496E6A53EE226080D93E51600D"
+},
+"install_size": 438567740,
+"release_date": "2026-05-28T16:09:11Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-JupiterTrojans",
+"name": "RSS-Origin 2 - JupiterTrojans",
+"abstract": "This pack includes 6 Jupiter trojans and 4 moons: Patroclus, Menoetius | Hektor, Skamandrios | Eurybates, Queta | Leucus | Polymele, S/2022 (15094) 1 | Orus.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-JupiterTrojans",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-JupiterTrojans/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-JupiterTrojans/releases/download/v1.0.2/RSSOrigin2-JupiterTrojans.zip",
+"download_size": 307263386,
+"download_hash": {
+"sha1": "EDD92FFCC93EB6A39012F6D3A5E7C5447401EF71",
+"sha256": "9C5EB41AECF57F9E41FB5A56B72AF23696D10C9717144BCF833B03504F2ECB08"
+},
+"install_size": 438567740,
+"release_date": "2026-06-03T09:47:42Z"
+}
+}
+},
+"RSSOrigin2-MissionPack-Lucy": {
+"module_version": {
+"v1.0.0": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Lucy",
+"name": "RSS-Origin 2 - MissionPack-Lucy",
+"abstract": "This pack includes 11 objects for the Lucy mission: Patroclus, Menoetius | Eurybates, Queta | Leucus | Polymele, S/2022 (15094) 1 | Orus | Donaldjohanson | Dinkinesh, Selam.",
+"author": "Charon_S",
+"version": "v1.0.0",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Lucy",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Lucy/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-JupiterTrojans"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Lucy/releases/download/v1.0.0/RSSOrigin2-MissionPack-Lucy.zip",
+"download_size": 212469366,
+"download_hash": {
+"sha1": "DC81ECAD9132EE81302238AF0FEEE58A66058214",
+"sha256": "AACE87A55AC4165F5C7D79A52971C82B96F282EB73628B15729D3D4332B617A4"
+},
+"install_size": 312360022,
+"release_date": "2026-05-28T16:44:56Z"
+},
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-MissionPack-Lucy",
+"name": "RSS-Origin 2 - MissionPack-Lucy",
+"abstract": "This pack includes 11 objects for the Lucy mission: Patroclus, Menoetius | Eurybates, Queta | Leucus | Polymele, S/2022 (15094) 1 | Orus | Donaldjohanson | Dinkinesh, Selam.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Lucy",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Lucy/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"conflicts": [
+{
+"name": "RSSOrigin2-MainBeltAsteroids-SizeI"
+},
+{
+"name": "RSSOrigin2-JupiterTrojans"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-MissionPack-Lucy/releases/download/v1.0.1/RSSOrigin2-MissionPack-Lucy.zip",
+"download_size": 212469361,
+"download_hash": {
+"sha1": "9E5CE6011BE95B4F940F159AE913406CFBA76ACC",
+"sha256": "973F565072FE882EBD15E8E794E216C78625E2B8E307FF9B639EEB3624085809"
+},
+"install_size": 312360022,
+"release_date": "2026-06-03T12:19:44Z"
+}
+}
+},
+"RSSOrigin2-TransNeptunianObjects-SizeI": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-TransNeptunianObjects-SizeI",
+"name": "RSS-Origin 2 - TransNeptunianObjects-SizeI",
+"abstract": "This pack includes 10 TNOs with diameter < 500km and 6 moons: Chaos | Logos, Zoe | ǂKá̦gára, ǃHãunu | Arrokoth | Leleākūhonua | 2014 FE72 | Arawn | Huya, S/2012 (38628) 1 | Lempo, Paha, Hiisi | Manwë, Thorondor.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects/releases/download/v1.0.1/RSSOrigin2-TransNeptunianObjects-SizeI.zip",
+"download_size": 935845583,
+"download_hash": {
+"sha1": "F9751F1843B7233138918CD5902B7288C7F3EC3D",
+"sha256": "B6732C82E8DBE76111FAF921FD5C624116728B6FD2F9635097A63CA84EA4B309"
+},
+"install_size": 1399211527,
+"release_date": "2026-05-28T16:25:52Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-TransNeptunianObjects-SizeI",
+"name": "RSS-Origin 2 - TransNeptunianObjects-SizeI",
+"abstract": "This pack includes 10 TNOs with diameter < 500km and 6 moons: Chaos | Logos, Zoe | ǂKá̦gára, ǃHãunu | Arrokoth | Leleākūhonua | 2014 FE72 | Arawn | Huya, S/2012 (38628) 1 | Lempo, Paha, Hiisi | Manwë, Thorondor.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects/releases/download/v1.0.2/RSSOrigin2-TransNeptunianObjects-SizeI.zip",
+"download_size": 935845576,
+"download_hash": {
+"sha1": "B5117B54C4971C4CD3B4518D1B5C2BCE865758D9",
+"sha256": "CDA52A5B382860E7687D50283C92B3D82153074EAD45C5BE030045C80F597182"
+},
+"install_size": 1399211527,
+"release_date": "2026-06-03T09:49:16Z"
+}
+}
+},
+"RSSOrigin2-TransNeptunianObjects-SizeII": {
+"module_version": {
+"v1.0.1": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-TransNeptunianObjects-SizeII",
+"name": "RSS-Origin 2 - TransNeptunianObjects-SizeII",
+"abstract": "This pack includes 13 TNOs with diameter > 500km and 7 moons: Varuna, Varuna II | Aya | Uni, Tinia | Salacia, Actaea | Varda, Ilmarë | Máni | 2012 VP113 | 2017 OF201 | Ixion | Achlys, S/2005 (208996) 1 | Gǃkúnǁʼhòmdímà, Gǃòʼé ǃHú | Dziewanna | Chiminigagua, S/2018 (532037) 1.",
+"author": "Charon_S",
+"version": "v1.0.1",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects/releases/download/v1.0.1/RSSOrigin2-TransNeptunianObjects-SizeII.zip",
+"download_size": 1802439089,
+"download_hash": {
+"sha1": "1086DF7DA1F14BD71F299D92748A851C0A7274E8",
+"sha256": "1A8ECA76FC60678D18CF55A0E189D102DBFB54517880A14E006212DE2D35E985"
+},
+"install_size": 2468276070,
+"release_date": "2026-05-28T16:21:33Z"
+},
+"v1.0.2": {
+"spec_version": "v1.34",
+"identifier": "RSSOrigin2-TransNeptunianObjects-SizeII",
+"name": "RSS-Origin 2 - TransNeptunianObjects-SizeII",
+"abstract": "This pack includes 13 TNOs with diameter > 500km and 7 moons: Varuna, Varuna II | Aya | Uni, Tinia | Salacia, Actaea | Varda, Ilmarë | Máni | 2012 VP113 | 2017 OF201 | Ixion | Achlys, S/2005 (208996) 1 | Gǃkúnǁʼhòmdímà, Gǃòʼé ǃHú | Dziewanna | Chiminigagua, S/2018 (532037) 1.",
+"author": "Charon_S",
+"version": "v1.0.2",
+"ksp_version": "1.12",
+"license": "CC-BY-NC-SA-4.0",
+"resources": {
+"homepage": "https://github.com/CharonSSS/RSS-Origin-2",
+"repository": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects",
+"bugtracker": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects/issues",
+"manual": "https://github.com/CharonSSS/RSS-Origin-2/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"depends": [
+{
+"name": "RSSOrigin2-Core"
+}
+],
+"install": [
+{
+"file": "GameData/RSSOrigin2"
+}
+],
+"download": "https://github.com/CharonSSS/RSS-Origin-2-TransNeptunianObjects/releases/download/v1.0.2/RSSOrigin2-TransNeptunianObjects-SizeII.zip",
+"download_size": 1802439071,
+"download_hash": {
+"sha1": "998091FB48B582BB2C8C87268B499FAEC81ED7D0",
+"sha256": "E3273927D72D2F3F16ADFEC9962FFFB5DAEED20B97E7CD3F54A200DC78438033"
+},
+"install_size": 2468276070,
+"release_date": "2026-06-03T09:51:55Z"
+}
+}
+},
+"Sol-SaturnSystem-8k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-SaturnSystem-8k",
+"name": "Sol Saturn System Textures (8k)",
+"abstract": "Sol Textures for the entire Saturn system!",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-SaturnSystem",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-SaturnSystem/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-SaturnSystem"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-SaturnSystem-4k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-SaturnSystem/releases/download/V0.9.5-0/Sol_Saturn-System_8k.zip",
+"download_size": 1181526986,
+"download_hash": {
+"sha1": "98CDA5475CCBC86B27397818C4C4F449BBB6D447",
+"sha256": "02167A49B0E8D48CB955CBAEA3788E4E4788E9CD1BA3239603615D773C7D4D05"
+},
+"install_size": 1467132640,
+"release_date": "2026-04-01T03:43:58Z"
+}
+}
+},
+"Sol-Sun-16k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Sun-16k",
+"name": "Sol Sun Textures (16k)",
+"abstract": "Textures for Sol's Sun.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Sun",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Sun/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Sun"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Sun-4k"
+},
+{
+"name": "Sol-Sun-8k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Sun/releases/download/V0.9.5-0/Sol_Sol_16k.zip",
+"download_size": 146211551,
+"download_hash": {
+"sha1": "5079A891F9B36A5D29BD7C69F2AB08B62182D834",
+"sha256": "FBE0435308681C29DAF2B75DBB6EF2E58D2CA058AB143F052C57E95BCF373E12"
+},
+"install_size": 227186070,
+"release_date": "2026-04-01T03:02:23Z"
+}
+}
+},
+"Sol-Sun-4k": {
+"module_version": {
+"V0.9.5-0": {
+"spec_version": "v1.34",
+"identifier": "Sol-Sun-4k",
+"name": "Sol Sun Textures (4k)",
+"abstract": "Textures for Sol's Sun.",
+"author": [
+"ballisticfox",
+"Charon_S"
+],
+"version": "V0.9.5-0",
+"ksp_version": "1.12",
+"license": "restricted",
+"resources": {
+"homepage": "https://github.com/RSS-Reborn/Sol-Configs/wiki",
+"repository": "https://github.com/RSS-Reborn/Sol-Sun",
+"bugtracker": "https://github.com/RSS-Reborn/Sol-Sun/issues",
+"manual": "https://github.com/RSS-Reborn/Sol-Configs/wiki"
+},
+"tags": [
+"config",
+"planet-pack"
+],
+"provides": [
+"Sol-Sun"
+],
+"depends": [
+{
+"name": "Sol-Core"
+}
+],
+"conflicts": [
+{
+"name": "Sol-Sun-8k"
+},
+{
+"name": "Sol-Sun-16k"
+}
+],
+"install": [
+{
+"file": "GameData/Sol-Textures"
+}
+],
+"download": "https://github.com/RSS-Reborn/Sol-Sun/releases/download/V0.9.5-0/Sol_Sol_4k.zip",
+"download_size": 12230291,
+"download_hash": {
+"sha1": "E4C69BDF1CBF8A2A40B43A634311DC1758684045",
+"sha256": "09E57ECCFB3C8E2E1FE30A944BB5CF18D5D7A83075C5F5F74738C872B8F8CA05"
+},
+"install_size": 17470870,
+"release_date": "2026-04-01T03:00:19Z"
+}
+}
+}
+},
+"download_counts": {},
+"known_game_versions": [],
+"repositories": []
+}

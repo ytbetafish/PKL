@@ -22,6 +22,7 @@ public sealed class ModService : IModService, IDisposable
 
     private GameInstance? _instance;
     private RegistryManager? _registryManager;
+    private Registry? _readonlyRegistry;
 
     /// <summary>
     /// Create the adapter with a self-contained data directory under the user's temp folder,
@@ -50,15 +51,31 @@ public sealed class ModService : IModService, IDisposable
     /// <summary>The currently attached instance, if any.</summary>
     public GameInstance? CurrentInstance => _instance;
 
+    /// <summary>The registry used for read paths (read-write manager registry or the read-only one).</summary>
+    private Registry? Registry => _registryManager?.registry ?? _readonlyRegistry;
+
     /// <summary>
     /// Attach a KSP instance (e.g. produced by <see cref="KspInstanceService"/>) and open its
-    /// CKAN registry.
+    /// CKAN registry read-write. Required for install / upgrade / remove operations.
     /// </summary>
     public void AttachInstance(GameInstance instance)
     {
         _instance = instance;
+        _readonlyRegistry = null;
         _manager.SetCurrentInstance(instance);
         _registryManager = RegistryManager.Instance(instance, _repoData);
+    }
+
+    /// <summary>
+    /// Attach a KSP instance and open its CKAN registry read-only (no lock, no writes into the
+    /// game's CKAN folder). Suitable for listing / search / planning.
+    /// </summary>
+    public void AttachInstanceReadOnly(GameInstance instance)
+    {
+        _instance = instance;
+        _registryManager?.Dispose();
+        _registryManager = null;
+        _readonlyRegistry = RegistryManager.ReadOnlyRegistry(instance, _repoData);
     }
 
     /// <inheritdoc />
@@ -99,12 +116,13 @@ public sealed class ModService : IModService, IDisposable
     /// <inheritdoc />
     public Task<IReadOnlyList<ModSearchResult>> ListInstalledAsync(CancellationToken cancellationToken = default)
     {
-        if (_instance == null || _registryManager == null)
+        var reg = Registry;
+        if (_instance == null || reg == null)
         {
             return Task.FromResult<IReadOnlyList<ModSearchResult>>(Array.Empty<ModSearchResult>());
         }
 
-        var installed = _registryManager.registry.Installed();
+        var installed = reg.Installed();
         var results = new List<ModSearchResult>();
         foreach (var (identifier, _) in installed)
         {
@@ -118,7 +136,8 @@ public sealed class ModService : IModService, IDisposable
     /// <inheritdoc />
     public Task<ModInstallPlan?> GetInstallPlanAsync(string identifier, CancellationToken cancellationToken = default)
     {
-        if (_instance == null || _registryManager == null)
+        var reg = Registry;
+        if (_instance == null || reg == null)
         {
             return Task.FromResult<ModInstallPlan?>(null);
         }
@@ -136,11 +155,11 @@ public sealed class ModService : IModService, IDisposable
                 modulesToInstall: new[] { target },
                 modulesToRemove: null,
                 options: opts,
-                registry: _registryManager.registry,
+                registry: reg,
                 game: _instance.Game,
                 versionCrit: _instance.VersionCriteria());
 
-            var installed = _registryManager.registry.Installed();
+            var installed = reg.Installed();
             var toInstall = new List<string>();
             var toUpgrade = new List<string>();
 
@@ -176,41 +195,34 @@ public sealed class ModService : IModService, IDisposable
     {
         if (_instance == null || _registryManager == null)
         {
-            return Task.CompletedTask;
+            throw new InvalidOperationException("Instance not attached read-write; call AttachInstance first.");
         }
 
-        try
+        var opts = RelationshipResolverOptions.DependsOnlyOpts(_instance.StabilityToleranceConfig);
+        Directory.CreateDirectory(_instance.DownloadCacheDir);
+        var cache = new NetModuleCache(_instance.DownloadCacheDir);
+        var installer = new ModuleInstaller(_instance, cache, _config, _user, cancellationToken);
+
+        var desired = plan.ToInstall.Concat(plan.ToUpgrade)
+            .Select(LatestAvailable)
+            .Where(m => m != null)
+            .Select(m => m!)
+            .ToList();
+
+        if (desired.Count > 0)
         {
-            var opts = RelationshipResolverOptions.DependsOnlyOpts(_instance.StabilityToleranceConfig);
-            var cache = new NetModuleCache(_instance.DownloadCacheDir);
-            var installer = new ModuleInstaller(_instance, cache, _config, _user, cancellationToken);
-
-            var desired = plan.ToInstall.Concat(plan.ToUpgrade)
-                .Select(LatestAvailable)
-                .Where(m => m != null)
-                .Select(m => m!)
-                .ToList();
-
-            if (desired.Count > 0)
-            {
-                HashSet<string>? possibleConfigOnlyDirs = null;
-                installer.InstallList(desired, opts, _registryManager, ref possibleConfigOnlyDirs,
-                    userAgent: UserAgent, ConfirmPrompt: false);
-            }
-
-            if (plan.ToRemove.Count > 0)
-            {
-                HashSet<string>? possibleConfigOnlyDirs = null;
-                installer.UninstallList(plan.ToRemove, ref possibleConfigOnlyDirs, _registryManager, ConfirmPrompt: false);
-            }
-
-            _registryManager.Save();
+            HashSet<string>? possibleConfigOnlyDirs = null;
+            installer.InstallList(desired, opts, _registryManager, ref possibleConfigOnlyDirs,
+                userAgent: UserAgent, ConfirmPrompt: false);
         }
-        catch
+
+        if (plan.ToRemove.Count > 0)
         {
-            // Execution errors are surfaced to the caller via the returned Task only when wired
-            // through a progress callback; here we keep the boundary non-fatal for smoke runs.
+            HashSet<string>? possibleConfigOnlyDirs = null;
+            installer.UninstallList(plan.ToRemove, ref possibleConfigOnlyDirs, _registryManager, ConfirmPrompt: false);
         }
+
+        _registryManager.Save();
 
         progress?.Report($"Plan for '{plan.Target}' applied.");
         return Task.CompletedTask;
@@ -220,12 +232,13 @@ public sealed class ModService : IModService, IDisposable
 
     private IEnumerable<CkanModule> EnumerateCatalog()
     {
-        if (_instance == null || _registryManager == null)
+        var reg = Registry;
+        if (_instance == null || reg == null)
         {
             yield break;
         }
 
-        var repos = _registryManager.registry.Repositories.Values.ToList();
+        var repos = reg.Repositories.Values.ToList();
         foreach (var avail in _repoData.GetAllAvailableModules(repos))
         {
             CkanModule? best = null;
@@ -246,21 +259,31 @@ public sealed class ModService : IModService, IDisposable
 
     private CkanModule? LatestAvailable(string identifier)
     {
-        if (_registryManager == null)
+        var reg = Registry;
+        if (reg == null)
         {
             return null;
         }
 
-        CkanModule? best = null;
-        foreach (var m in _registryManager.registry.AvailableByIdentifier(identifier))
+        try
         {
-            if (best == null || m.version.CompareTo(best.version) > 0)
+            CkanModule? best = null;
+            foreach (var m in reg.AvailableByIdentifier(identifier))
             {
-                best = m;
+                if (best == null || m.version.CompareTo(best.version) > 0)
+                {
+                    best = m;
+                }
             }
-        }
 
-        return best;
+            return best;
+        }
+        catch
+        {
+            // Installed entries without repo metadata (DLL-provided, redistributables, etc.)
+            // make CKAN throw ModuleNotFoundKraken; treat them as "not in catalog".
+            return null;
+        }
     }
 
     private static bool MatchesQuery(CkanModule mod, string? query)
@@ -272,13 +295,13 @@ public sealed class ModService : IModService, IDisposable
 
         var q = query.Trim();
         return mod.identifier.Contains(q, StringComparison.OrdinalIgnoreCase)
-            || mod.SearchableName.Contains(q, StringComparison.OrdinalIgnoreCase)
+            || mod.name.Contains(q, StringComparison.OrdinalIgnoreCase)
             || (mod.author != null && mod.author.Any(a => a.Contains(q, StringComparison.OrdinalIgnoreCase)));
     }
 
     private ModSearchResult ToResult(CkanModule? mod)
     {
-        var installed = _registryManager?.registry.Installed() ?? new Dictionary<string, ModuleVersion>();
+        var installed = Registry?.Installed() ?? new Dictionary<string, ModuleVersion>();
         return ToResult(mod, mod?.identifier ?? string.Empty, installed);
     }
 

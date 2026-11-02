@@ -1,0 +1,3735 @@
+{
+"available_modules": {
+"MechJeb2-dev": {
+"module_version": {
+"2.16.0.0-1717": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1717",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1717/MechJeb2-dev-2.16.0.0-1717.zip",
+"download_size": 2409544,
+"download_hash": {
+"sha1": null,
+"sha256": "28289DD34E173D4E49DB4DD5334EF7CB42E9AD7BBBFF09FC2464484492760B46"
+}
+},
+"2.16.0.0-1718": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1718",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1718/MechJeb2-dev-2.16.0.0-1718.zip",
+"download_size": 2409393,
+"download_hash": {
+"sha1": null,
+"sha256": "F647418969D16782173E4AA9AEC109E3E9136850F2D0172F46788E17D6FA5DF6"
+}
+},
+"2.16.0.0-1719": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1719",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1719/MechJeb2-dev-2.16.0.0-1719.zip",
+"download_size": 2409577,
+"download_hash": {
+"sha1": null,
+"sha256": "71BB24608850891366B5C1187F747110F6D111A9A7DDB9B1FC62C40A35CD9A80"
+}
+},
+"2.16.0.0-1720": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1720",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1720/MechJeb2-dev-2.16.0.0-1720.zip",
+"download_size": 2409510,
+"download_hash": {
+"sha1": null,
+"sha256": "18C0CCD4D1493123476D8B8C2CBAFE8ECD3C78489F5F771A860B0053A4504DAF"
+}
+},
+"2.16.0.0-1721": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1721",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1721/MechJeb2-dev-2.16.0.0-1721.zip",
+"download_size": 2409386,
+"download_hash": {
+"sha1": null,
+"sha256": "A3241AA8BC30E3A5F1BED09309B6FAE40EB9B6F30034546DCDF1BD641F2C9F11"
+}
+},
+"2.16.0.0-1722": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1722",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1722/MechJeb2-dev-2.16.0.0-1722.zip",
+"download_size": 2695946,
+"download_hash": {
+"sha1": null,
+"sha256": "D5606FAF50610DCB8433E624F018DA40D6807556BA254E504D39E954D90917EC"
+}
+},
+"2.16.0.0-1723": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1723",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1723/MechJeb2-dev-2.16.0.0-1723.zip",
+"download_size": 2696496,
+"download_hash": {
+"sha1": null,
+"sha256": "0A69915D6492B467F1D68F508936F757B6E24A5D1E1E676EE6643DD5BB48B275"
+}
+},
+"2.16.0.0-1724": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1724",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1724/MechJeb2-dev-2.16.0.0-1724.zip",
+"download_size": 2696413,
+"download_hash": {
+"sha1": null,
+"sha256": "734AC88372F23E4C10C60F018295FB4D9E716480AA37243D05B8A94DA17DD23E"
+}
+},
+"2.16.0.0-1725": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1725",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1725/MechJeb2-dev-2.16.0.0-1725.zip",
+"download_size": 2696181,
+"download_hash": {
+"sha1": null,
+"sha256": "0C26C42153C333C3F967B918ECE53BCB8DDC3AC9294307155B807B89DB38A06C"
+}
+},
+"2.16.0.0-1726": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1726",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1726/MechJeb2-dev-2.16.0.0-1726.zip",
+"download_size": 2696220,
+"download_hash": {
+"sha1": null,
+"sha256": "EEA357C3323FB8910913A62548B08619A07FCCF9D5974BA599CDAC1CDFE5B916"
+}
+},
+"2.16.0.0-1727": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1727",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1727/MechJeb2-dev-2.16.0.0-1727.zip",
+"download_size": 2705108,
+"download_hash": {
+"sha1": null,
+"sha256": "5565813E06C9F73A6DDB213D2FADC6E410EDC879842FD9092DB094F0A566B8AD"
+}
+},
+"2.16.0.0-1728": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1728",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1728/MechJeb2-dev-2.16.0.0-1728.zip",
+"download_size": 2705566,
+"download_hash": {
+"sha1": null,
+"sha256": "5A6A3AC83D706E9B2039EDE7CA0F14C0F1DA66525005FAD15F144AF5C05C25B4"
+}
+},
+"2.16.0.0-1729": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1729",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1729/MechJeb2-dev-2.16.0.0-1729.zip",
+"download_size": 2705458,
+"download_hash": {
+"sha1": null,
+"sha256": "F9622ED79290CEE2E9CA758A1552FE3224914EE1E688977DDF7BE7BAD75836A7"
+}
+},
+"2.16.0.0-1730": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1730",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1730/MechJeb2-dev-2.16.0.0-1730.zip",
+"download_size": 2705474,
+"download_hash": {
+"sha1": null,
+"sha256": "F401A569A8447B3A9466A30AF5316B1D406C898112978288C8B7E0929CAD5746"
+}
+},
+"2.16.0.0-1731": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1731",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1731/MechJeb2-dev-2.16.0.0-1731.zip",
+"download_size": 2705513,
+"download_hash": {
+"sha1": null,
+"sha256": "9A1CE01EDDA2DCA24E0B2C1540E6482642405F71B24149AB595AE6888CABD489"
+}
+},
+"2.16.0.0-1732": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1732",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1732/MechJeb2-dev-2.16.0.0-1732.zip",
+"download_size": 2705674,
+"download_hash": {
+"sha1": null,
+"sha256": "7BD3C7C24800491C5253365DA7A5C6CBD0875FD6F2B67D0C19A84F05AFA2647D"
+}
+},
+"2.16.0.0-1733": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1733",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1733/MechJeb2-dev-2.16.0.0-1733.zip",
+"download_size": 2705903,
+"download_hash": {
+"sha1": null,
+"sha256": "305E006C75DBBF372DDC80C4EFED9050EF5463EFBA785E4DA734731D3EBAB5D6"
+}
+},
+"2.16.0.0-1734": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1734",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1734/MechJeb2-dev-2.16.0.0-1734.zip",
+"download_size": 2705954,
+"download_hash": {
+"sha1": null,
+"sha256": "3262FAFF43C7598FD08AA1AE4FC78278FB2E527DC3FF171013883C27E5973A72"
+}
+},
+"2.16.0.0-1735": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1735",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1735/MechJeb2-dev-2.16.0.0-1735.zip",
+"download_size": 2706843,
+"download_hash": {
+"sha1": null,
+"sha256": "3F26566146B4596627C8628752B84D3BCA81C39CB2BA39F59489EDE9FF110BDD"
+}
+},
+"2.16.0.0-1736": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1736",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1736/MechJeb2-dev-2.16.0.0-1736.zip",
+"download_size": 2706840,
+"download_hash": {
+"sha1": null,
+"sha256": "E6EA7CC3036A58865404713ED46784261B6CCA39D211183622A00238B311C1D2"
+}
+},
+"2.16.0.0-1737": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1737",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1737/MechJeb2-dev-2.16.0.0-1737.zip",
+"download_size": 2706835,
+"download_hash": {
+"sha1": null,
+"sha256": "F1552EECEAA74FECB460DFDD82BA488546959EF976ECC4FE30EAEE02AE85CFBC"
+}
+},
+"2.16.0.0-1738": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1738",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1738/MechJeb2-dev-2.16.0.0-1738.zip",
+"download_size": 2706837,
+"download_hash": {
+"sha1": null,
+"sha256": "3F81426A63FC5B4F790C8F41CE8A30067C7432E1E8B29A0BC6254E41DE133B95"
+}
+},
+"2.16.0.0-1739": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1739",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1739/MechJeb2-dev-2.16.0.0-1739.zip",
+"download_size": 2706943,
+"download_hash": {
+"sha1": null,
+"sha256": "D04CE8618AC8634DCC47C315049A8B51E0FBD20F0EF96770B745DE79D195634A"
+}
+},
+"2.16.0.0-1740": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1740",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1740/MechJeb2-dev-2.16.0.0-1740.zip",
+"download_size": 2707057,
+"download_hash": {
+"sha1": null,
+"sha256": "BBE1451E86604F96A5DCA27FFA15FE78A01E4467F9D415EA591B022D360C65D4"
+}
+},
+"2.16.0.0-1741": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1741",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1741/MechJeb2-dev-2.16.0.0-1741.zip",
+"download_size": 2707048,
+"download_hash": {
+"sha1": null,
+"sha256": "4C257A7DAA9B690C271094D622DF00A5938AA8568A3372FA45922E491AAB39B4"
+}
+},
+"2.16.0.0-1742": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1742",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1742/MechJeb2-dev-2.16.0.0-1742.zip",
+"download_size": 2707126,
+"download_hash": {
+"sha1": null,
+"sha256": "C28042590A5F4E873BAFAC167D7B58A6C02EF3329AB09D0F8BE81909963307ED"
+}
+},
+"2.16.0.0-1743": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1743",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1743/MechJeb2-dev-2.16.0.0-1743.zip",
+"download_size": 2707143,
+"download_hash": {
+"sha1": null,
+"sha256": "7799E33B604DEA8B676652A0CD5CA4F1CC3DB8F4C0F534F7A4C7B58780156FE8"
+}
+},
+"2.16.0.0-1744": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1744",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1744/MechJeb2-dev-2.16.0.0-1744.zip",
+"download_size": 2707190,
+"download_hash": {
+"sha1": null,
+"sha256": "DD832FC00B7291AFB5FD307A9FBF277940C379F1543E9446BDC7A52C65C0E140"
+}
+},
+"2.16.0.0-1745": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1745",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1745/MechJeb2-dev-2.16.0.0-1745.zip",
+"download_size": 2707190,
+"download_hash": {
+"sha1": null,
+"sha256": "8382DBD6DAB38E8998D06A7401C1B7324A373FFA632E630E30A7EEE77E4AD499"
+}
+},
+"2.16.0.0-1746": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1746",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1746/MechJeb2-dev-2.16.0.0-1746.zip",
+"download_size": 2707328,
+"download_hash": {
+"sha1": null,
+"sha256": "C3CF5830A8F664ACD1D04E50061DE916F17605931F5E6D607C6ECEABE225D259"
+}
+},
+"2.16.0.0-1747": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1747",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1747/MechJeb2-dev-2.16.0.0-1747.zip",
+"download_size": 2707333,
+"download_hash": {
+"sha1": null,
+"sha256": "0A37000A2B473F1FDE73801102B0981B29996F0F4B1D6867C45290F0B1EFCF3B"
+}
+},
+"2.16.0.0-1748": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1748",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1748/MechJeb2-dev-2.16.0.0-1748.zip",
+"download_size": 2707390,
+"download_hash": {
+"sha1": null,
+"sha256": "6AEA721BD10C19020338E2E2539B0421E9A6A20369B68E66813B190591C54360"
+}
+},
+"2.16.0.0-1749": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1749",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1749/MechJeb2-dev-2.16.0.0-1749.zip",
+"download_size": 2707384,
+"download_hash": {
+"sha1": null,
+"sha256": "58616F3C18AF250A2A0E4914D24E19F711650161074BE9E325B7C3BFE83B0EAE"
+}
+},
+"2.16.0.0-1750": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1750",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1750/MechJeb2-dev-2.16.0.0-1750.zip",
+"download_size": 2708463,
+"download_hash": {
+"sha1": null,
+"sha256": "35B4238F6460ED7ABDF5430301B695C519B4E8D62BC05479B01550E6F505AACE"
+}
+},
+"2.16.0.0-1751": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1751",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1751/MechJeb2-dev-2.16.0.0-1751.zip",
+"download_size": 2708465,
+"download_hash": {
+"sha1": null,
+"sha256": "04F2B7B1587DA6C8C79F7FFC6ABD8C2A6CA1BAFB908C1A7D4F3DAA15D2E791D1"
+}
+},
+"2.16.0.0-1752": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1752",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1752/MechJeb2-dev-2.16.0.0-1752.zip",
+"download_size": 2708571,
+"download_hash": {
+"sha1": null,
+"sha256": "725B8F4C84C1CAF703D337E0F3B31D8B4A095AF1475E0AE2F55893D6C7C00017"
+}
+},
+"2.16.0.0-1753": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1753",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1753/MechJeb2-dev-2.16.0.0-1753.zip",
+"download_size": 2708584,
+"download_hash": {
+"sha1": null,
+"sha256": "4AA8AB13A06B9F94CFFEE914FAAFA4D45AF898353C6B1C55AC7F9A9EBA4DBDA6"
+}
+},
+"2.16.0.0-1754": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1754",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1754/MechJeb2-dev-2.16.0.0-1754.zip",
+"download_size": 2708585,
+"download_hash": {
+"sha1": null,
+"sha256": "EA9B4FCC0110D9E0B5173596013DA6606CD5617875BCF1774A3A70EB291BDEFC"
+}
+},
+"2.16.0.0-1755": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1755",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1755/MechJeb2-dev-2.16.0.0-1755.zip",
+"download_size": 2708648,
+"download_hash": {
+"sha1": null,
+"sha256": "18FAD164A49B035A4A0A2E4FF9BA4F6A086BCAC5EB48A352C5EDD947F535FC04"
+}
+},
+"2.16.0.0-1756": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1756",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1756/MechJeb2-dev-2.16.0.0-1756.zip",
+"download_size": 2708652,
+"download_hash": {
+"sha1": null,
+"sha256": "F9BCAE9DB5DEEB27628D07A0D4F42766C9F4EF999F99582D78DED75837606FF9"
+}
+},
+"2.16.0.0-1757": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1757",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1757/MechJeb2-dev-2.16.0.0-1757.zip",
+"download_size": 2708635,
+"download_hash": {
+"sha1": null,
+"sha256": "27263839F7203D55A397CA2F991A82079D5E1683C9F74EFC10916F3AC9BFB2E9"
+}
+},
+"2.16.0.0-1758": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1758",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1758/MechJeb2-dev-2.16.0.0-1758.zip",
+"download_size": 2708645,
+"download_hash": {
+"sha1": null,
+"sha256": "144CB52FD7F661861D15F0B81C1425CE16EB7C20D2141A8CBBEB5E8615311E81"
+}
+},
+"2.16.0.0-1759": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1759",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1759/MechJeb2-dev-2.16.0.0-1759.zip",
+"download_size": 2708639,
+"download_hash": {
+"sha1": null,
+"sha256": "B32376B795A8ACB3B8F5657E4576CE9804DEF3D1E5900C2D9BD8007047C29E01"
+}
+},
+"2.16.0.0-1760": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1760",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1760/MechJeb2-dev-2.16.0.0-1760.zip",
+"download_size": 2708672,
+"download_hash": {
+"sha1": null,
+"sha256": "B61E27E6341F8FEB2561B0887138E0E516E04E1DBF6BDCBC5EFD6CDFD6C3B110"
+}
+},
+"2.16.0.0-1761": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1761",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1761/MechJeb2-dev-2.16.0.0-1761.zip",
+"download_size": 2709802,
+"download_hash": {
+"sha1": null,
+"sha256": "65EFBCD55957F93ECABC4D5CDABA907F1FDA8861BB10DF75746575812A57ADCC"
+}
+},
+"2.16.0.0-1762": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1762",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1762/MechJeb2-dev-2.16.0.0-1762.zip",
+"download_size": 2709849,
+"download_hash": {
+"sha1": null,
+"sha256": "7B35C8FD5619696FF4542BC79701E9DFC984B274F10AC878A13B77999A63E14A"
+}
+},
+"2.16.0.0-1763": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1763",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1763/MechJeb2-dev-2.16.0.0-1763.zip",
+"download_size": 2710303,
+"download_hash": {
+"sha1": null,
+"sha256": "E0F0054625BC262677BB5E926487D875A51FD9CD3CC53BA2C08B23099E431EF4"
+}
+},
+"2.16.0.0-1764": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1764",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1764/MechJeb2-dev-2.16.0.0-1764.zip",
+"download_size": 2710349,
+"download_hash": {
+"sha1": null,
+"sha256": "E08D743C298DCE856636924D5526C7981FAF7C08F9E3132F051D2405A8BD7D42"
+}
+},
+"2.16.0.0-1765": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1765",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1765/MechJeb2-dev-2.16.0.0-1765.zip",
+"download_size": 2712326,
+"download_hash": {
+"sha1": null,
+"sha256": "DD1AAAB659126C480F09963E75E55B453C36C81D7826624E9EBA141120339217"
+}
+},
+"2.16.0.0-1766": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1766",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1766/MechJeb2-dev-2.16.0.0-1766.zip",
+"download_size": 2712373,
+"download_hash": {
+"sha1": null,
+"sha256": "B7A6DEA306EC0DD5239D39F32C7FBE239D64D792F7E53EDE009938A0E6574701"
+}
+},
+"2.16.0.0-1767": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1767",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1767/MechJeb2-dev-2.16.0.0-1767.zip",
+"download_size": 2712307,
+"download_hash": {
+"sha1": null,
+"sha256": "5167846F4EEF306B9468A842666F69F02623515912DB5B2EA7794391F76B9E4B"
+}
+},
+"2.16.0.0-1768": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1768",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1768/MechJeb2-dev-2.16.0.0-1768.zip",
+"download_size": 2712289,
+"download_hash": {
+"sha1": null,
+"sha256": "337ADF514BD77285ADF99A5466CB6824150243FEB0671BC79BA014F48249126F"
+}
+},
+"2.16.0.0-1769": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1769",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1769/MechJeb2-dev-2.16.0.0-1769.zip",
+"download_size": 2712338,
+"download_hash": {
+"sha1": null,
+"sha256": "27D8794F9DA711F68206855B6ADDE5ED7B703A2440E0A1AA3AAC6EB673DF06E9"
+}
+},
+"2.16.0.0-1770": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1770",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1770/MechJeb2-dev-2.16.0.0-1770.zip",
+"download_size": 2712668,
+"download_hash": {
+"sha1": null,
+"sha256": "88773CCF0BEF23391632B7361613803B4D7A4840B3EFD160571AE8E41149BE24"
+}
+},
+"2.16.0.0-1771": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1771",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1771/MechJeb2-dev-2.16.0.0-1771.zip",
+"download_size": 2712707,
+"download_hash": {
+"sha1": null,
+"sha256": "8973600203A53E9DCB47160E00774B969D425192C70D3890C231CC0C7434438C"
+}
+},
+"2.16.0.0-1772": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1772",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1772/MechJeb2-dev-2.16.0.0-1772.zip",
+"download_size": 2719918,
+"download_hash": {
+"sha1": null,
+"sha256": "24CE2CDDA9BA606FA5760529F6262DAACC425E2ED37D32DF1FCB0CB7DDDE94A6"
+}
+},
+"2.16.0.0-1773": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1773",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1773/MechJeb2-dev-2.16.0.0-1773.zip",
+"download_size": 2719768,
+"download_hash": {
+"sha1": null,
+"sha256": "4DAC71F841B45B41A0C5FF66A308CC96F3584D515F54E8E2E305376318C51B8F"
+}
+},
+"2.16.0.0-1774": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1774",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1774/MechJeb2-dev-2.16.0.0-1774.zip",
+"download_size": 2719544,
+"download_hash": {
+"sha1": null,
+"sha256": "B320964F559624C3ACB07A9C55AE672B849368C7917CAC4BF1B6A179A01E2B23"
+}
+},
+"2.16.0.0-1775": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1775",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1775/MechJeb2-dev-2.16.0.0-1775.zip",
+"download_size": 2719552,
+"download_hash": {
+"sha1": null,
+"sha256": "9C669C71BF4A8F5DAC579583C2BD8AA76D73C16537844927ACC8608F0C5F97C3"
+}
+},
+"2.16.0.0-1776": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1776",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1776/MechJeb2-dev-2.16.0.0-1776.zip",
+"download_size": 2719481,
+"download_hash": {
+"sha1": null,
+"sha256": "518D5E81EA2232F0509C10F077E021E24330DBB127C5E2A168D00E10309E2CF7"
+}
+},
+"2.16.0.0-1777": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1777",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1777/MechJeb2-dev-2.16.0.0-1777.zip",
+"download_size": 2719845,
+"download_hash": {
+"sha1": null,
+"sha256": "20D8555B75F2C53197D2554C745C505DF3DDBA880D4728E33F203E5D8FD92D6B"
+}
+},
+"2.16.0.0-1778": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1778",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1778/MechJeb2-dev-2.16.0.0-1778.zip",
+"download_size": 2719849,
+"download_hash": {
+"sha1": null,
+"sha256": "30DAAC74C23067B1198A1C981A6BCC23B6CE1CF57B3A69EC4FD94152000F9E0D"
+}
+},
+"2.16.0.0-1779": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1779",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1779/MechJeb2-dev-2.16.0.0-1779.zip",
+"download_size": 2719849,
+"download_hash": {
+"sha1": null,
+"sha256": "13A1B076303C055284F03569D8D1BE34BC3276F1E61D96D588BAB8E9C717467C"
+}
+},
+"2.16.0.0-1780": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1780",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1780/MechJeb2-dev-2.16.0.0-1780.zip",
+"download_size": 2719779,
+"download_hash": {
+"sha1": null,
+"sha256": "4A6428F4C6F48D54B65F2AA5BFF418E2D124CE4ECB11796EF35DBCF6D558D375"
+}
+},
+"2.16.0.0-1781": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1781",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1781/MechJeb2-dev-2.16.0.0-1781.zip",
+"download_size": 2719785,
+"download_hash": {
+"sha1": null,
+"sha256": "EE225653C77C77A81624CE316895C5D3EA95A20EDBCB9809CD905ED9B0E6556E"
+}
+},
+"2.16.0.0-1782": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1782",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1782/MechJeb2-dev-2.16.0.0-1782.zip",
+"download_size": 2905615,
+"download_hash": {
+"sha1": null,
+"sha256": "CD39B58A9F4C19CA48EE47820E3ECED11E6D5F29BDFB11FCCDAEB2D260A28B9E"
+}
+},
+"2.16.0.0-1783": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1783",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1783/MechJeb2-dev-2.16.0.0-1783.zip",
+"download_size": 2905999,
+"download_hash": {
+"sha1": null,
+"sha256": "3B85A7528712844248D019F1D4F575AC19ECCEA8877B6FEC1C6D56667CB29F22"
+}
+},
+"2.16.0.0-1784": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1784",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1784/MechJeb2-dev-2.16.0.0-1784.zip",
+"download_size": 2907080,
+"download_hash": {
+"sha1": null,
+"sha256": "6E79E2DAF85D0B2096267E2133E9D74AD250C94128DAF9CA73CC4F6DFB56D08A"
+}
+},
+"2.16.0.0-1785": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1785",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1785/MechJeb2-dev-2.16.0.0-1785.zip",
+"download_size": 2907005,
+"download_hash": {
+"sha1": null,
+"sha256": "2DCB09BA0CF8533F85A5C8A359D2F0568601762E4CC35B669EBE496D6513E80C"
+}
+},
+"2.16.0.0-1786": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1786",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1786/MechJeb2-dev-2.16.0.0-1786.zip",
+"download_size": 2907414,
+"download_hash": {
+"sha1": null,
+"sha256": "9F9D5516053D1A905BEC91E8453E594EA897F6F1F14EBAED658890ACBFDABE6D"
+}
+},
+"2.16.0.0-1787": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1787",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1787/MechJeb2-dev-2.16.0.0-1787.zip",
+"download_size": 2907356,
+"download_hash": {
+"sha1": null,
+"sha256": "7E7697F868093A0D78E5CACD6BCD2EC93B03CA8F91A8F5F67F92A0E7A2742B97"
+}
+},
+"2.16.0.0-1788": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1788",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1788/MechJeb2-dev-2.16.0.0-1788.zip",
+"download_size": 2907351,
+"download_hash": {
+"sha1": null,
+"sha256": "124D9CFE3BD9067D1393B18AB882BAB8DAE258577F668B20840F61269AF4038B"
+}
+},
+"2.16.0.0-1789": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1789",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1789/MechJeb2-dev-2.16.0.0-1789.zip",
+"download_size": 2907403,
+"download_hash": {
+"sha1": null,
+"sha256": "DA756821443D119B27A3D186D89519BEE9D1AEA78B2B6E1412D6DBF1078B57EE"
+}
+},
+"2.16.0.0-1790": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1790",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1790/MechJeb2-dev-2.16.0.0-1790.zip",
+"download_size": 2907422,
+"download_hash": {
+"sha1": null,
+"sha256": "A5858D01D0E88D54841917218C0127B0214EB63E9925E84128D660C1DCFAF415"
+}
+},
+"2.16.0.0-1791": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1791",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1791/MechJeb2-dev-2.16.0.0-1791.zip",
+"download_size": 2921397,
+"download_hash": {
+"sha1": null,
+"sha256": "C56F0042F6BF58B5130BE865EA07B2EF3E3459AF170C0FCDB491DFFB6D2777E7"
+}
+},
+"2.16.0.0-1792": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1792",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1792/MechJeb2-dev-2.16.0.0-1792.zip",
+"download_size": 2921396,
+"download_hash": {
+"sha1": null,
+"sha256": "76E8E0E033DB773CC0C1BF4ECC610B08D0CCFC34CACAA24879664DE43BB4DCE1"
+}
+},
+"2.16.0.0-1793": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1793",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1793/MechJeb2-dev-2.16.0.0-1793.zip",
+"download_size": 2922260,
+"download_hash": {
+"sha1": null,
+"sha256": "743C4B38A667C29F3A27CBECBDE76BE45EB10463EAECA2AF911CEDC78E928E8C"
+}
+},
+"2.16.0.0-1794": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1794",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1794/MechJeb2-dev-2.16.0.0-1794.zip",
+"download_size": 2923623,
+"download_hash": {
+"sha1": null,
+"sha256": "52226B8FA56D78316D1623B54F5274EDC2FC27494D0E6D194042ECCD64416F44"
+}
+},
+"2.16.0.0-1795": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1795",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1795/MechJeb2-dev-2.16.0.0-1795.zip",
+"download_size": 2924791,
+"download_hash": {
+"sha1": null,
+"sha256": "C46B66DF84947F7E5C7FB2D44F6B08CB307E9D1FC943D3C1867D3A0A2C9B7B76"
+}
+},
+"2.16.0.0-1796": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1796",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1796/MechJeb2-dev-2.16.0.0-1796.zip",
+"download_size": 2923634,
+"download_hash": {
+"sha1": null,
+"sha256": "94DEF21A556D54F3ABDF43DEC70926D09555385511C0AB0C0F4537AAD331FDEF"
+}
+},
+"2.16.0.0-1797": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1797",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1797/MechJeb2-dev-2.16.0.0-1797.zip",
+"download_size": 2895600,
+"download_hash": {
+"sha1": null,
+"sha256": "CE6D64010DF416CC5E6B331EDADA56F25BD3FC163528AE4B64704E29CD95EB25"
+}
+},
+"2.16.0.0-1798": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1798",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1798/MechJeb2-dev-2.16.0.0-1798.zip",
+"download_size": 2895592,
+"download_hash": {
+"sha1": null,
+"sha256": "663BE26A0B9D11AE54759CFB2EE0376A8135D3F99A01C3034249C98A11E63ED6"
+}
+},
+"2.16.0.0-1799": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1799",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1799/MechJeb2-dev-2.16.0.0-1799.zip",
+"download_size": 2895601,
+"download_hash": {
+"sha1": null,
+"sha256": "06B261CFEB147873191A88D335F6734B708E514AA64D1874BA84D6C4FA47495D"
+}
+},
+"2.16.0.0-1800": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1800",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1800/MechJeb2-dev-2.16.0.0-1800.zip",
+"download_size": 2895666,
+"download_hash": {
+"sha1": null,
+"sha256": "784341D3AB53028CA2D8D42FE1C6FD415CAE7F8F711DCA6E6306FA4DDB6D8DEC"
+}
+},
+"2.16.0.0-1801": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1801",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1801/MechJeb2-dev-2.16.0.0-1801.zip",
+"download_size": 2895835,
+"download_hash": {
+"sha1": null,
+"sha256": "E4431B2A6C677FDF1B73A070EED9627E0D787EF9345665EEA81B399A13D0713C"
+}
+},
+"2.16.0.0-1802": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1802",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1802/MechJeb2-dev-2.16.0.0-1802.zip",
+"download_size": 2896467,
+"download_hash": {
+"sha1": null,
+"sha256": "6D083DEE4BD7C635B0AD82FB26B7CC3917B1769FCD5530B6E36FA4024818F5F9"
+}
+},
+"2.16.0.0-1803": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1803",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1803/MechJeb2-dev-2.16.0.0-1803.zip",
+"download_size": 2896590,
+"download_hash": {
+"sha1": null,
+"sha256": "2C2599BC7006BAE58DB9F4576D8386110DC93C3F4FB87A5ACA645C0DA76E46FA"
+}
+},
+"2.16.0.0-1804": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1804",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1804/MechJeb2-dev-2.16.0.0-1804.zip",
+"download_size": 2897115,
+"download_hash": {
+"sha1": null,
+"sha256": "051084812A05E32D4641F35C3ECA0487D2DC8454880F324FA2CC56300D3E7092"
+}
+},
+"2.16.0.0-1805": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1805",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1805/MechJeb2-dev-2.16.0.0-1805.zip",
+"download_size": 2898221,
+"download_hash": {
+"sha1": null,
+"sha256": "2874CD402D99BE9FD68C5DA6428BC70E882D5DC348136EBFB621214E25A3798B"
+}
+},
+"2.16.0.0-1806": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1806",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1806/MechJeb2-dev-2.16.0.0-1806.zip",
+"download_size": 2847987,
+"download_hash": {
+"sha1": null,
+"sha256": "DD785A640FF99D33D47BDFCE625CB2B6C802A9E1FCFCCC2470FE5383F1A656D8"
+}
+},
+"2.16.0.0-1807": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1807",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1807/MechJeb2-dev-2.16.0.0-1807.zip",
+"download_size": 2848530,
+"download_hash": {
+"sha1": null,
+"sha256": "0A1BD65C6318188CA3EA52A9EF7DE89150E76A85A4460860F83780A0C2A2DD7C"
+}
+},
+"2.16.0.0-1808": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1808",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1808/MechJeb2-dev-2.16.0.0-1808.zip",
+"download_size": 2848812,
+"download_hash": {
+"sha1": null,
+"sha256": "7E5519C4E370378247BFEB86E8258008BEF05C14FAA9F5C49E4A9ED1BCD98EE9"
+}
+},
+"2.16.0.0-1809": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1809",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1809/MechJeb2-dev-2.16.0.0-1809.zip",
+"download_size": 2849023,
+"download_hash": {
+"sha1": null,
+"sha256": "ABDE4B4836B68D085F81941B7DBB24E67A17DB8AB7F2D1F6F35E7BB90AC80032"
+}
+},
+"2.16.0.0-1810": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1810",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1810/MechJeb2-dev-2.16.0.0-1810.zip",
+"download_size": 2849119,
+"download_hash": {
+"sha1": null,
+"sha256": "CBE40D864370F69EEEFE38EC40BA5370C349D78E93F9E2DFF9BB6CB66DF8C3B1"
+}
+},
+"2.16.0.0-1811": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1811",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1811/MechJeb2-dev-2.16.0.0-1811.zip",
+"download_size": 2849714,
+"download_hash": {
+"sha1": null,
+"sha256": "E08D87A10E7689FCD28D4E0F88709825752F75B39C30B16A7D8FC3C41560DA25"
+}
+},
+"2.16.0.0-1812": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1812",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1812/MechJeb2-dev-2.16.0.0-1812.zip",
+"download_size": 2849635,
+"download_hash": {
+"sha1": null,
+"sha256": "DB46F77AED2950078A7B9986AAA031FFA0F33AEF26FEEFB815DA67B01A8E0E41"
+}
+},
+"2.16.0.0-1813": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1813",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1813/MechJeb2-dev-2.16.0.0-1813.zip",
+"download_size": 2849915,
+"download_hash": {
+"sha1": null,
+"sha256": "64A6DAE44AD6E99353276480969D5EBB26CAE8C621060D1EEF18C9AFCA508573"
+}
+},
+"2.16.0.0-1814": {
+"spec_version": "v1.34",
+"identifier": "MechJeb2-dev",
+"name": "MechJeb 2 - DEV RELEASE",
+"abstract": "Anatid Robotics and Multiversal Mechatronics proudly presents the first flight assistant autopilot: MechJeb",
+"author": "sarbian",
+"version": "2.16.0.0-1814",
+"ksp_version_min": "1.12.0",
+"ksp_version_max": "1.12.90",
+"license": "GPL-3.0",
+"resources": {
+"homepage": "https://forum.kerbalspaceprogram.com/index.php?/topic/154834-*",
+"repository": "https://github.com/MuMech/MechJeb2/",
+"ci": "https://github.com/MuMech/MechJeb2/actions/workflows/build.yml"
+},
+"provides": [
+"MechJeb2"
+],
+"conflicts": [
+{
+"name": "MechJeb2"
+},
+{
+"name": "MechJeb2-RO"
+}
+],
+"install": [
+{
+"find": "MechJeb2"
+}
+],
+"download": "https://github.com/MuMech/MechJeb2/releases/download/dev-2.16.0.0-1814/MechJeb2-dev-2.16.0.0-1814.zip",
+"download_size": 2850521,
+"download_hash": {
+"sha1": null,
+"sha256": "B8CCE22C867527782649CE80113595EE66A14CB429CCA5B8C2AEEC622293CF98"
+}
+}
+}
+}
+},
+"download_counts": {},
+"known_game_versions": [],
+"repositories": []
+}
