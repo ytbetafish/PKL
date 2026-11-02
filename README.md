@@ -45,3 +45,4 @@ PKL/
 - [Hex-Dragon/PCL2](https://github.com/Hex-Dragon/PCL2) — 启动器骨架
 - [PCL-Community/PCL-CE](https://github.com/PCL-Community/PCL-CE) — 功能参考
 - [KSP-CKAN/CKAN](https://github.com/KSP-CKAN/CKAN) — 模组管理核心
+注：本项目正在开发
