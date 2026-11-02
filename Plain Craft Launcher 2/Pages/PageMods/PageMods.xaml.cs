@@ -8,7 +8,7 @@ using Pkl.Ckan;
 
 namespace PCL.Pages;
 
-public partial class PageMods : UserControl
+public partial class PageMods
 {
     private static ModService? _modService;
     private readonly Dictionary<string, string?> _transCache = new();

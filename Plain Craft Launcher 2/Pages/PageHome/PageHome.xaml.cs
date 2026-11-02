@@ -8,7 +8,7 @@ using Pkl.Ckan;
 
 namespace PCL.Pages;
 
-public partial class PageHome : UserControl
+public partial class PageHome
 {
     private Process? _kspProcess;
 

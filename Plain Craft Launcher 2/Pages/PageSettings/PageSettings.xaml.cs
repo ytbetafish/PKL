@@ -1,9 +1,9 @@
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace PCL.Pages;
 
-public partial class PageSettings : UserControl
+public partial class PageSettings
 {
     public PageSettings()
     {

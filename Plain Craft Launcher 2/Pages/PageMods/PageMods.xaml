@@ -1,89 +1,79 @@
-<UserControl x:Class="PCL.Pages.PageMods"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PCL">
-    <Grid Margin="24">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+<local:MyPageRight x:Class="PCL.Pages.PageMods"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:local="clr-namespace:PCL">
+    <local:MyScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel Margin="25,25,25,10">
 
-        <!-- 顶部搜索栏：PCL 原生 MySearchBox + 已安装按钮 -->
-        <Grid Grid.Row="0" Margin="0,0,0,12">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <local:MySearchBox x:Name="TxtSearch" HintText="搜索 KSP 模组（名称 / 作者 / ID）"
-                               Search="BtnSearch_Click" />
-            <local:MyButton Grid.Column="1" Text="已安装" Width="90" Margin="12,0,0,0"
-                            Click="BtnInstalled_Click" />
-        </Grid>
+            <local:MyCard Margin="0,0,0,15" Title="搜索 KSP 模组">
+                <Grid Margin="25,38,23,18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <local:MySearchBox x:Name="TxtSearch" HintText="搜索 KSP 模组（名称 / 作者 / ID）"
+                                       Search="BtnSearch_Click" />
+                    <local:MyButton Grid.Column="1" Text="已安装" Width="90" Margin="12,0,0,0"
+                                    Click="BtnInstalled_Click" />
+                </Grid>
+            </local:MyCard>
 
-        <!-- 模组列表 -->
-        <Border Grid.Row="1" Background="{DynamicResource ColorBrush3}" CornerRadius="8" Padding="6">
-            <DataGrid x:Name="GridMods" AutoGenerateColumns="False" IsReadOnly="True"
-                      SelectionChanged="GridMods_SelectionChanged" HeadersVisibility="Column"
-                      GridLinesVisibility="Horizontal" Background="Transparent" BorderThickness="0"
-                      RowBackground="Transparent" AlternatingRowBackground="{DynamicResource ColorBrushTransparentBackground}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="2*" />
-                    <DataGridTextColumn Header="作者" Binding="{Binding Author}" Width="*" />
-                    <DataGridTextColumn Header="版本" Binding="{Binding Version}" Width="Auto" />
-                    <DataGridTextColumn Header="简介" Binding="{Binding Description}" Width="3*">
-                        <DataGridTextColumn.ElementStyle>
-                            <Style TargetType="TextBlock">
-                                <Setter Property="TextTrimming" Value="CharacterEllipsis" />
-                            </Style>
-                        </DataGridTextColumn.ElementStyle>
-                    </DataGridTextColumn>
-                    <DataGridTextColumn Header="状态" Width="Auto">
-                        <DataGridTextColumn.Binding>
-                            <MultiBinding StringFormat="{}{0}{1}">
-                                <Binding Path="IsInstalled" />
-                                <Binding Path="HasUpdate" />
-                            </MultiBinding>
-                        </DataGridTextColumn.Binding>
-                    </DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-        </Border>
+            <local:MyCard Margin="0,0,0,15" Title="搜索结果">
+                <Border Margin="25,38,23,18" Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4">
+                    <DataGrid x:Name="GridMods" AutoGenerateColumns="False" IsReadOnly="True"
+                              SelectionChanged="GridMods_SelectionChanged" HeadersVisibility="Column"
+                              GridLinesVisibility="Horizontal" Background="Transparent" BorderThickness="0"
+                              RowBackground="Transparent" AlternatingRowBackground="{DynamicResource ColorBrush3}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="2*" />
+                            <DataGridTextColumn Header="作者" Binding="{Binding Author}" Width="*" />
+                            <DataGridTextColumn Header="版本" Binding="{Binding Version}" Width="Auto" />
+                            <DataGridTextColumn Header="简介" Binding="{Binding Description}" Width="3*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="状态" Width="Auto">
+                                <DataGridTextColumn.Binding>
+                                    <MultiBinding StringFormat="{}{0}{1}">
+                                        <Binding Path="IsInstalled" />
+                                        <Binding Path="HasUpdate" />
+                                    </MultiBinding>
+                                </DataGridTextColumn.Binding>
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Border>
+            </local:MyCard>
 
-        <!-- 详情区 -->
-        <Border Grid.Row="2" Background="{DynamicResource ColorBrush3}" CornerRadius="8" Padding="16"
-                Margin="0,12,0,0" MaxHeight="170">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                    <TextBlock x:Name="LabModName" Text="（选中一个模组）" FontSize="14" FontWeight="SemiBold" />
-                    <local:MyButton x:Name="BtnTranslate" Text="中/EN" Width="70" Height="28" Margin="12,0,0,0"
-                                    Click="BtnTranslate_Click" Visibility="Collapsed" />
+            <local:MyCard Margin="0,0,0,15" Title="模组详情">
+                <StackPanel Margin="25,38,23,18">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                        <TextBlock x:Name="LabModName" Text="（选中一个模组）" FontSize="14" FontWeight="SemiBold" />
+                        <local:MyButton x:Name="BtnTranslate" Text="中/EN" Width="70" Height="28" Margin="12,0,0,0"
+                                        Click="BtnTranslate_Click" Visibility="Collapsed" />
+                    </StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="90">
+                        <TextBlock x:Name="LabModDesc" Text="" TextWrapping="Wrap" Opacity="0.8" FontSize="12.5" />
+                    </ScrollViewer>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock x:Name="LabModHome" Text="" Opacity="0.5" FontSize="11" VerticalAlignment="Center" />
+                        <local:MyButton x:Name="BtnInstall" Text="安装 / 更新" Width="110" Height="30" Margin="16,0,0,0"
+                                        ColorType="Highlight" Click="BtnInstall_Click" Visibility="Collapsed" />
+                    </StackPanel>
                 </StackPanel>
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" MaxHeight="80">
-                    <TextBlock x:Name="LabModDesc" Text="" TextWrapping="Wrap" Opacity="0.8" FontSize="12.5" />
-                </ScrollViewer>
-                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,8,0,0">
-                    <TextBlock x:Name="LabModHome" Text="" Opacity="0.5" FontSize="11" VerticalAlignment="Center" />
-                    <local:MyButton x:Name="BtnInstall" Text="安装 / 更新" Width="110" Height="30" Margin="16,0,0,0"
-                                    ColorType="Highlight" Click="BtnInstall_Click" Visibility="Collapsed" />
-                </StackPanel>
-            </Grid>
-        </Border>
+            </local:MyCard>
 
-        <!-- 安装进度条 -->
-        <Border Grid.Row="3" Background="{DynamicResource ColorBrush3}" CornerRadius="8" Padding="16,10"
-                Margin="0,12,0,0" Visibility="Collapsed" x:Name="PanProgress">
-            <StackPanel>
-                <TextBlock x:Name="LabProgress" Text="准备中…" FontSize="12" Opacity="0.8" Margin="0,0,0,6"
-                           TextTrimming="CharacterEllipsis" />
-                <ProgressBar x:Name="BarProgress" Height="6" IsIndeterminate="True" />
-            </StackPanel>
-        </Border>
-    </Grid>
-</UserControl>
+            <local:MyCard Margin="0,0,0,15" Title="安装进度" x:Name="PanProgress" Visibility="Collapsed">
+                <StackPanel Margin="25,38,23,18">
+                    <TextBlock x:Name="LabProgress" Text="准备中…" FontSize="12" Opacity="0.8" Margin="0,0,0,6"
+                               TextTrimming="CharacterEllipsis" />
+                    <ProgressBar x:Name="BarProgress" Height="6" IsIndeterminate="True" />
+                </StackPanel>
+            </local:MyCard>
+
+        </StackPanel>
+    </local:MyScrollViewer>
+</local:MyPageRight>
