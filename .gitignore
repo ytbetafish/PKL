@@ -350,3 +350,5 @@ MaskFiles/
 .dotnet-home/
 pkl-settings.json
 
+
+.nuget/
