@@ -4,6 +4,7 @@
         <TargetFramework>net10.0-windows</TargetFramework>
         <OutputType>WinExe</OutputType>
         <RootNamespace>PCL</RootNamespace>
+        <AssemblyName>PKL</AssemblyName>
         <MyType>Custom</MyType>
         <IsWebBootstrapper>false</IsWebBootstrapper>
         <StartupObject>PCL.Program</StartupObject>
@@ -25,7 +26,7 @@
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <ApplicationIcon>Images\icon.ico</ApplicationIcon>
         <AssemblyTitle>PKL - KSP Launcher</AssemblyTitle>
-        <Description>Minecraft 启动器 (作者: 龙腾猫跃; 经社区二次开发版本)</Description>
+        <Description>PKL - Plain KSP Launcher，基于 PCL-CE 骨架的坎巴拉太空计划启动器</Description>
         <Product>PKL - KSP Launcher</Product>
         <Copyright>Copyright © 龙腾猫跃 2016. All Rights Reserved.</Copyright>
         <AssemblyVersion>2.15.1.0</AssemblyVersion>
