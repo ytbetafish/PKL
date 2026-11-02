@@ -21,6 +21,7 @@
             <TextBlock x:Name="LabKspVersion" Text="" FontSize="12" Opacity="0.6" Margin="0,0,0,32" />
 
             <Button x:Name="BtnLaunch" Content="启动 KSP" Padding="20,12" FontSize="14" Click="BtnLaunch_Click" HorizontalAlignment="Center" />
+            <TextBlock x:Name="LabKspStatus" Text="" FontSize="12" Opacity="0.7" Margin="0,12,0,0" HorizontalAlignment="Center" />
         </StackPanel>
     </Grid>
 </UserControl>

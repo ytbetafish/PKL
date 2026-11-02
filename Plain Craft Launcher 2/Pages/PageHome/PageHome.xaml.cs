@@ -1,3 +1,6 @@
+using System;
+using System.Diagnostics;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
@@ -7,10 +10,13 @@ namespace PCL.Pages;
 
 public partial class PageHome : UserControl
 {
+    private Process? _kspProcess;
+
     public PageHome()
     {
         InitializeComponent();
         Loaded += (_, _) => RefreshPath();
+        Unloaded += (_, _) => DetachKspWatcher();
     }
 
     private void RefreshPath()
@@ -50,12 +56,80 @@ public partial class PageHome : UserControl
 
     private void BtnLaunch_Click(object sender, RoutedEventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(PklSettings.Current.KspRootPath) ||
-            !KspInstanceService.IsKspRoot(PklSettings.Current.KspRootPath))
+        var root = PklSettings.Current.KspRootPath;
+        if (string.IsNullOrWhiteSpace(root) || !KspInstanceService.IsKspRoot(root))
         {
             MessageBox.Show("请先选择有效的 KSP 安装路径。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }
-        MessageBox.Show("启动 KSP 功能尚未实现（占位）。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
+
+        // 已在运行：点击按钮 → 提示
+        if (_kspProcess is { HasExited: false })
+        {
+            MessageBox.Show("KSP 已经在运行中。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
+            return;
+        }
+
+        var exe = Path.Combine(root, "KSP_x64.exe");
+        if (!File.Exists(exe)) exe = Path.Combine(root, "KSP.exe");
+        if (!File.Exists(exe))
+        {
+            MessageBox.Show("未找到 KSP_x64.exe / KSP.exe。", "PKL", MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
+
+        try
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = exe,
+                WorkingDirectory = root,
+                UseShellExecute = true
+            };
+            _kspProcess = Process.Start(psi);
+            if (_kspProcess is not null)
+            {
+                _kspProcess.EnableRaisingEvents = true;
+                _kspProcess.Exited += OnKspExited;
+                SetLaunchedUi();
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("启动失败：" + ex.Message, "PKL", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+
+    private void OnKspExited(object? sender, EventArgs e)
+    {
+        Dispatcher.BeginInvoke(new Action(() =>
+        {
+            DetachKspWatcher();
+            SetIdleUi();
+        }));
+    }
+
+    private void SetLaunchedUi()
+    {
+        BtnLaunch.Content = "游戏运行中…";
+        BtnLaunch.IsEnabled = false;
+        LabKspStatus.Text = $"KSP 已启动（PID {_kspProcess?.Id}）";
+    }
+
+    private void SetIdleUi()
+    {
+        BtnLaunch.Content = "启动 KSP";
+        BtnLaunch.IsEnabled = true;
+        LabKspStatus.Text = "";
+    }
+
+    private void DetachKspWatcher()
+    {
+        if (_kspProcess is not null)
+        {
+            try { _kspProcess.Exited -= OnKspExited; } catch { }
+            try { _kspProcess.Dispose(); } catch { }
+            _kspProcess = null;
+        }
     }
 }

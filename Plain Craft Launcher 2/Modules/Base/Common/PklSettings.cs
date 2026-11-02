@@ -18,7 +18,7 @@ public static class PklSettings
 
     public class SettingsData
     {
-        public string KspRootPath { get; set; } = "";
+        public string KspRootPath { get; set; } = @"D:\Kerbal Space Program";
         public string TranslateBaseUrl { get; set; } = "https://api.deepseek.com/v1";
         public string TranslateApiKey { get; set; } = "";
         public string TranslateModel { get; set; } = "deepseek-chat";

@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using PCL.Translation;
@@ -13,11 +15,12 @@ public partial class PageMods : UserControl
     private ModSearchResult? _selected;
     private bool _showChinese;
     private string? _originalDescription;
+    private bool _serviceReady;
 
     public PageMods()
     {
         InitializeComponent();
-        Loaded += async (_, _) => await EnsureServiceAndRefresh();
+        Loaded += async (_, _) => await EnsureServiceAsync();
     }
 
     private static ModService GetService()
@@ -35,32 +38,47 @@ public partial class PageMods : UserControl
                 }
                 catch
                 {
-                    // 附加失败则保持无实例，搜索仍可用。
+                    // 附加失败保持无实例，后续操作降级。
                 }
             }
         }
         return _modService;
     }
 
-    private async Task EnsureServiceAndRefresh()
+    private async Task EnsureServiceAsync()
     {
+        if (_serviceReady)
+        {
+            await DoSearch(TxtSearch.Text);
+            return;
+        }
+
+        var svc = GetService();
         try
         {
-            await GetService().RefreshMasterRegistryAsync();
-            await DoSearch(null);
+            PanProgress.Visibility = Visibility.Visible;
+            LabProgress.Text = "正在刷新 CKAN 注册表…";
+            BarProgress.IsIndeterminate = true;
+            await svc.RefreshMasterRegistryAsync();
         }
         catch (Exception ex)
         {
-            MessageBox.Show("加载模组注册表失败：" + ex.Message, "PKL", MessageBoxButton.OK, MessageBoxImage.Warning);
+            LabProgress.Text = "注册表刷新失败：" + ex.Message;
         }
+        finally
+        {
+            PanProgress.Visibility = Visibility.Collapsed;
+            _serviceReady = true;
+        }
+
+        await DoSearch(null);
     }
 
     private async Task DoSearch(string? query)
     {
         try
         {
-            var results = await GetService().SearchAsync(query);
-            GridMods.ItemsSource = results;
+            GridMods.ItemsSource = await GetService().SearchAsync(query);
         }
         catch (Exception ex)
         {
@@ -144,19 +162,33 @@ public partial class PageMods : UserControl
         if (_selected is null) return;
         try
         {
+            PanProgress.Visibility = Visibility.Visible;
+            BarProgress.IsIndeterminate = true;
+            LabProgress.Text = "正在解析依赖…";
+
             var plan = await GetService().GetInstallPlanAsync(_selected.Identifier);
             if (plan is null)
             {
+                PanProgress.Visibility = Visibility.Collapsed;
                 MessageBox.Show("无法为该模组生成安装计划（未附加 KSP 实例？）。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-            var progress = new Progress<string>(msg => LabModDesc.Text = msg);
+
+            LabProgress.Text = $"计划：安装 {plan.ToInstall.Count} 个，升级 {plan.ToUpgrade.Count} 个。";
+            var progress = new Progress<string>(msg =>
+            {
+                Dispatcher.BeginInvoke(new Action(() => LabProgress.Text = msg));
+            });
+
             await GetService().ExecutePlanAsync(plan, progress);
+
+            PanProgress.Visibility = Visibility.Collapsed;
             MessageBox.Show("安装计划执行完成。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
             await DoSearch(TxtSearch.Text);
         }
         catch (Exception ex)
         {
+            PanProgress.Visibility = Visibility.Collapsed;
             MessageBox.Show("安装失败：" + ex.Message, "PKL", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
