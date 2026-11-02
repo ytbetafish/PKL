@@ -26,7 +26,11 @@
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <ApplicationIcon>Images\icon.ico</ApplicationIcon>
         <AssemblyTitle>PKL - KSP Launcher</AssemblyTitle>
+<<<<<<< HEAD
         <Description>PKL - Plain KSP Launcher，基于 PCL-CE 骨架的坎巴拉太空计划启动器</Description>
+=======
+        <Description>Minecraft 启动器 (作者: 龙腾猫跃; 经社区二次开发版本)</Description>
+>>>>>>> a6b1628 (feat: restore native PCL-CE shell, hook KSP mods/launch into native nav)
         <Product>PKL - KSP Launcher</Product>
         <Copyright>Copyright © 龙腾猫跃 2016. All Rights Reserved.</Copyright>
         <AssemblyVersion>2.15.1.0</AssemblyVersion>
