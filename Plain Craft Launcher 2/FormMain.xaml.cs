@@ -1327,11 +1327,14 @@ public partial class FormMain
     /// </summary>
     private void BtnTitleSelect_Click(MyRadioButton sender, bool raiseByMouse)
     {
-        if (isChangingPage)
-            return;
-        var pageType = (PageType)int.Parse(sender.Tag.ToString());
-        PageChangeActual(pageType, PageSubType.Default);
+        var tag = sender.Tag?.ToString();
+        switch (tag)
+        {
+            case "1": PanMainRight.Child = new Pages.PageMods(); break;
+            case "2": PanMainRight.Child = new Pages.PageSettings(); break;
+            default: PanMainRight.Child = new Pages.PageHome(); break;
         }
+    }
 
     private void BtnTitleInner_Click(object sender, EventArgs e)
     {
