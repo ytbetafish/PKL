@@ -1,4 +1,4 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -134,7 +134,7 @@ public partial class FormMain
         var placeholderLeft = new MyPageLeft();
         PanMainLeft.Child = placeholderLeft;
         pageLeft = placeholderLeft;
-        PanMainRight.Child = new Pages.PageHome();
+        PanMainRight.Child = new MyPageRight { Child = new Pages.PageHome() };
         // 调试模式提醒
         if (Common.modeDebug)
             HintService.Show(Hints.Info(Lang.Text("Main.DebugMode.Hint")));
@@ -1329,11 +1329,16 @@ public partial class FormMain
     {
         if (isChangingPage) return;
         var tag = sender.Tag?.ToString();
-        // KSP 挂接：用 MyPageRight 包装 UserControl，避免原生代码强转失败
-        if (tag == "1") { PanMainRight.Child = new MyPageRight { Child = new Pages.PageMods() }; return; }
-        if (tag == "3") { PanMainRight.Child = new MyPageRight { Child = new Pages.PageHome() }; return; }
-        var pageType = (PageType)int.Parse(tag ?? "0");
-        PageChangeActual(pageType, PageSubType.Default);
+        // KSP 挂接：全部导航直接托管自定义页面并用 MyPageRight 包装，
+        // 绕过原生 PageChangeActual，避免对 PanMainRight.Child 做 MyPageRight 强转时 InvalidCastException。
+        UserControl page = tag switch
+        {
+            "1" => new Pages.PageMods(),
+            "2" => new Pages.PageSettings(),
+            "3" => new Pages.PageHome(),
+            _ => new Pages.PageHome(),
+        };
+        PanMainRight.Child = new MyPageRight { Child = page };
     }
 
     private void BtnTitleInner_Click(object sender, EventArgs e)
