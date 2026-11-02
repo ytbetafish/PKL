@@ -30,6 +30,7 @@ public sealed partial class SingleInstanceService
     [LifecycleStart]
     private static void _Start()
     {
+        bool shouldExit = false;
         try
         {
             var stream = File.Open(_LockFilePath, FileMode.Create, FileAccess.ReadWrite, FileShare.Read);
@@ -45,17 +46,53 @@ public sealed partial class SingleInstanceService
             {
                 using var stream = File.Open(_LockFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 using var reader = new StreamReader(stream);
-                var pid = reader.ReadToEnd();
-                Context.Info($"发现重复实例 {pid}，尝试传递参数并拉起主窗口");
+                var pidText = reader.ReadToEnd().Trim();
+
+                // 自愈：检查记录的 PID 是否还活着；死进程残留锁时接管
+                if (int.TryParse(pidText, out var oldPid) && oldPid != Environment.ProcessId)
+                {
+                    bool alive;
+                    try { _ = System.Diagnostics.Process.GetProcessById(oldPid); alive = true; }
+                    catch { alive = false; }
+
+                    if (!alive)
+                    {
+                        Context.Warn($"PID {oldPid} 已不存在，清理残留锁并接管");
+                        try { File.Delete(_LockFilePath); } catch { /* 文件可能仍被 OS 句柄占用，忽略 */ }
+                        // 直接以覆盖方式写回自己的 PID
+                        try
+                        {
+                            var takeover = File.Open(_LockFilePath, FileMode.Create, FileAccess.ReadWrite, FileShare.Read);
+                            using var sw = new StreamWriter(takeover, Encoding.ASCII, 8, true);
+                            sw.Write(Basics.CurrentProcessId);
+                            sw.Flush();
+                            _lockStream = takeover;
+                            Context.Debug("已接管单例锁");
+                            return; // 正常继续，不退出
+                        }
+                        catch (Exception ex)
+                        {
+                            Context.Warn("接管单例锁失败，忽略锁继续启动", ex);
+                            return; // 不退出，继续启动
+                        }
+                    }
+                }
+
+                Context.Info($"发现重复实例 {pidText}，尝试传递参数并拉起主窗口");
                 try
                 {
-                    _TryRpc(pid, "REQ cli\n" + JsonSerializer.Serialize(StartupService.UnhandledCommands, JsonCompat.SerializerOptions));
-                    _TryRpc(pid, "REQ activate");
+                    _TryRpc(pidText, "REQ cli\n" + JsonSerializer.Serialize(StartupService.UnhandledCommands, JsonCompat.SerializerOptions));
+                    _TryRpc(pidText, "REQ activate");
                 }
                 catch (Exception ex) { Context.Warn("RPC 通信失败", ex); }
+                shouldExit = true;
             }
-            catch (Exception ex) { Context.Error("读取单例锁出错", ex); }
-            finally { Context.RequestExit(1); }
+            catch (Exception ex)
+            {
+                Context.Error("读取单例锁出错", ex);
+                shouldExit = true;
+            }
+            if (shouldExit) Context.RequestExit(1);
         }
     }
 

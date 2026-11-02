@@ -22,7 +22,7 @@
         MinHeight="470"
         MinWidth="810"
         ScrollViewer.VerticalScrollBarVisibility="Disabled"
-        Icon="/Plain Craft Launcher 2;component/Images/icon.ico"
+        Icon="/PKL;component/Images/icon.ico"
         ResizeMode="CanResize"
         Background="{x:Null}"
         d:DesignWidth="870"

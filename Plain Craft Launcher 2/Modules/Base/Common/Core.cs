@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using PCL.Core.App;
 using PCL.Core.Utils;
 
@@ -39,7 +39,7 @@ public static partial class Common
     ///     程序内嵌图片文件夹路径，以“/”结尾。
     /// </summary>
     public const string PathImage =
-        "pack://application:,,,/Plain Craft Launcher 2;component/Images/";
+        "pack://application:,,,/PKL;component/Images/";
 
     /// <summary>
     ///     当前程序的语言。
