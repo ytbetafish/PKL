@@ -1,73 +1,95 @@
-**简体中文** | [English](README-EN.md) | [繁體中文](README-ZH_TW.md)
+# PKL — KSP Launcher
 
-<div align="center">
+基于 **PCL-CE**（Plain Craft Launcher Community Edition，dev 分支）改造的 **《坎巴拉太空计划》(Kerbal Space Program, KSP)** 启动器。
 
-<img src="Plain Craft Launcher 2/Images/icon.ico" alt="Logo" width="80" height="80">
+- 以 PCL-CE 的 WPF 程序骨架为底座，剥离全部 Minecraft 专属内容；
+- 集成 **CKAN**（Comprehensive Kerbal Archive Network）核心，实现 KSP 模组的浏览 / 搜索 / 安装 / 依赖解析；
+- 参考 PCL-CE 的"简介翻译"，实现模组简介的中 / 英翻译切换。
 
-# PCL Community Edition
+技术栈：C# / WPF / .NET 10 (`net10.0-windows`)。
 
-[![Stars](https://img.shields.io/github/stars/PCL-Community/PCL-CE?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTggLjI1YS43NS43NSAwIDAgMSAuNjczLjQxOGwxLjg4MiAzLjgxNSA0LjIxLjYxMmEuNzUuNzUgMCAwIDEgLjQxNiAxLjI3OWwtMy4wNDYgMi45Ny43MTkgNC4xOTJhLjc1MS43NTEgMCAwIDEtMS4wODguNzkxTDggMTIuMzQ3bC0zLjc2NiAxLjk4YS43NS43NSAwIDAgMS0xLjA4OC0uNzlsLjcyLTQuMTk0TC44MTggNi4zNzRhLjc1Ljc1IDAgMCAxIC40MTYtMS4yOGw0LjIxLS42MTFMNy4zMjcuNjY4QS43NS43NSAwIDAgMSA4IC4yNVoiIGZpbGw9IiNlYWM1NGYiLz48L3N2Zz4=&logoSize=auto&label=stars&labelColor=444444&color=eac54f)](https://github.com/PCL-Community/PCL-CE/)
-![GitHub Release](https://img.shields.io/github/v/release/PCL-Community/PCL-CE?label=release&logo=github&style=for-the-badge)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/PCL-Community/PCL-CE/build-test.yml?style=for-the-badge)
+---
 
-[![Issues](https://img.shields.io/github/issues/PCL-Community/PCL-CE?style=for-the-badge&label=issues&labelColor=444444&color=1F883D&logo=github)](https://github.com/PCL-Community/PCL-CE/issues)
-[![Pull requests](https://img.shields.io/github/issues-pr/PCL-Community/PCL-CE?style=for-the-badge&label=pull%20requests&labelColor=444444&color=1F883D&logo=github)](https://github.com/PCL-Community/PCL-CE/pulls)
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/PCL-Community/PCL-CE/total?style=for-the-badge)
-[![哔哩哔哩](https://img.shields.io/badge/动态-bilibili-00A4DB?style=for-the-badge&labelColor=444444&logo=bilibili)](https://space.bilibili.com/3546847192811755/dynamic) <br />
+## 一、上游来源
 
-<a href="https://trendshift.io/repositories/21800?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-21800" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/21800/weekly?language=C%23" alt="PCL-Community%2FPCL-CE | Trendshift" width="250" height="55"/></a>
-<a href="https://trendshift.io/repositories/21800" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/21800" alt="PCL-Community%2FPCL-CE | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+| 组件 | 仓库 | 版本/分支 | 许可 |
+|---|---|---|---|
+| 改造底座 | `PCL-Community/PCL-CE` | `dev`（commit `74c4e2d`） | Apache-2.0（"Plain Craft Launcher 2"目录除外，沿用其原许可） |
+| 模组管理核心 | `KSP-CKAN/CKAN` | `master`，对标 `v1.36.4` | MIT |
+| 简介翻译原型 | 取自 PCL-CE `PCL.Launcher.Core/Comp/ProjectProps.cs` 的翻译代理 | — | 同 PCL-CE |
 
-[社区版下载](https://github.com/PCL-Community/PCL-CE/releases/latest) |
-[上游存储库](https://github.com/Meloong-Git/PCL)
+> 最初考虑的 `Hex-Dragon/PCL2 v2.13.1.1` 为 VB.NET + .NET Framework 4.8 旧式工程，本机无对应工具链，故按决策改用已 C# 化、架构更清晰的 PCL-CE dev。
 
-[提交问题](https://github.com/PCL-Community/PCL-CE/issues/new/choose) |
-[贡献指南](https://github.com/PCL-Community/PCL-CE/wiki/开发指南)
+## 二、目录结构
 
-</div>
+```
+PKL/
+├─ PCL.Core/                     # 保留：核心工具库（JSON/日志/网络/扩展）
+├─ PCL.Core.Wpf/                 # 保留：WPF 主题、控件、动画、图标
+├─ PCL.Core.SourceGenerators/    # 保留：源生成器
+├─ PCL.Launcher.Core/            # 业务核心（已剥离 MC，新增翻译服务）
+│   └─ Translation/              #   ITranslationService / OpenAiTranslationService / TranslationOptions
+├─ Plain Craft Launcher 2/       # WPF 主程序
+│   ├─ Program.cs / Application   # 启动
+│   ├─ FormMain.xaml(.cs)         # 主窗口外壳与导航
+│   ├─ Pages/PageHome/            #   主页：选择 KSP 路径、显示版本、启动按钮（占位）
+│   ├─ Pages/PageMods/            #   模组管理：搜索/列表/安装计划/简介翻译切换
+│   ├─ Pages/PageSettings/        #   设置：翻译 API（BaseUrl/Key/Model）持久化
+│   └─ Modules/Base/Common/PklSettings.cs   # KSP 路径 + 翻译设置 JSON 持久化
+├─ external/CKAN.Core/            # 内联的 CKAN 核心（从 CKAN/Core 复制，目标 net10.0）
+├─ src/Pkl.Ckan/                  # CKAN 适配层（无头，不依赖 WPF）
+│   ├─ IModService.cs             #   模组管理对外接口
+│   ├─ ModService.cs              #   搜索/已安装/安装计划/执行计划
+│   ├─ KspInstanceService.cs      #   KSP 实例探测与加载
+│   └─ Contracts.cs               #   KspInstanceInfo / ModSearchResult / ModInstallPlan
+└─ docs/
+    ├─ 改造与整合方案.md
+    └─ 参考样例分析.md
+```
 
-PCL CE 是基于 PCL 开源代码二次开发的社区版本，包括了主线暂未制作的功能和改进！
+## 三、构建方式
 
-社区版的版本号与主线并非严格对应关系，也请不要向官方仓库反馈社区版问题。
+需要 **.NET 10 SDK**（本机装于 `C:\Users\adminstartor\.dotnet`）。干净构建：
 
-欢迎大家来用用看！
+```powershell
+# 指向 .NET 10 SDK（若已在 PATH 可省略前两行）
+$env:DOTNET_ROOT='C:\Users\adminstartor\.dotnet'
+$env:Path='C:\Users\adminstartor\.dotnet;'+$env:Path
+# 可选：把 NuGet 缓存与 CLI 主目录重定向到仓库内，避免权限问题
+$env:DOTNET_CLI_TELEMETRY_OPTOUT='1'
+$env:DOTNET_SKIP_FIRST_TIME_EXPERIENCE='1'
 
-**开发群:** [599620549](https://qm.qq.com/q/PNQA4Md8wc)[✦](https://t.me/+78XW2bUOvKJjMTZl) | **用户 1 群:** [1028074835](https://qm.qq.com/q/qrMGJo8BQQ) | **用户 2 群:** [1070029541](https://qm.qq.com/q/lBywbDMWhG)
+cd PKL
+dotnet build ".\Plain Craft Launcher 2.slnx" -c Debug
+```
 
-## 💻 支持平台
+预期结果：**0 error**（当前约 394 条 warning，多为可空性与未使用字段，不影响运行）。
+运行主程序：`Plain Craft Launcher 2\bin\Debug\net10.0-windows\Plain Craft Launcher 2.exe`。
 
-| 操作系统 | 支持情况 | 环境要求 |
-|---|---|---|
-| Windows 10 1809 (17763) 或更高 | ✅ 完整支持 | [.NET 10 Desktop Runtime](https://get.dot.net/10) |
-| Windows 8 - Windows 10 1809 (17763) | ⚠️ 理论能跑，酌情提供社区支持 | [.NET 10 Desktop Runtime](https://get.dot.net/10) |
-| Windows 7 或更低版本 | ❌ 不支持 | / |
-| macOS / Linux / 其他操作系统 | ⚠️ 仅跨平台开发支持（交叉编译） | [.NET 10 SDK](https://get.dot.net/10) |
+## 四、功能清单
 
-**✅ 完整支持**：尽可能提供一切相关支持，但必须确保启动器为最新版本。
+- [x] PCL WPF 外壳：主窗口、主题资源、设置 JSON 持久化、日志、下载引擎框架保留可运行；
+- [x] MC 专属内容已剥离：版本隔离、MC 账号/皮肤、Java 检测、Forge/Fabric 安装器、MC Mod 平台、资源包/光影/存档/服务器等页面与模块；
+- [x] CKAN 集成：KSP 路径探测、注册表刷新、模组搜索、已安装列表、依赖解析安装计划、执行安装；
+- [x] 简介翻译：模组简介"中/EN"切换，OpenAI 兼容接口（默认 DeepSeek），可在设置页配置 BaseUrl/ApiKey/Model，内存缓存；
+- [ ] 启动 KSP 进程（按钮已留占位）；
+- [ ] 安装执行进度独立 UI、翻译"测试连接"按钮。
 
-**⚠️ 理论能跑，酌情提供社区支持**：PCL CE 应该可以在这些平台上运行，但不保证功能完全可用。你可能需要升级到完整支持的系统版本以获得进一步社区技术支持。
+## 五、分层架构
 
-**❌ 不支持**：PCL CE 在这些平台的可用性较低，甚至压根打不开。请升级操作系统以使用 PCL CE。
+```
+┌─────────────────────────────────────────────────────────┐
+│  Plain Craft Launcher 2 (WPF, net10.0-windows)           │
+│   PageHome ─┐                                            │
+│   PageMods ─┼─> IModService (Pkl.Ckan) ─> CKAN.Core      │
+│   PageSettings└─> ITranslationService (OpenAI 兼容)      │
+└──────────────┬───────────────────────────┬───────────────┘
+                │                            │
+         src/Pkl.Ckan (无头适配)      PCL.Core / PCL.Core.Wpf
+         external/CKAN.Core           (主题/控件/日志/设置)
+         (模组解析/依赖)
+```
 
-**⚠️ 仅跨平台开发支持（交叉编译）**：PCL CE 的源代码可以在 macOS 与 Linux 平台编译，但无法直接运行。作为开发者，你可以在这些平台上进行开发，然后将编译产物转移到 Windows 系统测试。
+## 六、许可
 
-**注**：    
-社区仅对最新版本的启动器提供支持。    
-取决于部分问题的特殊性（如系统不完整），有时你仍然必须升级操作系统以继续获得支持。    
-PCL CE 始终建议使用最新版本的操作系统以获得最佳体验。    
-你仍然可以尝试在不受支持的系统上使用 PCL CE，但可能会遇到很多额外问题。
-
-## 🔒 许可证
-
-- `Plain Craft Launcher 2/` 使用 [自定义许可证](https://github.com/PCL-Community/PCL-CE/blob/dev/Plain%20Craft%20Launcher%202/LICENCE)
-- `其余所有目录` 使用 [Apache License 2.0](https://github.com/PCL-Community/PCL-CE/blob/dev/LICENSE)
-
-## 🌟 统计数据
-![Alt](https://repobeats.axiom.co/api/embed/3e46296e6e3a134991a783480fd2f62723bb0353.svg "Repobeats analytics image")
-
-[![Star History Chart](https://api.star-history.com/chart?repos=PCL-Community/PCL-CE&type=date&legend=top-left&sealed_token=Ts-GaAXJ5nb9fJERusrXneo05pfZ83tMhReHJ98nmmlemBTqHS5Ozocdep1MTMdsX-6CRiQH9TqiS1Kk7SxjTfk02eUOxnm25oHff6TLLvrY7pGujOkU1IwjVFQLE-5GJYogutJAyI78jujBlOnpk3J2OKAY1PBhmkyUOzW1C1sdz5BzPbj2eBbJGvDx)](https://www.star-history.com/?repos=PCL-Community%2FPCL-CE&type=date&legend=top-left)
-
-**此页浏览量**（总计 / 今日）：[![Hits](https://hits.zkitefly.eu.org/?tag=https://github.com/PCL-Community/PCL-CE)](https://hits.zkitefly.eu.org/?tag=https://github.com/PCL-Community/PCL-CE&web=true)
-## ❤️ 贡献者
-
-[![](https://contrib.rocks/image?repo=PCL-Community/PCL-CE)](https://github.com/PCL-Community/PCL-CE/graphs/contributors)
+本仓库为二次开发作品：PCL 外壳部分遵循 PCL-CE 相应许可；CKAN 核心遵循 MIT；新增 PKL 代码可按 Apache-2.0 使用。详见各上游 `LICENSE`。

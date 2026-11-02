@@ -2,28 +2,17 @@
 
 public partial class Setup
 {
+    /// <summary>
+    ///     KSP 改造后：原 Minecraft 实例设置页面（内存/服务器登录）已剥离，
+    ///     保留空实现以兼容配置观察者调用。
+    /// </summary>
     public static void VersionRamType(int type)
     {
-        if (Launcher.frmInstanceSetup is null)
-            return;
-        Launcher.frmInstanceSetup.RamType(type);
+        // KSP 改造后：MC 实例内存设置页面已剥离。
     }
 
     public static void VersionServerLogin(int type)
     {
-        if (Launcher.frmInstanceSetup is null)
-            return;
-
-        Common.WriteIni($"{GameFolders.mcFolderSelected}PCL.ini", "InstanceCache", "");
-        if (PageInstanceLeft.McInstance is null || GameFolders.mcFolderSelected is null)
-            return;
-
-        PageInstanceLeft.McInstance = new McInstance(PageInstanceLeft.McInstance.Name).Load();
-        Loading.LoaderFolderRun(
-            InstanceList.mcInstanceListLoader,
-            GameFolders.mcFolderSelected,
-            Loading.LoaderFolderRunType.ForceRun,
-            1,
-            @"versions\");
+        // KSP 改造后：MC 实例服务器登录设置已剥离。
     }
 }

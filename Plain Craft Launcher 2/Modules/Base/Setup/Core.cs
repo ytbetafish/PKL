@@ -1,4 +1,4 @@
-﻿using PCL.Core.App;
+using PCL.Core.App;
 using PCL.Core.App.Configuration;
 
 namespace PCL;
@@ -9,7 +9,7 @@ public partial class Setup
     {
         ConfigService.RegisterObserver(
             Config.Preference.Hide,
-            new ConfigObserver(ConfigEvent.Changed, _ => PageSetupUI.HiddenRefresh()));
+            new ConfigObserver(ConfigEvent.Changed, _ => { }));
 
         Config.Launch.MemoryAllocationModeConfig.Observe(
             new ConfigObserver(
@@ -190,7 +190,7 @@ public partial class Setup
         UiLogoText(Config.Preference.WindowTitleCustomText);
         UiLogoLeft(Config.Preference.TopBarLeftAlign);
 
-        PageSetupUI.HiddenRefresh();
+        // KSP: PageSetupUI.HiddenRefresh(); // 设置界面已剥离
 
         SystemDebugMode(Config.Debug.Enabled);
         SystemDebugAnim(Config.Debug.AnimationSpeed);

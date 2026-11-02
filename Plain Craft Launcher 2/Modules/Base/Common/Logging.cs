@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.Reflection;
@@ -424,7 +424,7 @@ public static partial class Common
                         OS: {RuntimeInformation.OSDescription} (32-bit: {SystemInfo.Is32BitSystem})
                         Memory: {availableMiB} MiB / {totalMiB} MiB
                         DPI: {Dpi} ({dpiScale * 100}%)
-                        MC Folder: {GameFolders.mcFolderSelected ?? "Nothing"}
+                        KSP Folder: {LauncherState.SelectedKspDirectory ?? "Nothing"}
                         Executable Path: {ExePath}
                         """;
 

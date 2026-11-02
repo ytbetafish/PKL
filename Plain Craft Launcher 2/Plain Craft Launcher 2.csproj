@@ -24,9 +24,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <ApplicationIcon>Images\icon.ico</ApplicationIcon>
-        <AssemblyTitle>Plain Craft Launcher Community Edition</AssemblyTitle>
+        <AssemblyTitle>PKL - KSP Launcher</AssemblyTitle>
         <Description>Minecraft 启动器 (作者: 龙腾猫跃; 经社区二次开发版本)</Description>
-        <Product>Plain Craft Launcher Community Edition</Product>
+        <Product>PKL - KSP Launcher</Product>
         <Copyright>Copyright © 龙腾猫跃 2016. All Rights Reserved.</Copyright>
         <AssemblyVersion>2.15.1.0</AssemblyVersion>
         <FileVersion>2.15.1.0</FileVersion>
@@ -81,6 +81,7 @@
         <ProjectReference Include="..\PCL.Core\PCL.Core.csproj" />
         <ProjectReference Include="..\PCL.Core.Wpf\PCL.Core.Wpf.csproj" />
         <ProjectReference Include="..\PCL.Launcher.Core\PCL.Launcher.Core.csproj" />
+        <ProjectReference Include="..\src\Pkl.Ckan\Pkl.Ckan.csproj" />
     </ItemGroup>
     <ItemGroup>
         <Using Include="System.Text.Json" />

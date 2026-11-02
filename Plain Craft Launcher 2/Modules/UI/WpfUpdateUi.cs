@@ -2,7 +2,7 @@ using PCL.Core.Platform;
 
 namespace PCL;
 
-/// <summary>将更新业务通知桥接到 WPF 主窗口。</summary>
+/// <summary>将更新业务通知桥接到 WPF 主窗口。KSP 改造后：设置页更新标签已剥离，保留对话框/提示与重启按钮。</summary>
 public sealed class WpfUpdateUi : IUpdateUi
 {
     public int ShowMessageBox(
@@ -30,19 +30,12 @@ public sealed class WpfUpdateUi : IUpdateUi
 
     public void ShowHint(string text, NotificationType type = NotificationType.Info)
     {
-        var hintType = type switch
-        {
-            NotificationType.Success => NotificationType.Success,
-            NotificationType.Warning => NotificationType.Warning,
-            NotificationType.Error => NotificationType.Error,
-            _ => NotificationType.Info
-        };
-        DialogCompat.ShowHint(text, hintType);
+        DialogCompat.ShowHint(text, type);
     }
 
     public void NavigateSetupUpdate()
     {
-        Launcher.frmMain?.PageChange(FormMain.PageType.Setup, FormMain.PageSubType.SetupUpdate);
+        // KSP：设置页更新标签尚未实现，预留占位
     }
 
     public void ShowUpdateRestartButton(string tooltip)
@@ -61,18 +54,12 @@ public sealed class WpfUpdateUi : IUpdateUi
         PlatformServices.UiDispatcher?.Post(() =>
         {
             Launcher.frmMain?.BtnExtraDownload.ShowRefresh();
-            Launcher.frmMain?.BtnExtraDownload.Ribble();
         });
     }
 
     public void UpdateSetupButton(string text, bool enabled)
     {
-        PlatformServices.UiDispatcher?.Post(() =>
-        {
-            if (Launcher.frmSetupUpdate is not { } page) return;
-            page.BtnUpdate.TrySetLocalizedValue("Text", text);
-            page.BtnUpdate.IsEnabled = enabled;
-        });
+        // KSP：更新按钮尚未在设置页实现，预留占位
     }
 
     public void ExitApplication(bool restart)
@@ -82,12 +69,11 @@ public sealed class WpfUpdateUi : IUpdateUi
     }
 }
 
-/// <summary>公告按钮事件桥接。</summary>
+/// <summary>公告按钮事件桥接。KSP 改造后：主页自定义事件系统已剥离，保留空实现。</summary>
 public sealed class WpfAnnouncementActions : IAnnouncementActionHandler
 {
     public void Execute(string command, string? parameter)
     {
-        if (EventTypeMapper.TryParse(command, out var eventType))
-            CustomEvent.Raise(eventType, parameter);
+        // KSP：公告交互动作尚未实现，预留占位
     }
 }

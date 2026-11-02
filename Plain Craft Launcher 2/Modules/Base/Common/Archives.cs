@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Runtime.InteropServices;
@@ -251,8 +251,8 @@ public static partial class Common
         using var process = new Process();
         process.StartInfo = new ProcessStartInfo
         {
-            FileName = GameLaunch.ExtractLinkD(),
-            Arguments = $"\"{linkPath}\" \"{targetPath}\"",
+            FileName = "cmd.exe",
+            Arguments = $"/c mklink /J \"" + linkPath + "\" \"" + targetPath + "\"",
             CreateNoWindow = true,
             UseShellExecute = false
         };

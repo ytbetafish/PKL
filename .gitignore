@@ -346,3 +346,7 @@ MaskFiles/
 # macOS
 
 **/.DS_Store
+# PKL local state
+.dotnet-home/
+pkl-settings.json
+

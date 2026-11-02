@@ -161,31 +161,10 @@ public static partial class Common
 
     /// <summary>
     ///     将 XML 转换为对应 UI 对象。
+    ///     KSP 改造后：原主页自定义事件注入与 XamlEventSanitizer 清洗已随主页事件系统剥离。
     /// </summary>
     public static object GetObjectFromXml(string str)
     {
-        return GetObjectFromXml(str, out _);
-    }
-
-    /// <summary>
-    ///     将 XML 转换为对应 UI 对象，并输出 XAML 清理结果。
-    /// </summary>
-    public static object GetObjectFromXml(
-        string str,
-        out XamlEventSanitizer.SanitizeResult sanitizeResult)
-    {
-        str = str
-            .Replace("EventType=\"", "local:CustomEventService.EventType=\"")
-            .Replace("EventData=\"", "local:CustomEventService.EventData=\"")
-            .Replace("Property=\"EventType\"", "Property=\"local:CustomEventService.EventType\"")
-            .Replace("Property=\"EventData\"", "Property=\"local:CustomEventService.EventData\"");
-        str = str.Replace(
-            "local:CustomEventService.local:CustomEventService.",
-            "local:CustomEventService.");
-
-        sanitizeResult = XamlEventSanitizer.Sanitize(str);
-        str = sanitizeResult.SanitizedXaml;
-
         using var stream = new MemoryStream(Encoding.UTF8.GetBytes(str));
         using (var reader = new XamlXmlReader(stream))
         {

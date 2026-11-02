@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>CKAN</AssemblyName>
+    <RootNamespace>CKAN</RootNamespace>
+    <OutputType>Library</OutputType>
+    <!-- Forked integration: converge the upstream multi-target to a single net10.0-windows TFM
+         so Pkl.Ckan can ProjectReference it directly. -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <Configurations>Debug;Release;NoGUI</Configurations>
+    <Prefer32Bit>false</Prefer32Bit>
+    <!-- Upstream treats warnings as errors on a multi-target matrix; for the fork build we
+         relax that and only suppress the warnings the upstream already suppresses. -->
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);IDE1006;CS1591;NU1901;NU1902;NU1903;NU1904;SYSLIB0050;IDE0090;NU1510;CS8631</NoWarn>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <!-- Do not pack: this is an internal referenced project, not a shipped NuGet. -->
+    <IsPackable>false</IsPackable>
+    <Product>CKAN (PKL fork)</Product>
+  </PropertyGroup>
+
+  <!-- Static version (upstream derived it from CHANGELOG.md via build.ps1, which we don't run). -->
+  <PropertyGroup>
+    <Version>1.34.0</Version>
+    <AssemblyVersion>1.34.0.0</AssemblyVersion>
+    <FileVersion>1.34.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
+    <PackageReference Include="System.Security.Permissions" Version="4.7.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="TxFileManager" Version="1.5.0.1" />
+    <PackageReference Include="log4net" Version="3.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NJsonSchema" Version="10.9.0" />
+    <PackageReference Include="YamlDotNet" Version="9.1.0" />
+    <PackageReference Include="ValveKeyValue" Version="0.3.1.152" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.5" />
+    <PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="all" />
+    <PackageReference Include="IndexRange" Version="1.0.3" />
+    <PackageReference Include="StringSyntaxAttribute" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="builds-ksp.json" />
+    <EmbeddedResource Include="builds-ksp2.json" />
+    <EmbeddedResource Include="CKAN.schema" LogicalName="CKAN.Core.CKAN.schema" />
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>MSBuild:Compile</Generator>
+      <LastGenOutput>$(IntermediateOutputPath)Resources.Designer.cs</LastGenOutput>
+      <StronglyTypedFileName>$(IntermediateOutputPath)Resources.Designer.cs</StronglyTypedFileName>
+      <StronglyTypedLanguage>$(Language)</StronglyTypedLanguage>
+      <StronglyTypedNamespace>$(RootNamespace).Properties</StronglyTypedNamespace>
+      <StronglyTypedClassName>Resources</StronglyTypedClassName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="log4net.xml" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- Upstream patches the generated Resources.Designer.cs to use SingleAssemblyResourceManager
+       and make it public; keep that step. -->
+  <Target Name="UseOurResourceManager" AfterTargets="PrepareResources">
+    <WriteLinesToFile File="$(IntermediateOutputPath)Resources.Designer.cs"
+                      Lines="$([System.IO.File]::ReadAllText('$(IntermediateOutputPath)Resources.Designer.cs').Replace('new global::System.Resources.ResourceManager', 'new SingleAssemblyResourceManager').Replace('internal', 'public'))"
+                      Overwrite="true" />
+  </Target>
+
+</Project>

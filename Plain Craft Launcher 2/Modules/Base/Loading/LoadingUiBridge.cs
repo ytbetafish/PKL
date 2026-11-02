@@ -3,12 +3,11 @@ using PCL.Core.Platform;
 
 namespace PCL;
 
-/// <summary>将加载框架的 UI 通知桥接到 WPF 主窗口。</summary>
+/// <summary>将加载框架的 UI 通知桥接到 WPF 主窗口。KSP 改造后：任务列表页已剥离，仅保留下载按钮/任务栏进度。</summary>
 public sealed class LoadingUiBridge : ILoadingUi
 {
     public void TaskAdded(Loading.LoaderBase loader)
     {
-        PlatformServices.UiDispatcher?.Post(() => Launcher.frmSpeedLeft?.TaskRemove(loader));
     }
 
     public void TaskRemoved(Loading.LoaderBase loader)
@@ -17,7 +16,6 @@ public sealed class LoadingUiBridge : ILoadingUi
 
     public void TaskRefreshed(Loading.LoaderBase loader)
     {
-        PlatformServices.UiDispatcher?.Post(() => Launcher.frmSpeedLeft?.TaskRefresh(loader));
     }
 
     public void RefreshDownloadButton()

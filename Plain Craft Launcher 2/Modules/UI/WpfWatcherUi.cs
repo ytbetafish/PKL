@@ -2,13 +2,12 @@ using PCL.Core.Platform;
 
 namespace PCL;
 
-/// <summary>将游戏监视器通知桥接到 WPF 主窗口。</summary>
+/// <summary>将游戏监视器通知桥接到 WPF 主窗口。KSP 改造后仅保留窗口退出/显示骨架。</summary>
 public sealed class WpfWatcherUi : IWatcherUi
 {
     public void RefreshShutdownButton()
     {
-        PlatformServices.UiDispatcher?.Post(() =>
-            Launcher.frmMain?.BtnExtraShutdown.ShowRefresh());
+        // KSP：暂无游戏进程监视，保留空实现
     }
 
     public void ExitApplication()
@@ -32,34 +31,16 @@ public sealed class WpfWatcherUi : IWatcherUi
 
     public void ShowHint(string text, NotificationType type = NotificationType.Info)
     {
-        var hintType = type switch
-        {
-            NotificationType.Success => NotificationType.Success,
-            NotificationType.Warning => NotificationType.Warning,
-            NotificationType.Error => NotificationType.Error,
-            _ => NotificationType.Info
-        };
-        DialogCompat.ShowHint(text, hintType);
+        DialogCompat.ShowHint(text, type);
     }
 }
 
-/// <summary>媒体服务桥接。</summary>
+/// <summary>媒体服务桥接。KSP 改造后：背景音乐/视频背景已剥离，保留空实现。</summary>
 public sealed class WpfMediaService : IMediaService
 {
-    public void PauseMusic()
-    {
-        Music.MusicPause();
-    }
+    public void PauseMusic() { }
 
-    public void ResumeMusic()
-    {
-        Music.MusicResume();
-    }
+    public void ResumeMusic() { }
 
-    public void SetVideoGaming(bool gaming)
-    {
-        VideoBackground.IsGaming = gaming;
-        if (gaming) VideoBackground.VideoPause();
-        else VideoBackground.VideoPlay();
-    }
+    public void SetVideoGaming(bool gaming) { }
 }

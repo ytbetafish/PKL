@@ -1245,13 +1245,6 @@ public partial class MyListItem : IMyRadio
         ExecuteCommand();
         if (e.Handled)
             return;
-        // 触发自定义事件
-        var dependencyObject = (DependencyObject)sender;
-        if (CustomEventService.GetEventType(dependencyObject) != EventType.None)
-        {
-            Launcher.RaiseCustomEvent(this);
-            e.Handled = true;
-        }
 
         if (e.Handled)
             return;

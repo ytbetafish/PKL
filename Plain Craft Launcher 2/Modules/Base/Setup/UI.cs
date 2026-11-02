@@ -44,12 +44,7 @@ public partial class Setup
 
     public static void UiAutoPauseVideo(bool value)
     {
-        VideoBackground.ForcePlay = !value;
-
-        if (!value)
-            VideoBackground.VideoPlay();
-        else if (VideoBackground.IsGaming)
-            VideoBackground.VideoPause();
+        // KSP 改造后：原 MC 主页视频背景（VideoBackground）已剥离，无后台视频需暂停。
     }
 
     public static void UiBackgroundOpacity(int value)
@@ -162,54 +157,15 @@ public partial class Setup
 
     /// <summary>
     ///     设置自定义主页类型。
-    ///     0：无，1：本地，2：联网，3：预设。
+    ///     KSP 改造后：原 MC 自定义主页设置页（PageSetupUI）已剥离，此设置不再作用于任何 UI。
     /// </summary>
     public static void UiCustomType(int value)
     {
-        var ui = Launcher.frmSetupUi;
-        if (ui is null)
-            return;
-
-        if (value is >= 0 and <= 3)
-        {
-            ui.PanCustomPreset.Visibility = ToVisibility(value == 3);
-            ui.PanCustomLocal.Visibility = ToVisibility(value == 1);
-            ui.PanCustomNet.Visibility = ToVisibility(value == 2);
-
-            var showHint = value is 1 or 2;
-            ui.HintCustom.Visibility = ToVisibility(showHint);
-            ui.HintCustomWarn.Visibility = ToVisibility(
-                showHint && !States.Hint.UntrustedHomepage);
-
-            if (showHint)
-            {
-                var hintKey = value == 1
-                    ? "Setup.Ui.Homepage.LocalFile.Hint"
-                    : "Setup.Ui.Homepage.NetUpdate.Hint";
-
-                ui.HintCustom.TrySetLocalizedValue("Text", hintKey);
-
-                CustomEventService.SetEventType(
-                    ui.HintCustom,
-                    value == 1 ? EventType.None : EventType.OpenUrl);
-
-                if (value == 2)
-                    CustomEventService.SetEventData(
-                        ui.HintCustom,
-                        "https://github.com/PCL-Community/PCL-CE/discussions");
-            }
-        }
-
-        ui.CardCustom.TriggerForceResize();
+        // KSP 改造后：MC 自定义主页设置界面已剥离。
     }
 
     public static void UiBlur(bool value)
     {
-        var ui = Launcher.frmSetupUi;
-        if (ui is null)
-            return;
-
-        ui.PanBlurValue.Visibility = ToVisibility(value);
         UiBlurValue(value ? Config.Preference.Blur.Radius : 0);
     }
 
@@ -238,7 +194,6 @@ public partial class Setup
             value = 4;
 
         var main = Launcher.frmMain;
-        var ui = Launcher.frmSetupUi;
         if (main is null)
             return;
 
@@ -252,13 +207,6 @@ public partial class Setup
 
             if (value != 4)
                 main.CELogo.Visibility = ToVisibility(value != 0);
-
-            if (ui is not null)
-            {
-                ui.CheckLogoLeft.Visibility = ToVisibility(value == 0);
-                ui.PanLogoText.Visibility = ToVisibility(value == 2);
-                ui.PanLogoChange.Visibility = ToVisibility(value == 3);
-            }
 
             switch (value)
             {
@@ -287,7 +235,6 @@ public partial class Setup
         }
 
         UiLogoLeft(Config.Preference.TopBarLeftAlign);
-        ui?.CardLogo.TriggerForceResize();
     }
 
     public static void UiLogoText(string value)

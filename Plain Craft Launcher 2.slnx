@@ -16,4 +16,5 @@
         <Build Solution="*|*" Project="false" />
     </Project>
     <Project Path="Plain Craft Launcher 2\Plain Craft Launcher 2.csproj" Type="C#" />
+    <Project Path="src\Pkl.Ckan\Pkl.Ckan.csproj" Type="C#" />
 </Solution>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Pkl.Ckan</RootNamespace>
+    <AssemblyName>Pkl.Ckan</AssemblyName>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The forked CKAN core built as a plain net10.0-windows class library. -->
+    <ProjectReference Include="..\..\external\CKAN.Core\CKAN-core.csproj" />
+    <!-- PCL.Core is intentionally NOT referenced: this layer is a headless mod-management
+         adapter and must not pull WPF / launcher concerns into the boundary. -->
+  </ItemGroup>
+
+</Project>

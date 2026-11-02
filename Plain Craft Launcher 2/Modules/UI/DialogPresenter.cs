@@ -41,8 +41,7 @@ public sealed class DialogPresenter : IDialogPresenter
                 DialogKind.Markdown => new MyMsgMarkdown(dialog),
                 DialogKind.Input => new MyMsgInput(dialog),
                 DialogKind.Select => new MyMsgSelect(dialog),
-                DialogKind.AuthServer => new MyMsgAuthServer(dialog),
-                DialogKind.Login => new MyMsgLogin(dialog),
+                // KSP：AuthServer / Login 弹窗依赖 MC 登录流程，已剥离，走兜底
                 _ => null
             };
 
