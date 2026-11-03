@@ -63,23 +63,15 @@
                             <local:MyButton Grid.Column="1" Text="添加实例" Margin="10,0,0,0" Height="34" Width="100" Click="BtnAddInstance_Click" />
                         </Grid>
                         <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="当前实例路径" />
-                        <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
-                            <TextBlock x:Name="LabKspPath" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
-                        </Border>
+                        <local:MyTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspPath" Height="34" IsReadOnly="True" />
                         <TextBlock Grid.Row="4" VerticalAlignment="Center" Margin="0,0,25,0" Text="KSP 版本" />
                         <TextBlock Grid.Row="4" Grid.Column="1" x:Name="LabKspVersion" Text="" VerticalAlignment="Center" FontSize="13" />
                         <TextBlock Grid.Row="6" VerticalAlignment="Center" Margin="0,0,25,0" Text="游戏可执行文件" />
-                        <Border Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
-                            <TextBlock x:Name="LabKspExe" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
-                        </Border>
+                        <local:MyTextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspExe" Height="34" IsReadOnly="True" />
                         <TextBlock Grid.Row="8" VerticalAlignment="Center" Margin="0,0,25,0" Text="数据目录 (GameData)" />
-                        <Border Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
-                            <TextBlock x:Name="LabKspGameData" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
-                        </Border>
+                        <local:MyTextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspGameData" Height="34" IsReadOnly="True" />
                         <TextBlock Grid.Row="10" VerticalAlignment="Center" Margin="0,0,25,0" Text="日志目录" />
-                        <Border Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
-                            <TextBlock x:Name="LabKspLogs" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
-                        </Border>
+                        <local:MyTextBox Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspLogs" Height="34" IsReadOnly="True" />
                     </Grid>
                 </StackPanel>
             </local:MyCard>
