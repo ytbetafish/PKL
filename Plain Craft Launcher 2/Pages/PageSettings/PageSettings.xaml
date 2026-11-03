@@ -8,8 +8,8 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <local:MyPageLeft Grid.Column="0" Background="#2D2D30">
-            <StackPanel Margin="0,12,0,0">
+        <local:MyPageLeft Grid.Column="0" Background="#2D2D30" AnimatedControl="{Binding ElementName=PanItem}">
+            <StackPanel x:Name="PanItem" Margin="0,12,0,0">
                 <TextBlock Text="KSP" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
                 <local:MyListItem x:Name="NavKsp" IsScaleAnimationEnabled="True" Checked="True" Type="RadioBox"
                                   MinPaddingRight="35" Height="36" VerticalAlignment="Top"
@@ -63,21 +63,21 @@
                             <local:MyButton Grid.Column="1" Text="添加实例" Margin="10,0,0,0" Height="34" Width="100" Click="BtnAddInstance_Click" />
                         </Grid>
                         <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="当前实例路径" />
-                        <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="{DynamicResource ColorBrushHighlight}" BorderThickness="1" CornerRadius="4" Padding="12,8">
+                        <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
                             <TextBlock x:Name="LabKspPath" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
                         </Border>
                         <TextBlock Grid.Row="4" VerticalAlignment="Center" Margin="0,0,25,0" Text="KSP 版本" />
                         <TextBlock Grid.Row="4" Grid.Column="1" x:Name="LabKspVersion" Text="" VerticalAlignment="Center" FontSize="13" />
                         <TextBlock Grid.Row="6" VerticalAlignment="Center" Margin="0,0,25,0" Text="游戏可执行文件" />
-                        <Border Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="{DynamicResource ColorBrushHighlight}" BorderThickness="1" CornerRadius="4" Padding="12,8">
+                        <Border Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
                             <TextBlock x:Name="LabKspExe" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
                         </Border>
                         <TextBlock Grid.Row="8" VerticalAlignment="Center" Margin="0,0,25,0" Text="数据目录 (GameData)" />
-                        <Border Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="{DynamicResource ColorBrushHighlight}" BorderThickness="1" CornerRadius="4" Padding="12,8">
+                        <Border Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
                             <TextBlock x:Name="LabKspGameData" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
                         </Border>
                         <TextBlock Grid.Row="10" VerticalAlignment="Center" Margin="0,0,25,0" Text="日志目录" />
-                        <Border Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="{DynamicResource ColorBrushHighlight}" BorderThickness="1" CornerRadius="4" Padding="12,8">
+                        <Border Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
                             <TextBlock x:Name="LabKspLogs" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
                         </Border>
                     </Grid>
@@ -117,7 +117,7 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <Border Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="{DynamicResource ColorBrushHighlight}" BorderThickness="1" CornerRadius="4" Padding="12,8">
+                            <Border Background="{DynamicResource ColorBrushCardBackground}" BorderBrush="#3B82F6" BorderThickness="1" CornerRadius="4" Padding="12,8">
                                 <TextBlock x:Name="LabCkanDataDir" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
                             </Border>
                             <local:MyButton Grid.Column="1" Text="选择目录" Margin="10,0,0,0" Height="34" Width="100" Click="BtnPickCkanDir_Click" />
