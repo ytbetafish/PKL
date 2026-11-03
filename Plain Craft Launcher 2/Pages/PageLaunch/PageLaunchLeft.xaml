@@ -17,19 +17,19 @@
                        Margin="0,6,0,0" TextWrapping="Wrap" />
         </StackPanel>
 
-        <!-- 中间：大启动按钮垂直居中 -->
-        <Grid Grid.Row="1" Margin="20,0,20,0" VerticalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <local:MyButton x:Name="BtnLaunch" Height="54"
-                            Text="启动 KSP" ColorType="Highlight"
-                            Click="BtnLaunch_Click" Padding="30,0" />
-            <TextBlock x:Name="LabVersion" Grid.Row="1" Text="" Margin="35,8,35,0"
-                       HorizontalAlignment="Center" FontSize="11"
-                       Foreground="{DynamicResource ColorBrushGray3}" />
-        </Grid>
+        <!-- 中间：大启动卡片按钮，两行文字 -->
+        <Border x:Name="BtnLaunch" Grid.Row="1" Margin="20,0,20,0" VerticalAlignment="Center"
+                Background="{DynamicResource ColorBrushTransparentBackground}"
+                CornerRadius="6" BorderBrush="{DynamicResource ColorBrushHighlight}"
+                BorderThickness="1.5"
+                MouseLeftButtonUp="BtnLaunch_Click" Cursor="Hand">
+            <StackPanel VerticalAlignment="Center" Margin="20,16">
+                <TextBlock x:Name="LabLaunchTitle" Text="启动 KSP" FontSize="16" HorizontalAlignment="Center"
+                           Foreground="{DynamicResource ColorBrushText}" />
+                <TextBlock x:Name="LabVersion" Text="" FontSize="11" HorizontalAlignment="Center"
+                           Margin="0,4,0,0" Foreground="{DynamicResource ColorBrushGray3}" />
+            </StackPanel>
+        </Border>
 
         <!-- 底部：两个小按钮均分宽度 -->
         <Grid Grid.Row="2" Margin="20,0,20,20">
