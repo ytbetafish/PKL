@@ -1,0 +1,240 @@
+p = r'Plain Craft Launcher 2\Pages\PageSettings\PageSettings.xaml'
+t = open(p, encoding='utf-8-sig').read()
+
+old_ckan = '''            <local:MyCard x:Name="PanCkan" Title="CKAN 模组源" Visibility="Collapsed">
+                <StackPanel Margin="25,38,23,18">
+                    <TextBlock Text="数据目录" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Border Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,9">
+                            <TextBlock x:Name="LabCkanDataDir" Text="" Opacity="0.8"
+                                       FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                        </Border>
+                        <local:MyButton Grid.Column="1" Text="选择目录" Width="96" Margin="10,0,0,0" Click="BtnPickCkanDir_Click" />
+                    </Grid>
+
+                    <TextBlock Text="模组镜像源 URL（每行一个，留空用官方源）" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <TextBox x:Name="TxtMirrorUrls" Height="70" Margin="0,0,0,12" AcceptsReturn="True"
+                             TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                             Background="{DynamicResource ColorBrushHalfWhite}" BorderBrush="{DynamicResource ColorBrushBg0}"
+                             BorderThickness="1" Padding="6,4" FontSize="12" />
+
+                    <TextBlock Text="下载源策略" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <ComboBox x:Name="CboStrategy" Height="32" Margin="0,0,0,14">
+                        <ComboBoxItem Content="镜像源为主，官方源补缺失（推荐）" Tag="OfficialFirst" />
+                        <ComboBoxItem Content="仅使用镜像源" Tag="MirrorOnly" />
+                        <ComboBoxItem Content="仅使用官方源" Tag="OfficialOnly" />
+                    </ComboBox>
+
+                    <TextBlock Text="稳定性容忍度" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,14">
+                        <local:MyRadioButton x:Name="OptStable" GroupName="stability" Text="Stable" />
+                        <local:MyRadioButton x:Name="OptTesting" GroupName="stability" Text="Testing" Margin="16,0,0,0" />
+                        <local:MyRadioButton x:Name="OptPre" GroupName="stability" Text="PreRelease" Margin="16,0,0,0" />
+                    </StackPanel>
+
+                    <local:MyButton x:Name="BtnRefreshRepo" Text="刷新模组索引" Height="34" Click="BtnRefreshRepo_Click" />
+                    <TextBlock x:Name="LabCkanStatus" Text="" FontSize="12" Opacity="0.7" Margin="0,8,0,0" />
+
+                    <TextBlock Text="HTTP 代理（http://host:port，留空直连）" FontSize="12" Opacity="0.7" Margin="0,14,0,5" />
+                    <local:MyTextBox x:Name="TxtProxy" Height="34" Margin="0,0,0,12" />
+
+                    <Grid Margin="0,0,0,14">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="并发下载数" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                            <local:MyTextBox x:Name="TxtConcurrency" Height="34" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="12,0,0,0">
+                            <TextBlock Text="超时秒数" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                            <local:MyTextBox x:Name="TxtTimeout" Height="34" />
+                        </StackPanel>
+                    </Grid>
+
+                    <StackPanel Orientation="Horizontal">
+                        <local:MyButton Text="导出已安装清单" Width="130" Height="32" Click="BtnExportMods_Click" />
+                        <local:MyButton Text="导入 .ckan 清单" Width="130" Height="32" Margin="10,0,0,0" Click="BtnImportMods_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </local:MyCard>'''
+
+new_ckan = '''            <local:MyCard x:Name="PanCkan" Title="CKAN 模组源" Visibility="Collapsed">
+                <StackPanel Margin="25,30,25,20">
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="数据目录" VerticalAlignment="Center" FontSize="13"/>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,9">
+                                <TextBlock x:Name="LabCkanDataDir" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"/>
+                            </Border>
+                            <local:MyButton Grid.Column="1" Text="选择目录" Margin="10,0,0,0" Height="36" Width="100" Click="BtnPickCkanDir_Click"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="镜像源 URL" VerticalAlignment="Top" FontSize="13"/>
+                        <TextBox Grid.Column="1" x:Name="TxtMirrorUrls" Height="70" AcceptsReturn="True"
+                                 TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                                 Background="{DynamicResource ColorBrushHalfWhite}" BorderBrush="{DynamicResource ColorBrushBg0}"
+                                 BorderThickness="1" Padding="6,4" FontSize="12"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="下载源策略" VerticalAlignment="Center" FontSize="13"/>
+                        <ComboBox Grid.Column="1" x:Name="CboStrategy" Height="36">
+                            <ComboBoxItem Content="镜像源为主，官方源补缺失（推荐）" Tag="OfficialFirst"/>
+                            <ComboBoxItem Content="仅使用镜像源" Tag="MirrorOnly"/>
+                            <ComboBoxItem Content="仅使用官方源" Tag="OfficialOnly"/>
+                        </ComboBox>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="稳定性容忍度" VerticalAlignment="Center" FontSize="13"/>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyRadioButton x:Name="OptStable" GroupName="stability" Text="Stable"/>
+                            <local:MyRadioButton x:Name="OptTesting" GroupName="stability" Text="Testing" Margin="16,0,0,0"/>
+                            <local:MyRadioButton x:Name="OptPre" GroupName="stability" Text="PreRelease" Margin="16,0,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="HTTP 代理" VerticalAlignment="Center" FontSize="13"/>
+                        <local:MyTextBox Grid.Column="1" x:Name="TxtProxy" Height="36"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="并发下载数" VerticalAlignment="Center" FontSize="13"/>
+                        <local:MyTextBox Grid.Column="1" x:Name="TxtConcurrency" Height="36"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="超时秒数" VerticalAlignment="Center" FontSize="13"/>
+                        <local:MyTextBox Grid.Column="1" x:Name="TxtTimeout" Height="36"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="模组索引" VerticalAlignment="Center" FontSize="13"/>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyButton x:Name="BtnRefreshRepo" Text="刷新索引" Height="36" Width="100" Click="BtnRefreshRepo_Click"/>
+                            <TextBlock x:Name="LabCkanStatus" Text="" FontSize="12" Opacity="0.7" Margin="14,0,0,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="清单管理" VerticalAlignment="Center" FontSize="13"/>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyButton Text="导出清单" Width="110" Height="36" Click="BtnExportMods_Click"/>
+                            <local:MyButton Text="导入 .ckan" Width="110" Height="36" Margin="10,0,0,0" Click="BtnImportMods_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </local:MyCard>'''
+
+assert old_ckan in t, 'ckan old not found'
+t = t.replace(old_ckan, new_ckan, 1)
+
+old_tr = '''            <local:MyCard x:Name="PanTranslate" Title="模组描述翻译服务" Visibility="Collapsed">
+                <StackPanel Margin="25,38,23,18">
+                    <TextBlock Text="翻译接口 Base URL" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <local:MyTextBox x:Name="TxtBaseUrl" Height="34" Margin="0,0,0,12" />
+
+                    <TextBlock Text="API Key" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <local:MyTextBox x:Name="TxtApiKey" Height="34" Margin="0,0,0,12" />
+
+                    <TextBlock Text="模型" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <local:MyTextBox x:Name="TxtModel" Height="34" Margin="0,0,0,14" />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <local:MyButton x:Name="BtnSave" Text="保存设置" Width="110" Height="34" ColorType="Highlight" Click="BtnSave_Click" />
+                        <TextBlock x:Name="LabSaved" Grid.Column="1" Text="" FontSize="12" Opacity="0.7"
+                                   VerticalAlignment="Center" Margin="14,0,0,0" />
+                    </Grid>
+                </StackPanel>
+            </local:MyCard>'''
+
+new_tr = '''            <local:MyCard x:Name="PanTranslate" Title="翻译服务" Visibility="Collapsed">
+                <StackPanel Margin="25,30,25,20">
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="接口 Base URL" VerticalAlignment="Center" FontSize="13"/>
+                        <local:MyTextBox Grid.Column="1" x:Name="TxtBaseUrl" Height="36"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="API Key" VerticalAlignment="Center" FontSize="13"/>
+                        <local:MyTextBox Grid.Column="1" x:Name="TxtApiKey" Height="36"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="模型" VerticalAlignment="Center" FontSize="13"/>
+                        <local:MyTextBox Grid.Column="1" x:Name="TxtModel" Height="36"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="" FontSize="13"/>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyButton x:Name="BtnSave" Text="保存设置" Width="110" Height="36" ColorType="Highlight" Click="BtnSave_Click"/>
+                            <TextBlock x:Name="LabSaved" Text="" FontSize="12" Opacity="0.7" Margin="14,0,0,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </local:MyCard>'''
+
+assert old_tr in t, 'translate old not found'
+t = t.replace(old_tr, new_tr, 1)
+
+open(p, 'w', encoding='utf-8-sig').write(t)
+print('ok')
