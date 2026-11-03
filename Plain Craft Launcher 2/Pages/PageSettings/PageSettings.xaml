@@ -8,7 +8,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <local:MyPageLeft Grid.Column="0">
+        <local:MyPageLeft Grid.Column="0" Background="#2D2D30">
             <StackPanel Margin="0,12,0,0">
                 <TextBlock Text="KSP" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
                 <local:MyListItem x:Name="NavKsp" IsScaleAnimationEnabled="False" Checked="True" Type="RadioBox"
