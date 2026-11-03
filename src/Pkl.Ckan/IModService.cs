@@ -36,4 +36,10 @@ public interface IModService
     /// Uninstall an installed mod (plus any orphaned dependencies).
     /// </summary>
     Task UninstallAsync(string identifier, IProgress<string>? progress = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Find mods that depend on (or conflict with) the given identifier.
+    /// Returns (reverseDeps, conflicts) lists of mod identifiers.
+    /// </summary>
+    (IReadOnlyList<string> reverseDeps, IReadOnlyList<string> conflicts) GetReverseAndConflicts(string identifier);
 }

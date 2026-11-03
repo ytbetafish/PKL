@@ -28,6 +28,7 @@ public partial class PageMods
 
     private static ModService GetService()
     {
+        ModService.ApplyHttpProxy(PklSettings.Current.HttpProxy);
         if (_modService is null)
         {
             _modService = new ModService(dataDir: PklSettings.Current.CkanDataDir);
@@ -161,6 +162,8 @@ public partial class PageMods
             LabModDesc.Text = "";
             LabModHome.Text = "";
             LabDeps.Visibility = Visibility.Collapsed;
+            LabReverse.Visibility = Visibility.Collapsed;
+            LabConflicts.Visibility = Visibility.Collapsed;
             BtnInstall.Visibility = Visibility.Collapsed;
             BtnUninstall.Visibility = Visibility.Collapsed;
             BtnTranslate.Visibility = Visibility.Collapsed;
@@ -187,6 +190,20 @@ public partial class PageMods
             {
                 LabDeps.Visibility = Visibility.Collapsed;
             }
+
+            var (rev, conflicts) = GetService().GetReverseAndConflicts(_selected.Identifier);
+            if (rev.Count > 0)
+            {
+                LabReverse.Text = "被依赖：" + string.Join("、", rev);
+                LabReverse.Visibility = Visibility.Visible;
+            }
+            else LabReverse.Visibility = Visibility.Collapsed;
+            if (conflicts.Count > 0)
+            {
+                LabConflicts.Text = "冲突：" + string.Join("、", conflicts);
+                LabConflicts.Visibility = Visibility.Visible;
+            }
+            else LabConflicts.Visibility = Visibility.Collapsed;
         }
         catch { LabDeps.Visibility = Visibility.Collapsed; }
     }

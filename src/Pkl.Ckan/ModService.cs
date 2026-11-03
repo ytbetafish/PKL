@@ -1,8 +1,9 @@
-using CKAN;
+﻿using CKAN;
 using CKAN.Configuration;
 using CKAN.IO;
 using CKAN.Versioning;
 using IUser = CKAN.IUser;
+using System.Net;
 
 namespace Pkl.Ckan;
 
@@ -44,6 +45,15 @@ public sealed class ModService : IModService, IDisposable
         _config = new JsonConfiguration(Path.Combine(dataDir, "config.json"));
         _repoData = new RepositoryDataManager(Path.Combine(dataDir, "repo-data"));
         _manager = new GameInstanceManager(_user, _config);
+    }
+
+    /// <summary>
+    /// Apply a process-wide HTTP proxy (NetAsyncDownloader does not take one in its ctor).
+    /// </summary>
+    public static void ApplyHttpProxy(string? proxy)
+    {
+        if (string.IsNullOrWhiteSpace(proxy)) return;
+        try { WebRequest.DefaultWebProxy = new WebProxy(proxy, true); } catch { }
     }
 
     /// <summary>Accumulated log sink (for the "view log" window).</summary>
@@ -355,6 +365,13 @@ public sealed class ModService : IModService, IDisposable
             hasUpdate,
             compatible,
             iconUrl);
+    }
+
+    /// <inheritdoc />
+    public (IReadOnlyList<string> reverseDeps, IReadOnlyList<string> conflicts) GetReverseAndConflicts(string identifier)
+    {
+        // Reverse iteration over the whole catalog requires repoDataMgr plumbing; return empty for now.
+        return (Array.Empty<string>(), Array.Empty<string>());
     }
 
     public void Dispose()
