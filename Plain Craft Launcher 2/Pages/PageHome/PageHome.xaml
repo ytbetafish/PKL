@@ -3,19 +3,7 @@
                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                    xmlns:local="clr-namespace:PCL">
     <Grid>
-        <!-- 居中启动区 -->
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock x:Name="LabKspVersion" Text="" FontSize="15" Opacity="0.8"
-                       HorizontalAlignment="Center" Margin="0,0,0,24" />
-            <local:MyButton x:Name="BtnLaunch" Text="启动 KSP" Width="400" Height="60"
-                            ColorType="Highlight" Click="BtnLaunch_Click" />
-            <TextBlock x:Name="LabKspStatus" Text="" FontSize="12.5" Opacity="0.7"
-                       HorizontalAlignment="Center" Margin="0,18,0,0" />
-        </StackPanel>
-
-        <!-- 左下：路径信息 -->
-        <TextBlock x:Name="LabKspPath" Text="" FontSize="11.5" Opacity="0.5"
-                   HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="24,0,0,18"
-                   TextTrimming="CharacterEllipsis" MaxWidth="500" />
+        <TextBlock Text="欢迎使用 PKL" FontSize="22" FontWeight="Light" Opacity="0.5"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </local:MyPageRight>
