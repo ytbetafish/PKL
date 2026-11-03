@@ -6,16 +6,29 @@
         <StackPanel Margin="25,25,25,10">
 
             <local:MyCard Margin="0,0,0,15" Title="搜索 KSP 模组">
-                <Grid Margin="25,38,23,18">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <local:MySearchBox x:Name="TxtSearch" HintText="搜索 KSP 模组（名称 / 作者 / ID）"
-                                       Search="BtnSearch_Click" />
-                    <local:MyButton Grid.Column="1" Text="已安装" Width="90" Margin="12,0,0,0"
-                                    Click="BtnInstalled_Click" />
-                </Grid>
+                <StackPanel Margin="25,38,23,18">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <local:MySearchBox x:Name="TxtSearch" HintText="搜索 KSP 模组（名称 / 作者 / ID）"
+                                           Search="BtnSearch_Click" />
+                        <local:MyButton Grid.Column="1" x:Name="BtnFilterAll" Text="全部" Width="80" Margin="12,0,0,0"
+                                        Click="BtnFilterAll_Click" />
+                        <local:MyButton Grid.Column="2" x:Name="BtnUpdateAll" Text="更新全部" Width="90" Margin="10,0,0,0"
+                                        Click="BtnUpdateAll_Click" />
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <local:MyButton x:Name="BtnFilterInstalled" Text="已安装" Width="90"
+                                        Click="BtnFilterInstalled_Click" />
+                        <local:MyButton x:Name="BtnFilterUpdates" Text="有更新" Width="90" Margin="10,0,0,0"
+                                        Click="BtnFilterUpdates_Click" />
+                        <local:MyButton x:Name="BtnFilterNotInstalled" Text="未安装" Width="90" Margin="10,0,0,0"
+                                        Click="BtnFilterNotInstalled_Click" />
+                    </StackPanel>
+                </StackPanel>
             </local:MyCard>
 
             <local:MyCard Margin="0,0,0,15" Title="搜索结果">
@@ -58,10 +71,14 @@
                     <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="90">
                         <TextBlock x:Name="LabModDesc" Text="" TextWrapping="Wrap" Opacity="0.8" FontSize="12.5" />
                     </ScrollViewer>
+                    <TextBlock x:Name="LabDeps" Text="" TextWrapping="Wrap" Opacity="0.6" FontSize="11.5"
+                               Margin="0,8,0,0" Visibility="Collapsed" />
                     <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                         <TextBlock x:Name="LabModHome" Text="" Opacity="0.5" FontSize="11" VerticalAlignment="Center" />
                         <local:MyButton x:Name="BtnInstall" Text="安装 / 更新" Width="110" Height="30" Margin="16,0,0,0"
                                         ColorType="Highlight" Click="BtnInstall_Click" Visibility="Collapsed" />
+                        <local:MyButton x:Name="BtnUninstall" Text="卸载" Width="80" Height="30" Margin="10,0,0,0"
+                                        Click="BtnUninstall_Click" Visibility="Collapsed" />
                     </StackPanel>
                 </StackPanel>
             </local:MyCard>

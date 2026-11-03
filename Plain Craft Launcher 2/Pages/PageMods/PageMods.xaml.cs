@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,11 +17,12 @@ public partial class PageMods
     private bool _showChinese;
     private string? _originalDescription;
     private bool _serviceAttaching;
+    private string _filter = "all";
+    private IReadOnlyList<ModSearchResult> _lastResults = Array.Empty<ModSearchResult>();
 
     public PageMods()
     {
         InitializeComponent();
-        // 不在构造函数/Loaded 做任何同步 IO；实例附加放到后台，搜索由用户触发。
         Loaded += async (_, _) => await AttachKspBackgroundAsync();
     }
 
@@ -62,7 +64,8 @@ public partial class PageMods
         }
         try
         {
-            GridMods.ItemsSource = await GetService().SearchAsync(query);
+            _lastResults = await GetService().SearchAsync(query);
+            ApplyFilter();
         }
         catch (Exception ex)
         {
@@ -70,21 +73,85 @@ public partial class PageMods
         }
     }
 
+    private void ApplyFilter()
+    {
+        IEnumerable<ModSearchResult> q = _lastResults;
+        q = _filter switch
+        {
+            "installed" => q.Where(m => m.IsInstalled),
+            "updates" => q.Where(m => m.HasUpdate),
+            "notinstalled" => q.Where(m => !m.IsInstalled),
+            _ => q,
+        };
+        GridMods.ItemsSource = q.ToList();
+    }
+
     private async void BtnSearch_Click(object sender, EventArgs e) => await DoSearch(TxtSearch.Text);
 
-    private async void BtnInstalled_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    private async void BtnFilterInstalled_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        _filter = "installed";
+        try { _lastResults = await GetService().ListInstalledAsync(); } catch { }
+        ApplyFilter();
+    }
+
+    private async void BtnFilterUpdates_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        _filter = "updates";
+        try { _lastResults = await GetService().ListInstalledAsync(); } catch { }
+        ApplyFilter();
+    }
+
+    private void BtnFilterNotInstalled_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        _filter = "notinstalled";
+        ApplyFilter();
+    }
+
+    private void BtnFilterAll_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        _filter = "all";
+        ApplyFilter();
+    }
+
+    private async void BtnUpdateAll_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         try
         {
-            GridMods.ItemsSource = await GetService().ListInstalledAsync();
+            PanProgress.Visibility = Visibility.Visible;
+            BarProgress.IsIndeterminate = true;
+            var installed = await GetService().ListInstalledAsync();
+            var updates = installed.Where(m => m.HasUpdate).ToList();
+            if (updates.Count == 0)
+            {
+                PanProgress.Visibility = Visibility.Collapsed;
+                MessageBox.Show("没有需要更新的模组。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            var progress = new Progress<string>(msg =>
+                Dispatcher.BeginInvoke(new Action(() => LabProgress.Text = msg)));
+            int i = 0;
+            foreach (var m in updates)
+            {
+                i++;
+                LabProgress.Text = $"正在更新 {m.Name}（{i}/{updates.Count}）…";
+                var plan = await GetService().GetInstallPlanAsync(m.Identifier);
+                if (plan is not null) await GetService().ExecutePlanAsync(plan, progress);
+            }
+            PanProgress.Visibility = Visibility.Collapsed;
+            MessageBox.Show($"已更新 {updates.Count} 个模组。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
+            _filter = "updates";
+            _lastResults = await GetService().ListInstalledAsync();
+            ApplyFilter();
         }
         catch (Exception ex)
         {
-            MessageBox.Show("列出已安装模组失败：" + ex.Message, "PKL", MessageBoxButton.OK, MessageBoxImage.Warning);
+            PanProgress.Visibility = Visibility.Collapsed;
+            MessageBox.Show("更新失败：" + ex.Message, "PKL", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 
-    private void GridMods_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void GridMods_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         _selected = GridMods.SelectedItem as ModSearchResult;
         _showChinese = false;
@@ -93,7 +160,9 @@ public partial class PageMods
             LabModName.Text = "（选中一个模组）";
             LabModDesc.Text = "";
             LabModHome.Text = "";
+            LabDeps.Visibility = Visibility.Collapsed;
             BtnInstall.Visibility = Visibility.Collapsed;
+            BtnUninstall.Visibility = Visibility.Collapsed;
             BtnTranslate.Visibility = Visibility.Collapsed;
             return;
         }
@@ -102,7 +171,24 @@ public partial class PageMods
         LabModDesc.Text = string.IsNullOrWhiteSpace(_originalDescription) ? "（无简介）" : _originalDescription;
         LabModHome.Text = string.IsNullOrWhiteSpace(_selected.Homepage) ? "" : _selected.Homepage;
         BtnInstall.Visibility = string.IsNullOrWhiteSpace(PklSettings.Current.KspRootPath) ? Visibility.Collapsed : Visibility.Visible;
+        BtnUninstall.Visibility = _selected.IsInstalled ? Visibility.Visible : Visibility.Collapsed;
         BtnTranslate.Visibility = string.IsNullOrWhiteSpace(_originalDescription) ? Visibility.Collapsed : Visibility.Visible;
+
+        // 拉一下依赖列表
+        try
+        {
+            var plan = await GetService().GetInstallPlanAsync(_selected.Identifier);
+            if (plan is { ToInstall.Count: > 0 })
+            {
+                LabDeps.Text = "依赖：" + string.Join("、", plan.ToInstall);
+                LabDeps.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                LabDeps.Visibility = Visibility.Collapsed;
+            }
+        }
+        catch { LabDeps.Visibility = Visibility.Collapsed; }
     }
 
     private async void BtnTranslate_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -169,6 +255,31 @@ public partial class PageMods
         {
             PanProgress.Visibility = Visibility.Collapsed;
             MessageBox.Show("安装失败：" + ex.Message, "PKL", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+
+    private async void BtnUninstall_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        if (_selected is null) return;
+        if (MessageBox.Show($"确定卸载 {_selected.Name}？", "PKL",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+            return;
+        try
+        {
+            PanProgress.Visibility = Visibility.Visible;
+            BarProgress.IsIndeterminate = true;
+            LabProgress.Text = $"正在卸载 {_selected.Name}…";
+            var progress = new Progress<string>(msg =>
+                Dispatcher.BeginInvoke(new Action(() => LabProgress.Text = msg)));
+            await GetService().UninstallAsync(_selected.Identifier, progress);
+            PanProgress.Visibility = Visibility.Collapsed;
+            MessageBox.Show("卸载完成。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
+            await DoSearch(TxtSearch.Text);
+        }
+        catch (Exception ex)
+        {
+            PanProgress.Visibility = Visibility.Collapsed;
+            MessageBox.Show("卸载失败：" + ex.Message, "PKL", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

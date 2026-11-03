@@ -228,6 +228,26 @@ public sealed class ModService : IModService, IDisposable
         return Task.CompletedTask;
     }
 
+    /// <inheritdoc />
+    public Task UninstallAsync(string identifier, IProgress<string>? progress = null, CancellationToken cancellationToken = default)
+    {
+        if (_instance == null || _registryManager == null)
+        {
+            throw new InvalidOperationException("Instance not attached read-write; call AttachInstance first.");
+        }
+
+        Directory.CreateDirectory(_instance.DownloadCacheDir);
+        var cache = new NetModuleCache(_instance.DownloadCacheDir);
+        var installer = new ModuleInstaller(_instance, cache, _config, _user, cancellationToken);
+
+        HashSet<string>? possibleConfigOnlyDirs = null;
+        installer.UninstallList(new[] { identifier }, ref possibleConfigOnlyDirs, _registryManager, ConfirmPrompt: false);
+
+        _registryManager.Save();
+        progress?.Report($"Uninstalled '{identifier}'.");
+        return Task.CompletedTask;
+    }
+
     // ---- internals -----------------------------------------------------------
 
     private IEnumerable<CkanModule> EnumerateCatalog()

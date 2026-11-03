@@ -31,4 +31,9 @@ public interface IModService
     /// Execute a previously computed plan (downloads + installs/upgrades/removes).
     /// </summary>
     Task ExecutePlanAsync(ModInstallPlan plan, IProgress<string>? progress = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Uninstall an installed mod (plus any orphaned dependencies).
+    /// </summary>
+    Task UninstallAsync(string identifier, IProgress<string>? progress = null, CancellationToken cancellationToken = default);
 }
