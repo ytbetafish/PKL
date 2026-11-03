@@ -11,6 +11,8 @@ namespace PCL.Pages;
 
 public partial class PageSettings
 {
+    private bool _isInitialized = false;
+
     public PageSettings()
     {
         InitializeComponent();
@@ -41,11 +43,19 @@ public partial class PageSettings
         NavCkan.Check += Nav_Changed;
         NavTranslate.Check += Nav_Changed;
         NavAbout.Check += Nav_Changed;
+        _isInitialized = true;
         NavKsp.Checked = true;
     }
 
     private void Nav_Changed(object sender, PCL.Common.RouteEventArgs e)
     {
+        PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
+        PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
+        PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
+        PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
+
+        if (!_isInitialized) return;
+
         LeftNav.TriggerHideAnimation();
 
         PCL.Animations.AniStop("PageSettings NavSwitch");
