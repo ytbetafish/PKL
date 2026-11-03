@@ -36,6 +36,7 @@ public partial class PageSettings
         TxtTimeout.Text = PklSettings.Current.HttpTimeoutSeconds.ToString();
 
         RefreshInstancesList();
+        RefreshKspInfo();
         NavKsp.Check += Nav_Changed;
         NavCkan.Check += Nav_Changed;
         NavTranslate.Check += Nav_Changed;
@@ -67,9 +68,36 @@ public partial class PageSettings
             {
                 PklSettings.Current.KspRootPath = s;
                 PklSettings.Save();
-                LabSaved.Text = "已切换 KSP 实例，重启 PKL 后生效。";
+                RefreshKspInfo();
+                LabSaved.Text = "已切换 KSP 实例。";
             }
         };
+    }
+
+    private void RefreshKspInfo()
+    {
+        var root = PklSettings.Current.KspRootPath;
+        LabKspPath.Text = string.IsNullOrEmpty(root) ? "（未设置）" : root;
+        if (string.IsNullOrEmpty(root) || !Directory.Exists(root))
+        {
+            LabKspVersion.Text = "—";
+            LabKspExe.Text = "—";
+            LabKspGameData.Text = "—";
+            LabKspLogs.Text = "—";
+            return;
+        }
+        try
+        {
+            var versionTxt = Path.Combine(root, "version.txt");
+            LabKspVersion.Text = File.Exists(versionTxt) ? File.ReadAllText(versionTxt).Trim() : "未知";
+        }
+        catch { LabKspVersion.Text = "读取失败"; }
+        LabKspExe.Text = File.Exists(Path.Combine(root, "KSP_x64.exe")) ? Path.Combine(root, "KSP_x64.exe") :
+                         File.Exists(Path.Combine(root, "ksp.exe")) ? Path.Combine(root, "ksp.exe") : "未找到";
+        var gd = Path.Combine(root, "GameData");
+        LabKspGameData.Text = Directory.Exists(gd) ? gd : "不存在";
+        var logs = Path.Combine(root, "KSP_Data", "output_log.txt");
+        LabKspLogs.Text = File.Exists(logs) ? logs : Path.Combine(root, "KSP_Data");
     }
 
     private void BtnAddInstance_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
