@@ -30,6 +30,9 @@ public static class PklSettings
         public string CkanDataDir { get; set; } =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PKL", "Ckan");
         public string CkanMasterRepoUrl { get; set; } = "https://archive.ksp-ckan.net/CKAN-meta.zip";
+        public List<string> CkanMirrorUrls { get; set; } = new();
+        // MirrorOnly / OfficialFirst / OfficialOnly
+        public string CkanRepoStrategy { get; set; } = "MirrorOnly";
         public string CkanStabilityTolerance { get; set; } = "Stable";
 
         public string HttpProxy { get; set; } = "";

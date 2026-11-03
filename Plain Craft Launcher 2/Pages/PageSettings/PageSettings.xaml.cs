@@ -18,7 +18,12 @@ public partial class PageSettings
         TxtApiKey.Text = PklSettings.Current.TranslateApiKey;
         TxtModel.Text = PklSettings.Current.TranslateModel;
         LabCkanDataDir.Text = PklSettings.Current.CkanDataDir;
-        TxtCkanRepoUrl.Text = PklSettings.Current.CkanMasterRepoUrl;
+        TxtMirrorUrls.Text = string.Join("\n", PklSettings.Current.CkanMirrorUrls);
+        foreach (System.Windows.Controls.ComboBoxItem item in CboStrategy.Items)
+        {
+            if ((string)item.Tag == PklSettings.Current.CkanRepoStrategy) { CboStrategy.SelectedItem = item; break; }
+        }
+        if (CboStrategy.SelectedItem == null) CboStrategy.SelectedIndex = 0;
         switch (PklSettings.Current.CkanStabilityTolerance)
         {
             case "Testing": OptTesting.Checked = true; break;
@@ -90,7 +95,9 @@ public partial class PageSettings
             BtnRefreshRepo.IsEnabled = false;
             LabCkanStatus.Text = "正在刷新模组索引…";
             var svc = new ModService(dataDir: PklSettings.Current.CkanDataDir);
-            svc.MirrorUrl = TxtCkanRepoUrl.Text.Trim();
+            svc.MirrorUrls = TxtMirrorUrls.Text.Split(new[]{'\r','\n'}, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(s => s.Trim()).Where(s => s.Length > 0).ToList();
+            svc.RepoStrategy = (CboStrategy.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Tag as string ?? "MirrorOnly";
             await svc.RefreshMasterRegistryAsync();
             LabCkanStatus.Text = "索引刷新完成。";
         }
@@ -106,7 +113,9 @@ public partial class PageSettings
 
     private async void BtnTestRepo_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        var url = TxtCkanRepoUrl.Text.Trim();
+        var url = TxtMirrorUrls.Text.Split(new[]{'\r','\n'}, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(s => s.Trim()).FirstOrDefault();
+        if (string.IsNullOrEmpty(url)) { LabCkanStatus.Text = "未填镜像 URL。"; return; }
         if (string.IsNullOrWhiteSpace(url)) { LabCkanStatus.Text = "URL 为空。"; return; }
         try
         {
@@ -178,7 +187,9 @@ public partial class PageSettings
         PklSettings.Current.TranslateBaseUrl = TxtBaseUrl.Text.Trim();
         PklSettings.Current.TranslateApiKey = TxtApiKey.Text.Trim();
         PklSettings.Current.TranslateModel = TxtModel.Text.Trim();
-        PklSettings.Current.CkanMasterRepoUrl = TxtCkanRepoUrl.Text.Trim();
+        PklSettings.Current.CkanMirrorUrls = TxtMirrorUrls.Text.Split(new[]{'\r','\n'}, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(s => s.Trim()).Where(s => s.Length > 0).ToList();
+        PklSettings.Current.CkanRepoStrategy = (CboStrategy.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Tag as string ?? "MirrorOnly";
         PklSettings.Current.CkanStabilityTolerance =
             OptPre.Checked ? "PreRelease" : OptTesting.Checked ? "Testing" : "Stable";
         PklSettings.Current.HttpProxy = TxtProxy.Text.Trim();
