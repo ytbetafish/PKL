@@ -51,9 +51,9 @@
 
                     <TextBlock Text="下载源策略" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
                     <ComboBox x:Name="CboStrategy" Height="32" Margin="0,0,0,14">
-                        <ComboBoxItem Content="尽量使用镜像源" Tag="MirrorOnly" />
-                        <ComboBoxItem Content="优先使用官方源，加载缓慢时换用镜像源" Tag="OfficialFirst" />
-                        <ComboBoxItem Content="尽量使用官方源" Tag="OfficialOnly" />
+                        <ComboBoxItem Content="镜像源为主，官方源补缺失（推荐）" Tag="OfficialFirst" />
+                        <ComboBoxItem Content="仅使用镜像源" Tag="MirrorOnly" />
+                        <ComboBoxItem Content="仅使用官方源" Tag="OfficialOnly" />
                     </ComboBox>
 
                     <TextBlock Text="稳定性容忍度" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />

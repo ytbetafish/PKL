@@ -37,6 +37,7 @@ public partial class PageMods
             _modService = new ModService(dataDir: PklSettings.Current.CkanDataDir);
         }
         _modService.MirrorUrls = new System.Collections.Generic.List<string>(PklSettings.Current.CkanMirrorUrls);
+        _modService.OfficialRepoUrl = PklSettings.Current.CkanMasterRepoUrl;
         _modService.RepoStrategy = PklSettings.Current.CkanRepoStrategy;
         return _modService;
     }

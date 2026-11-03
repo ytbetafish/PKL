@@ -97,7 +97,8 @@ public partial class PageSettings
             var svc = new ModService(dataDir: PklSettings.Current.CkanDataDir);
             svc.MirrorUrls = TxtMirrorUrls.Text.Split(new[]{'\r','\n'}, StringSplitOptions.RemoveEmptyEntries)
                             .Select(s => s.Trim()).Where(s => s.Length > 0).ToList();
-            svc.RepoStrategy = (CboStrategy.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Tag as string ?? "MirrorOnly";
+            svc.OfficialRepoUrl = PklSettings.Current.CkanMasterRepoUrl;
+            svc.RepoStrategy = (CboStrategy.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Tag as string ?? "OfficialFirst";
             await svc.RefreshMasterRegistryAsync();
             LabCkanStatus.Text = "索引刷新完成。";
         }

@@ -99,8 +99,10 @@ public sealed class ModService : IModService, IDisposable
 
     /// <summary>Mirror URLs to use when strategy is MirrorOnly or OfficialFirst.</summary>
     public System.Collections.Generic.List<string> MirrorUrls { get; set; } = new();
+    /// <summary>Default official CKAN repo URL (used as fallback when strategy != MirrorOnly).</summary>
+    public string OfficialRepoUrl { get; set; } = "https://archive.ksp-ckan.net/CKAN-meta.zip";
     /// <summary>One of "MirrorOnly" / "OfficialFirst" / "OfficialOnly".</summary>
-    public string RepoStrategy { get; set; } = "MirrorOnly";
+    public string RepoStrategy { get; set; } = "OfficialFirst";
 
     /// <inheritdoc />
     public Task RefreshMasterRegistryAsync(CancellationToken cancellationToken = default)
@@ -112,48 +114,24 @@ public sealed class ModService : IModService, IDisposable
 
         try
         {
-            // Configure repositories based on strategy.
-            var chosen = new List<CKAN.Repository>();
-            if (RepoStrategy != "OfficialOnly" && MirrorUrls.Count > 0)
+            // Rebuild repo list according to strategy. Order matters: earlier repos win,
+            // later repos fill in what earlier ones don't have.
+            _registryManager.registry.RepositoriesClear();
+
+            if (RepoStrategy != "OfficialOnly")
             {
                 foreach (var u in MirrorUrls)
                 {
                     if (!string.IsNullOrWhiteSpace(u))
-                        chosen.Add(new CKAN.Repository("PKL-Mirror", u.Trim()));
+                        try { _registryManager.registry.RepositoriesAdd(new CKAN.Repository("PKL-Mirror", u.Trim())); } catch { }
                 }
             }
             if (RepoStrategy != "MirrorOnly")
             {
-                // Keep / add official repos (CKAN default). We don't have a hardcoded official URL,
-                // so leave existing official repos in place when no mirrors are chosen.
-                if (chosen.Count == 0)
-                {
-                    // OfficialOnly: leave default repos untouched.
-                }
-                else
-                {
-                    // OfficialFirst: add mirrors after official repos.
-                    foreach (var r in chosen)
-                    {
-                        try { _registryManager.registry.RepositoriesAdd(r); } catch { }
-                    }
-                    _registryManager.Save();
-                    goto run;
-                }
+                try { _registryManager.registry.RepositoriesAdd(new CKAN.Repository("CKAN-Official", OfficialRepoUrl)); } catch { }
             }
-            else
-            {
-                // MirrorOnly: wipe everything, use only mirrors.
-                try
-                {
-                    _registryManager.registry.RepositoriesClear();
-                    foreach (var r in chosen) _registryManager.registry.RepositoriesAdd(r);
-                    _registryManager.Save();
-                }
-                catch { }
-            }
+            _registryManager.Save();
 
-            run:
             var repos = _registryManager.registry.Repositories.Values.ToList();
             var downloader = new NetAsyncDownloader(_user,
                 () => (System.Security.Cryptography.HashAlgorithm?)null,
