@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
@@ -30,6 +31,12 @@ public static class PklSettings
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PKL", "Ckan");
         public string CkanMasterRepoUrl { get; set; } = "https://archive.ksp-ckan.net/CKAN-meta.zip";
         public string CkanStabilityTolerance { get; set; } = "Stable";
+
+        public string HttpProxy { get; set; } = "";
+        public int DownloadConcurrency { get; set; } = 4;
+        public int HttpTimeoutSeconds { get; set; } = 30;
+
+        public List<string> Instances { get; set; } = new();
     }
 
     private static string ResolvePath()

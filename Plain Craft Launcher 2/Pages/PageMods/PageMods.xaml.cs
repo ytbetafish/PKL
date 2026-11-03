@@ -282,4 +282,24 @@ public partial class PageMods
             MessageBox.Show("卸载失败：" + ex.Message, "PKL", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
+
+    private void BtnViewLog_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        var text = GetService().Log.Dump();
+        var win = new Window
+        {
+            Title = "PKL 操作日志",
+            Width = 700,
+            Height = 500,
+            Content = new TextBox
+            {
+                Text = string.IsNullOrEmpty(text) ? "（暂无日志）" : text,
+                IsReadOnly = true,
+                TextWrapping = TextWrapping.Wrap,
+                VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Auto,
+            }
+        };
+        win.ShowDialog();
+    }
 }

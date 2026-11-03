@@ -358,7 +358,7 @@
                                     Orientation="Horizontal"
                                     Margin="13,0">
                             <local:MyRadioButton x:Name="BtnTitleSelect0"
-                                                 Text="主页"
+                                                 Text="启动"
                                                  Tag="0"
                                                  Margin="5,0"
                                                  Checked="True"
@@ -367,7 +367,7 @@
                                                  LogoScale="0.9"
                                                  SvgIcon="lucide/play" />
                             <local:MyRadioButton x:Name="BtnTitleSelect1"
-                                                 Text="KSP 模组"
+                                                 Text="下载"
                                                  Tag="1"
                                                  Margin="5,0"
                                                  Padding="2,0"

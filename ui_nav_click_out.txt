@@ -1,0 +1,23 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261103022639
+Username: DESKTOP-60H1VIC\adminstartor
+RunAs User: DESKTOP-60H1VIC\adminstartor
+Configuration Name: 
+Machine: DESKTOP-60H1VIC (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\adminstartor\DoubaoWork\chats\2026-11-02\new-chat-1\PKL\ui_nav_click.ps1 -TargetName KSP 模组
+Process ID: 20228
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+clicking [KSP 模组] rect X=1293 Y=355 W=109 H=30 -> 1348,370
+**********************
+Windows PowerShell transcript end
+End time: 20261103022644
+**********************

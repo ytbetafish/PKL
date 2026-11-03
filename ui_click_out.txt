@@ -1,0 +1,41 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261103022654
+Username: DESKTOP-60H1VIC\adminstartor
+RunAs User: DESKTOP-60H1VIC\adminstartor
+Configuration Name: 
+Machine: DESKTOP-60H1VIC (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Users\adminstartor\DoubaoWork\chats\2026-11-02\new-chat-1\PKL\ui_click.ps1
+Process ID: 19912
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PID=5680
+descendants=17
+[0] name='' type=ControlType.Custom aid=VideoBack
+[1] name='' type=ControlType.Image aid=ImgTitle
+[2] name='主页' type=ControlType.Text aid=LabText
+[3] name='KSP 模组' type=ControlType.Text aid=LabText
+[4] name='设置' type=ControlType.Text aid=LabText
+[5] name='KSP 启动' type=ControlType.Text aid=LabText
+[6] name='' type=ControlType.Custom aid=
+[7] name='PKL - KSP Launcher' type=ControlType.Text aid=
+[8] name='Kerbal Space Program 启动器外壳' type=ControlType.Text aid=
+[9] name='KSP 安装路径：' type=ControlType.Text aid=
+[10] name='D:\Kerbal Space Program' type=ControlType.Text aid=LabKspPath
+[11] name='选择路径' type=ControlType.Button aid=
+[12] name='选择路径' type=ControlType.Text aid=
+[13] name='检测到 KSP 版本：1.12.5.3190' type=ControlType.Text aid=LabKspVersion
+[14] name='启动 KSP' type=ControlType.Button aid=BtnLaunch
+[15] name='启动 KSP' type=ControlType.Text aid=
+[16] name='' type=ControlType.Text aid=LabKspStatus
+**********************
+Windows PowerShell transcript end
+End time: 20261103022655
+**********************

@@ -29,21 +29,25 @@ public sealed class ModService : IModService, IDisposable
     /// so it never collides with a system-wide CKAN install.
     /// </summary>
     public ModService()
-        : this(new NullUser(), null)
+        : this(null, null)
     {
     }
 
-    /// <param name="user">CKAN user sink (defaults to a null/no-op user).</param>
+    /// <param name="user">CKAN user sink (defaults to a StringBuilder-backed user so we can show logs).</param>
     /// <param name="dataDir">Where CKAN config and cached repo data live; defaults to a temp dir.</param>
     public ModService(IUser? user = null, string? dataDir = null)
     {
-        _user = user ?? new NullUser();
+        Log = user as StringBuilderUser ?? new StringBuilderUser();
+        _user = Log;
         dataDir ??= Path.Combine(Path.GetTempPath(), "Pkl.Ckan");
         Directory.CreateDirectory(dataDir);
         _config = new JsonConfiguration(Path.Combine(dataDir, "config.json"));
         _repoData = new RepositoryDataManager(Path.Combine(dataDir, "repo-data"));
         _manager = new GameInstanceManager(_user, _config);
     }
+
+    /// <summary>Accumulated log sink (for the "view log" window).</summary>
+    public StringBuilderUser Log { get; }
 
     /// <summary>The underlying CKAN game-instance manager (advanced use).</summary>
     public GameInstanceManager Manager => _manager;
@@ -330,6 +334,15 @@ public sealed class ModService : IModService, IDisposable
         bool isInstalled = installed.TryGetValue(identifier, out var installedVersion);
         bool hasUpdate = isInstalled && mod != null && mod.version.CompareTo(installedVersion) > 0;
 
+        bool compatible = true;
+        if (mod != null && _instance != null)
+        {
+            try { compatible = mod.IsCompatible(_instance.VersionCriteria()); }
+            catch { /* leave default */ }
+        }
+
+        string? iconUrl = mod?.resources?.homepage?.ToString();
+
         return new ModSearchResult(
             identifier,
             mod?.name ?? identifier,
@@ -339,7 +352,9 @@ public sealed class ModService : IModService, IDisposable
             mod?.version?.ToString() ?? installedVersion?.ToString(),
             mod?.resources?.homepage?.ToString(),
             isInstalled,
-            hasUpdate);
+            hasUpdate,
+            compatible,
+            iconUrl);
     }
 
     public void Dispose()

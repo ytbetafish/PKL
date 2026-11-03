@@ -73,6 +73,35 @@
                     <local:MyButton x:Name="BtnRefreshRepo" Text="刷新模组索引" Height="34"
                                     Click="BtnRefreshRepo_Click" />
                     <TextBlock x:Name="LabCkanStatus" Text="" FontSize="12" Opacity="0.7" Margin="0,8,0,0" />
+
+                    <TextBlock Text="HTTP 代理（http://host:port，留空直连）" FontSize="12" Opacity="0.7" Margin="0,14,0,5" />
+                    <local:MyTextBox x:Name="TxtProxy" Height="34" Margin="0,0,0,12" />
+
+                    <Grid Margin="0,0,0,14">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="并发下载数" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                            <local:MyTextBox x:Name="TxtConcurrency" Height="34" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="12,0,0,0">
+                            <TextBlock Text="超时秒数" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                            <local:MyTextBox x:Name="TxtTimeout" Height="34" />
+                        </StackPanel>
+                    </Grid>
+
+                    <TextBlock Text="KSP 实例" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,14">
+                        <ComboBox x:Name="CboInstances" Width="320" Height="32" />
+                        <local:MyButton Text="添加实例" Width="96" Margin="10,0,0,0" Click="BtnAddInstance_Click" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <local:MyButton Text="导出已安装清单" Width="130" Height="32" Click="BtnExportMods_Click" />
+                        <local:MyButton Text="导入 .ckan 清单" Width="130" Height="32" Margin="10,0,0,0" Click="BtnImportMods_Click" />
+                    </StackPanel>
                 </StackPanel>
             </local:MyCard>
 

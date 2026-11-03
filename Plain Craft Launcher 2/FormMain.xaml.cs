@@ -134,6 +134,7 @@ public partial class FormMain
         var placeholderLeft = new MyPageLeft();
         PanMainLeft.Child = placeholderLeft;
         pageLeft = placeholderLeft;
+        PanMainLeft.Child = new PageLaunchLeft();
         PanMainRight.Child = new Pages.PageHome();
         // 调试模式提醒
         if (Common.modeDebug)
@@ -1331,14 +1332,32 @@ public partial class FormMain
         var tag = sender.Tag?.ToString();
         // KSP 挂接：全部导航直接托管自定义页面并用 MyPageRight 包装，
         // 绕过原生 PageChangeActual，避免对 PanMainRight.Child 做 MyPageRight 强转时 InvalidCastException。
-        MyPageRight page = tag switch
+        switch (tag)
         {
-            "1" => new Pages.PageMods(),
-            "2" => new Pages.PageSettings(),
-            "3" => new Pages.PageHome(),
-            _ => new Pages.PageHome(),
+            case "1":
+                PanMainLeft.Child = pageLeft;
+                PanMainRight.Child = new Pages.PageMods();
+                break;
+            case "2":
+                PanMainLeft.Child = pageLeft;
+                PanMainRight.Child = new Pages.PageSettings();
+                break;
+            default:
+                PanMainLeft.Child = new PageLaunchLeft();
+                PanMainRight.Child = new Pages.PageHome();
+                break;
+        }
+    }
+
+    public void SelectNavTag(string tag)
+    {
+        var btn = tag switch
+        {
+            "1" => BtnTitleSelect1,
+            "2" => BtnTitleSelect2,
+            _ => BtnTitleSelect0,
         };
-        PanMainRight.Child = page;
+        if (btn is not null) btn.Checked = true;
     }
 
     private void BtnTitleInner_Click(object sender, EventArgs e)
