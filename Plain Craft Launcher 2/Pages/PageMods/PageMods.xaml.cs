@@ -28,7 +28,7 @@ public partial class PageMods
     {
         if (_modService is null)
         {
-            _modService = new ModService();
+            _modService = new ModService(dataDir: PklSettings.Current.CkanDataDir);
         }
         return _modService;
     }

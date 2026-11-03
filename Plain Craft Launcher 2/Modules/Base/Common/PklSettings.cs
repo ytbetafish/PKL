@@ -25,6 +25,11 @@ public static class PklSettings
         public string TranslateBaseUrl { get; set; } = "https://api.deepseek.com/v1";
         public string TranslateApiKey { get; set; } = "";
         public string TranslateModel { get; set; } = "deepseek-chat";
+
+        public string CkanDataDir { get; set; } =
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PKL", "Ckan");
+        public string CkanMasterRepoUrl { get; set; } = "https://archive.ksp-ckan.net/CKAN-meta.zip";
+        public string CkanStabilityTolerance { get; set; } = "Stable";
     }
 
     private static string ResolvePath()
