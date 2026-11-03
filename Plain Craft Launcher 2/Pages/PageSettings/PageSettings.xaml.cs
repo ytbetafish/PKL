@@ -43,7 +43,7 @@ public partial class PageSettings
         NavKsp.Checked = true;
     }
 
-    private void Nav_Changed(MyRadioButton sender, bool raiseByMouse)
+    private void Nav_Changed(object sender, PCL.Common.RouteEventArgs e)
     {
         PanKsp.Visibility = NavKsp.Checked ? Visibility.Visible : Visibility.Collapsed;
         PanCkan.Visibility = NavCkan.Checked ? Visibility.Visible : Visibility.Collapsed;
