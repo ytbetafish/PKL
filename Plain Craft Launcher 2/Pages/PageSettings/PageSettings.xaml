@@ -116,8 +116,8 @@
 
             <local:MyCard x:Name="PanAbout" Title="关于" Visibility="Collapsed">
                 <StackPanel Margin="25,38,23,18">
-                    <TextBlock Text="PKL - KSP Launcher" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,6" />
-                    <TextBlock Text="基于 PCL-CE 二次开发，模组数据通过 CKAN 元数据索引获取。"
+                    <TextBlock Text="PKL v1.0.0" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,6" />
+                    <TextBlock Text="基于 PCL-CE 2.15.1 二次开发，模组数据通过 CKAN 元数据索引获取。"
                                FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
                 </StackPanel>
             </local:MyCard>
