@@ -28,7 +28,10 @@ public partial class PageMods
 
     private static ModService GetService()
     {
-        ModService.ApplyHttpProxy(PklSettings.Current.HttpProxy);
+        ModService.ApplyNetworkSettings(
+            PklSettings.Current.HttpProxy,
+            PklSettings.Current.DownloadConcurrency,
+            PklSettings.Current.HttpTimeoutSeconds);
         if (_modService is null)
         {
             _modService = new ModService(dataDir: PklSettings.Current.CkanDataDir);

@@ -48,12 +48,17 @@ public sealed class ModService : IModService, IDisposable
     }
 
     /// <summary>
-    /// Apply a process-wide HTTP proxy (NetAsyncDownloader does not take one in its ctor).
+    /// Apply process-wide network settings: HTTP proxy, default connection limit, idle timeout.
+    /// (NetAsyncDownloader does not expose these in its ctor.)
     /// </summary>
-    public static void ApplyHttpProxy(string? proxy)
+    public static void ApplyNetworkSettings(string? proxy, int concurrency, int timeoutSeconds)
     {
-        if (string.IsNullOrWhiteSpace(proxy)) return;
-        try { WebRequest.DefaultWebProxy = new WebProxy(proxy, true); } catch { }
+        if (!string.IsNullOrWhiteSpace(proxy))
+        {
+            try { WebRequest.DefaultWebProxy = new WebProxy(proxy, true); } catch { }
+        }
+        try { ServicePointManager.DefaultConnectionLimit = Math.Max(2, concurrency); } catch { }
+        try { ServicePointManager.MaxServicePointIdleTime = Math.Max(5, timeoutSeconds) * 1000; } catch { }
     }
 
     /// <summary>Accumulated log sink (for the "view log" window).</summary>
@@ -370,8 +375,26 @@ public sealed class ModService : IModService, IDisposable
     /// <inheritdoc />
     public (IReadOnlyList<string> reverseDeps, IReadOnlyList<string> conflicts) GetReverseAndConflicts(string identifier)
     {
-        // Reverse iteration over the whole catalog requires repoDataMgr plumbing; return empty for now.
-        return (Array.Empty<string>(), Array.Empty<string>());
+        var deps = new List<string>();
+        var conflicts = new List<string>();
+        if (_instance == null) return (deps, conflicts);
+        try
+        {
+            var repos = Registry?.Repositories?.Values ?? Enumerable.Empty<CKAN.Repository>();
+            foreach (var am in _repoData.GetAllAvailableModules(repos))
+            {
+                foreach (var mod in am.AllAvailable())
+                {
+                    if (mod.identifier == identifier) continue;
+                    if (mod.depends?.Any(r => (r as CKAN.ModuleRelationshipDescriptor)?.name == identifier) == true)
+                        deps.Add(mod.name ?? mod.identifier);
+                    if (mod.conflicts?.Any(r => (r as CKAN.ModuleRelationshipDescriptor)?.name == identifier) == true)
+                        conflicts.Add(mod.name ?? mod.identifier);
+                }
+            }
+        }
+        catch { /* ignore */ }
+        return (deps.Distinct().ToList(), conflicts.Distinct().ToList());
     }
 
     public void Dispose()

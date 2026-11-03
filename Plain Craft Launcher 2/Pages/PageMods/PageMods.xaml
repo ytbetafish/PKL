@@ -38,6 +38,13 @@
                               GridLinesVisibility="Horizontal" Background="Transparent" BorderThickness="0"
                               RowBackground="Transparent" AlternatingRowBackground="{DynamicResource ColorBrush3}">
                         <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="" Width="46">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ContentControl Content="{Binding Identifier, Converter={StaticResource ModIconConverter}}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
                             <DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="2*" />
                             <DataGridTextColumn Header="作者" Binding="{Binding Author}" Width="*" />
                             <DataGridTextColumn Header="版本" Binding="{Binding Version}" Width="Auto" />
