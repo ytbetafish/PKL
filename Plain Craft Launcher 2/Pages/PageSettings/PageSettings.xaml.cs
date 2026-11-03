@@ -46,11 +46,7 @@ public partial class PageSettings
 
     private void Nav_Changed(object sender, PCL.Common.RouteEventArgs e)
     {
-        MyPageLeft? pageLeft = null;
-        if (this.FindName("NavKsp") is MyListItem navItem)
-            pageLeft = GetParentOfType<MyPageLeft>(navItem);
-
-        pageLeft?.TriggerHideAnimation();
+        LeftNav.TriggerHideAnimation();
 
         PCL.Animations.AniStop("PageSettings NavSwitch");
         PCL.Animations.AniStart(new[]
@@ -62,16 +58,8 @@ public partial class PageSettings
                 PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
                 PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
             }, 110),
-            PCL.Animations.AaCode(() => pageLeft?.TriggerShowAnimation(), 30, true)
+            PCL.Animations.AaCode(() => LeftNav.TriggerShowAnimation(), 30, true)
         }, "PageSettings NavSwitch");
-    }
-
-    private static T? GetParentOfType<T>(System.Windows.DependencyObject child) where T : System.Windows.DependencyObject
-    {
-        var parent = System.Windows.Media.VisualTreeHelper.GetParent(child);
-        while (parent != null && parent is not T)
-            parent = System.Windows.Media.VisualTreeHelper.GetParent(parent);
-        return parent as T;
     }
 
     private void RefreshInstancesList()
