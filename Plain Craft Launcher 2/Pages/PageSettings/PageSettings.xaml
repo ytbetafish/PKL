@@ -8,7 +8,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" Background="{DynamicResource ColorBrushCardBackground}">
+        <Border Grid.Column="0" Background="{DynamicResource ColorBrushBg0}">
         <local:MyScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
                               Style="{StaticResource ScrollViewerFullMargin}">
             <StackPanel Margin="0,12,0,0">
