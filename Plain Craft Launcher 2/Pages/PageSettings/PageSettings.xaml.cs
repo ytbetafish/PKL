@@ -13,7 +13,7 @@ public partial class PageSettings
         TxtModel.Text = PklSettings.Current.TranslateModel;
     }
 
-    private void BtnSave_Click(object sender, RoutedEventArgs e)
+    private void BtnSave_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         PklSettings.Current.TranslateBaseUrl = TxtBaseUrl.Text.Trim();
         PklSettings.Current.TranslateApiKey = TxtApiKey.Text.Trim();

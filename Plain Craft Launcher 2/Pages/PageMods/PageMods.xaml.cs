@@ -88,7 +88,7 @@ public partial class PageMods
 
     private async void BtnSearch_Click(object sender, EventArgs e) => await DoSearch(TxtSearch.Text);
 
-    private async void BtnInstalled_Click(object sender, RoutedEventArgs e)
+    private async void BtnInstalled_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         try
         {
@@ -121,7 +121,7 @@ public partial class PageMods
         BtnTranslate.Visibility = string.IsNullOrWhiteSpace(_originalDescription) ? Visibility.Collapsed : Visibility.Visible;
     }
 
-    private async void BtnTranslate_Click(object sender, RoutedEventArgs e)
+    private async void BtnTranslate_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         if (_selected is null || string.IsNullOrWhiteSpace(_selected.Description))
             return;
@@ -152,7 +152,7 @@ public partial class PageMods
         LabModDesc.Text = result ?? "（翻译失败，请检查翻译设置）";
     }
 
-    private async void BtnInstall_Click(object sender, RoutedEventArgs e)
+    private async void BtnInstall_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         if (_selected is null) return;
         try

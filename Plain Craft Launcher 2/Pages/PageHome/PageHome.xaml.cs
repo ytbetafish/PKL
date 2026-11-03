@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
@@ -40,7 +40,7 @@ public partial class PageHome
         }
     }
 
-    private void BtnPickPath_Click(object sender, RoutedEventArgs e)
+    private void BtnPickPath_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         var dialog = new OpenFolderDialog
         {
@@ -54,7 +54,7 @@ public partial class PageHome
         }
     }
 
-    private void BtnLaunch_Click(object sender, RoutedEventArgs e)
+    private void BtnLaunch_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         var root = PklSettings.Current.KspRootPath;
         if (string.IsNullOrWhiteSpace(root) || !KspInstanceService.IsKspRoot(root))
