@@ -36,6 +36,19 @@ public partial class PageSettings
         TxtTimeout.Text = PklSettings.Current.HttpTimeoutSeconds.ToString();
 
         RefreshInstancesList();
+        NavKsp.Check += Nav_Changed;
+        NavCkan.Check += Nav_Changed;
+        NavTranslate.Check += Nav_Changed;
+        NavAbout.Check += Nav_Changed;
+        NavKsp.Checked = true;
+    }
+
+    private void Nav_Changed(MyRadioButton sender, bool raiseByMouse)
+    {
+        PanKsp.Visibility = NavKsp.Checked ? Visibility.Visible : Visibility.Collapsed;
+        PanCkan.Visibility = NavCkan.Checked ? Visibility.Visible : Visibility.Collapsed;
+        PanTranslate.Visibility = NavTranslate.Checked ? Visibility.Visible : Visibility.Collapsed;
+        PanAbout.Visibility = NavAbout.Checked ? Visibility.Visible : Visibility.Collapsed;
     }
 
     private void RefreshInstancesList()

@@ -1,4 +1,4 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Diagnostics;
 using PCL.Core.App;
 using PCL.Core.App.Localization;
@@ -309,8 +309,8 @@ public static class UpdateManager
 
     private static void LoadOnlineInfo()
     {
-        ScheduleBasedOnConfig();
-        AnnouncementService.Load();
+        // PKL: 禁用 PCL-CE 自动更新检查与公告拉取
+        return;
     }
 
     private static void ScheduleBasedOnConfig()
