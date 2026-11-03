@@ -166,10 +166,16 @@ public partial class FormMain
             AddResizer();
         else
             RemoveResizer();
-        // PKL 品牌：显示 PKL 文字，隐藏 CE 角标
-        LabTitleLogo.Text = "PKL";
-        LabTitleLogo.Visibility = Visibility.Visible;
-        CELogo.Visibility = Visibility.Collapsed;
+        // PKL 品牌：隐藏原版 PCL 矢量 logo + CE 角标，显示 PKL 文字
+        try
+        {
+            ShapeTitleLogo.Visibility = Visibility.Collapsed;
+            ShapeHMCLTitleLogo.Visibility = Visibility.Collapsed;
+            CELogo.Visibility = Visibility.Collapsed;
+            LabTitleLogo.Text = "PKL";
+            LabTitleLogo.Visibility = Visibility.Visible;
+        }
+        catch { }
         // PLC 彩蛋
         if (RandomUtils.NextInt(1, 1000) == 233)
             ShapeTitleLogo.Data = (Geometry)new GeometryConverter().ConvertFromString(
