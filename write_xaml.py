@@ -1,0 +1,200 @@
+xaml = '''<local:MyPageRight x:Class="PCL.Pages.PageSettings"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:local="clr-namespace:PCL">
+    <Grid Margin="25,25,25,25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <local:MyScrollViewer Grid.Column="0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="0,12,0,0">
+                <TextBlock Text="KSP" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
+                <local:MyListItem x:Name="NavKsp" Type="RadioBox" Checked="True"
+                                  MinPaddingRight="35" Height="36" Title="实例管理" SvgIcon="lucide/rocket" />
+
+                <TextBlock Text="模组" Margin="13,14,5,4" Opacity="0.6" FontSize="12" />
+                <local:MyListItem x:Name="NavCkan" Type="RadioBox"
+                                  MinPaddingRight="35" Height="36" Title="CKAN 模组源" SvgIcon="lucide/package" />
+                <local:MyListItem x:Name="NavTranslate" Type="RadioBox"
+                                  MinPaddingRight="35" Height="36" Title="翻译服务" SvgIcon="lucide/globe" />
+
+                <TextBlock Text="关于" Margin="13,14,5,4" Opacity="0.6" FontSize="12" />
+                <local:MyListItem x:Name="NavAbout" Type="RadioBox"
+                                  MinPaddingRight="35" Height="36" Title="软件信息" SvgIcon="lucide/info" />
+            </StackPanel>
+        </local:MyScrollViewer>
+
+        <Grid Grid.Column="1" Margin="20,0,0,0">
+
+            <local:MyCard x:Name="PanKsp" Title="KSP 实例">
+                <StackPanel Margin="25,40,25,21">
+                    <Grid Grid.IsSharedSizeScope="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="60" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="已添加的 KSP 实例" />
+                        <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <local:MyComboBox x:Name="CboInstances" Height="34" />
+                            <local:MyButton Grid.Column="1" Text="添加实例" Margin="10,0,0,0" Height="34" Width="100" Click="BtnAddInstance_Click" />
+                        </Grid>
+                        <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="当前实例路径" />
+                        <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,4">
+                            <TextBlock x:Name="LabKspPath" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock Grid.Row="4" VerticalAlignment="Center" Margin="0,0,25,0" Text="KSP 版本" />
+                        <TextBlock Grid.Row="4" Grid.Column="1" x:Name="LabKspVersion" Text="" VerticalAlignment="Center" FontSize="13" />
+                        <TextBlock Grid.Row="6" VerticalAlignment="Center" Margin="0,0,25,0" Text="游戏可执行文件" />
+                        <Border Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,4">
+                            <TextBlock x:Name="LabKspExe" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock Grid.Row="8" VerticalAlignment="Center" Margin="0,0,25,0" Text="数据目录 (GameData)" />
+                        <Border Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,4">
+                            <TextBlock x:Name="LabKspGameData" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock Grid.Row="10" VerticalAlignment="Center" Margin="0,0,25,0" Text="日志目录" />
+                        <Border Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,4">
+                            <TextBlock x:Name="LabKspLogs" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </local:MyCard>
+
+            <local:MyCard x:Name="PanCkan" Title="CKAN 模组源" Visibility="Collapsed">
+                <StackPanel Margin="25,40,25,21">
+                    <Grid Grid.IsSharedSizeScope="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="60" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="数据目录" />
+                        <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Border Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,4">
+                                <TextBlock x:Name="LabCkanDataDir" Text="" FontSize="12" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                            </Border>
+                            <local:MyButton Grid.Column="1" Text="选择目录" Margin="10,0,0,0" Height="34" Width="100" Click="BtnPickCkanDir_Click" />
+                        </Grid>
+                        <TextBlock Grid.Row="2" VerticalAlignment="Top" Margin="0,0,25,0" Text="镜像源 URL" />
+                        <local:MyTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtMirrorUrls" AcceptsReturn="True"
+                                         TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Height="60" />
+                        <TextBlock Grid.Row="4" VerticalAlignment="Center" Margin="0,0,25,0" Text="下载源策略" />
+                        <local:MyComboBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" x:Name="CboStrategy" Height="34">
+                            <local:MyComboBoxItem Content="镜像源为主，官方源补缺失（推荐）" Tag="OfficialFirst" />
+                            <local:MyComboBoxItem Content="仅使用镜像源" Tag="MirrorOnly" />
+                            <local:MyComboBoxItem Content="仅使用官方源" Tag="OfficialOnly" />
+                        </local:MyComboBox>
+                        <TextBlock Grid.Row="6" VerticalAlignment="Center" Margin="0,0,25,0" Text="稳定性容忍度" />
+                        <StackPanel Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyRadioButton x:Name="OptStable" GroupName="stability" Text="Stable" />
+                            <local:MyRadioButton x:Name="OptTesting" GroupName="stability" Text="Testing" Margin="16,0,0,0" />
+                            <local:MyRadioButton x:Name="OptPre" GroupName="stability" Text="PreRelease" Margin="16,0,0,0" />
+                        </StackPanel>
+                        <TextBlock Grid.Row="8" VerticalAlignment="Center" Margin="0,0,25,0" Text="HTTP 代理" />
+                        <local:MyTextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtProxy" Height="34" />
+                        <TextBlock Grid.Row="10" VerticalAlignment="Center" Margin="0,0,25,0" Text="并发下载数" />
+                        <local:MyTextBox Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtConcurrency" Height="34" />
+                        <TextBlock Grid.Row="12" VerticalAlignment="Center" Margin="0,0,25,0" Text="超时秒数" />
+                        <local:MyTextBox Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtTimeout" Height="34" />
+                        <TextBlock Grid.Row="14" VerticalAlignment="Center" Margin="0,0,25,0" Text="模组索引" />
+                        <StackPanel Grid.Row="14" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyButton x:Name="BtnRefreshRepo" Text="刷新索引" Height="34" Width="100" Click="BtnRefreshRepo_Click" />
+                            <TextBlock x:Name="LabCkanStatus" Text="" FontSize="12" Opacity="0.7" Margin="14,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <TextBlock Grid.Row="16" VerticalAlignment="Center" Margin="0,0,25,0" Text="清单管理" />
+                        <StackPanel Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyButton Text="导出清单" Width="110" Height="34" Click="BtnExportMods_Click" />
+                            <local:MyButton Text="导入 .ckan" Width="110" Height="34" Margin="10,0,0,0" Click="BtnImportMods_Click" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </local:MyCard>
+
+            <local:MyCard x:Name="PanTranslate" Title="翻译服务" Visibility="Collapsed">
+                <StackPanel Margin="25,40,25,21">
+                    <Grid Grid.IsSharedSizeScope="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="60" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="接口 Base URL" />
+                        <local:MyTextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtBaseUrl" Height="34" />
+                        <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="API Key" />
+                        <local:MyTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtApiKey" Height="34" />
+                        <TextBlock Grid.Row="4" VerticalAlignment="Center" Margin="0,0,25,0" Text="模型" />
+                        <local:MyTextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtModel" Height="34" />
+                        <StackPanel Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyButton x:Name="BtnSave" Text="保存设置" Width="110" Height="34" ColorType="Highlight" Click="BtnSave_Click" />
+                            <TextBlock x:Name="LabSaved" Text="" FontSize="12" Opacity="0.7" Margin="14,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </local:MyCard>
+
+            <local:MyCard x:Name="PanAbout" Title="关于" Visibility="Collapsed">
+                <StackPanel Margin="25,40,25,21">
+                    <TextBlock Text="PKL v1.0.0" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,6" />
+                    <TextBlock Text="基于 PCL-CE 2.15.1 二次开发，模组数据通过 CKAN 元数据索引获取。"
+                               FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                </StackPanel>
+            </local:MyCard>
+
+        </Grid>
+    </Grid>
+</local:MyPageRight>
+'''
+open(r'Plain Craft Launcher 2\Pages\PageSettings\PageSettings.xaml', 'w', encoding='utf-8-sig').write(xaml)
+print('xaml written')

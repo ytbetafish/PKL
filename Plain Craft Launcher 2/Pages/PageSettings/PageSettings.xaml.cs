@@ -19,9 +19,9 @@ public partial class PageSettings
         TxtModel.Text = PklSettings.Current.TranslateModel;
         LabCkanDataDir.Text = PklSettings.Current.CkanDataDir;
         TxtMirrorUrls.Text = string.Join("\n", PklSettings.Current.CkanMirrorUrls);
-        foreach (System.Windows.Controls.ComboBoxItem item in CboStrategy.Items)
+        foreach (var item in CboStrategy.Items)
         {
-            if ((string)item.Tag == PklSettings.Current.CkanRepoStrategy) { CboStrategy.SelectedItem = item; break; }
+            if (item is System.Windows.Controls.ComboBoxItem ci && (string)ci.Tag == PklSettings.Current.CkanRepoStrategy) { CboStrategy.SelectedItem = item; break; }
         }
         if (CboStrategy.SelectedItem == null) CboStrategy.SelectedIndex = 0;
         switch (PklSettings.Current.CkanStabilityTolerance)
@@ -36,6 +36,7 @@ public partial class PageSettings
         TxtTimeout.Text = PklSettings.Current.HttpTimeoutSeconds.ToString();
 
         RefreshInstancesList();
+        RefreshKspInfo();
         NavKsp.Check += Nav_Changed;
         NavCkan.Check += Nav_Changed;
         NavTranslate.Check += Nav_Changed;
@@ -67,9 +68,36 @@ public partial class PageSettings
             {
                 PklSettings.Current.KspRootPath = s;
                 PklSettings.Save();
-                LabSaved.Text = "已切换 KSP 实例，重启 PKL 后生效。";
+                RefreshKspInfo();
+                LabSaved.Text = "已切换 KSP 实例。";
             }
         };
+    }
+
+    private void RefreshKspInfo()
+    {
+        var root = PklSettings.Current.KspRootPath;
+        LabKspPath.Text = string.IsNullOrEmpty(root) ? "（未设置）" : root;
+        if (string.IsNullOrEmpty(root) || !Directory.Exists(root))
+        {
+            LabKspVersion.Text = "—";
+            LabKspExe.Text = "—";
+            LabKspGameData.Text = "—";
+            LabKspLogs.Text = "—";
+            return;
+        }
+        try
+        {
+            var versionTxt = Path.Combine(root, "version.txt");
+            LabKspVersion.Text = File.Exists(versionTxt) ? File.ReadAllText(versionTxt).Trim() : "未知";
+        }
+        catch { LabKspVersion.Text = "读取失败"; }
+        LabKspExe.Text = File.Exists(Path.Combine(root, "KSP_x64.exe")) ? Path.Combine(root, "KSP_x64.exe") :
+                         File.Exists(Path.Combine(root, "ksp.exe")) ? Path.Combine(root, "ksp.exe") : "未找到";
+        var gd = Path.Combine(root, "GameData");
+        LabKspGameData.Text = Directory.Exists(gd) ? gd : "不存在";
+        var logs = Path.Combine(root, "KSP_Data", "output_log.txt");
+        LabKspLogs.Text = File.Exists(logs) ? logs : Path.Combine(root, "KSP_Data");
     }
 
     private void BtnAddInstance_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -81,8 +109,9 @@ public partial class PageSettings
                 PklSettings.Current.Instances.Add(dialog.FolderName);
             PklSettings.Current.KspRootPath = dialog.FolderName;
             PklSettings.Save();
-            LabSaved.Text = "实例已添加，重启 PKL 后生效。";
+            LabSaved.Text = "实例已添加。";
             RefreshInstancesList();
+            RefreshKspInfo();
         }
     }
 
@@ -97,7 +126,7 @@ public partial class PageSettings
             PklSettings.Current.CkanDataDir = dialog.FolderName;
             PklSettings.Save();
             LabCkanDataDir.Text = dialog.FolderName;
-            LabCkanStatus.Text = "数据目录已保存，重启 PKL 后生效。";
+            LabCkanStatus.Text = "数据目录已保存。";
         }
     }
 
@@ -122,26 +151,6 @@ public partial class PageSettings
         finally
         {
             BtnRefreshRepo.IsEnabled = true;
-        }
-    }
-
-    private async void BtnTestRepo_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
-    {
-        var url = TxtMirrorUrls.Text.Split(new[]{'\r','\n'}, StringSplitOptions.RemoveEmptyEntries)
-                            .Select(s => s.Trim()).FirstOrDefault();
-        if (string.IsNullOrEmpty(url)) { LabCkanStatus.Text = "未填镜像 URL。"; return; }
-        if (string.IsNullOrWhiteSpace(url)) { LabCkanStatus.Text = "URL 为空。"; return; }
-        try
-        {
-            LabCkanStatus.Text = "正在测试连接…";
-            using var http = new System.Net.Http.HttpClient();
-            http.Timeout = TimeSpan.FromSeconds(10);
-            var resp = await http.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
-            LabCkanStatus.Text = $"连接成功：HTTP {(int)resp.StatusCode} ({resp.ReasonPhrase})";
-        }
-        catch (Exception ex)
-        {
-            LabCkanStatus.Text = $"连接失败：{ex.Message}";
         }
     }
 
