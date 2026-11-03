@@ -9,10 +9,10 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" VerticalAlignment="Top">
-            <local:MyRadioButton x:Name="NavKsp" GroupName="settingsNav" Text="KSP 实例" Checked="Nav_Changed" Margin="0,0,0,8" />
-            <local:MyRadioButton x:Name="NavCkan" GroupName="settingsNav" Text="CKAN 模组" Checked="Nav_Changed" Margin="0,0,0,8" />
-            <local:MyRadioButton x:Name="NavTranslate" GroupName="settingsNav" Text="翻译服务" Checked="Nav_Changed" Margin="0,0,0,8" />
-            <local:MyRadioButton x:Name="NavAbout" GroupName="settingsNav" Text="关于" Checked="Nav_Changed" Margin="0,0,0,8" />
+            <local:MyRadioButton x:Name="NavKsp" GroupName="settingsNav" Text="KSP 实例" Check="Nav_Changed" Margin="0,0,0,8" />
+            <local:MyRadioButton x:Name="NavCkan" GroupName="settingsNav" Text="CKAN 模组" Check="Nav_Changed" Margin="0,0,0,8" />
+            <local:MyRadioButton x:Name="NavTranslate" GroupName="settingsNav" Text="翻译服务" Check="Nav_Changed" Margin="0,0,0,8" />
+            <local:MyRadioButton x:Name="NavAbout" GroupName="settingsNav" Text="关于" Check="Nav_Changed" Margin="0,0,0,8" />
         </StackPanel>
 
         <Grid Grid.Column="1" Margin="20,0,0,0">
