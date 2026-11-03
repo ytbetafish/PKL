@@ -46,10 +46,18 @@ public partial class PageSettings
 
     private void Nav_Changed(object sender, PCL.Common.RouteEventArgs e)
     {
-        PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
-        PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
-        PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
-        PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
+        PCL.Animations.AniBeginControl();
+        try
+        {
+            PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
+            PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
+            PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
+            PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
+        }
+        finally
+        {
+            PCL.Animations.AniEndControl();
+        }
     }
 
     private void RefreshInstancesList()
