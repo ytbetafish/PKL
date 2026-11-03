@@ -46,25 +46,24 @@ public partial class PageSettings
 
     private void Nav_Changed(object sender, PCL.Common.RouteEventArgs e)
     {
-        // Find the MyPageLeft parent and trigger hide/show animation like FormMain does
+        MyPageLeft? pageLeft = null;
         if (this.FindName("NavKsp") is MyListItem navItem)
-        {
-            var pageLeft = GetParentOfType<MyPageLeft>(navItem);
-            if (pageLeft != null)
-                pageLeft.TriggerHideAnimation();
-        }
+            pageLeft = GetParentOfType<MyPageLeft>(navItem);
 
-        PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
-        PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
-        PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
-        PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
+        pageLeft?.TriggerHideAnimation();
 
-        if (this.FindName("NavKsp") is MyListItem navItem2)
+        PCL.Animations.AniStop("PageSettings NavSwitch");
+        PCL.Animations.AniStart(new[]
         {
-            var pageLeft = GetParentOfType<MyPageLeft>(navItem2);
-            if (pageLeft != null)
-                pageLeft.TriggerShowAnimation();
-        }
+            PCL.Animations.AaCode(() =>
+            {
+                PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
+                PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
+                PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
+                PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
+            }, 110),
+            PCL.Animations.AaCode(() => pageLeft?.TriggerShowAnimation(), 30, true)
+        }, "PageSettings NavSwitch");
     }
 
     private static T? GetParentOfType<T>(System.Windows.DependencyObject child) where T : System.Windows.DependencyObject
