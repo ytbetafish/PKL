@@ -53,23 +53,6 @@ public partial class PageSettings
         PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
         PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
         PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
-
-        if (!_isInitialized) return;
-
-        LeftNav.TriggerHideAnimation();
-
-        PCL.Animations.AniStop("PageSettings NavSwitch");
-        PCL.Animations.AniStart(new[]
-        {
-            PCL.Animations.AaCode(() =>
-            {
-                PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
-                PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
-                PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
-                PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
-            }, 110),
-            PCL.Animations.AaCode(() => LeftNav.TriggerShowAnimation(), 30, true)
-        }, "PageSettings NavSwitch");
     }
 
     private void RefreshInstancesList()
