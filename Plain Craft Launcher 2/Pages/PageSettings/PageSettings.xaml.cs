@@ -88,8 +88,14 @@ public partial class PageSettings
         }
         try
         {
+            var buildId = Path.Combine(root, "KSP_Data", "buildID.txt");
             var versionTxt = Path.Combine(root, "version.txt");
-            LabKspVersion.Text = File.Exists(versionTxt) ? File.ReadAllText(versionTxt).Trim() : "未知";
+            if (File.Exists(buildId))
+                LabKspVersion.Text = File.ReadAllText(buildId).Trim();
+            else if (File.Exists(versionTxt))
+                LabKspVersion.Text = File.ReadAllText(versionTxt).Trim();
+            else
+                LabKspVersion.Text = "未知";
         }
         catch { LabKspVersion.Text = "读取失败"; }
         LabKspExe.Text = File.Exists(Path.Combine(root, "KSP_x64.exe")) ? Path.Combine(root, "KSP_x64.exe") :
