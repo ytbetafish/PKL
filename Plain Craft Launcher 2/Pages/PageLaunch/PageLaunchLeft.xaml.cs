@@ -67,8 +67,8 @@ public partial class PageLaunchLeft
             {
                 _kspProcess.EnableRaisingEvents = true;
                 _kspProcess.Exited += OnKspExited;
-                LabLaunchTitle.Text = "游戏运行中…";
-                BtnLaunch.IsHitTestVisible = false;
+                BtnLaunch.Text = "游戏运行中…";
+                BtnLaunch.IsEnabled = false;
             }
         }
         catch (Exception ex)
@@ -82,8 +82,8 @@ public partial class PageLaunchLeft
         Dispatcher.BeginInvoke(new Action(() =>
         {
             DetachKspWatcher();
-            LabLaunchTitle.Text = "启动 KSP";
-            BtnLaunch.IsHitTestVisible = true;
+            BtnLaunch.Text = "启动 KSP";
+            BtnLaunch.IsEnabled = true;
         }));
     }
 

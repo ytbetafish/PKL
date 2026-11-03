@@ -20,18 +20,15 @@
 
         <!-- Row 1：空白 -->
 
-        <!-- Row 2：大启动按钮（蓝色填充，两行文字） -->
-        <Border x:Name="BtnLaunch" Grid.Row="2" CornerRadius="4" Margin="20,0,20,0" Height="64"
-                Background="{DynamicResource ColorBrushHighlight}"
-                MouseLeftButtonUp="BtnLaunch_Click" Cursor="Hand">
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock x:Name="LabLaunchTitle" Text="启动 KSP" FontSize="15"
-                           HorizontalAlignment="Center" Foreground="White" />
-                <TextBlock x:Name="LabVersion" Text="" FontSize="11"
-                           HorizontalAlignment="Center" Margin="0,3,0,0"
-                           Foreground="White" Opacity="0.85" />
-            </StackPanel>
-        </Border>
+        <!-- Row 2：大启动按钮 + 浮在底部的版本号 -->
+        <Grid Grid.Row="2" Margin="20,0,20,0">
+            <local:MyButton x:Name="BtnLaunch" Height="54"
+                            Text="启动 KSP" ColorType="Highlight"
+                            Padding="30,0,30,15" Click="BtnLaunch_Click" />
+            <TextBlock x:Name="LabVersion" Margin="35,0,35,10" IsHitTestVisible="False"
+                       VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                       FontSize="11" Foreground="{DynamicResource ColorBrushGray3}" />
+        </Grid>
 
         <!-- Row 3：两个小按钮均分宽度 -->
         <Grid Grid.Row="3" Margin="20,10,20,20">
