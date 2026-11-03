@@ -46,17 +46,23 @@ public partial class PageSettings
 
     private void Nav_Changed(object sender, PCL.Common.RouteEventArgs e)
     {
-        PCL.Animations.AniBeginControl();
-        try
+        PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
+        PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
+        PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
+        PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
+
+        System.Windows.FrameworkElement? shown =
+            sender == NavKsp ? PanKsp :
+            sender == NavCkan ? PanCkan :
+            sender == NavTranslate ? PanTranslate :
+            sender == NavAbout ? PanAbout : null;
+        if (shown != null)
         {
-            PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
-            PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
-            PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
-            PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
-        }
-        finally
-        {
-            PCL.Animations.AniEndControl();
+            shown.Opacity = 0;
+            PCL.Animations.AniStart(new[]
+            {
+                PCL.Animations.AaCode(() => shown.Opacity = 1, 200)
+            }, "PageSettings NavFade");
         }
     }
 
