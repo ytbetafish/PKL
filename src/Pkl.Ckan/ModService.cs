@@ -97,6 +97,11 @@ public sealed class ModService : IModService, IDisposable
         _readonlyRegistry = RegistryManager.ReadOnlyRegistry(instance, _repoData);
     }
 
+    /// <summary>
+    /// Optional mirror repo URL to use instead of CKAN's official repos. Set by caller.
+    /// </summary>
+    public string? MirrorUrl { get; set; }
+
     /// <inheritdoc />
     public Task RefreshMasterRegistryAsync(CancellationToken cancellationToken = default)
     {
@@ -107,6 +112,18 @@ public sealed class ModService : IModService, IDisposable
 
         try
         {
+            // If a mirror URL is configured, replace the official repos with our single mirror.
+            if (!string.IsNullOrWhiteSpace(MirrorUrl))
+            {
+                try
+                {
+                    _registryManager.registry.RepositoriesClear();
+                    _registryManager.registry.RepositoriesAdd(new CKAN.Repository("PKL-Mirror", MirrorUrl));
+                    _registryManager.Save();
+                }
+                catch { /* best effort */ }
+            }
+
             var repos = _registryManager.registry.Repositories.Values.ToList();
             var downloader = new NetAsyncDownloader(_user,
                 () => (System.Security.Cryptography.HashAlgorithm?)null,

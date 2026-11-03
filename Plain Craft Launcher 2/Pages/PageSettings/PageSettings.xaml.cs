@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 using Pkl.Ckan;
@@ -16,9 +17,6 @@ public partial class PageSettings
         TxtBaseUrl.Text = PklSettings.Current.TranslateBaseUrl;
         TxtApiKey.Text = PklSettings.Current.TranslateApiKey;
         TxtModel.Text = PklSettings.Current.TranslateModel;
-        LabKspPath.Text = string.IsNullOrWhiteSpace(PklSettings.Current.KspRootPath)
-            ? "未设置" : PklSettings.Current.KspRootPath;
-
         LabCkanDataDir.Text = PklSettings.Current.CkanDataDir;
         TxtCkanRepoUrl.Text = PklSettings.Current.CkanMasterRepoUrl;
         switch (PklSettings.Current.CkanStabilityTolerance)
@@ -51,28 +49,9 @@ public partial class PageSettings
             {
                 PklSettings.Current.KspRootPath = s;
                 PklSettings.Save();
-                LabKspPath.Text = s;
                 LabSaved.Text = "已切换 KSP 实例，重启 PKL 后生效。";
             }
         };
-    }
-
-    private void BtnPickKspPath_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
-    {
-        var dialog = new OpenFolderDialog
-        {
-            Title = "选择 KSP 安装目录（包含 KSP_x64.exe 与 GameData）"
-        };
-        if (dialog.ShowDialog() == true)
-        {
-            PklSettings.Current.KspRootPath = dialog.FolderName;
-            if (!PklSettings.Current.Instances.Contains(dialog.FolderName))
-                PklSettings.Current.Instances.Add(dialog.FolderName);
-            PklSettings.Save();
-            LabKspPath.Text = dialog.FolderName;
-            LabSaved.Text = "KSP 路径已保存。";
-            RefreshInstancesList();
-        }
     }
 
     private void BtnAddInstance_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -84,7 +63,6 @@ public partial class PageSettings
                 PklSettings.Current.Instances.Add(dialog.FolderName);
             PklSettings.Current.KspRootPath = dialog.FolderName;
             PklSettings.Save();
-            LabKspPath.Text = dialog.FolderName;
             LabSaved.Text = "实例已添加，重启 PKL 后生效。";
             RefreshInstancesList();
         }
@@ -112,6 +90,7 @@ public partial class PageSettings
             BtnRefreshRepo.IsEnabled = false;
             LabCkanStatus.Text = "正在刷新模组索引…";
             var svc = new ModService(dataDir: PklSettings.Current.CkanDataDir);
+            svc.MirrorUrl = TxtCkanRepoUrl.Text.Trim();
             await svc.RefreshMasterRegistryAsync();
             LabCkanStatus.Text = "索引刷新完成。";
         }
@@ -122,6 +101,24 @@ public partial class PageSettings
         finally
         {
             BtnRefreshRepo.IsEnabled = true;
+        }
+    }
+
+    private async void BtnTestRepo_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        var url = TxtCkanRepoUrl.Text.Trim();
+        if (string.IsNullOrWhiteSpace(url)) { LabCkanStatus.Text = "URL 为空。"; return; }
+        try
+        {
+            LabCkanStatus.Text = "正在测试连接…";
+            using var http = new System.Net.Http.HttpClient();
+            http.Timeout = TimeSpan.FromSeconds(10);
+            var resp = await http.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
+            LabCkanStatus.Text = $"连接成功：HTTP {(int)resp.StatusCode} ({resp.ReasonPhrase})";
+        }
+        catch (Exception ex)
+        {
+            LabCkanStatus.Text = $"连接失败：{ex.Message}";
         }
     }
 
