@@ -6,8 +6,18 @@
         <StackPanel Margin="25,25,25,10">
 
             <local:MyCard Margin="0,0,0,15" Title="KSP 设置">
-                <TextBlock Margin="25,38,23,18" FontSize="12.5" Opacity="0.7"
-                           TextWrapping="Wrap">KSP 安装目录在主页「KSP 启动」卡片中选择，此处仅查看。</TextBlock>
+                <Grid Margin="25,38,23,18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4" Padding="12,9">
+                        <TextBlock x:Name="LabKspPath" Text="未设置" Opacity="0.8"
+                                   FontSize="12.5" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                    </Border>
+                    <local:MyButton Grid.Column="1" Text="选择路径" Width="96" Margin="10,0,0,0"
+                                    Click="BtnPickKspPath_Click" />
+                </Grid>
             </local:MyCard>
 
             <local:MyCard Margin="0,0,0,15" Title="模组描述翻译服务">

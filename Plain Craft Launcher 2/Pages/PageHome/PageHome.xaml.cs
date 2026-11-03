@@ -2,8 +2,6 @@
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using Microsoft.Win32;
 using Pkl.Ckan;
 
 namespace PCL.Pages;
@@ -24,7 +22,7 @@ public partial class PageHome
         var path = PklSettings.Current.KspRootPath;
         if (string.IsNullOrWhiteSpace(path))
         {
-            LabKspPath.Text = "未选择";
+            LabKspPath.Text = "未设置 KSP 路径（请到设置页选择）";
             LabKspVersion.Text = "";
             return;
         }
@@ -32,25 +30,11 @@ public partial class PageHome
         try
         {
             var probe = new KspInstanceService().Probe(path);
-            LabKspVersion.Text = probe?.Version is null ? "（未检测到 KSP 版本）" : $"检测到 KSP 版本：{probe.Version}";
+            LabKspVersion.Text = probe?.Version is null ? "未检测到 KSP" : $"KSP {probe.Version}";
         }
         catch
         {
             LabKspVersion.Text = "（路径无效）";
-        }
-    }
-
-    private void BtnPickPath_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
-    {
-        var dialog = new OpenFolderDialog
-        {
-            Title = "选择 KSP 安装目录（包含 KSP_x64.exe 与 GameData）"
-        };
-        if (dialog.ShowDialog() == true)
-        {
-            PklSettings.Current.KspRootPath = dialog.FolderName;
-            PklSettings.Save();
-            RefreshPath();
         }
     }
 

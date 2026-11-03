@@ -15,12 +15,13 @@ public partial class PageMods
     private ModSearchResult? _selected;
     private bool _showChinese;
     private string? _originalDescription;
-    private bool _serviceReady;
+    private bool _serviceAttaching;
 
     public PageMods()
     {
         InitializeComponent();
-        Loaded += async (_, _) => await EnsureServiceAsync();
+        // 不在构造函数/Loaded 做任何同步 IO；实例附加放到后台，搜索由用户触发。
+        Loaded += async (_, _) => await AttachKspBackgroundAsync();
     }
 
     private static ModService GetService()
@@ -28,54 +29,37 @@ public partial class PageMods
         if (_modService is null)
         {
             _modService = new ModService();
-            var root = PklSettings.Current.KspRootPath;
-            if (!string.IsNullOrWhiteSpace(root) && KspInstanceService.IsKspRoot(root))
-            {
-                try
-                {
-                    var ksp = new KspInstanceService();
-                    _modService.AttachInstance(ksp.Load(root));
-                }
-                catch
-                {
-                    // 附加失败保持无实例，后续操作降级。
-                }
-            }
         }
         return _modService;
     }
 
-    private async Task EnsureServiceAsync()
+    private async Task AttachKspBackgroundAsync()
     {
-        if (_serviceReady)
-        {
-            await DoSearch(TxtSearch.Text);
-            return;
-        }
-
-        var svc = GetService();
+        if (_serviceAttaching) return;
+        _serviceAttaching = true;
         try
         {
-            PanProgress.Visibility = Visibility.Visible;
-            LabProgress.Text = "正在刷新 CKAN 注册表…";
-            BarProgress.IsIndeterminate = true;
-            await svc.RefreshMasterRegistryAsync();
+            var root = PklSettings.Current.KspRootPath;
+            if (string.IsNullOrWhiteSpace(root) || !KspInstanceService.IsKspRoot(root)) return;
+            await Task.Run(() =>
+            {
+                var ksp = new KspInstanceService();
+                GetService().AttachInstance(ksp.Load(root));
+            });
         }
         catch (Exception ex)
         {
-            LabProgress.Text = "注册表刷新失败：" + ex.Message;
+            LabModDesc.Text = "KSP 实例附加失败：" + ex.Message;
         }
-        finally
-        {
-            PanProgress.Visibility = Visibility.Collapsed;
-            _serviceReady = true;
-        }
-
-        await DoSearch(null);
     }
 
     private async Task DoSearch(string? query)
     {
+        if (string.IsNullOrWhiteSpace(query))
+        {
+            LabModDesc.Text = "输入关键词后按回车或点搜索。";
+            return;
+        }
         try
         {
             GridMods.ItemsSource = await GetService().SearchAsync(query);
