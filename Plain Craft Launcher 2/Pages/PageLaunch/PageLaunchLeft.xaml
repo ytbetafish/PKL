@@ -25,7 +25,7 @@
             </Grid.RowDefinitions>
             <local:MyButton x:Name="BtnLaunch" Height="54"
                             Text="启动 KSP" ColorType="Highlight"
-                            Click="BtnLaunch_Click" Padding="30,0,30,15" />
+                            Click="BtnLaunch_Click" Padding="30,0" />
             <TextBlock x:Name="LabVersion" Grid.Row="1" Text="" Margin="35,8,35,0"
                        HorizontalAlignment="Center" FontSize="11"
                        Foreground="{DynamicResource ColorBrushGray3}" />
@@ -38,9 +38,9 @@
                 <ColumnDefinition Width="12" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <local:MyButton x:Name="BtnInstance" Height="35"
+            <local:MyButton x:Name="BtnInstance" Height="35" HorizontalAlignment="Stretch"
                             Text="打开 KSP 目录" Click="BtnOpenDir_Click" />
-            <local:MyButton x:Name="BtnMore" Grid.Column="2" Height="35"
+            <local:MyButton x:Name="BtnMore" Grid.Column="2" Height="35" HorizontalAlignment="Stretch"
                             Text="实例设置" Click="BtnGotoSettings_Click" />
         </Grid>
     </Grid>
