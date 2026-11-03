@@ -10,15 +10,19 @@
 
         <local:MyScrollViewer Grid.Column="0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
             <StackPanel Margin="0,12,0,0">
-                <TextBlock Text="设置" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
+                <TextBlock Text="KSP" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
                 <local:MyListItem x:Name="NavKsp" Type="RadioBox" Checked="True"
-                                  MinPaddingRight="35" Height="36" Title="KSP 实例" SvgIcon="lucide/gamepad-2" />
+                                  MinPaddingRight="35" Height="36" Title="实例管理" SvgIcon="lucide/rocket" />
+
+                <TextBlock Text="模组" Margin="13,14,5,4" Opacity="0.6" FontSize="12" />
                 <local:MyListItem x:Name="NavCkan" Type="RadioBox"
-                                  MinPaddingRight="35" Height="36" Title="CKAN 模组" SvgIcon="lucide/package" />
+                                  MinPaddingRight="35" Height="36" Title="CKAN 模组源" SvgIcon="lucide/package" />
                 <local:MyListItem x:Name="NavTranslate" Type="RadioBox"
-                                  MinPaddingRight="35" Height="36" Title="翻译服务" SvgIcon="lucide/languages" />
+                                  MinPaddingRight="35" Height="36" Title="翻译服务" SvgIcon="lucide/globe" />
+
+                <TextBlock Text="关于" Margin="13,14,5,4" Opacity="0.6" FontSize="12" />
                 <local:MyListItem x:Name="NavAbout" Type="RadioBox"
-                                  MinPaddingRight="35" Height="36" Title="关于" SvgIcon="lucide/info" />
+                                  MinPaddingRight="35" Height="36" Title="软件信息" SvgIcon="lucide/info" />
             </StackPanel>
         </local:MyScrollViewer>
 
@@ -26,12 +30,34 @@
 
             <local:MyCard x:Name="PanKsp" Title="KSP 实例">
                 <StackPanel Margin="25,38,23,18">
-                    <TextBlock Text="已添加的 KSP 实例" FontSize="12" Opacity="0.7" Margin="0,0,0,5" />
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,14">
-                        <ComboBox x:Name="CboInstances" Width="360" Height="32" />
-                        <local:MyButton Text="添加实例" Width="96" Margin="10,0,0,0" Click="BtnAddInstance_Click" />
-                    </StackPanel>
-                    <TextBlock Text="切换实例后需要重启 PKL 生效。" FontSize="11" Opacity="0.5" />
+                    <Grid Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="已添加的 KSP 实例" FontSize="12" Opacity="0.7" VerticalAlignment="Center" />
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <ComboBox x:Name="CboInstances" Width="360" Height="32" />
+                            <local:MyButton Text="添加实例" Width="96" Margin="10,0,0,0" Click="BtnAddInstance_Click" />
+                        </StackPanel>
+                    </Grid>
+                    <Grid Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="当前实例路径" FontSize="12" Opacity="0.7" VerticalAlignment="Center" />
+                        <TextBlock x:Name="LabKspPath" Grid.Column="1" Text="" FontSize="12" Opacity="0.9"
+                                   VerticalAlignment="Center" TextTrimming="CharacterEllipsis" />
+                    </Grid>
+                    <Grid Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="切换实例后" FontSize="12" Opacity="0.7" VerticalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="需要重启 PKL 生效" FontSize="12" Opacity="0.5" VerticalAlignment="Center" />
+                    </Grid>
                 </StackPanel>
             </local:MyCard>
 
