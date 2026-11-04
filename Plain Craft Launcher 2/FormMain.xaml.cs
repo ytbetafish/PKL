@@ -1339,21 +1339,8 @@ public partial class FormMain
     private void BtnTitleSelect_Click(MyRadioButton sender, bool raiseByMouse)
     {
         if (isChangingPage) return;
-        var tag = sender.Tag?.ToString();
-        // KSP 挂接：全部导航直接托管自定义页面并用 MyPageRight 包装，
-        // 绕过原生 PageChangeActual，避免对 PanMainRight.Child 做 MyPageRight 强转时 InvalidCastException。
-        switch (tag)
-        {
-            case "1":
-                PageChangeAnim(pageLeft, new Pages.PageMods());
-                break;
-            case "2":
-                PageChangeAnim(new PageSettingsLeft(), new Pages.PageSettings());
-                break;
-            default:
-                PageChangeAnim(new PageLaunchLeft(), new Pages.PageHome());
-                break;
-        }
+        var pageType = (PageType)int.Parse(sender.Tag.ToString());
+        PageChangeActual(pageType, PageSubType.Default);
     }
 
     public void SelectNavTag(string tag)
@@ -1451,8 +1438,16 @@ public partial class FormMain
             pageCurrent = stack;
             switch (stack.page)
             {
-                // KSP 改造后：原 MC 页面导航（启动/下载/联机/设置/日志/实例选择/任务管理/Mod/存档）
                 // 已随对应页面删除。新的 KSP 导航将由独立的主页/模组管理/设置页面替代。
+                case PageType.Launch: // 启动页
+                    PageChangeAnim(new PageLaunchLeft(), new Pages.PageHome());
+                    break;
+                case PageType.Download: // 下载/模组页
+                    PageChangeAnim(pageLeft, new Pages.PageMods());
+                    break;
+                case PageType.Setup: // 设置页
+                    PageChangeAnim(new PageSettingsLeft(), new Pages.PageSettings());
+                    break;
                 default: break;
             }
 
