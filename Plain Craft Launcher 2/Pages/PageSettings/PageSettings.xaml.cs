@@ -49,10 +49,31 @@ public partial class PageSettings
 
     private void Nav_Changed(object sender, PCL.Common.RouteEventArgs e)
     {
-        PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
-        PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
-        PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
-        PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
+        // 照原版 FormMain.PageChangeAnim 的写法
+        LeftNav.TriggerHideAnimation();
+        var target = sender switch
+        {
+            _ when sender == NavKsp => PanKsp,
+            _ when sender == NavCkan => PanCkan,
+            _ when sender == NavTranslate => PanTranslate,
+            _ => PanAbout,
+        };
+        target.Opacity = 0d;
+        PCL.Animations.AniStart(new[]
+        {
+            PCL.Animations.AaCode(() =>
+            {
+                PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
+                PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
+                PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
+                PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
+                target.Opacity = 1d;
+            }, 110),
+            PCL.Animations.AaCode(() =>
+            {
+                LeftNav.TriggerShowAnimation();
+            }, 30, true)
+        }, "PageSettings NavSwitch");
     }
 
     private void RefreshInstancesList()
@@ -239,6 +260,7 @@ public partial class PageSettings
         public string version { get; set; } = "";
     }
 }
+
 
 
 
