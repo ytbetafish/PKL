@@ -1,0 +1,28 @@
+<local:MyPageLeft x:Class="PCL.PageSettingsLeft"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:local="clr-namespace:PCL"
+                  Width="160">
+    <local:MyScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                          Style="{StaticResource ScrollViewerFullMargin}">
+        <StackPanel Margin="0,12,0,0" x:Name="PanItem">
+            <TextBlock Text="KSP" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
+            <local:MyListItem x:Name="NavKsp" IsScaleAnimationEnabled="False" Checked="True" Type="RadioBox"
+                              MinPaddingRight="35" Height="36" VerticalAlignment="Top"
+                              Title="实例管理" SvgIcon="lucide/rocket" />
+
+            <TextBlock Text="模组" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
+            <local:MyListItem x:Name="NavCkan" IsScaleAnimationEnabled="False" Type="RadioBox"
+                              MinPaddingRight="35" Height="36" VerticalAlignment="Top"
+                              Title="CKAN 模组源" SvgIcon="lucide/package" />
+            <local:MyListItem x:Name="NavTranslate" IsScaleAnimationEnabled="False" Type="RadioBox"
+                              MinPaddingRight="35" Height="36" VerticalAlignment="Top"
+                              Title="翻译服务" SvgIcon="lucide/globe" />
+
+            <TextBlock Text="关于" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
+            <local:MyListItem x:Name="NavAbout" IsScaleAnimationEnabled="False" Type="RadioBox"
+                              MinPaddingRight="35" Height="36" VerticalAlignment="Top"
+                              Title="软件信息" SvgIcon="lucide/info" />
+        </StackPanel>
+    </local:MyScrollViewer>
+</local:MyPageLeft>
