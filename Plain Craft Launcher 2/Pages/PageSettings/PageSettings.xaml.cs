@@ -43,46 +43,22 @@ public partial class PageSettings
 
     public void SelectNav(string key)
     {
+        var target = key switch
+        {
+            "ksp" => PanKsp,
+            "ckan" => PanCkan,
+            "translate" => PanTranslate,
+            _ => PanAbout,
+        };
+        target.Opacity = 0d;
+        target.BeginAnimation(System.Windows.UIElement.OpacityProperty, new System.Windows.Media.Animation.DoubleAnimation(0d, 1d, new System.Windows.Duration(TimeSpan.FromMilliseconds(200))));
         PanKsp.Visibility = key == "ksp" ? Visibility.Visible : Visibility.Collapsed;
         PanCkan.Visibility = key == "ckan" ? Visibility.Visible : Visibility.Collapsed;
         PanTranslate.Visibility = key == "translate" ? Visibility.Visible : Visibility.Collapsed;
         PanAbout.Visibility = key == "about" ? Visibility.Visible : Visibility.Collapsed;
     }
 
-    private void Nav_Changed(object sender, PCL.Common.RouteEventArgs e)
-    {
-        // 整个左栏从左边滑入滑出，跟启动页边栏一致
-        if (LeftNav.RenderTransform is not System.Windows.Media.TranslateTransform)
-            LeftNav.RenderTransform = new System.Windows.Media.TranslateTransform();
-        var transform = (System.Windows.Media.TranslateTransform)LeftNav.RenderTransform;
-
-        // 先向左滑出
-        var slideOut = new System.Windows.Media.Animation.DoubleAnimation(-40d, new System.Windows.Duration(TimeSpan.FromMilliseconds(150)));
-        var fadeOut = new System.Windows.Media.Animation.DoubleAnimation(0.3d, new System.Windows.Duration(TimeSpan.FromMilliseconds(150)));
-        
-        // 再从左边滑入
-        var slideIn = new System.Windows.Media.Animation.DoubleAnimation(0d, new System.Windows.Duration(TimeSpan.FromMilliseconds(300)))
-        {
-            BeginTime = TimeSpan.FromMilliseconds(180),
-            EasingFunction = new System.Windows.Media.Animation.CubicEase { EasingMode = System.Windows.Media.Animation.EasingMode.EaseOut }
-        };
-        var fadeIn = new System.Windows.Media.Animation.DoubleAnimation(1d, new System.Windows.Duration(TimeSpan.FromMilliseconds(300)))
-        {
-            BeginTime = TimeSpan.FromMilliseconds(180)
-        };
-
-        transform.BeginAnimation(System.Windows.Media.TranslateTransform.XProperty, slideOut);
-        LeftNav.BeginAnimation(System.Windows.UIElement.OpacityProperty, fadeOut);
-        
-        // 切内容
-        PanKsp.Visibility = sender == NavKsp ? Visibility.Visible : Visibility.Collapsed;
-        PanCkan.Visibility = sender == NavCkan ? Visibility.Visible : Visibility.Collapsed;
-        PanTranslate.Visibility = sender == NavTranslate ? Visibility.Visible : Visibility.Collapsed;
-        PanAbout.Visibility = sender == NavAbout ? Visibility.Visible : Visibility.Collapsed;
-        
-        transform.BeginAnimation(System.Windows.Media.TranslateTransform.XProperty, slideIn);
-        LeftNav.BeginAnimation(System.Windows.UIElement.OpacityProperty, fadeIn);
-    }
+    
 
     private void RefreshInstancesList()
     {
@@ -268,6 +244,8 @@ public partial class PageSettings
         public string version { get; set; } = "";
     }
 }
+
+
 
 
 
