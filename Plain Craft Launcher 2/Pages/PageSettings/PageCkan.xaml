@@ -28,7 +28,7 @@
                             <local:MyButton Grid.Column="1" Text="浏览" Margin="10,0,0,0" Height="34" Width="80" Click="BtnPickCkanDir_Click" />
                         </Grid>
                         <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="镜像源" />
-                        <local:MyTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtMirrorUrls" Height="68" AcceptsReturn="True" TextWrapping="Wrap" />
+                        <local:MyTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtMirrorUrls" Height="68" AcceptsReturn="True" TextWrapping="Wrap" Margin="0,0,0,3" />
                     </Grid>
                 </StackPanel>
             </local:MyCard>
@@ -69,3 +69,4 @@
         </StackPanel>
     </local:MyScrollViewer>
 </local:MyPageRight>
+
