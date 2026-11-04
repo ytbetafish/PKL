@@ -1464,12 +1464,8 @@ public partial class FormMain
                                 PanMainRight.Child = right;
                                 if (right is MyPageRight newRight) newRight.PageOnEnter();
                             };
-                            PageChangeAnim(settingsLeft, new Pages.PageKspInstance());
                         }
-                        else
-                        {
-                            PanMainLeft.Child = settingsLeft;
-                        }
+                        PageChangeAnim(settingsLeft, new Pages.PageKspInstance());
                     }
                     break;
                 default: break;
