@@ -1448,9 +1448,18 @@ public partial class FormMain
                 case PageType.Setup: // 设置页
                     {
                         var left = new PageSettingsLeft();
-                        var right = new Pages.PageSettings();
-                        left.NavChanged += (key) => right.SelectNav(key);
-                        PageChangeAnim(left, right);
+                        left.NavChanged += (key) =>
+                        {
+                            FrameworkElement right = key switch
+                            {
+                                "ksp" => new Pages.PageKspInstance(),
+                                "ckan" => new Pages.PageCkan(),
+                                "translate" => new Pages.PageTranslate(),
+                                _ => new Pages.PageAbout(),
+                            };
+                            PageChangeAnim(left, right);
+                        };
+                        PageChangeAnim(left, new Pages.PageKspInstance());
                     }
                     break;
                 default: break;
@@ -1792,6 +1801,7 @@ public partial class FormMain
 
     #endregion
 }
+
 
 
 
