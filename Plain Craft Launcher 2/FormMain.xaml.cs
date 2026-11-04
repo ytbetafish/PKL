@@ -25,6 +25,7 @@ namespace PCL;
 
 public partial class FormMain
 {
+    private static PageSettingsLeft? settingsLeft;
     // 愚人节鼠标位置
     public MouseEventArgs lastMouseArg;
 
@@ -1447,19 +1448,26 @@ public partial class FormMain
                     break;
                 case PageType.Setup: // 设置页
                     {
-                        var left = new PageSettingsLeft();
-                        left.NavChanged += (key) =>
+                        if (settingsLeft is null)
                         {
-                            FrameworkElement right = key switch
+                            settingsLeft = new PageSettingsLeft();
+                            settingsLeft.NavChanged += (key) =>
                             {
-                                "ksp" => new Pages.PageKspInstance(),
-                                "ckan" => new Pages.PageCkan(),
-                                "translate" => new Pages.PageTranslate(),
-                                _ => new Pages.PageAbout(),
+                                FrameworkElement right = key switch
+                                {
+                                    "ksp" => new Pages.PageKspInstance(),
+                                    "ckan" => new Pages.PageCkan(),
+                                    "translate" => new Pages.PageTranslate(),
+                                    _ => new Pages.PageAbout(),
+                                };
+                                PanMainRight.Child = right;
                             };
-                            PageChangeAnim(left, right);
-                        };
-                        PageChangeAnim(left, new Pages.PageKspInstance());
+                            PageChangeAnim(settingsLeft, new Pages.PageKspInstance());
+                        }
+                        else
+                        {
+                            PanMainLeft.Child = settingsLeft;
+                        }
                     }
                     break;
                 default: break;
