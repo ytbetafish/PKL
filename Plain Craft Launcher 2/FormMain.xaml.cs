@@ -104,8 +104,8 @@ public partial class FormMain
         Opacity = 0d;
         try
         {
-            Height = States.UI.WindowHeight;
-            Width = States.UI.WindowWidth;
+            //             Height = States.UI.WindowHeight;
+            //             Width = States.UI.WindowWidth;
         }
         catch (Exception ex) // 修复 #2019
         {
