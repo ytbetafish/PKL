@@ -26,6 +26,7 @@ namespace PCL;
 public partial class FormMain
 {
     private static PageSettingsLeft? settingsLeft;
+    private static string settingsNav = "ksp";
     // 愚人节鼠标位置
     public MouseEventArgs lastMouseArg;
 
@@ -1453,6 +1454,7 @@ public partial class FormMain
                             settingsLeft = new PageSettingsLeft();
                             settingsLeft.NavChanged += (key) =>
                             {
+                                settingsNav = key;
                                 FrameworkElement right = key switch
                                 {
                                     "ksp" => new Pages.PageKspInstance(),
@@ -1465,7 +1467,14 @@ public partial class FormMain
                                 if (right is MyPageRight newRight) newRight.PageOnEnter();
                             };
                         }
-                        PageChangeAnim(settingsLeft, new Pages.PageKspInstance());
+                        FrameworkElement right = settingsNav switch
+                        {
+                            "ksp" => new Pages.PageKspInstance(),
+                            "ckan" => new Pages.PageCkan(),
+                            "translate" => new Pages.PageTranslate(),
+                            _ => new Pages.PageAbout(),
+                        };
+                        PageChangeAnim(settingsLeft, right);
                     }
                     break;
                 default: break;
