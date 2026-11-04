@@ -43,6 +43,7 @@ public partial class PageSettings
 
     public async void SelectNav(string key)
     {
+        Animations.AniStop("Settings NavChange");
         Animations.AniBeginControl();
         try
         {
@@ -50,20 +51,30 @@ public partial class PageSettings
                          PanCkan.Visibility == Visibility.Visible ? PanCkan :
                          PanTranslate.Visibility == Visibility.Visible ? PanTranslate : PanAbout;
             if (oldPan.Name == key) return;
-            // 旧面板淡出
-            var fadeOut = new System.Windows.Media.Animation.DoubleAnimation(1d, 0d, new System.Windows.Duration(TimeSpan.FromMilliseconds(110)));
-            oldPan.BeginAnimation(System.Windows.UIElement.OpacityProperty, fadeOut);
+            // 旧面板淡出动画
+            oldPan.RenderTransform = new System.Windows.Media.ScaleTransform(1d, 1d);
+            Animations.AniStart(new[]
+            {
+                Animations.AaScaleTransform(oldPan, -0.04, ease: new Animations.AniEaseInFluent()),
+                Animations.AaOpacity(oldPan, 0d, 110)
+            }, "Settings NavChange");
             await Task.Delay(110);
             // 切换 Visibility
             PanKsp.Visibility = key == "ksp" ? Visibility.Visible : Visibility.Collapsed;
             PanCkan.Visibility = key == "ckan" ? Visibility.Visible : Visibility.Collapsed;
             PanTranslate.Visibility = key == "translate" ? Visibility.Visible : Visibility.Collapsed;
             PanAbout.Visibility = key == "about" ? Visibility.Visible : Visibility.Collapsed;
-            // 新面板淡入
+            // 新面板入场动画
             var newPan = key switch { "ksp" => PanKsp, "ckan" => PanCkan, "translate" => PanTranslate, _ => PanAbout };
             newPan.Opacity = 0d;
-            var fadeIn = new System.Windows.Media.Animation.DoubleAnimation(0d, 1d, new System.Windows.Duration(TimeSpan.FromMilliseconds(200)));
-            newPan.BeginAnimation(System.Windows.UIElement.OpacityProperty, fadeIn);
+            newPan.RenderTransform = new System.Windows.Media.ScaleTransform(0.96d, 0.96d);
+            newPan.RenderTransformOrigin = new Point(0.5d, 0.5d);
+            await Task.Delay(30);
+            Animations.AniStart(new[]
+            {
+                Animations.AaScaleTransform(newPan, 0.04, ease: new Animations.AniEaseOutBack((Animations.AniEasePower)2)),
+                Animations.AaOpacity(newPan, 1d, 200)
+            }, "Settings NavChange");
         }
         finally
         {
@@ -257,6 +268,7 @@ public partial class PageSettings
         public string version { get; set; } = "";
     }
 }
+
 
 
 
