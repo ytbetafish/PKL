@@ -44,9 +44,9 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="34" />
                             <RowDefinition Height="9" />
-                            <RowDefinition Height="68" />
+                            <RowDefinition Height="34" />
                             <RowDefinition Height="9" />
-                            <RowDefinition Height="68" />
+                            <RowDefinition Height="34" />
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="仓库策略" />
                         <local:MyComboBox Grid.Row="0" Grid.Column="1" x:Name="CboStrategy" Height="34">
