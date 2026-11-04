@@ -1,11 +1,12 @@
 <local:MyPageRight x:Class="PCL.Pages.PageTranslate"
                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                  xmlns:local="clr-namespace:PCL">
-    <Grid Margin="25,25,25,25">
-        <StackPanel>
-            <local:MyCard Title="翻译服务">
-                <StackPanel Margin="25,40,25,21">
+                  xmlns:local="clr-namespace:PCL"
+                  PanScroll="{Binding ElementName=PanBack}">
+    <local:MyScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" x:Name="PanBack">
+        <StackPanel x:Name="PanMain" Margin="25,10">
+            <local:MyCard Margin="0,15" Title="翻译服务">
+                <StackPanel Margin="25,37,25,15">
                     <Grid IsSharedSizeScope="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
@@ -28,8 +29,8 @@
                 </StackPanel>
             </local:MyCard>
 
-            <local:MyCard Title="网络设置" Margin="0,15,0,0">
-                <StackPanel Margin="25,40,25,21">
+            <local:MyCard Margin="0,15" Title="网络设置">
+                <StackPanel Margin="25,37,25,15">
                     <Grid IsSharedSizeScope="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
@@ -56,5 +57,5 @@
                 </StackPanel>
             </local:MyCard>
         </StackPanel>
-    </Grid>
+    </local:MyScrollViewer>
 </local:MyPageRight>

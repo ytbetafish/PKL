@@ -1,50 +1,53 @@
 <local:MyPageRight x:Class="PCL.Pages.PageKspInstance"
                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                  xmlns:local="clr-namespace:PCL">
-    <Grid Margin="25,25,25,25">
-        <local:MyCard Title="KSP 实例">
-            <StackPanel Margin="25,40,25,21">
-                <Grid Grid.IsSharedSizeScope="True">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="60" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="34" />
-                        <RowDefinition Height="9" />
-                        <RowDefinition Height="34" />
-                        <RowDefinition Height="9" />
-                        <RowDefinition Height="34" />
-                        <RowDefinition Height="9" />
-                        <RowDefinition Height="34" />
-                        <RowDefinition Height="9" />
-                        <RowDefinition Height="34" />
-                        <RowDefinition Height="9" />
-                        <RowDefinition Height="34" />
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="已添加的 KSP 实例" />
-                    <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+                  xmlns:local="clr-namespace:PCL"
+                  PanScroll="{Binding ElementName=PanBack}">
+    <local:MyScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" x:Name="PanBack">
+        <StackPanel x:Name="PanMain" Margin="25,10">
+            <local:MyCard Margin="0,15" Title="KSP 实例">
+                <StackPanel Margin="25,37,25,15">
+                    <Grid Grid.IsSharedSizeScope="True">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="60" />
                         </Grid.ColumnDefinitions>
-                        <local:MyComboBox x:Name="CboInstances" Height="34" />
-                        <local:MyButton Grid.Column="1" Text="添加实例" Margin="10,0,0,0" Height="34" Width="100" Click="BtnAddInstance_Click" />
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="已添加的 KSP 实例" />
+                        <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <local:MyComboBox x:Name="CboInstances" Height="34" />
+                            <local:MyButton Grid.Column="1" Text="添加实例" Margin="10,0,0,0" Height="34" Width="100" Click="BtnAddInstance_Click" />
+                        </Grid>
+                        <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="当前实例路径" />
+                        <local:MyTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspPath" Height="34" IsReadOnly="True" />
+                        <TextBlock Grid.Row="4" VerticalAlignment="Center" Margin="0,0,25,0" Text="KSP 版本" />
+                        <TextBlock Grid.Row="4" Grid.Column="1" x:Name="LabKspVersion" Text="" VerticalAlignment="Center" FontSize="13" />
+                        <TextBlock Grid.Row="6" VerticalAlignment="Center" Margin="0,0,25,0" Text="游戏可执行文件" />
+                        <local:MyTextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspExe" Height="34" IsReadOnly="True" />
+                        <TextBlock Grid.Row="8" VerticalAlignment="Center" Margin="0,0,25,0" Text="数据目录 (GameData)" />
+                        <local:MyTextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspGameData" Height="34" IsReadOnly="True" />
+                        <TextBlock Grid.Row="10" VerticalAlignment="Center" Margin="0,0,25,0" Text="日志目录" />
+                        <local:MyTextBox Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspLogs" Height="34" IsReadOnly="True" />
                     </Grid>
-                    <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="当前实例路径" />
-                    <local:MyTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspPath" Height="34" IsReadOnly="True" />
-                    <TextBlock Grid.Row="4" VerticalAlignment="Center" Margin="0,0,25,0" Text="KSP 版本" />
-                    <TextBlock Grid.Row="4" Grid.Column="1" x:Name="LabKspVersion" Text="" VerticalAlignment="Center" FontSize="13" />
-                    <TextBlock Grid.Row="6" VerticalAlignment="Center" Margin="0,0,25,0" Text="游戏可执行文件" />
-                    <local:MyTextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspExe" Height="34" IsReadOnly="True" />
-                    <TextBlock Grid.Row="8" VerticalAlignment="Center" Margin="0,0,25,0" Text="数据目录 (GameData)" />
-                    <local:MyTextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspGameData" Height="34" IsReadOnly="True" />
-                    <TextBlock Grid.Row="10" VerticalAlignment="Center" Margin="0,0,25,0" Text="日志目录" />
-                    <local:MyTextBox Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LabKspLogs" Height="34" IsReadOnly="True" />
-                </Grid>
-            </StackPanel>
-        </local:MyCard>
-    </Grid>
+                </StackPanel>
+            </local:MyCard>
+        </StackPanel>
+    </local:MyScrollViewer>
 </local:MyPageRight>
