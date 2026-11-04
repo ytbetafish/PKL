@@ -1,0 +1,72 @@
+﻿<local:MyPageRight x:Class="PCL.Pages.PageCkan"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:local="clr-namespace:PCL">
+    <Grid Margin="25,25,25,25">
+        <StackPanel>
+            <local:MyCard Title="CKAN 数据目录">
+                <StackPanel Margin="25,40,25,21">
+                    <Grid IsSharedSizeScope="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="数据目录" />
+                        <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <local:MyTextBox x:Name="LabCkanDataDir" Height="34" IsReadOnly="True" />
+                            <local:MyButton Grid.Column="1" Text="浏览" Margin="10,0,0,0" Height="34" Width="80" Click="BtnPickCkanDir_Click" />
+                        </Grid>
+                        <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="镜像源" />
+                        <local:MyTextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="TxtMirrorUrls" Height="68" AcceptsReturn="True" TextWrapping="Wrap" />
+                    </Grid>
+                </StackPanel>
+            </local:MyCard>
+
+            <local:MyCard Title="模组索引操作" Margin="0,15,0,0">
+                <StackPanel Margin="25,40,25,21">
+                    <Grid IsSharedSizeScope="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="Name" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                            <RowDefinition Height="9" />
+                            <RowDefinition Height="34" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="仓库策略" />
+                        <local:MyComboBox Grid.Row="0" Grid.Column="1" x:Name="CboStrategy" Height="34" />
+                        <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="稳定性容忍度" />
+                        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                            <local:MyRadioButton x:Name="OptStable" Text="稳定版" Checked="True" Margin="0,0,20,0" />
+                            <local:MyRadioButton x:Name="OptTesting" Text="测试版" Margin="0,0,20,0" />
+                            <local:MyRadioButton x:Name="OptPre" Text="预发布版" />
+                        </StackPanel>
+                        <TextBlock Grid.Row="4" VerticalAlignment="Center" Margin="0,0,25,0" Text="状态" />
+                        <TextBlock Grid.Row="4" Grid.Column="1" x:Name="LabCkanStatus" Text="就绪。" VerticalAlignment="Center" FontSize="13" />
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <local:MyButton x:Name="BtnRefreshRepo" Text="刷新模组索引" Height="34" Width="120" Click="BtnRefreshRepo_Click" />
+                        <local:MyButton Text="导出清单" Height="34" Width="100" Margin="10,0,0,0" Click="BtnExportMods_Click" />
+                        <local:MyButton Text="导入清单" Height="34" Width="100" Margin="10,0,0,0" Click="BtnImportMods_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </local:MyCard>
+        </StackPanel>
+    </Grid>
+</local:MyPageRight>
+
+
