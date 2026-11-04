@@ -41,46 +41,14 @@ public partial class PageSettings
         RefreshInstancesList();
         RefreshKspInfo();
     }
-
-    public async void SelectNav(string key)
+    public void SelectNav(string key)
     {
-        Animations.AniStop("Settings NavChange");
-        Animations.AniBeginControl();
-        try
-        {
-            var oldPan = PanKsp.Visibility == Visibility.Visible ? PanKsp :
-                         PanCkan.Visibility == Visibility.Visible ? PanCkan :
-                         PanTranslate.Visibility == Visibility.Visible ? PanTranslate : PanAbout;
-            if (oldPan.Name == key) return;
-            // 旧面板向上滑出 + 淡出
-            oldPan.RenderTransform = new TranslateTransform(0d, 0d);
-            Animations.AniStart(new[]
-            {
-                Animations.AaTranslateY(oldPan, -10d, 110, ease: new Animations.AniEaseInFluent()),
-                Animations.AaOpacity(oldPan, 0d, 110)
-            }, "Settings NavChange");
-            await Task.Delay(110);
-            // 切换 Visibility
-            PanKsp.Visibility = key == "ksp" ? Visibility.Visible : Visibility.Collapsed;
-            PanCkan.Visibility = key == "ckan" ? Visibility.Visible : Visibility.Collapsed;
-            PanTranslate.Visibility = key == "translate" ? Visibility.Visible : Visibility.Collapsed;
-            PanAbout.Visibility = key == "about" ? Visibility.Visible : Visibility.Collapsed;
-            // 新面板从上面滑入
-            var newPan = key switch { "ksp" => PanKsp, "ckan" => PanCkan, "translate" => PanTranslate, _ => PanAbout };
-            newPan.Opacity = 0d;
-            newPan.RenderTransform = new TranslateTransform(0d, -16d);
-            await Task.Delay(30);
-            Animations.AniStart(new[]
-            {
-                Animations.AaTranslateY(newPan, 5d, 250, ease: new Animations.AniEaseOutFluent()),
-                Animations.AaTranslateY(newPan, 11d, 350, ease: new Animations.AniEaseOutBack())
-            }, "Settings NavChange");
-        }
-        finally
-        {
-            Animations.AniEndControl();
-        }
+        PanKsp.Visibility = key == "ksp" ? Visibility.Visible : Visibility.Collapsed;
+        PanCkan.Visibility = key == "ckan" ? Visibility.Visible : Visibility.Collapsed;
+        PanTranslate.Visibility = key == "translate" ? Visibility.Visible : Visibility.Collapsed;
+        PanAbout.Visibility = key == "about" ? Visibility.Visible : Visibility.Collapsed;
     }
+
 
     
 
