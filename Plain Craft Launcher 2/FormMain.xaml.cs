@@ -1345,16 +1345,13 @@ public partial class FormMain
         switch (tag)
         {
             case "1":
-                PanMainLeft.Child = pageLeft;
-                PanMainRight.Child = new Pages.PageMods();
+                PageChangeAnim(pageLeft, new Pages.PageMods());
                 break;
             case "2":
-                PanMainLeft.Child = pageLeft;
-                PanMainRight.Child = new Pages.PageSettings();
+                PageChangeAnim(new PageSettingsLeft(), new Pages.PageSettings());
                 break;
             default:
-                PanMainLeft.Child = new PageLaunchLeft();
-                PanMainRight.Child = new Pages.PageHome();
+                PageChangeAnim(new PageLaunchLeft(), new Pages.PageHome());
                 break;
         }
     }
@@ -1795,6 +1792,7 @@ public partial class FormMain
 
     #endregion
 }
+
 
 
 
