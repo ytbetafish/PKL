@@ -49,7 +49,12 @@
                             <RowDefinition Height="68" />
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="0,0,25,0" Text="仓库策略" />
-                        <local:MyComboBox Grid.Row="0" Grid.Column="1" x:Name="CboStrategy" Height="34" />
+                        <local:MyComboBox Grid.Row="0" Grid.Column="1" x:Name="CboStrategy" Height="34">
+                            <ComboBoxItem Content="官方源优先" Tag="OfficialFirst" />
+                            <ComboBoxItem Content="镜像源优先" Tag="MirrorFirst" />
+                            <ComboBoxItem Content="仅官方源" Tag="OfficialOnly" />
+                            <ComboBoxItem Content="仅镜像源" Tag="MirrorOnly" />
+                        </local:MyComboBox>
                         <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="稳定性容忍度" />
                         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                             <local:MyRadioButton x:Name="OptStable" Text="稳定版" Checked="True" Margin="0,0,20,0" />
