@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using Pkl.Ckan;
 
 namespace PCL.Pages;
@@ -51,11 +52,11 @@ public partial class PageSettings
                          PanCkan.Visibility == Visibility.Visible ? PanCkan :
                          PanTranslate.Visibility == Visibility.Visible ? PanTranslate : PanAbout;
             if (oldPan.Name == key) return;
-            // 旧面板淡出动画
-            oldPan.RenderTransform = new System.Windows.Media.ScaleTransform(1d, 1d);
+            // 旧面板向上滑出 + 淡出
+            oldPan.RenderTransform = new TranslateTransform(0d, 0d);
             Animations.AniStart(new[]
             {
-                Animations.AaScaleTransform(oldPan, -0.04, ease: new Animations.AniEaseInFluent()),
+                Animations.AaTranslateY(oldPan, -10d, 110, ease: new Animations.AniEaseInFluent()),
                 Animations.AaOpacity(oldPan, 0d, 110)
             }, "Settings NavChange");
             await Task.Delay(110);
@@ -64,16 +65,15 @@ public partial class PageSettings
             PanCkan.Visibility = key == "ckan" ? Visibility.Visible : Visibility.Collapsed;
             PanTranslate.Visibility = key == "translate" ? Visibility.Visible : Visibility.Collapsed;
             PanAbout.Visibility = key == "about" ? Visibility.Visible : Visibility.Collapsed;
-            // 新面板入场动画
+            // 新面板从上面滑入
             var newPan = key switch { "ksp" => PanKsp, "ckan" => PanCkan, "translate" => PanTranslate, _ => PanAbout };
             newPan.Opacity = 0d;
-            newPan.RenderTransform = new System.Windows.Media.ScaleTransform(0.96d, 0.96d);
-            newPan.RenderTransformOrigin = new Point(0.5d, 0.5d);
+            newPan.RenderTransform = new TranslateTransform(0d, -16d);
             await Task.Delay(30);
             Animations.AniStart(new[]
             {
-                Animations.AaScaleTransform(newPan, 0.04, ease: new Animations.AniEaseOutBack((Animations.AniEasePower)2)),
-                Animations.AaOpacity(newPan, 1d, 200)
+                Animations.AaTranslateY(newPan, 5d, 250, ease: new Animations.AniEaseOutFluent()),
+                Animations.AaTranslateY(newPan, 11d, 350, ease: new Animations.AniEaseOutBack())
             }, "Settings NavChange");
         }
         finally
@@ -268,6 +268,8 @@ public partial class PageSettings
         public string version { get; set; } = "";
     }
 }
+
+
 
 
 
