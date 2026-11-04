@@ -1460,7 +1460,7 @@ public partial class FormMain
                                     "translate" => new Pages.PageTranslate(),
                                     _ => new Pages.PageAbout(),
                                 };
-                                PanMainRight.Child = right;
+                                PageChangeAnim(settingsLeft, right);
                             };
                             PageChangeAnim(settingsLeft, new Pages.PageKspInstance());
                         }
