@@ -41,21 +41,34 @@ public partial class PageSettings
         RefreshKspInfo();
     }
 
-    public void SelectNav(string key)
+    public async void SelectNav(string key)
     {
-        var target = key switch
+        Animations.AniBeginControl();
+        try
         {
-            "ksp" => PanKsp,
-            "ckan" => PanCkan,
-            "translate" => PanTranslate,
-            _ => PanAbout,
-        };
-        target.Opacity = 0d;
-        target.BeginAnimation(System.Windows.UIElement.OpacityProperty, new System.Windows.Media.Animation.DoubleAnimation(0d, 1d, new System.Windows.Duration(TimeSpan.FromMilliseconds(200))));
-        PanKsp.Visibility = key == "ksp" ? Visibility.Visible : Visibility.Collapsed;
-        PanCkan.Visibility = key == "ckan" ? Visibility.Visible : Visibility.Collapsed;
-        PanTranslate.Visibility = key == "translate" ? Visibility.Visible : Visibility.Collapsed;
-        PanAbout.Visibility = key == "about" ? Visibility.Visible : Visibility.Collapsed;
+            var oldPan = PanKsp.Visibility == Visibility.Visible ? PanKsp :
+                         PanCkan.Visibility == Visibility.Visible ? PanCkan :
+                         PanTranslate.Visibility == Visibility.Visible ? PanTranslate : PanAbout;
+            if (oldPan.Name == key) return;
+            // 旧面板淡出
+            var fadeOut = new System.Windows.Media.Animation.DoubleAnimation(1d, 0d, new System.Windows.Duration(TimeSpan.FromMilliseconds(110)));
+            oldPan.BeginAnimation(System.Windows.UIElement.OpacityProperty, fadeOut);
+            await Task.Delay(110);
+            // 切换 Visibility
+            PanKsp.Visibility = key == "ksp" ? Visibility.Visible : Visibility.Collapsed;
+            PanCkan.Visibility = key == "ckan" ? Visibility.Visible : Visibility.Collapsed;
+            PanTranslate.Visibility = key == "translate" ? Visibility.Visible : Visibility.Collapsed;
+            PanAbout.Visibility = key == "about" ? Visibility.Visible : Visibility.Collapsed;
+            // 新面板淡入
+            var newPan = key switch { "ksp" => PanKsp, "ckan" => PanCkan, "translate" => PanTranslate, _ => PanAbout };
+            newPan.Opacity = 0d;
+            var fadeIn = new System.Windows.Media.Animation.DoubleAnimation(0d, 1d, new System.Windows.Duration(TimeSpan.FromMilliseconds(200)));
+            newPan.BeginAnimation(System.Windows.UIElement.OpacityProperty, fadeIn);
+        }
+        finally
+        {
+            Animations.AniEndControl();
+        }
     }
 
     
