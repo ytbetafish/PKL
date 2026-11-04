@@ -27,8 +27,8 @@
         Background="{x:Null}"
         d:DesignWidth="870"
         d:DesignHeight="520"
-        Width="850"
-        Height="500"
+        Width="800"
+        Height="480"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow"
         AllowsTransparency="False"
@@ -555,3 +555,4 @@
         </Border>
     </Grid>
 </Window>
+
