@@ -1446,7 +1446,12 @@ public partial class FormMain
                     PageChangeAnim(new MyPageLeft(), new Pages.PageMods());
                     break;
                 case PageType.Setup: // 设置页
-                    PageChangeAnim(new PageSettingsLeft(), new Pages.PageSettings());
+                    {
+                        var left = new PageSettingsLeft();
+                        var right = new Pages.PageSettings();
+                        left.NavChanged += (key) => right.SelectNav(key);
+                        PageChangeAnim(left, right);
+                    }
                     break;
                 default: break;
             }
