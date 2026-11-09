@@ -91,15 +91,15 @@ dotnet build ".\Plain Craft Launcher 2.slnx" -c Release
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  Plain Craft Launcher 2 (WPF, net10.0-windows)           │
-│   顶栏导航：启动页 / 下载页 / 设置页                      │
+│  Plain Craft Launcher 2 (WPF, net10.0-windows)          │
+│   顶栏导航：启动页 / 下载页 / 设置页                       │
 │   设置页：左栏导航（PageSettingsLeft）                    │
 │           右栏独立页面（PageKspInstance/PageCkan/...）    │
 │   PageHome ─┐                                            │
-│   PageDownload┼─> IModService (Pkl.Ckan) ─> CKAN.Core   │
+│   PageDownload┼─> IModService (Pkl.Ckan) ─> CKAN.Core    │
 │   PageSettings└─> ITranslationService (OpenAI 兼容)      │
 └──────────────┬───────────────────────────┬───────────────┘
-                │                            │
+               │                           │
          src/Pkl.Ckan (无头适配)      PCL.Core / PCL.Core.Wpf
          external/CKAN.Core           (主题/控件/日志/设置)
          (模组解析/依赖)
