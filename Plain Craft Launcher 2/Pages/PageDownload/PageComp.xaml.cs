@@ -66,6 +66,10 @@ public partial class PageComp : Grid
             Tag = mod,
             Margin = new Thickness(0, 0, 0, 8),
         };
+        card.Click += (s, e) =>
+        {
+            Launcher.frmMain.PageChange(new FormMain.PageStackData { page = FormMain.PageType.CompDetail }, parameter: mod);
+        };
         return card;
     }
 
@@ -149,5 +153,8 @@ public class ModItem
     public string Description { get; set; } = "";
     public int Downloads { get; set; }
 }
+
+
+
 
 
