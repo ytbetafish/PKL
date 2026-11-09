@@ -240,7 +240,7 @@ public partial class FormMain
             {
 
 
-#if DEBUG || DEBUGCI
+#if false // DEBUG || DEBUGCI
 
                 if (Environment.GetEnvironmentVariable("PCL_DISABLE_DEBUG_HINT") is null)
                 {
@@ -1816,6 +1816,7 @@ public partial class FormMain
 
     #endregion
 }
+
 
 
 
