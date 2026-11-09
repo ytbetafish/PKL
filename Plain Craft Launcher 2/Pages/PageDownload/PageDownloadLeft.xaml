@@ -23,39 +23,6 @@
                 </local:MyListItem.Buttons>
             </local:MyListItem>
 
-            <local:MyListItem x:Name="ItemPack" Type="RadioBox" IsScaleAnimationEnabled="False" Tag="2"
-                              Check="PageCheck"
-                              MinPaddingRight="35" Height="36" VerticalAlignment="Top"
-                              Title="整合包"
-                              LogoScale="0.98"
-                              SvgIcon="lucide/package">
-                <local:MyListItem.Buttons>
-                    <x:Array Type="{x:Type local:MyIconButton}">
-                        <local:MyIconButton Tag="2" ToolTip="刷新"
-                                            ToolTipService.Placement="Right" Click="RefreshButton_Click"
-                                            ToolTipService.InitialShowDelay="200" ToolTipService.VerticalOffset="-1"
-                                            LogoScale="0.85"
-                                            SvgIcon="lucide/refresh-cw" />
-                    </x:Array>
-                </local:MyListItem.Buttons>
-            </local:MyListItem>
-
-            <local:MyListItem x:Name="ItemFavorites" Type="RadioBox" IsScaleAnimationEnabled="False" Tag="3"
-                              Check="PageCheck"
-                              MinPaddingRight="35" Height="36" VerticalAlignment="Top"
-                              Title="收藏夹"
-                              SvgIcon="lucide/heart">
-                <local:MyListItem.Buttons>
-                    <x:Array Type="{x:Type local:MyIconButton}">
-                        <local:MyIconButton Tag="3" ToolTip="刷新"
-                                            ToolTipService.Placement="Right" Click="RefreshButton_Click"
-                                            ToolTipService.InitialShowDelay="200" ToolTipService.VerticalOffset="-1"
-                                            LogoScale="0.85"
-                                            SvgIcon="lucide/refresh-cw" />
-                    </x:Array>
-                </local:MyListItem.Buttons>
-            </local:MyListItem>
-
         </StackPanel>
     </local:MyScrollViewer>
 </local:MyPageLeft>

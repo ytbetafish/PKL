@@ -8,8 +8,6 @@ namespace PCL;
 public partial class PageDownloadLeft : IRefreshable
 {
     public static Pages.PageMods? DownloadModPage;
-    public static Pages.PageMods? DownloadPackPage;
-    public static Pages.PageMods? DownloadFavoritesPage;
 
     public void Refresh()
     {
@@ -27,12 +25,6 @@ public partial class PageDownloadLeft : IRefreshable
         {
             case FormMain.PageSubType.DownloadMod:
                 ItemMod.Checked = true;
-                break;
-            case FormMain.PageSubType.DownloadPack:
-                ItemPack.Checked = true;
-                break;
-            case FormMain.PageSubType.DownloadCompFavorites:
-                ItemFavorites.Checked = true;
                 break;
         }
 
@@ -63,10 +55,6 @@ public partial class PageDownloadLeft : IRefreshable
         {
             case FormMain.PageSubType.DownloadMod:
                 return DownloadModPage ??= new Pages.PageMods();
-            case FormMain.PageSubType.DownloadPack:
-                return DownloadPackPage ??= new Pages.PageMods();
-            case FormMain.PageSubType.DownloadCompFavorites:
-                return DownloadFavoritesPage ??= new Pages.PageMods();
             default:
                 throw new Exception("未知的下载子页面类型: " + id);
         }
