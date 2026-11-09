@@ -55,56 +55,17 @@ public partial class PageComp : Grid
         _vm.ApplyPagerState(_currentPage, _mods.Count, PageSize);
     }
 
-    private Border CreateModCard(ModItem mod)
+    private MyCompItem CreateModCard(ModItem mod)
     {
-        var card = new Border
+        var card = new MyCompItem
         {
-            Background = new SolidColorBrush(Color.FromRgb(40, 40, 40)),
-            CornerRadius = new CornerRadius(8),
-            Padding = new Thickness(16),
-            Margin = new Thickness(0, 0, 0, 12),
-        };
-
-        var panel = new StackPanel();
-
-        var title = new TextBlock
-        {
-            Text = mod.Name,
-            Foreground = Brushes.White,
-            FontSize = 16,
-            FontWeight = FontWeights.Bold,
-            Margin = new Thickness(0, 0, 0, 4),
-        };
-        panel.Children.Add(title);
-
-        var author = new TextBlock
-        {
-            Text = $"作者: {mod.Author}",
-            Foreground = new SolidColorBrush(Color.FromRgb(150, 150, 150)),
-            FontSize = 12,
+            Title = mod.Name,
+            SubTitle = mod.Author,
+            Description = mod.Description,
+            Downloads = mod.Downloads.ToString("N0"),
+            Tag = mod,
             Margin = new Thickness(0, 0, 0, 8),
         };
-        panel.Children.Add(author);
-
-        var description = new TextBlock
-        {
-            Text = mod.Description,
-            Foreground = new SolidColorBrush(Color.FromRgb(200, 200, 200)),
-            FontSize = 13,
-            TextWrapping = TextWrapping.Wrap,
-            Margin = new Thickness(0, 0, 0, 8),
-        };
-        panel.Children.Add(description);
-
-        var downloads = new TextBlock
-        {
-            Text = $"下载量: {mod.Downloads:N0}",
-            Foreground = new SolidColorBrush(Color.FromRgb(150, 150, 150)),
-            FontSize = 12,
-        };
-        panel.Children.Add(downloads);
-
-        card.Child = panel;
         return card;
     }
 
@@ -188,3 +149,5 @@ public class ModItem
     public string Description { get; set; } = "";
     public int Downloads { get; set; }
 }
+
+
