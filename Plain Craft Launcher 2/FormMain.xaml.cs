@@ -1445,7 +1445,7 @@ public partial class FormMain
                     PageChangeAnim(new PageLaunchLeft(), new Pages.PageHome());
                     break;
                 case PageType.Download: // 下载/模组页
-                    PageChangeAnim(new PageDownloadLeft(), new Pages.PageMods());
+                    PageChangeAnim(new PageDownloadLeft(), new PageDownloadMod());
                     break;
                 case PageType.Setup: // 设置页
                     {
@@ -1816,6 +1816,7 @@ public partial class FormMain
 
     #endregion
 }
+
 
 
 
