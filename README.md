@@ -1,4 +1,4 @@
-# PKL — KSP Launcher
+﻿# PKL — KSP Launcher
 
 基于 **PCL-CE**（Plain Craft Launcher Community Edition，dev 分支）改造的 **《坎巴拉太空计划》(Kerbal Space Program, KSP)** 启动器。
 
@@ -84,7 +84,7 @@ dotnet build ".\Plain Craft Launcher 2.slnx" -c Release
 - [x] 设置页滚动：内容超出时自动显示垂直滚动条；
 - [x] 已去掉：启动时弹出的"PCL CE 版本说明"对话框（ShowCeAnnounce）；
 - [x] 已去掉：DEBUG 版本提示对话框（`#if DEBUG || DEBUGCI` 改为 `#if false`）；
-- [ ] 启动 KSP 进程（按钮已留占位）；
+- [x] 启动 KSP 进程；
 - [ ] 安装执行进度独立 UI、翻译"测试连接"按钮。
 
 ## 五、分层架构
@@ -120,3 +120,4 @@ dotnet build ".\Plain Craft Launcher 2.slnx" -c Release
 ## 七、许可
 
 本仓库为二次开发作品：PCL 外壳部分遵循 PCL-CE 相应许可；CKAN 核心遵循 MIT；新增 PKL 代码可按 Apache-2.0 使用。详见各上游 `LICENSE`。
+
