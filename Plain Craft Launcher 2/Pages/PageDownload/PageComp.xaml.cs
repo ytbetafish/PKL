@@ -6,7 +6,7 @@ using System.Windows.Markup;
 namespace PCL;
 
 [ContentProperty("SearchTags")]
-public partial class PageComp
+public partial class PageComp : Grid
 {
     public PageComp()
     {
