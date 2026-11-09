@@ -1,13 +1,45 @@
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
+using System.Windows.Input;
+using PCL.Core.App.Localization;
 using PCL.Core.UI.Hints;
 
 namespace PCL;
 
-public partial class PageDownloadLeft
+public partial class PageDownloadLeft : IRefreshable
 {
     public static Pages.PageMods? DownloadModPage;
     public static Pages.PageMods? DownloadPackPage;
     public static Pages.PageMods? DownloadFavoritesPage;
+
+    public void Refresh()
+    {
+        Refresh(Launcher.frmMain.PageCurrentSub);
+    }
+
+    public void RefreshButton_Click(object sender, EventArgs e)
+    {
+        Refresh((FormMain.PageSubType)Common.Val(((MyIconButton)sender).Tag));
+    }
+
+    public void Refresh(FormMain.PageSubType subType)
+    {
+        switch (subType)
+        {
+            case FormMain.PageSubType.DownloadMod:
+                ItemMod.Checked = true;
+                break;
+            case FormMain.PageSubType.DownloadPack:
+                ItemPack.Checked = true;
+                break;
+            case FormMain.PageSubType.DownloadCompFavorites:
+                ItemFavorites.Checked = true;
+                break;
+        }
+
+        HintService.Show(Hints.Info("正在刷新...", log: false));
+    }
+
+    #region 页面切换
 
     public FormMain.PageSubType PageId = FormMain.PageSubType.DownloadMod;
 
@@ -30,27 +62,13 @@ public partial class PageDownloadLeft
         switch (id)
         {
             case FormMain.PageSubType.DownloadMod:
-            {
-                if (DownloadModPage is null)
-                    DownloadModPage = new Pages.PageMods();
-                return DownloadModPage;
-            }
+                return DownloadModPage ??= new Pages.PageMods();
             case FormMain.PageSubType.DownloadPack:
-            {
-                if (DownloadPackPage is null)
-                    DownloadPackPage = new Pages.PageMods();
-                return DownloadPackPage;
-            }
+                return DownloadPackPage ??= new Pages.PageMods();
             case FormMain.PageSubType.DownloadCompFavorites:
-            {
-                if (DownloadFavoritesPage is null)
-                    DownloadFavoritesPage = new Pages.PageMods();
-                return DownloadFavoritesPage;
-            }
+                return DownloadFavoritesPage ??= new Pages.PageMods();
             default:
-            {
                 throw new Exception("未知的下载子页面类型: " + id);
-            }
         }
     }
 
@@ -97,8 +115,5 @@ public partial class PageDownloadLeft
         }, "PageLeft PageChange");
     }
 
-    private void RefreshButton_Click(object sender, EventArgs e)
-    {
-        HintService.Show(Hints.Info("正在刷新...", log: false));
-    }
+    #endregion
 }

@@ -1,4 +1,4 @@
-<local:MyPageLeft x:Class="PCL.PageDownloadLeft"
+﻿<local:MyPageLeft x:Class="PCL.PageDownloadLeft"
                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                   xmlns:local="clr-namespace:PCL">
@@ -6,12 +6,11 @@
                           Style="{StaticResource ScrollViewerFullMargin}">
         <StackPanel Margin="0,12,0,0" Name="PanItem">
 
-            <TextBlock Text="社区资源" Margin="13,10,5,4" Opacity="0.6" FontSize="12" />
-
-            <local:MyListItem x:Name="ItemMod" Checked="True" Type="RadioBox"
+            <local:MyListItem x:Name="ItemMod" Checked="True" IsScaleAnimationEnabled="False" Type="RadioBox"
                               Check="PageCheck"
                               Tag="1" MinPaddingRight="35" Height="36" VerticalAlignment="Top"
                               Title="模组"
+                              LogoScale="0.97"
                               SvgIcon="lucide/puzzle">
                 <local:MyListItem.Buttons>
                     <x:Array Type="{x:Type local:MyIconButton}">
@@ -24,10 +23,11 @@
                 </local:MyListItem.Buttons>
             </local:MyListItem>
 
-            <local:MyListItem x:Name="ItemPack" Type="RadioBox" Tag="2"
+            <local:MyListItem x:Name="ItemPack" Type="RadioBox" IsScaleAnimationEnabled="False" Tag="2"
                               Check="PageCheck"
                               MinPaddingRight="35" Height="36" VerticalAlignment="Top"
                               Title="整合包"
+                              LogoScale="0.98"
                               SvgIcon="lucide/package">
                 <local:MyListItem.Buttons>
                     <x:Array Type="{x:Type local:MyIconButton}">
@@ -40,7 +40,7 @@
                 </local:MyListItem.Buttons>
             </local:MyListItem>
 
-            <local:MyListItem x:Name="ItemFavorites" Type="RadioBox" Tag="3"
+            <local:MyListItem x:Name="ItemFavorites" Type="RadioBox" IsScaleAnimationEnabled="False" Tag="3"
                               Check="PageCheck"
                               MinPaddingRight="35" Height="36" VerticalAlignment="Top"
                               Title="收藏夹"
