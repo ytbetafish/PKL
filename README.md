@@ -90,19 +90,19 @@ dotnet build ".\Plain Craft Launcher 2.slnx" -c Release
 ## 五、分层架构
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  Plain Craft Launcher 2 (WPF, net10.0-windows)           │
-│   顶栏导航：启动页 / 下载页 / 设置页                      │
-│   设置页：左栏导航（PageSettingsLeft）                    │
-│           右栏独立页面（PageKspInstance/PageCkan/...）    │
-│   PageHome ─┐                                            │
-│   PageDownload┼─> IModService (Pkl.Ckan) ─> CKAN.Core   │
-│   PageSettings└─> ITranslationService (OpenAI 兼容)      │
-└──────────────┬───────────────────────────┬───────────────┘
-                │                            │
-         src/Pkl.Ckan (无头适配)      PCL.Core / PCL.Core.Wpf
-         external/CKAN.Core           (主题/控件/日志/设置)
-         (模组解析/依赖)
+┌──────────────────────────────────────────────────────┐
+│  UI 层 (WPF Pages)                                  │  ← 界面层
+│  PageHome / PageDownload / PageSettings             │
+│  PageSettingsLeft / PageKspInstance                │
+├──────────────────────────────────────────────────────┤
+│  业务服务层 (Services)                               │  ← 业务层
+│  IModService (CKAN 模组管理)                        │
+│  ITranslationService (翻译服务)                     │
+├──────────────────────────────────────────────────────┤
+│  核心库层 (Core Libraries)                         │  ← 核心层
+│  PCL.Core (日志/网络/设置/控件)                    │
+│  CKAN.Core (模组解析/依赖计算)                      │
+└──────────────────────────────────────────────────────┘
 ```
 
 ## 六、设置页动画说明
