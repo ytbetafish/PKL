@@ -90,20 +90,20 @@ dotnet build ".\Plain Craft Launcher 2.slnx" -c Release
 ## 五、分层架构
 
 ```
-┌───────────────────────────┐
-│  UI 层 (WPF Pages)        │  ← 界面层
-│  PageHome                 │
-│  PageDownload             │
-│  PageSettings             │
-├───────────────────────────┤
-│  业务服务层 (Services)    │  ← 业务层
-│  IModService              │
-│  ITranslationService      │
-├───────────────────────────┤
-│  核心库层 (Core Libraries)│  ← 核心层
-│  PCL.Core                 │
-│  CKAN.Core                │
-└───────────────────────────┘
+┌─────────────────────────────┐
+│  UI 层 (WPF Pages)          │  ← 界面层
+│  PageHome                   │
+│  PageDownload               │
+│  PageSettings               │
+├─────────────────────────────┤
+│  业务服务层 (Services)      │  ← 业务层
+│  IModService                │
+│  ITranslationService        │
+├─────────────────────────────┤
+│  核心库层 (Core Libraries)  │  ← 核心层
+│  PCL.Core                   │
+│  CKAN.Core                  │
+└─────────────────────────────┘
 ```
 
 ## 六、设置页动画说明
