@@ -364,7 +364,7 @@ public partial class FormMain
             Config.Launch.GameWindowMode = GameWindowSizeMode.Default;
 
         // 更新后展示社区版提示
-        UpdateManager.ShowCeAnnounce();
+        // UpdateManager.ShowCeAnnounce(); // 去掉: 启动时弹出的PCL CE版本说明对话框
         // 输出更新日志
         if (lastVersionCode <= 0)
             return;
@@ -1816,6 +1816,7 @@ public partial class FormMain
 
     #endregion
 }
+
 
 
 
