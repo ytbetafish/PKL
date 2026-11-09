@@ -96,11 +96,11 @@ dotnet build ".\Plain Craft Launcher 2.slnx" -c Release
 │  PageDownload               │
 │  PageSettings               │
 ├─────────────────────────────┤
-│  业务服务层 (Services)      │  ← 业务层
+│  业务服务层 (Services)       │  ← 业务层
 │  IModService                │
 │  ITranslationService        │
 ├─────────────────────────────┤
-│  核心库层 (Core Libraries)  │  ← 核心层
+│  核心库层 (Core Libraries)   │  ← 核心层
 │  PCL.Core                   │
 │  CKAN.Core                  │
 └─────────────────────────────┘
