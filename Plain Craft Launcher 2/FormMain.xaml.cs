@@ -1171,6 +1171,10 @@ public partial class FormMain
             {
                 return Lang.Text("Main.Title.GameLog");
             }
+            case PageType.CompDetail:
+            {
+                return "模组详情";
+            }
             // KSP: MC 子页面标题已剥离。
             default:
             {
