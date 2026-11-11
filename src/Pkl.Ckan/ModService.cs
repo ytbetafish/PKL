@@ -24,6 +24,7 @@ public sealed class ModService : IModService, IDisposable
     private GameInstance? _instance;
     private RegistryManager? _registryManager;
     private Registry? _readonlyRegistry;
+    private readonly SpaceDockClient _spaceDock = new();
 
     /// <summary>
     /// Create the adapter with a self-contained data directory under the user's temp folder,
@@ -148,22 +149,52 @@ public sealed class ModService : IModService, IDisposable
     }
 
     /// <inheritdoc />
-    public Task<IReadOnlyList<ModSearchResult>> SearchAsync(string? query, CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<ModSearchResult>> SearchAsync(string? query, CancellationToken cancellationToken = default)
     {
         var results = EnumerateCatalog()
             .Where(m => MatchesQuery(m, query))
             .Select(ToResult)
             .ToList();
-        return Task.FromResult<IReadOnlyList<ModSearchResult>>(results);
+        await EnrichFromSpaceDock(results, cancellationToken).ConfigureAwait(false);
+        return results;
+    }
+
+    /// <summary>用 SpaceDock 详情补下载量、作者、横幅图与简介；CKAN 已有值不覆盖。</summary>
+    private async Task EnrichFromSpaceDock(List<ModSearchResult> results, CancellationToken cancellationToken)
+    {
+        for (var i = 0; i < results.Count; i++)
+        {
+            if (cancellationToken.IsCancellationRequested)
+                break;
+
+            var mod = LatestAvailable(results[i].Identifier);
+            if (mod?.resources?.spacedock is not { } url)
+                continue;
+            if (!SpaceDockClient.TryParseModId(url, out var modId))
+                continue;
+
+            var sd = await _spaceDock.FetchAsync(modId, cancellationToken).ConfigureAwait(false);
+            if (sd is null)
+                continue;
+
+            var r = results[i];
+            results[i] = r with
+            {
+                Downloads = sd.Downloads,
+                Author = string.IsNullOrEmpty(r.Author) ? sd.Author : r.Author,
+                IconUrl = string.IsNullOrEmpty(r.IconUrl) ? sd.Background : r.IconUrl,
+                Description = string.IsNullOrEmpty(r.Description) ? sd.ShortDescription : r.Description
+            };
+        }
     }
 
     /// <inheritdoc />
-    public Task<IReadOnlyList<ModSearchResult>> ListInstalledAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<ModSearchResult>> ListInstalledAsync(CancellationToken cancellationToken = default)
     {
         var reg = Registry;
         if (_instance == null || reg == null)
         {
-            return Task.FromResult<IReadOnlyList<ModSearchResult>>(Array.Empty<ModSearchResult>());
+            return Array.Empty<ModSearchResult>();
         }
 
         var installed = reg.Installed();
@@ -174,7 +205,8 @@ public sealed class ModService : IModService, IDisposable
             results.Add(ToResult(mod, identifier, installed));
         }
 
-        return Task.FromResult<IReadOnlyList<ModSearchResult>>(results);
+        await EnrichFromSpaceDock(results, cancellationToken).ConfigureAwait(false);
+        return results;
     }
 
     /// <inheritdoc />

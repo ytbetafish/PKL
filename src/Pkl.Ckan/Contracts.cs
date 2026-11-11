@@ -21,7 +21,8 @@ public sealed record ModSearchResult(
     bool IsInstalled,
     bool HasUpdate,
     bool IsCompatible = true,
-    string? IconUrl = null);
+    string? IconUrl = null,
+    int Downloads = 0);
 
 /// <summary>
 /// The install/upgrade/remove plan computed by CKAN's dependency resolver.

@@ -28,8 +28,7 @@ public static class CkanCompAdapter
             ["RawName"] = mod.Name,
             ["Description"] = mod.Description ?? string.Empty,
             ["Website"] = mod.Homepage ?? string.Empty,
-            // ModSearchResult 不携带下载量计数，置 0；后续可由 SpaceDock 兜底补充。
-            ["DownloadCount"] = 0,
+            ["DownloadCount"] = mod.Downloads,
             ["Tags"] = new JsonArray(),
         };
 
