@@ -178,6 +178,56 @@ public sealed class ModService : IModService, IDisposable
     }
 
     /// <inheritdoc />
+    public Task<IReadOnlyList<ModVersionInfo>> GetVersionsAsync(string identifier, CancellationToken cancellationToken = default)
+    {
+        var reg = Registry;
+        var list = new List<ModVersionInfo>();
+        if (_instance == null || reg == null || string.IsNullOrWhiteSpace(identifier))
+        {
+            return Task.FromResult<IReadOnlyList<ModVersionInfo>>(list);
+        }
+
+        List<CkanModule> modules;
+        try
+        {
+            modules = reg.AvailableByIdentifier(identifier).ToList();
+        }
+        catch
+        {
+            return Task.FromResult<IReadOnlyList<ModVersionInfo>>(list);
+        }
+
+        var criteria = _instance.VersionCriteria();
+        foreach (var m in modules.OrderByDescending(m => m.version))
+        {
+            bool compatible;
+            try { compatible = m.IsCompatible(criteria); } catch { compatible = true; }
+
+            var urls = m.download?
+                .Select(u => u.ToString())
+                .Where(s => !string.IsNullOrEmpty(s))
+                .ToList() ?? new List<string>();
+
+            var gameVersions = new List<string>();
+            if (m.ksp_version_min is not null) gameVersions.Add(m.ksp_version_min.ToString());
+            if (m.ksp_version_max is not null) gameVersions.Add(m.ksp_version_max.ToString());
+            else if (m.ksp_version is not null) gameVersions.Add(m.ksp_version.ToString());
+            // 未声明兼容版本时兜底为不限版本，保证版本卡片能进入分组。
+            if (gameVersions.Count == 0) gameVersions.Add("*");
+
+            list.Add(new ModVersionInfo(
+                m.identifier,
+                m.version.ToString(),
+                m.release_date?.ToString("yyyy-MM-dd"),
+                urls,
+                gameVersions,
+                compatible));
+        }
+
+        return Task.FromResult<IReadOnlyList<ModVersionInfo>>(list);
+    }
+
+    /// <inheritdoc />
     public Task<ModInstallPlan?> GetInstallPlanAsync(string identifier, CancellationToken cancellationToken = default)
     {
         var reg = Registry;
@@ -381,7 +431,8 @@ public sealed class ModService : IModService, IDisposable
             catch { /* leave default */ }
         }
 
-        string? iconUrl = mod?.resources?.homepage?.ToString();
+        // CKAN 模块元数据不含图标 URL（ResourcesDescriptor 无 icon 字段），图标留待 SpaceDock 兜底。
+        string? iconUrl = null;
 
         return new ModSearchResult(
             identifier,

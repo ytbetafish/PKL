@@ -261,9 +261,19 @@ public partial class MyCompItem
 
     private void MyCompItem_Click(MyCompItem sender, EventArgs e)
     {
-        if (Tag is ModItem mod)
+        if (Tag is Comp.CompProject project)
         {
-            PCL.Core.UI.Hints.HintService.Show(PCL.Core.UI.Hints.Hints.Info($"点击了模组: {mod.Name}", log: false));
+            Launcher.frmMain?.PageChange(new FormMain.PageStackData
+            {
+                page = FormMain.PageType.CompDetail,
+                additional = (
+                    project,
+                    new List<string>(),
+                    string.Empty,
+                    Comp.CompLoaderType.Any,
+                    Comp.CompType.Mod,
+                    string.Empty)
+            });
         }
     }
 

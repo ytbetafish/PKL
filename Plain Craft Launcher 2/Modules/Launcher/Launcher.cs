@@ -1,6 +1,10 @@
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
+using PCL.Core.Utils;
+using PCL.Core.Utils.OS;
+using Pkl.Ckan;
 
 namespace PCL;
 
@@ -16,6 +20,50 @@ public static partial class Launcher
 
     /// <summary>启动画面实例。</summary>
     public static SplashScreen? frmStart;
+
+    /// <summary>模组详情页实例。</summary>
+    public static PageModDetail? frmDownloadCompDetail;
+
+    private static ModService? _ckanService;
+    private static bool _ckanInitialized;
+
+    /// <summary>CKAN 模组管理服务（懒加载单例）。</summary>
+    public static IModService Ckan
+    {
+        get
+        {
+            if (_ckanService is null)
+                InitializeCkan();
+            return _ckanService!;
+        }
+    }
+
+    /// <summary>定位本机 KSP 实例并附加到 CKAN 服务；失败时回退为无实例的空服务，不阻断启动。</summary>
+    private static void InitializeCkan()
+    {
+        if (_ckanInitialized)
+            return;
+        _ckanInitialized = true;
+        try
+        {
+            var service = new ModService();
+            var detector = new KspInstanceService();
+            var root = detector.FindCandidateRoots().FirstOrDefault();
+            if (root is not null)
+            {
+                var instance = detector.Load(root);
+                service.AttachInstance(instance);
+            }
+            _ckanService = service;
+            // 后台刷新注册表，不阻塞 UI
+            _ = service.RefreshMasterRegistryAsync();
+        }
+        catch
+        {
+            // CKAN 初始化失败不影响启动；列表在服务不可用时显示空态
+            _ckanService ??= new ModService();
+        }
+    }
 
     /// <summary>
     ///     KSP 改造后：主页自定义事件系统已随 Event 目录一并删除，
@@ -86,5 +134,44 @@ public static partial class Launcher
         {
             // GPU 偏好设置失败不影响启动
         }
+    }
+
+    /// <summary>
+    ///     申请一个可用于任务缓存的临时文件夹，以 \ 结尾。这些文件夹无需进行后续清理。
+    ///     若所有缓存位置均没有权限，会抛出异常。
+    /// </summary>
+    /// <param name="requireNonSpace">是否要求路径不包含空格。</param>
+    public static string RequestTaskTempFolder(bool requireNonSpace = false)
+    {
+        TryClearTaskTemp();
+
+        try
+        {
+            var tempFolder =
+                $@"{Common.pathTemp}TaskTemp\{Common.GetUuid()}-{RandomUtils.NextInt(0, 1000000)}\";
+
+            if (!requireNonSpace || !tempFolder.Contains(' '))
+            {
+                Directory.CreateDirectory(tempFolder);
+                Common.CheckPermissionWithException(tempFolder);
+                return tempFolder;
+            }
+        }
+        catch
+        {
+            // ignored
+        }
+
+        var fallbackFolder = Path.Combine(
+            SystemPaths.DriveLetter,
+            "ProgramData",
+            "PCL",
+            "TaskTemp",
+            $"{Common.GetUuid()}-{RandomUtils.NextInt(0, 1000000)}");
+
+        Directory.CreateDirectory(fallbackFolder);
+        Common.CheckPermission(fallbackFolder);
+
+        return fallbackFolder;
     }
 }

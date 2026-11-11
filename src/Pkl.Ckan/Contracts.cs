@@ -31,3 +31,13 @@ public sealed record ModInstallPlan(
     IReadOnlyList<string> ToInstall,
     IReadOnlyList<string> ToUpgrade,
     IReadOnlyList<string> ToRemove);
+/// <summary>
+/// A single published version of a catalogued mod.
+/// </summary>
+public sealed record ModVersionInfo(
+    string Identifier,
+    string Version,
+    string? ReleaseDate,
+    IReadOnlyList<string> DownloadUrls,
+    IReadOnlyList<string> GameVersions,
+    bool IsCompatible);

@@ -51,7 +51,7 @@
             </local:MyCard>
             <StackPanel Grid.Row="1" Grid.RowSpan="2" Name="PanMain" Grid.IsSharedSizeScope="True">
                 <local:MyCard Margin="0,0,0,15" x:Name="CardFilter"
-                              Visibility="{Binding FilterVisibility}">
+                              Visibility="Collapsed">
                     <StackPanel>
                         <DockPanel x:Name="PanInstanceFilterHost" Margin="10,10,0,5">
                             <ItemsControl x:Name="PanInstanceFilterLabel" DockPanel.Dock="Left" Height="27"

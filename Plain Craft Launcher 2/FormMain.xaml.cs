@@ -1242,11 +1242,11 @@ public partial class FormMain
         /// </list>
         /// </summary>
         public (
-            object CompProject,
+            Comp.CompProject CompProject,
             List<string> ExpandedTitles,
             string TargetVersion,
-            int TargetLoader,
-            int ResourceType,
+            Comp.CompLoaderType TargetLoader,
+            Comp.CompType ResourceType,
             string SavePath
         )? additional;
 
@@ -1481,6 +1481,12 @@ public partial class FormMain
                         PageChangeAnim(settingsLeft, right);
                     }
                     break;
+                case PageType.CompDetail: // 模组详情
+                {
+                    Launcher.frmDownloadCompDetail ??= new PageModDetail();
+                    PageChangeAnim(new MyPageLeft(), Launcher.frmDownloadCompDetail);
+                    break;
+                }
                 default: break;
             }
 
