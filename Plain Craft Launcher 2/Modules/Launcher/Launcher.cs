@@ -52,7 +52,7 @@ public static partial class Launcher
             if (root is not null)
             {
                 var instance = detector.Load(root);
-                service.AttachInstance(instance);
+                service.AttachInstanceRobust(instance);
             }
             _ckanService = service;
             // 后台刷新注册表，不阻塞 UI

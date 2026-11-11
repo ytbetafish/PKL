@@ -15,6 +15,8 @@ namespace Pkl.Ckan;
 public sealed class ModService : IModService, IDisposable
 {
     private const string UserAgent = "Pkl.Ckan/1.0";
+    /// <summary>SpaceDock 联网补充的最大条数（列表分页之外的目录条目不做网络回填）。</summary>
+    private const int EnrichLimit = 40;
 
     private readonly IUser _user;
     private readonly IConfiguration _config;
@@ -98,6 +100,22 @@ public sealed class ModService : IModService, IDisposable
         _readonlyRegistry = RegistryManager.ReadOnlyRegistry(instance, _repoData);
     }
 
+    /// <summary>
+    /// 附加实例；若注册表被其他 CKAN 进程占用（锁冲突），自动回退只读模式，
+    /// 搜索/浏览仍可用；安装/升级/移除需要读写锁，只读模式下会拒绝执行。
+    /// </summary>
+    public void AttachInstanceRobust(GameInstance instance)
+    {
+        try
+        {
+            AttachInstance(instance);
+        }
+        catch (Exception ex) when (ex is RegistryInUseKraken or IOException)
+        {
+            AttachInstanceReadOnly(instance);
+        }
+    }
+
     /// <summary>Mirror URLs to use when strategy is MirrorOnly or OfficialFirst.</summary>
     public System.Collections.Generic.List<string> MirrorUrls { get; set; } = new();
     /// <summary>Default official CKAN repo URL (used as fallback when strategy != MirrorOnly).</summary>
@@ -159,33 +177,46 @@ public sealed class ModService : IModService, IDisposable
         return results;
     }
 
-    /// <summary>用 SpaceDock 详情补下载量、作者、横幅图与简介；CKAN 已有值不覆盖。</summary>
+    /// <summary>用 SpaceDock 详情补下载量、作者、横幅图与简介；CKAN 已有值不覆盖；并发限流，仅回填前 EnrichLimit 条。</summary>
     private async Task EnrichFromSpaceDock(List<ModSearchResult> results, CancellationToken cancellationToken)
     {
-        for (var i = 0; i < results.Count; i++)
+        var limit = Math.Min(results.Count, EnrichLimit);
+        using var semaphore = new SemaphoreSlim(8);
+        var tasks = new List<Task>();
+        for (var i = 0; i < limit; i++)
         {
-            if (cancellationToken.IsCancellationRequested)
-                break;
-
-            var mod = LatestAvailable(results[i].Identifier);
-            if (mod?.resources?.spacedock is not { } url)
-                continue;
-            if (!SpaceDockClient.TryParseModId(url, out var modId))
-                continue;
-
-            var sd = await _spaceDock.FetchAsync(modId, cancellationToken).ConfigureAwait(false);
-            if (sd is null)
-                continue;
-
-            var r = results[i];
-            results[i] = r with
+            var idx = i;
+            tasks.Add(Task.Run(async () =>
             {
-                Downloads = sd.Downloads,
-                Author = string.IsNullOrEmpty(r.Author) ? sd.Author : r.Author,
-                IconUrl = string.IsNullOrEmpty(r.IconUrl) ? sd.Background : r.IconUrl,
-                Description = string.IsNullOrEmpty(r.Description) ? sd.ShortDescription : r.Description
-            };
+                await semaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
+                try
+                {
+                    var mod = LatestAvailable(results[idx].Identifier);
+                    if (mod?.resources?.spacedock is not { } url)
+                        return;
+                    if (!SpaceDockClient.TryParseModId(url, out var modId))
+                        return;
+
+                    var sd = await _spaceDock.FetchAsync(modId, cancellationToken).ConfigureAwait(false);
+                    if (sd is null)
+                        return;
+
+                    var r = results[idx];
+                    results[idx] = r with
+                    {
+                        Downloads = sd.Downloads,
+                        Author = string.IsNullOrEmpty(r.Author) ? sd.Author : r.Author,
+                        IconUrl = string.IsNullOrEmpty(r.IconUrl) ? sd.Background : r.IconUrl,
+                        Description = string.IsNullOrEmpty(r.Description) ? sd.ShortDescription : r.Description
+                    };
+                }
+                finally
+                {
+                    semaphore.Release();
+                }
+            }, cancellationToken));
         }
+        await Task.WhenAll(tasks).ConfigureAwait(false);
     }
 
     /// <inheritdoc />
