@@ -18,6 +18,7 @@ using PCL.Core.Utils;
 using PCL.Core.Utils.Validate;
 using PCL.Network;
 using PCL.Network.Loaders;
+using Pkl.Ckan;
 using Control = System.Windows.Forms.Control;
 
 namespace PCL;
@@ -128,6 +129,14 @@ public partial class PageModDetail : IPageView
                 Launcher.frmMain?.BtnExtraDownload.ShowRefresh();
                 Launcher.frmMain?.BtnExtraDownload.Ribble();
             }
+            catch (InstanceReadOnlyException ex)
+            {
+                Common.Log(
+                    ex,
+                    "[CKAN] 只读模式下无法安装",
+                    Common.LogLevel.Feedback,
+                    userSummary: ex.Message);
+            }
             catch (Exception ex)
             {
                 Common.Log(
@@ -145,7 +154,8 @@ public partial class PageModDetail : IPageView
 
     private void BtnIntroWiki_Click(object sender, Common.RouteEventArgs e)
     {
-        Common.OpenWebsite("https://www.mcmod.cn/class/" + _project.WikiId + ".html");
+        // KSP / CKAN 模组无 MC 百科条目：CKAN 数据源下 Wiki 按钮已隐藏，点击兜底不跳转任何站点。
+        Common.Log("[CKAN] 当前模组无可用 Wiki 条目");
     }
 
     private void BtnIntroCopy_Click(object sender, Common.RouteEventArgs e)

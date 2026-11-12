@@ -8,6 +8,17 @@ using System.Net;
 namespace Pkl.Ckan;
 
 /// <summary>
+/// 当前实例以只读方式附加（注册表被其他 CKAN 进程占用），安装 / 升级 / 卸载等写操作被拒绝。
+/// </summary>
+public sealed class InstanceReadOnlyException : InvalidOperationException
+{
+    public InstanceReadOnlyException()
+        : base("KSP 实例注册表被其他 CKAN 客户端占用，当前为只读模式；请先关闭常驻 CKAN 客户端后再执行安装或卸载。")
+    {
+    }
+}
+
+/// <summary>
 /// <see cref="IModService"/> implementation backed directly by CKAN.Core's public APIs.
 /// The class is safe to construct even on a machine without KSP: all operations degrade to
 /// empty/no-op results until an instance is attached.
@@ -362,9 +373,13 @@ public sealed class ModService : IModService, IDisposable
     /// <inheritdoc />
     public Task ExecutePlanAsync(ModInstallPlan plan, IProgress<string>? progress = null, CancellationToken cancellationToken = default)
     {
-        if (_instance == null || _registryManager == null)
+        if (_instance == null)
         {
-            throw new InvalidOperationException("Instance not attached read-write; call AttachInstance first.");
+            throw new InvalidOperationException("尚未附加 KSP 实例。");
+        }
+        if (_registryManager == null)
+        {
+            throw new InstanceReadOnlyException();
         }
 
         var opts = RelationshipResolverOptions.DependsOnlyOpts(_instance.StabilityToleranceConfig);
@@ -400,9 +415,13 @@ public sealed class ModService : IModService, IDisposable
     /// <inheritdoc />
     public Task UninstallAsync(string identifier, IProgress<string>? progress = null, CancellationToken cancellationToken = default)
     {
-        if (_instance == null || _registryManager == null)
+        if (_instance == null)
         {
-            throw new InvalidOperationException("Instance not attached read-write; call AttachInstance first.");
+            throw new InvalidOperationException("尚未附加 KSP 实例。");
+        }
+        if (_registryManager == null)
+        {
+            throw new InstanceReadOnlyException();
         }
 
         Directory.CreateDirectory(_instance.DownloadCacheDir);
