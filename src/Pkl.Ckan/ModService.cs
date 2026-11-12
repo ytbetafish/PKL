@@ -130,7 +130,7 @@ public sealed class ModService : IModService, IDisposable
     /// <summary>Mirror URLs to use when strategy is MirrorOnly or OfficialFirst.</summary>
     public System.Collections.Generic.List<string> MirrorUrls { get; set; } = new();
     /// <summary>Default official CKAN repo URL (used as fallback when strategy != MirrorOnly).</summary>
-    public string OfficialRepoUrl { get; set; } = "https://archive.ksp-ckan.net/CKAN-meta.zip";
+    public string OfficialRepoUrl { get; set; } = "https://github.com/KSP-CKAN/CKAN-meta/archive/master.tar.gz";
     /// <summary>One of "MirrorOnly" / "OfficialFirst" / "OfficialOnly".</summary>
     public string RepoStrategy { get; set; } = "OfficialFirst";
 
@@ -144,34 +144,43 @@ public sealed class ModService : IModService, IDisposable
 
         try
         {
-            // Rebuild repo list according to strategy. Order matters: earlier repos win,
-            // later repos fill in what earlier ones don't have.
-            _registryManager.registry.RepositoriesClear();
+            var registry = _registryManager.registry;
+            var existing = registry.Repositories;
+
+            // 保留实例注册表中已有的仓库（含本机 CKAN 客户端写入的仓库），只按配置补齐缺失项；
+            // 不再清空仓库列表，避免抹掉既有仓库导致磁盘缓存与当前仓库对不上。
+            void AddRepo(string name, string uri)
+            {
+                if (string.IsNullOrWhiteSpace(uri) || existing.ContainsKey(name))
+                    return;
+                registry.RepositoriesAdd(new CKAN.Repository(name, uri.Trim()));
+            }
 
             if (RepoStrategy != "OfficialOnly")
             {
+                var i = 0;
                 foreach (var u in MirrorUrls)
                 {
                     if (!string.IsNullOrWhiteSpace(u))
-                        try { _registryManager.registry.RepositoriesAdd(new CKAN.Repository("PKL-Mirror", u.Trim())); } catch { }
+                        AddRepo($"PKL-Mirror-{++i}", u.Trim());
                 }
             }
             if (RepoStrategy != "MirrorOnly")
             {
-                try { _registryManager.registry.RepositoriesAdd(new CKAN.Repository("CKAN-Official", OfficialRepoUrl)); } catch { }
+                AddRepo("CKAN-Official", OfficialRepoUrl);
             }
             _registryManager.Save();
 
-            var repos = _registryManager.registry.Repositories.Values.ToList();
+            var repos = registry.Repositories.Values.ToList();
             var downloader = new NetAsyncDownloader(_user,
                 () => (System.Security.Cryptography.HashAlgorithm?)null,
                 UserAgent,
                 cancellationToken);
             _repoData.Update(repos, _instance.Game, false, downloader, _user, UserAgent);
         }
-        catch
+        catch (Exception ex)
         {
-            // Offline / transient errors: keep the previously cached registry.
+            try { _user.RaiseError("刷新仓库注册表失败: " + ex.Message); } catch { }
         }
 
         return Task.CompletedTask;
