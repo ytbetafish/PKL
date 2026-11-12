@@ -99,8 +99,11 @@ public partial class PageComp : Grid
 
     private void BtnPageRight_Click(object sender, EventArgs e)
     {
-        _currentPage++;
-        RefreshList();
+        if ((_currentPage + 1) * PageSize < _projects.Count)
+        {
+            _currentPage++;
+            RefreshList();
+        }
     }
 
     private void Load_State(object sender, LoadingState state, LoadingState oldState)
