@@ -26,12 +26,14 @@ public sealed record ModSearchResult(
 
 /// <summary>
 /// The install/upgrade/remove plan computed by CKAN's dependency resolver.
+/// When <see cref="FailureReason"/> is non-null the plan could not be produced; the lists are empty.
 /// </summary>
 public sealed record ModInstallPlan(
     string Target,
     IReadOnlyList<string> ToInstall,
     IReadOnlyList<string> ToUpgrade,
-    IReadOnlyList<string> ToRemove);
+    IReadOnlyList<string> ToRemove,
+    string? FailureReason = null);
 /// <summary>
 /// A single published version of a catalogued mod.
 /// </summary>

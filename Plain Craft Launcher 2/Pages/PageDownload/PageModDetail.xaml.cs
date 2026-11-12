@@ -110,7 +110,14 @@ public partial class PageModDetail : IPageView
                 var plan = Launcher.Ckan.GetInstallPlanAsync(_project.Id).GetAwaiter().GetResult();
                 if (plan is null)
                 {
-                    Common.Log($"[CKAN] 未找到模组 {_project.Id} 的安装计划");
+                    Common.Log($"[CKAN] 未找到模组 {_project.Id} 的安装计划", Common.LogLevel.Feedback,
+                        userSummary: Lang.Text("Download.Comp.Error.OperationFailed"));
+                    return;
+                }
+                if (!string.IsNullOrEmpty(plan.FailureReason))
+                {
+                    Common.Log($"[CKAN] {_project.Id} 安装计划不可用：{plan.FailureReason}", Common.LogLevel.Feedback,
+                        userSummary: plan.FailureReason);
                     return;
                 }
 

@@ -341,9 +341,21 @@ public sealed class ModService : IModService, IDisposable
                 toUpgrade,
                 Array.Empty<string>()));
         }
-        catch
+        catch (Exception ex)
         {
-            return Task.FromResult<ModInstallPlan?>(null);
+            var reason = ex switch
+            {
+                TooManyModsProvideKraken => "该模组的某个依赖存在多个提供者，需在 CKAN 客户端中选择提供者",
+                InconsistentKraken => $"与已安装模组冲突：{ex.Message}",
+                DependenciesNotSatisfiedKraken => $"依赖在当前 KSP 版本无可安装版本：{ex.Message}",
+                _ => $"无法生成安装计划：{ex.Message}"
+            };
+            return Task.FromResult<ModInstallPlan?>(new ModInstallPlan(
+                target.identifier,
+                Array.Empty<string>(),
+                Array.Empty<string>(),
+                Array.Empty<string>(),
+                reason));
         }
     }
 
