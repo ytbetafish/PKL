@@ -1489,6 +1489,11 @@ public partial class FormMain
                     PageChangeAnim(new MyPageLeft(), Launcher.frmDownloadCompDetail);
                     break;
                 }
+                case PageType.InstanceSelect: // 实例选择
+                {
+                    PageChangeAnim(new MyPageLeft(), new Pages.PageSelectRight());
+                    break;
+                }
                 default: break;
             }
 

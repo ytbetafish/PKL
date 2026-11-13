@@ -38,7 +38,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <local:MyButton x:Name="BtnInstance" Height="35" HorizontalAlignment="Stretch"
-                            Text="打开 KSP 目录" Click="BtnOpenDir_Click" />
+                            Text="选择实例" Click="BtnSelectInstance_Click" />
             <local:MyButton x:Name="BtnMore" Grid.Column="2" Height="35" HorizontalAlignment="Stretch"
                             Text="实例设置" Click="BtnGotoSettings_Click" />
         </Grid>

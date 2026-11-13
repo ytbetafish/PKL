@@ -87,15 +87,10 @@ public partial class PageLaunchLeft
         }));
     }
 
-    private void BtnOpenDir_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    private void BtnSelectInstance_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        var root = PklSettings.Current.KspRootPath;
-        if (string.IsNullOrWhiteSpace(root) || !Directory.Exists(root))
-        {
-            MessageBox.Show("KSP 路径未设置或不存在。", "PKL", MessageBoxButton.OK, MessageBoxImage.Information);
-            return;
-        }
-        Process.Start(new ProcessStartInfo { FileName = root, UseShellExecute = true });
+        if (Window.GetWindow(this) is FormMain fm)
+            fm.PageChange(FormMain.PageType.InstanceSelect);
     }
 
     private void BtnGotoSettings_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
