@@ -1,4 +1,6 @@
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -8,7 +10,8 @@ using System.Text.RegularExpressions;
 namespace Pkl.Ckan;
 
 /// <summary>SpaceDock 模组详情（仅抽取启动器需要的字段）。</summary>
-public sealed record SpaceDockMod(int Id, string Author, string? Background, int Downloads, string? ShortDescription);
+public sealed record SpaceDockMod(int Id, string Author, string? Background, int Downloads,
+    string? ShortDescription, string? License, string? Website, string? LatestVersion);
 
 /// <summary>
 /// SpaceDock.info 只读客户端：按 CKAN 模块记录的 spacedock 链接补下载量、作者与横幅图。
@@ -32,6 +35,15 @@ public sealed class SpaceDockClient
         [JsonPropertyName("background")] public string? Background { get; set; }
         [JsonPropertyName("downloads")] public int Downloads { get; set; }
         [JsonPropertyName("short_description")] public string? ShortDescription { get; set; }
+        [JsonPropertyName("license")] public string? License { get; set; }
+        [JsonPropertyName("website")] public string? Website { get; set; }
+        [JsonPropertyName("source_code")] public string? SourceCode { get; set; }
+        [JsonPropertyName("versions")] public List<ApiVersion> Versions { get; set; } = new();
+
+        public sealed class ApiVersion
+        {
+            [JsonPropertyName("friendly_version")] public string? FriendlyVersion { get; set; }
+        }
     }
 
     /// <summary>从 SpaceDock 链接（/mod/&lt;id&gt;/&lt;slug&gt;）解析模组 id。</summary>
@@ -73,9 +85,12 @@ public sealed class SpaceDockClient
             return null;
         }
 
+        var latestVersion = api?.Versions?.FirstOrDefault()?.FriendlyVersion;
+        var website = string.IsNullOrWhiteSpace(api?.Website) ? api?.SourceCode : api?.Website;
         var result = api is null
             ? null
-            : new SpaceDockMod(api.Id, api.Author ?? string.Empty, api.Background, api.Downloads, api.ShortDescription);
+            : new SpaceDockMod(api.Id, api.Author ?? string.Empty, api.Background, api.Downloads,
+                api.ShortDescription, api.License, website, latestVersion);
         _cache[modId] = result;
         return result;
     }

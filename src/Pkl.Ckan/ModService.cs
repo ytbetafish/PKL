@@ -249,7 +249,10 @@ public sealed class ModService : IModService, IDisposable
                         Downloads = sd.Downloads,
                         Author = string.IsNullOrEmpty(r.Author) ? sd.Author : r.Author,
                         IconUrl = string.IsNullOrEmpty(r.IconUrl) ? sd.Background : r.IconUrl,
-                        Description = string.IsNullOrEmpty(r.Description) ? sd.ShortDescription : r.Description
+                        Description = string.IsNullOrEmpty(r.Description) ? sd.ShortDescription : r.Description,
+                        License = string.IsNullOrEmpty(r.License) ? sd.License : r.License,
+                        Homepage = string.IsNullOrEmpty(r.Homepage) ? sd.Website : r.Homepage,
+                        Version = string.IsNullOrEmpty(r.Version) ? sd.LatestVersion : r.Version
                     };
                 }
                 finally
