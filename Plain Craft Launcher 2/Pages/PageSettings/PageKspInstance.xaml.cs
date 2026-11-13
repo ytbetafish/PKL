@@ -36,14 +36,16 @@ public partial class PageKspInstance
 
     private void RefreshKspInfo()
     {
-        var root = PklSettings.Current.KspRootPath;
+        var settings = PklSettings.Current;
+        var root = settings.KspRootPath;
         LabKspPath.Text = string.IsNullOrEmpty(root) ? "（未设置）" : root;
+
         if (string.IsNullOrEmpty(root) || !Directory.Exists(root))
         {
             LabKspVersion.Text = "—";
-            LabKspExe.Text = "—";
-            LabKspGameData.Text = "—";
-            LabKspLogs.Text = "—";
+            LabKspExe.Text = string.IsNullOrEmpty(settings.KspExePath) ? "—" : settings.KspExePath;
+            LabKspGameData.Text = string.IsNullOrEmpty(settings.KspGameDataPath) ? "—" : settings.KspGameDataPath;
+            LabKspLogs.Text = string.IsNullOrEmpty(settings.KspLogsPath) ? "—" : settings.KspLogsPath;
             return;
         }
         try
@@ -57,12 +59,31 @@ public partial class PageKspInstance
             else
                 LabKspVersion.Text = "未知";
         } catch { LabKspVersion.Text = "读取失败"; }
-        LabKspExe.Text = File.Exists(Path.Combine(root, "KSP_x64.exe")) ? Path.Combine(root, "KSP_x64.exe") :
-                         File.Exists(Path.Combine(root, "ksp.exe")) ? Path.Combine(root, "ksp.exe") : "未找到";
+
+        LabKspExe.Text = string.IsNullOrEmpty(settings.KspExePath)
+            ? (File.Exists(Path.Combine(root, "KSP_x64.exe")) ? Path.Combine(root, "KSP_x64.exe") :
+               File.Exists(Path.Combine(root, "ksp.exe")) ? Path.Combine(root, "ksp.exe") : "未找到")
+            : settings.KspExePath;
         var gd = Path.Combine(root, "GameData");
-        LabKspGameData.Text = Directory.Exists(gd) ? gd : "不存在";
+        LabKspGameData.Text = string.IsNullOrEmpty(settings.KspGameDataPath)
+            ? (Directory.Exists(gd) ? gd : "不存在")
+            : settings.KspGameDataPath;
         var logs = Path.Combine(root, "KSP_Data", "output_log.txt");
-        LabKspLogs.Text = File.Exists(logs) ? logs : Path.Combine(root, "KSP_Data");
+        LabKspLogs.Text = string.IsNullOrEmpty(settings.KspLogsPath)
+            ? (File.Exists(logs) ? logs : Path.Combine(root, "KSP_Data"))
+            : settings.KspLogsPath;
+    }
+
+    private void SaveInstanceFields(object sender, RoutedEventArgs e)
+    {
+        var settings = PklSettings.Current;
+        if (!string.IsNullOrWhiteSpace(LabKspPath.Text))
+            settings.KspRootPath = LabKspPath.Text.Trim();
+        settings.KspExePath = LabKspExe.Text.Trim();
+        settings.KspGameDataPath = LabKspGameData.Text.Trim();
+        settings.KspLogsPath = LabKspLogs.Text.Trim();
+        PklSettings.Save();
+        RefreshKspInfo();
     }
 
     private void BtnAddInstance_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)

@@ -26,6 +26,17 @@ public partial class PageCkan
         }
     }
 
+    private void SaveDataDir(object sender, RoutedEventArgs e)
+    {
+        var dir = LabCkanDataDir.Text.Trim();
+        if (!string.IsNullOrEmpty(dir))
+        {
+            PklSettings.Current.CkanDataDir = dir;
+            PklSettings.Save();
+            LabCkanStatus.Text = "数据目录已保存。";
+        }
+    }
+
     private void BtnPickCkanDir_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         var dialog = new OpenFolderDialog
@@ -47,6 +58,8 @@ public partial class PageCkan
         {
             BtnRefreshRepo.IsEnabled = false;
             LabCkanStatus.Text = "正在刷新模组索引…";
+            PklSettings.Current.CkanDataDir = LabCkanDataDir.Text.Trim();
+            PklSettings.Save();
             var svc = new ModService(dataDir: PklSettings.Current.CkanDataDir);
             svc.MirrorUrls = TxtMirrorUrls.Text.Split(new[]{'\r','\n'}, System.StringSplitOptions.RemoveEmptyEntries)
                             .Select(s => s.Trim()).Where(s => s.Length > 0).ToList();

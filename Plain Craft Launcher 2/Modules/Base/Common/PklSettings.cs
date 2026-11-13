@@ -40,6 +40,9 @@ public static class PklSettings
         public int HttpTimeoutSeconds { get; set; } = 30;
 
         public List<string> Instances { get; set; } = new();
+        public string KspExePath { get; set; } = "";
+        public string KspGameDataPath { get; set; } = "";
+        public string KspLogsPath { get; set; } = "";
     }
 
     private static string ResolvePath()

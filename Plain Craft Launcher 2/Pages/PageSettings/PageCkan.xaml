@@ -24,7 +24,7 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <local:MyTextBox x:Name="LabCkanDataDir" Height="34" IsReadOnly="True" />
+                            <local:MyTextBox x:Name="LabCkanDataDir" Height="34" LostFocus="SaveDataDir" />
                             <local:MyButton Grid.Column="1" Text="浏览" Margin="10,0,0,0" Height="34" Width="80" Click="BtnPickCkanDir_Click" />
                         </Grid>
                         <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="0,0,25,0" Text="镜像源" />
