@@ -108,6 +108,29 @@ public partial class MyCompItem
         set => PathLogo.Source = value;
     }
 
+    /// <summary>首字母占位文本。</summary>
+    public string Letter
+    {
+        get => LabLetter.Text;
+        set => LabLetter.Text = value;
+    }
+
+    /// <summary>首字母占位块的背景色。</summary>
+    public Brush LetterBrush
+    {
+        set => PanLetter.Background = value;
+    }
+
+    /// <summary>切换图标层与首字母占位层的可见性。</summary>
+    public bool ShowLetter
+    {
+        set
+        {
+            PanLetter.Visibility = value ? Visibility.Visible : Visibility.Collapsed;
+            PathLogo.Visibility = value ? Visibility.Collapsed : Visibility.Visible;
+        }
+    }
+
     public string Title
     {
         get => _vm.TitleText;

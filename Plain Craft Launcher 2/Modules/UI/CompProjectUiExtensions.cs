@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using PCL.Core.App.Localization;
 
 namespace PCL;
@@ -7,6 +8,34 @@ namespace PCL;
 /// <summary>Comp 工程项的 WPF 控件构造，保留在 UI 程序集。</summary>
 public static class CompProjectUiExtensions
 {
+    private static readonly Brush[] InitialBrushes =
+    [
+        new SolidColorBrush(Color.FromRgb(0x5B, 0x6E, 0xE1)),
+        new SolidColorBrush(Color.FromRgb(0x3D, 0x99, 0x70)),
+        new SolidColorBrush(Color.FromRgb(0xE8, 0x83, 0x3A)),
+        new SolidColorBrush(Color.FromRgb(0xC8, 0x50, 0x6B)),
+        new SolidColorBrush(Color.FromRgb(0x4A, 0x90, 0xA4)),
+        new SolidColorBrush(Color.FromRgb(0x8E, 0x7C, 0xC3))
+    ];
+
+    private static string GetInitial(Comp.CompProject mod)
+    {
+        var name = string.IsNullOrWhiteSpace(mod.TranslatedName) ? mod.RawName : mod.TranslatedName;
+        name = (name ?? string.Empty).Trim();
+        if (name.Length == 0)
+            return "?";
+        var ch = name[0];
+        return char.IsLetter(ch) ? char.ToUpperInvariant(ch).ToString() : ch.ToString();
+    }
+
+    private static Brush GetInitialBrush(string key)
+    {
+        var hash = 0;
+        foreach (var c in key ?? string.Empty)
+            hash = unchecked(hash * 31 + c);
+        return InitialBrushes[Math.Abs(hash) % InitialBrushes.Length];
+    }
+
     extension(Comp.CompProject project)
     {
         public MyVirtualizingElement<MyCompItem> ToCompItem(
@@ -20,7 +49,7 @@ public static class CompProjectUiExtensions
                 {
                     Tag = project
                 };
-                project.ApplyLogoToMyImage(newItem.PathLogo);
+                project.ApplyIcon(newItem);
 
                 var title = project.GetControlTitle(true);
                 newItem.Title = title.Key;
@@ -98,16 +127,21 @@ public static class CompProjectUiExtensions
             };
         }
 
-        public void ApplyLogoToMyImage(MyImage img)
+        /// <summary>有图标则显示横幅图（方形裁剪）；无图标则用名字首字母色块占位。</summary>
+        public void ApplyIcon(MyCompItem item)
         {
             if (string.IsNullOrEmpty(project.LogoUrl))
             {
-                img.Source = $"{LauncherPaths.ImageRoot}Icons/NoIcon.png";
+                item.PathLogo.Source = null;
+                item.ShowLetter = true;
+                item.Letter = GetInitial(project);
+                item.LetterBrush = GetInitialBrush(project.Id);
             }
             else
             {
-                img.Source = project.LogoUrl;
-                img.FallbackSource = GameDownload.DlSourceModGet(project.LogoUrl);
+                item.ShowLetter = false;
+                item.PathLogo.Source = project.LogoUrl;
+                item.PathLogo.FallbackSource = GameDownload.DlSourceModGet(project.LogoUrl);
             }
         }
     }
