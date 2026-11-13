@@ -3,6 +3,7 @@ using CKAN.Configuration;
 using CKAN.IO;
 using CKAN.Versioning;
 using IUser = CKAN.IUser;
+using System.Diagnostics;
 using System.Net;
 
 namespace Pkl.Ckan;
@@ -38,6 +39,15 @@ public sealed class ModService : IModService, IDisposable
     private RegistryManager? _registryManager;
     private Registry? _readonlyRegistry;
     private readonly SpaceDockClient _spaceDock = new();
+
+    /// <summary>诊断埋点汇（如启动器 log4net）；为空时仅写入内存日志。</summary>
+    public Action<string>? TraceSink { get; set; }
+
+    private void Trace(string message)
+    {
+        try { Log.RaiseMessage(message); } catch { }
+        try { TraceSink?.Invoke(message); } catch { }
+    }
 
     /// <summary>
     /// Create the adapter with a self-contained data directory under the user's temp folder,
@@ -144,6 +154,7 @@ public sealed class ModService : IModService, IDisposable
 
         try
         {
+            Trace("Refresh 开始");
             var registry = _registryManager.registry;
             var existing = registry.Repositories;
 
@@ -170,13 +181,15 @@ public sealed class ModService : IModService, IDisposable
                 AddRepo("CKAN-Official", OfficialRepoUrl);
             }
             _registryManager.Save();
+            Trace("注册表 Save 完成");
 
             var repos = registry.Repositories.Values.ToList();
             var downloader = new NetAsyncDownloader(_user,
                 () => (System.Security.Cryptography.HashAlgorithm?)null,
                 UserAgent,
                 cancellationToken);
-            _repoData.Update(repos, _instance.Game, false, downloader, _user, UserAgent);
+            var updateResult = _repoData.Update(repos, _instance.Game, false, downloader, _user, UserAgent);
+            Trace($"仓库 Update 完成: {updateResult}");
         }
         catch (Exception ex)
         {
@@ -189,11 +202,20 @@ public sealed class ModService : IModService, IDisposable
     /// <inheritdoc />
     public async Task<IReadOnlyList<ModSearchResult>> SearchAsync(string? query, CancellationToken cancellationToken = default)
     {
-        var results = EnumerateCatalog()
-            .Where(m => MatchesQuery(m, query))
-            .Select(ToResult)
-            .ToList();
+        var sw = Stopwatch.StartNew();
+        // 目录枚举与投影放到后台线程，避免阻塞 STA 导致加载动画停滞、页面看似未响应。
+        var results = await Task.Run(() =>
+        {
+            var modules = EnumerateCatalog().Where(m => MatchesQuery(m, query)).ToList();
+            Trace($"目录枚举 {modules.Count} 条，{sw.ElapsedMilliseconds} ms");
+            sw.Restart();
+            var list = modules.Select(ToResult).ToList();
+            Trace($"结果投影 {list.Count} 条，{sw.ElapsedMilliseconds} ms");
+            return list;
+        }, cancellationToken).ConfigureAwait(false);
+        sw.Restart();
         await EnrichFromSpaceDock(results, cancellationToken).ConfigureAwait(false);
+        Trace($"SpaceDock 回填完成，{sw.ElapsedMilliseconds} ms");
         return results;
     }
 

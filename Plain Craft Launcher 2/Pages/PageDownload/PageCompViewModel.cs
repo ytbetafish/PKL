@@ -20,13 +20,13 @@ public partial class PageCompViewModel : ViewModelBase
 
     [ObservableProperty] private double _rightOpacity = 1d;
 
-    [ObservableProperty] private bool _isPagerVisible = true;
+    [ObservableProperty] private bool _isPagerVisible = false;
 
     [ObservableProperty] private bool _isErrorVisible;
 
     [ObservableProperty] private string _errorMessage = "";
 
-    [ObservableProperty] private string _loadingText = "正在加载...";
+    [ObservableProperty] private string _loadingText = "正在获取模组列表";
 
     public void ApplyPagerState(int currentPage, int totalItems, int pageSize)
     {

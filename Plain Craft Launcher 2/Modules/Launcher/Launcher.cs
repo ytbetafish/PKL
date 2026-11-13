@@ -55,6 +55,7 @@ public static partial class Launcher
             service.MirrorUrls = new System.Collections.Generic.List<string>(settings.CkanMirrorUrls);
             service.OfficialRepoUrl = settings.CkanMasterRepoUrl;
             service.RepoStrategy = settings.CkanRepoStrategy;
+            service.TraceSink = msg => Common.Log("[CKAN] " + msg);
             var detector = new KspInstanceService();
             var root = detector.FindCandidateRoots().FirstOrDefault();
             if (root is not null)
@@ -63,8 +64,8 @@ public static partial class Launcher
                 service.AttachInstanceRobust(instance);
             }
             _ckanService = service;
-            // 后台刷新注册表，不阻塞 UI
-            _ = service.RefreshMasterRegistryAsync();
+            // 后台刷新注册表，不阻塞 UI（必须 Task.Run：RefreshMasterRegistryAsync 为同步方法，直接调用会在 STA 线程阻塞联网下载仓库）
+            _ = System.Threading.Tasks.Task.Run(() => service.RefreshMasterRegistryAsync());
         }
         catch
         {

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -38,18 +39,27 @@ public partial class PageComp : Grid
             return;
         _loading = true;
         PanLoad.Visibility = Visibility.Visible;
+        PanContent.Visibility = Visibility.Collapsed;
         _vm.ApplyErrorState(null);
         try
         {
             var query = string.IsNullOrWhiteSpace(keyword) ? null : keyword.Trim();
+            var sw = Stopwatch.StartNew();
+            Common.Log("[CKAN] SearchAsync 开始");
             var results = await Launcher.Ckan.SearchAsync(query);
+            Common.Log($"[CKAN] SearchAsync 返回 {results.Count} 条，耗时 {sw.ElapsedMilliseconds} ms");
+            sw.Restart();
             _projects = CkanCompAdapter.ToProjects(results);
+            Common.Log($"[CKAN] ToProjects {_projects.Count} 条，耗时 {sw.ElapsedMilliseconds} ms");
             _currentPage = 0;
             RefreshList();
+            PanContent.Visibility = Visibility.Visible;
+            Common.Log($"[CKAN] RefreshList 完成，卡片 {PanProjects.Children.Count} 个");
         }
         catch (Exception ex)
         {
             Common.Log(ex, "CKAN 模组列表加载失败");
+            PanContent.Visibility = Visibility.Visible;
             _vm.ApplyErrorState(ex.Message);
         }
         finally
