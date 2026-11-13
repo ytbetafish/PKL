@@ -10,7 +10,7 @@ public static class LauncherPaths
 
     /// <summary>程序内嵌图片根路径。</summary>
     public const string ImageRoot =
-        "pack://application:,,,/Plain Craft Launcher 2;component/Images/";
+        "pack://application:,,,/PKL;component/Images/";
 
     /// <summary>程序可执行文件所在目录，以“\”结尾。</summary>
     public static string ExecutableDirectory { get; } =

@@ -36,7 +36,8 @@ public class MyBitmap
                 filePathOrResourceName =
                     filePathOrResourceName.Replace("pack://application:,,,/images/",
                         Common.PathImage);
-                if (filePathOrResourceName.StartsWithF(Common.PathImage))
+                if (filePathOrResourceName.StartsWithF(Common.PathImage)
+                    || filePathOrResourceName.StartsWith("pack://"))
                 {
                     if (_Cache.ContainsKey(filePathOrResourceName))
                     {
