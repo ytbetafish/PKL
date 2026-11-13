@@ -55,10 +55,28 @@ public partial class PageMods
                 var ksp = new KspInstanceService();
                 GetService().AttachInstance(ksp.Load(root));
             });
+            await LoadInstalledAsync();
         }
         catch (Exception ex)
         {
             LabModDesc.Text = "KSP 实例附加失败：" + ex.Message;
+        }
+    }
+
+    /// <summary>加载当前实例已安装的模组列表（默认视图）。</summary>
+    private async Task LoadInstalledAsync()
+    {
+        try
+        {
+            _filter = "installed";
+            _lastResults = await GetService().ListInstalledAsync();
+            ApplyFilter();
+            if (_lastResults.Count == 0)
+                LabModDesc.Text = "当前实例尚未通过 CKAN 安装模组。";
+        }
+        catch (Exception ex)
+        {
+            LabModDesc.Text = "已安装模组加载失败：" + ex.Message;
         }
     }
 
@@ -97,9 +115,7 @@ public partial class PageMods
 
     private async void BtnFilterInstalled_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        _filter = "installed";
-        try { _lastResults = await GetService().ListInstalledAsync(); } catch { }
-        ApplyFilter();
+        await LoadInstalledAsync();
     }
 
     private async void BtnFilterUpdates_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)

@@ -13,6 +13,9 @@
                               Title="实例管理" SvgIcon="lucide/rocket" />
 
             <TextBlock Text="模组" Margin="13,6,5,4" Opacity="0.6" FontSize="12" />
+            <local:MyListItem x:Name="NavMods" IsScaleAnimationEnabled="False" Type="RadioBox"
+                              MinPaddingRight="35" Height="36" VerticalAlignment="Top"
+                              Title="已安装模组" SvgIcon="lucide/puzzle" />
             <local:MyListItem x:Name="NavCkan" IsScaleAnimationEnabled="False" Type="RadioBox"
                               MinPaddingRight="35" Height="36" VerticalAlignment="Top"
                               Title="CKAN 模组源" SvgIcon="lucide/package" />

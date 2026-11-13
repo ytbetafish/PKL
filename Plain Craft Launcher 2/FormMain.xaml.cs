@@ -1462,6 +1462,7 @@ public partial class FormMain
                                 FrameworkElement right = key switch
                                 {
                                     "ksp" => new Pages.PageKspInstance(),
+                                    "mods" => new Pages.PageMods(),
                                     "ckan" => new Pages.PageCkan(),
                                     "translate" => new Pages.PageTranslate(),
                                     _ => new Pages.PageAbout(),
@@ -1474,6 +1475,7 @@ public partial class FormMain
                         FrameworkElement right = settingsNav switch
                         {
                             "ksp" => new Pages.PageKspInstance(),
+                            "mods" => new Pages.PageMods(),
                             "ckan" => new Pages.PageCkan(),
                             "translate" => new Pages.PageTranslate(),
                             _ => new Pages.PageAbout(),
