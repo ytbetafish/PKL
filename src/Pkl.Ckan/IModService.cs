@@ -17,6 +17,12 @@ public interface IModService
     Task<IReadOnlyList<ModSearchResult>> SearchAsync(string? query, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// 对结果列表 [start, start+count) 区间做 SpaceDock 联网回填（图标、下载量、作者等），
+    /// 原地写回列表；失败项保持原值。调用方可缓存已回填区间，避免重复网络请求。
+    /// </summary>
+    Task EnrichRangeAsync(IList<ModSearchResult> results, int start, int count, CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// List mods currently installed in the attached KSP instance.
     /// </summary>
     Task<IReadOnlyList<ModSearchResult>> ListInstalledAsync(CancellationToken cancellationToken = default);

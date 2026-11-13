@@ -16,6 +16,9 @@ public partial class PageComp : Grid
     private readonly PageCompViewModel _vm = new();
 
     private List<Comp.CompProject> _projects = new();
+    private List<ModSearchResult> _results = new();
+    private readonly HashSet<int> _enrichedPages = new();
+    private CancellationTokenSource? _enrichCts;
     private int _currentPage = 0;
     private const int PageSize = 40;
     private bool _loading;
@@ -49,12 +52,15 @@ public partial class PageComp : Grid
             var results = await Launcher.Ckan.SearchAsync(query);
             Common.Log($"[CKAN] SearchAsync 返回 {results.Count} 条，耗时 {sw.ElapsedMilliseconds} ms");
             sw.Restart();
-            _projects = CkanCompAdapter.ToProjects(results);
+            _results = results.ToList();
+            _projects = CkanCompAdapter.ToProjects(_results);
             Common.Log($"[CKAN] ToProjects {_projects.Count} 条，耗时 {sw.ElapsedMilliseconds} ms");
+            _enrichedPages.Clear();
             _currentPage = 0;
             RefreshList();
             PanContent.Visibility = Visibility.Visible;
             Common.Log($"[CKAN] RefreshList 完成，卡片 {PanProjects.Children.Count} 个");
+            _ = EnrichCurrentPageAsync();
         }
         catch (Exception ex)
         {
@@ -79,6 +85,45 @@ public partial class PageComp : Grid
         _vm.ApplyPagerState(_currentPage, _projects.Count, PageSize);
     }
 
+    /// <summary>异步回填当前页的 SpaceDock 信息（图标/下载量等）；已回填的页保留在本地缓存，不重复请求。</summary>
+    private async Task EnrichCurrentPageAsync()
+    {
+        _enrichCts?.Cancel();
+        _enrichCts?.Dispose();
+        _enrichCts = new CancellationTokenSource();
+        var ct = _enrichCts.Token;
+
+        if (_results.Count == 0 || _enrichedPages.Contains(_currentPage))
+            return;
+
+        var start = _currentPage * PageSize;
+        if (start >= _results.Count)
+            return;
+        var count = Math.Min(PageSize, _results.Count - start);
+
+        try
+        {
+            await Launcher.Ckan.EnrichRangeAsync(_results, start, count, ct).ConfigureAwait(false);
+            if (ct.IsCancellationRequested)
+                return;
+
+            _enrichedPages.Add(_currentPage);
+            var mapped = CkanCompAdapter.ToProjects(_results.GetRange(start, count));
+            for (var i = 0; i < mapped.Count; i++)
+                _projects[start + i] = mapped[i];
+
+            await Dispatcher.InvokeAsync(() => RefreshList());
+        }
+        catch (OperationCanceledException)
+        {
+            // 翻页取消，丢弃本次回填结果。
+        }
+        catch (Exception ex)
+        {
+            Common.Log(ex, "当前页模组信息回填失败");
+        }
+    }
+
     public ItemCollection SearchTags => ComboSearchTag.Items;
 
     public string TypeName => "模组";
@@ -96,6 +141,7 @@ public partial class PageComp : Grid
     {
         _currentPage = 0;
         RefreshList();
+        _ = EnrichCurrentPageAsync();
     }
 
     private void BtnPageLeft_Click(object sender, EventArgs e)
@@ -104,6 +150,7 @@ public partial class PageComp : Grid
         {
             _currentPage--;
             RefreshList();
+            _ = EnrichCurrentPageAsync();
         }
     }
 
@@ -113,6 +160,7 @@ public partial class PageComp : Grid
         {
             _currentPage++;
             RefreshList();
+            _ = EnrichCurrentPageAsync();
         }
     }
 

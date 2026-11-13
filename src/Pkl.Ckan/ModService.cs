@@ -27,9 +27,6 @@ public sealed class InstanceReadOnlyException : InvalidOperationException
 public sealed class ModService : IModService, IDisposable
 {
     private const string UserAgent = "Pkl.Ckan/1.0";
-    /// <summary>SpaceDock 联网补充的最大条数（列表分页之外的目录条目不做网络回填）。</summary>
-    private const int EnrichLimit = 40;
-
     private readonly IUser _user;
     private readonly IConfiguration _config;
     private readonly RepositoryDataManager _repoData;
@@ -213,21 +210,22 @@ public sealed class ModService : IModService, IDisposable
             Trace($"结果投影 {list.Count} 条，{sw.ElapsedMilliseconds} ms");
             return list;
         }, cancellationToken).ConfigureAwait(false);
-        sw.Restart();
-        await EnrichFromSpaceDock(results, cancellationToken).ConfigureAwait(false);
-        Trace($"SpaceDock 回填完成，{sw.ElapsedMilliseconds} ms");
         return results;
     }
 
-    /// <summary>用 SpaceDock 详情补下载量、作者、横幅图与简介；CKAN 已有值不覆盖；并发限流，仅回填前 EnrichLimit 条。</summary>
-    private async Task EnrichFromSpaceDock(List<ModSearchResult> results, CancellationToken cancellationToken)
+    /// <summary>对 results 的 [start, start+count) 区间做 SpaceDock 回填；并发限流，失败项保持原值。</summary>
+    public async Task EnrichRangeAsync(IList<ModSearchResult> results, int start, int count, CancellationToken cancellationToken = default)
     {
-        var limit = Math.Min(results.Count, EnrichLimit);
+        ArgumentNullException.ThrowIfNull(results);
+        if (count <= 0 || start < 0 || start >= results.Count)
+            return;
+        count = Math.Min(count, results.Count - start);
+
         using var semaphore = new SemaphoreSlim(8);
         var tasks = new List<Task>();
-        for (var i = 0; i < limit; i++)
+        for (var i = 0; i < count; i++)
         {
-            var idx = i;
+            var idx = start + i;
             tasks.Add(Task.Run(async () =>
             {
                 await semaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
@@ -281,7 +279,7 @@ public sealed class ModService : IModService, IDisposable
             results.Add(ToResult(mod, identifier, installed));
         }
 
-        await EnrichFromSpaceDock(results, cancellationToken).ConfigureAwait(false);
+        await EnrichRangeAsync(results, 0, results.Count, cancellationToken).ConfigureAwait(false);
         return results;
     }
 
