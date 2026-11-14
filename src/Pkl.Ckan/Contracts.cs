@@ -22,7 +22,13 @@ public sealed record ModSearchResult(
     bool HasUpdate,
     bool IsCompatible = true,
     string? IconUrl = null,
-    int Downloads = 0);
+    int Downloads = 0,
+    /// <summary>本模组所依赖（作为前置）的模组显示名列表。</summary>
+    IReadOnlyList<string>? Depends = null,
+    /// <summary>依赖本模组（把它作为前置）的模组显示名列表。</summary>
+    IReadOnlyList<string>? ReverseDeps = null,
+    /// <summary>与本模组冲突的模组显示名列表。</summary>
+    IReadOnlyList<string>? Conflicts = null);
 
 /// <summary>
 /// The install/upgrade/remove plan computed by CKAN's dependency resolver.

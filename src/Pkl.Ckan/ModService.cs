@@ -1,4 +1,4 @@
-﻿using CKAN;
+using CKAN;
 using CKAN.Configuration;
 using CKAN.IO;
 using CKAN.Versioning;
@@ -271,15 +271,64 @@ public sealed class ModService : IModService, IDisposable
             return Array.Empty<ModSearchResult>();
         }
 
-        var installed = reg.Installed();
-        var results = new List<ModSearchResult>();
-        foreach (var (identifier, _) in installed)
+        var sw = Stopwatch.StartNew();
+        var results = await Task.Run(() =>
         {
-            var mod = LatestAvailable(identifier);
-            results.Add(ToResult(mod, identifier, installed));
-        }
+            var installed = reg.Installed();
+
+            // 一次性遍历目录，构建 标识->显示名、反向依赖、冲突 三张映射，避免逐条模组重复全目录扫描。
+            var nameById = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            var reverseMap = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
+            var conflictMap = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
+            foreach (var m in EnumerateCatalog())
+            {
+                nameById[m.identifier] = m.name ?? m.identifier;
+                foreach (var r in m.depends ?? Enumerable.Empty<CKAN.RelationshipDescriptor>())
+                {
+                    var dep = (r as CKAN.ModuleRelationshipDescriptor)?.name;
+                    if (!string.IsNullOrEmpty(dep) && !string.Equals(dep, m.identifier, StringComparison.OrdinalIgnoreCase))
+                        AddRel(reverseMap, dep, m.name ?? m.identifier);
+                }
+                foreach (var r in m.conflicts ?? Enumerable.Empty<CKAN.RelationshipDescriptor>())
+                {
+                    var conflict = (r as CKAN.ModuleRelationshipDescriptor)?.name;
+                    if (!string.IsNullOrEmpty(conflict) && !string.Equals(conflict, m.identifier, StringComparison.OrdinalIgnoreCase))
+                        AddRel(conflictMap, conflict, m.name ?? m.identifier);
+                }
+            }
+
+            string ResolveName(string ident) => nameById.TryGetValue(ident, out var n) ? n : ident;
+
+            var list = new List<ModSearchResult>();
+            foreach (var (identifier, _) in installed)
+            {
+                var mod = LatestAvailable(identifier);
+                var result = ToResult(mod, identifier, installed);
+
+                var depList = mod?.depends?
+                    .Select(r => (r as CKAN.ModuleRelationshipDescriptor)?.name)
+                    .Where(n => !string.IsNullOrEmpty(n))!
+                    .Select(ResolveName)
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .ToList();
+                IReadOnlyList<string> deps = depList ?? (IReadOnlyList<string>)Array.Empty<string>();
+
+                reverseMap.TryGetValue(identifier, out var reverse);
+                conflictMap.TryGetValue(identifier, out var conflicts);
+
+                list.Add(result with
+                {
+                    Depends = deps,
+                    ReverseDeps = reverse?.Distinct(StringComparer.OrdinalIgnoreCase).ToList(),
+                    Conflicts = conflicts?.Distinct(StringComparer.OrdinalIgnoreCase).ToList()
+                });
+            }
+            return list;
+        }, cancellationToken).ConfigureAwait(false);
+        Trace($"已装投影 {results.Count} 条，{sw.ElapsedMilliseconds} ms");
 
         await EnrichRangeAsync(results, 0, results.Count, cancellationToken).ConfigureAwait(false);
+        Trace($"已装回填完成，{sw.ElapsedMilliseconds} ms");
         return results;
     }
 
@@ -469,6 +518,17 @@ public sealed class ModService : IModService, IDisposable
     }
 
     // ---- internals -----------------------------------------------------------
+
+    private static void AddRel(Dictionary<string, List<string>> map, string key, string display)
+    {
+        if (!map.TryGetValue(key, out var list))
+        {
+            list = new List<string>();
+            map[key] = list;
+        }
+        if (!list.Contains(display, StringComparer.OrdinalIgnoreCase))
+            list.Add(display);
+    }
 
     private IEnumerable<CkanModule> EnumerateCatalog()
     {

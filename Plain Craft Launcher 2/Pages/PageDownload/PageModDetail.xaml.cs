@@ -19,6 +19,7 @@ using PCL.Core.Utils.Validate;
 using PCL.Network;
 using PCL.Network.Loaders;
 using Pkl.Ckan;
+using PCL.Translation;
 using Control = System.Windows.Forms.Control;
 
 namespace PCL;
@@ -183,7 +184,13 @@ public partial class PageModDetail : IPageView
         try
         {
             HintService.Show(Hints.Info(Lang.Text("Download.Comp.Detail.DescriptionTranslating", _project.TranslatedName)));
-            var chineseDescription = await _project.ChineseDescription;
+            var svc = new OpenAiTranslationService(new TranslationOptions
+            {
+                BaseUrl = PklSettings.Current.TranslateBaseUrl,
+                ApiKey = PklSettings.Current.TranslateApiKey,
+                Model = PklSettings.Current.TranslateModel
+            });
+            var chineseDescription = await svc.TranslateAsync(_project.Description, "zh-CN");
             if (chineseDescription is null)
                 return;
             await DialogService.Instance.ShowAsync(new TextDialogRequest

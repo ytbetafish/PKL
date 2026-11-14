@@ -189,6 +189,12 @@ public partial class MyCompItem
         set => LabSource.Text = value;
     }
 
+    /// <summary>是否显示版本/下载/时间/来源元数据行（下载页保留，实例页可隐藏）。</summary>
+    public bool ShowMetaRow
+    {
+        set => PanMetaRow.Visibility = value ? Visibility.Visible : Visibility.Collapsed;
+    }
+
     public MyCompItem()
     {
         InitializeComponent();
@@ -265,6 +271,11 @@ public partial class MyCompItem
 
     public void RefreshFavoriteStatus()
     {
+        if (Tag is Comp.CompProject project)
+        {
+            var isFavourite = Comp.CompFavorites.IsFavourite(project.Id);
+            BtnDelete.SvgIcon = isFavourite ? "lucide/heart-filled" : "lucide/heart";
+        }
     }
     #endregion
 
@@ -276,6 +287,8 @@ public partial class MyCompItem
 
     private void BtnDelete_Click(object sender, EventArgs e)
     {
+        if (Tag is Comp.CompProject project)
+            CompFavoritesUi.ShowMenu(project, (UIElement)sender, RefreshFavoriteStatus);
     }
 
     private void _BtnDownload_Click(object sender, EventArgs e)

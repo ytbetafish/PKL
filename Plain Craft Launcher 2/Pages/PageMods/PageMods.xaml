@@ -31,42 +31,11 @@
                 </StackPanel>
             </local:MyCard>
 
-            <local:MyCard Margin="0,0,0,15" Title="搜索结果">
-                <Border Margin="25,38,23,18" Background="{DynamicResource ColorBrushTransparentBackground}" CornerRadius="4">
-                    <DataGrid x:Name="GridMods" AutoGenerateColumns="False" IsReadOnly="True"
-                              SelectionChanged="GridMods_SelectionChanged" HeadersVisibility="Column"
-                              GridLinesVisibility="Horizontal" Background="Transparent" BorderThickness="0"
-                              RowBackground="Transparent" AlternatingRowBackground="{DynamicResource ColorBrush3}">
-                        <DataGrid.Columns>
-                            <DataGridTemplateColumn Header="" Width="46">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <ContentControl Content="{Binding Identifier, Converter={StaticResource ModIconConverter}}" />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                            <DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="2*" />
-                            <DataGridTextColumn Header="作者" Binding="{Binding Author}" Width="*" />
-                            <DataGridTextColumn Header="版本" Binding="{Binding Version}" Width="Auto" />
-                            <DataGridTextColumn Header="简介" Binding="{Binding Description}" Width="3*">
-                                <DataGridTextColumn.ElementStyle>
-                                    <Style TargetType="TextBlock">
-                                        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
-                                    </Style>
-                                </DataGridTextColumn.ElementStyle>
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="状态" Width="Auto">
-                                <DataGridTextColumn.Binding>
-                                    <MultiBinding StringFormat="{}{0}{1}">
-                                        <Binding Path="IsInstalled" />
-                                        <Binding Path="HasUpdate" />
-                                    </MultiBinding>
-                                </DataGridTextColumn.Binding>
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="兼容" Binding="{Binding IsCompatible}" Width="Auto" />
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </Border>
+            <local:MyCard x:Name="PanListCard" Margin="0,0,0,15" Title="模组列表" Visibility="Collapsed">
+                <StackPanel x:Name="PanList" Margin="20,40,18,10" Orientation="Vertical" VerticalAlignment="Top" />
+            </local:MyCard>
+            <local:MyCard x:Name="PanLoad" HorizontalAlignment="Center" VerticalAlignment="Center" UseAnimation="False" Margin="40,50">
+                <local:MyLoading Margin="20,20,20,17" x:Name="Load" HorizontalAlignment="Center" VerticalAlignment="Center" Text="正在加载模组…" />
             </local:MyCard>
 
             <local:MyCard Margin="0,0,0,15" Title="模组详情">

@@ -135,7 +135,7 @@ public static class CompProjectUiExtensions
                 item.PathLogo.Source = null;
                 item.ShowLetter = true;
                 item.Letter = GetInitial(project);
-                item.LetterBrush = GetInitialBrush(project.Id);
+                item.LetterBrush = GetInitialBrush(string.IsNullOrWhiteSpace(project.TranslatedName) ? project.RawName : project.TranslatedName);
             }
             else
             {

@@ -11,6 +11,15 @@
                               Tag="0" MinPaddingRight="35" Height="36" VerticalAlignment="Top"
                               Title="概览"
                               SvgIcon="lucide/layout-dashboard" />
+            <local:MyListItem x:Name="ItemMod" IsScaleAnimationEnabled="False" Type="RadioBox" Tag="5"
+                              Check="PageCheck" MinPaddingRight="35" Height="36" VerticalAlignment="Top"
+                              Title="模组" SvgIcon="lucide/puzzle" />
+            <local:MyListItem x:Name="ItemWorld" IsScaleAnimationEnabled="False" Type="RadioBox" Tag="3"
+                              Check="PageCheck" MinPaddingRight="35" Height="36" VerticalAlignment="Top"
+                              Title="存档" SvgIcon="lucide/globe" />
+            <local:MyListItem x:Name="ItemScreenshot" IsScaleAnimationEnabled="False" Type="RadioBox" Tag="4"
+                              Check="PageCheck" MinPaddingRight="35" Height="36" VerticalAlignment="Top"
+                              Title="截图" SvgIcon="lucide/image" />
         </StackPanel>
     </local:MyScrollViewer>
 </local:MyPageLeft>

@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using PCL;
 using PCL.Translation;
 using Pkl.Ckan;
 
@@ -50,6 +51,7 @@ public partial class PageMods
         {
             var root = PklSettings.Current.KspRootPath;
             if (string.IsNullOrWhiteSpace(root) || !KspInstanceService.IsKspRoot(root)) return;
+            PanLoad.Visibility = Visibility.Visible;
             await Task.Run(() =>
             {
                 var ksp = new KspInstanceService();
@@ -87,6 +89,7 @@ public partial class PageMods
             LabModDesc.Text = "输入关键词后按回车或点搜索。";
             return;
         }
+        PanLoad.Visibility = Visibility.Visible;
         try
         {
             _lastResults = await GetService().SearchAsync(query);
@@ -108,7 +111,51 @@ public partial class PageMods
             "notinstalled" => q.Where(m => !m.IsInstalled),
             _ => q,
         };
-        GridMods.ItemsSource = q.ToList();
+        BuildList(q.ToList());
+        PanLoad.Visibility = Visibility.Collapsed;
+        PanListCard.Visibility = Visibility.Visible;
+    }
+
+    private void BuildList(IReadOnlyList<ModSearchResult> mods)
+    {
+        PanList.Children.Clear();
+        if (mods.Count == 0)
+        {
+            PanList.Children.Add(new TextBlock
+            {
+                Text = "暂无模组",
+                Margin = new Thickness(15, 10, 0, 10),
+                Opacity = 0.6,
+                FontSize = 13
+            });
+            return;
+        }
+
+        foreach (var mod in mods)
+            PanList.Children.Add(CreateItem(mod));
+    }
+
+    private MyListItem CreateItem(ModSearchResult mod)
+    {
+        var info = new List<string>();
+        if (!string.IsNullOrWhiteSpace(mod.Author)) info.Add(mod.Author!);
+        if (!string.IsNullOrWhiteSpace(mod.Version)) info.Add(mod.Version!);
+        info.Add(mod.HasUpdate ? "有更新" : mod.IsInstalled ? "已安装" : "未安装");
+
+        var item = new MyListItem
+        {
+            Title = mod.Name,
+            Info = string.Join(" · ", info),
+            tag = mod,
+            Height = 46d,
+            Type = MyListItem.CheckType.None
+        };
+        if (!string.IsNullOrWhiteSpace(mod.IconUrl))
+            item.Logo = mod.IconUrl!;
+        else
+            item.SvgIcon = "lucide/puzzle";
+        item.Click += (_, _) => SelectMod(mod);
+        return item;
     }
 
     private async void BtnSearch_Click(object sender, EventArgs e) => await DoSearch(TxtSearch.Text);
@@ -174,9 +221,9 @@ public partial class PageMods
         }
     }
 
-    private async void GridMods_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void SelectMod(ModSearchResult? mod)
     {
-        _selected = GridMods.SelectedItem as ModSearchResult;
+        _selected = mod;
         _showChinese = false;
         if (_selected is null)
         {

@@ -12,6 +12,9 @@ namespace PCL;
 public partial class PageInstanceLeft : IRefreshable, IPageView
 {
     private static PageInstanceOverall? _overall;
+    private static PageInstanceCompResource? _mods;
+    private static PageInstanceSaves? _saves;
+    private static PageInstanceScreenshot? _shots;
     private bool _refreshed;
 
     public FormMain.PageSubType PageId = FormMain.PageSubType.VersionOverall;
@@ -43,6 +46,12 @@ public partial class PageInstanceLeft : IRefreshable, IPageView
     {
         if (subType == FormMain.PageSubType.VersionOverall)
             ItemOverall.Checked = true;
+        else if (subType == FormMain.PageSubType.VersionMod)
+            ItemMod.Checked = true;
+        else if (subType == FormMain.PageSubType.VersionWorld)
+            ItemWorld.Checked = true;
+        else if (subType == FormMain.PageSubType.VersionScreenshot)
+            ItemScreenshot.Checked = true;
     }
 
     private void PageCheck(object sender, Common.RouteEventArgs e)
@@ -59,6 +68,12 @@ public partial class PageInstanceLeft : IRefreshable, IPageView
         {
             case FormMain.PageSubType.VersionOverall:
                 return _overall ??= new PageInstanceOverall();
+            case FormMain.PageSubType.VersionMod:
+                return _mods ??= new PageInstanceCompResource();
+            case FormMain.PageSubType.VersionWorld:
+                return _saves ??= new PageInstanceSaves();
+            case FormMain.PageSubType.VersionScreenshot:
+                return _shots ??= new PageInstanceScreenshot();
             default:
                 throw new Exception("未知的实例设置子页面类型: " + id);
         }
