@@ -1491,7 +1491,7 @@ public partial class FormMain
                 }
                 case PageType.InstanceSelect: // 实例选择
                 {
-                    PageChangeAnim(new MyPageLeft(), new Pages.PageSelectRight());
+                    PageChangeAnim(new PageSelectLeft(), new PageSelectRight());
                     break;
                 }
                 default: break;
