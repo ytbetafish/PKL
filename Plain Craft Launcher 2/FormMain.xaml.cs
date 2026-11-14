@@ -1175,6 +1175,10 @@ public partial class FormMain
             {
                 return "模组详情";
             }
+            case PageType.InstanceSetup:
+            {
+                return "实例设置";
+            }
             // KSP: MC 子页面标题已剥离。
             default:
             {
@@ -1492,6 +1496,11 @@ public partial class FormMain
                 case PageType.InstanceSelect: // 实例选择
                 {
                     PageChangeAnim(new PageSelectLeft(), new PageSelectRight());
+                    break;
+                }
+                case PageType.InstanceSetup: // 实例设置
+                {
+                    PageChangeAnim(new PageInstanceLeft(), new PageInstanceOverall());
                     break;
                 }
                 default: break;

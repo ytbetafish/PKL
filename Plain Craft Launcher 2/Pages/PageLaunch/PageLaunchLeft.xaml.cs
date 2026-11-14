@@ -96,7 +96,7 @@ public partial class PageLaunchLeft
     private void BtnGotoSettings_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         if (Window.GetWindow(this) is FormMain fm)
-            fm.SelectNavTag("2");
+            fm.PageChange(FormMain.PageType.InstanceSetup);
     }
 
     private void DetachKspWatcher()
